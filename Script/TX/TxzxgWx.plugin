@@ -1,0 +1,7 @@
+//微信部分
+http-request https://wzq.tenpay.com/cgi-bin/redpoint.fcgi? script-path=https://raw.githubusercontent.com/CenBoMin/GithubSync/main/TXSTOCK/txs_cookie.js, requires-body=true, timeout=10, enabled=true, tag=自选股wx
+
+//活动cow
+http-request https://zqact03.tenpay.com/activity/page/raisebull/ script-path=https://raw.githubusercontent.com/CenBoMin/GithubSync/main/TXSTOCK/txs_cookie.js, requires-body=true, timeout=10, enabled=true, tag=自选股wx
+
+hostname = *.tenpay.com
