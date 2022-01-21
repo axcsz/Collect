@@ -14,7 +14,7 @@
 > 优先
 ```bash
 
-https://raw.githubusercontent.com/Arm0506/Collection/master/Quantumult-X/Xbt370.conf
+
 
 ```
 
@@ -22,36 +22,7 @@ https://raw.githubusercontent.com/Arm0506/Collection/master/Quantumult-X/Xbt370.
 
 ```bash
 
-https://ghproxy.com/https://raw.githubusercontent.com/Arm0506/Collection/master/Quantumult-X/Xbt370.conf
 
-```
-
-
-
-
-# 一键安装青龙依赖命令:
-> 我只是简单加了几个依赖
-
-> 1、先进入容器
-
-```bash
-
-docker exec -it qinglong bash
-
-```
-
-> 2、在执行下面命令
-
-```bash
-
-curl -fsSL https://ghproxy.com/https://raw.githubusercontent.com/Arm0506/Collection/master/qlyilai.sh | sh
-
-```
-> 3、最后输出，就完成了，重启下青龙 Docker ：
-
-```bash
-
-docker restart qinglong
 
 ```
 
