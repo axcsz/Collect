@@ -29,5 +29,3 @@
 
 # 感谢下面大佬制作
 
-* [FlechazoPh](https://github.com/FlechazoPh/QLDependency)
-* [qinglong](https://github.com/whyour/qinglong)
