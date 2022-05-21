@@ -14,7 +14,7 @@
 > 优先
 ```bash
 
-https://raw.githubusercontent.com/Mouse3701/Collection/master/Quantumult-X/Mouse3701.conf
+
 
 ```
 
@@ -22,7 +22,7 @@ https://raw.githubusercontent.com/Mouse3701/Collection/master/Quantumult-X/Mouse
 
 ```bash
 
-https://raw.githubusercontent.com/Mouse3701/Collection/master/Quantumult-X/Mouse3701.conf
+
 
 ```
 
