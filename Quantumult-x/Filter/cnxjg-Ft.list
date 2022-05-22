@@ -1,0 +1,26 @@
+# 
+
+host-suffix, jsdelivr.net, 国际互联
+# > 知乎AD屏蔽,以下规则请放置在filter_local最顶部
+DOMAIN,118.89.204.198,REJECT
+DOMAIN-KEYWORD,118.89.204.198,REJECT
+IP-CIDR,118.89.204.198/32,REJECT
+DOMAIN,appcloud2.in.zhihu.com,REJECT
+HOST,mqtt.zhihu.com,reject
+HOST,sugar.zhihu.com,reject
+USER-AGENT,AVOS*,REJECT
+# > 贴吧AD处理
+IP-CIDR,180.76.76.200/32,REJECT
+HOST,im.tieba.baidu.com,REJECT
+# > Siri搜索建议
+host-suffix, local, direct
+ip-cidr, 192.168.0.0/16, direct
+ip-cidr, 10.0.0.0/8, direct
+ip-cidr, 172.16.0.0/12, direct
+ip-cidr, 127.0.0.0/8, direct
+ip-cidr, 100.64.0.0/10, direct
+ip-cidr, 224.0.0.0/4, direct
+ip6-cidr, fe80::/10, direct
+ip-cidr, 203.107.1.1/24, reject
+ip-cidr, 183.240.197.130/32, direct
+final, 其他服务
