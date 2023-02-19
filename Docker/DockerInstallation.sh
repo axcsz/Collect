@@ -1,9 +1,9 @@
 #!/bin/bash
 ## Author: SuperManito
-## Modified: 2021-12-15
+## Modified: 2022-06-05
 ## License: GPL-2.0
-## Github Repository: https://github.com/SuperManito/LinuxMirrors
-## Gitee Repository: https://gitee.com/SuperManito/LinuxMirrors
+## Github: https://github.com/SuperManito/LinuxMirrors
+## Gitee: https://gitee.com/SuperManito/LinuxMirrors
 
 function AuthorSignature() {
     echo -e "\n${GREEN} ------------ 脚本执行结束 ------------ ${PLAIN}\n"
@@ -16,8 +16,7 @@ function AuthorSignature() {
     echo -e '\033[0;1;35;95m│\033[0m          \033[0;1;34;94m/\033[0;1;35;95m_/\033[0m                                               \033[0;1;35;95m│\033[0m'
     echo -e '\033[0;1;31;91m└─\033[0;1;33;93m──\033[0;1;32;92m──\033[0;1;36;96m──\033[0;1;34;94m──\033[0;1;35;95m──\033[0;1;31;91m──\033[0;1;33;93m──\033[0;1;32;92m──\033[0;1;36;96m──\033[0;1;34;94m──\033[0;1;35;95m──\033[0;1;31;91m──\033[0;1;33;93m──\033[0;1;32;92m──\033[0;1;36;96m──\033[0;1;34;94m──\033[0;1;35;95m──\033[0;1;31;91m──\033[0;1;33;93m──\033[0;1;32;92m──\033[0;1;36;96m──\033[0;1;34;94m──\033[0;1;35;95m──\033[0;1;31;91m──\033[0;1;33;93m──\033[0;1;32;92m──\033[0;1;36;96m──\033[0;1;34;94m──\033[0;1;35;95m──\033[0;1;31;91m─┘\033[0m\n'
 
-    echo -e " \033[1;34mGithub\033[0m - https://github.com/SuperManito/LinuxMirrors"
-    echo -e " \033[1;34mGitee\033[0m  - https://gitee.com/SuperManito/LinuxMirrors\n"
+    echo -e " \033[1;34m官方网站\033[0m https://supermanito.github.io/LinuxMirrors\n"
 }
 
 ## 定义系统判定变量
@@ -61,7 +60,7 @@ BLUE='\033[34m'
 PLAIN='\033[0m'
 BOLD='\033[1m'
 SUCCESS='[\033[32mOK\033[0m]'
-COMPLETE='[\033[32mDone\033[0m]'
+COMPLETE='[\033[32mDONE\033[0m]'
 WARN='[\033[33mWARN\033[0m]'
 ERROR='[\033[31mERROR\033[0m]'
 WORKING='[\033[34m*\033[0m]'
@@ -83,18 +82,18 @@ function Combin_Function() {
 ## 系统判定变量
 function EnvJudgment() {
     ## 判定当前系统基于 Debian or RedHat
-    if [ -f $RedHatRelease ]; then
+    if [ -s $RedHatRelease ]; then
         SYSTEM_FACTIONS=${SYSTEM_REDHAT}
-    elif [ -f $DebianVersion ]; then
+    elif [ -s $DebianVersion ]; then
         SYSTEM_FACTIONS=${SYSTEM_DEBIAN}
     else
-        echo -e "\n${RED} ------------ 无法判断当前运行环境，请先确认脚本是否已适配当前系统！ ------------ ${PLAIN}\n"
+        echo -e "\n$ERROR 无法判断当前运行环境，请先确认本脚本针对当前操作系统是否适配！\n"
         exit
     fi
     ## 定义系统名称
     SYSTEM_NAME=$(cat $LinuxRelease | grep -E "^NAME=" | awk -F '=' '{print$2}' | sed "s/[\'\"]//g")
     ## 定义系统版本号
-    SYSTEM_VERSION_NUMBER=$(cat $LinuxRelease |  grep -E "VERSION_ID=" | awk -F '=' '{print$2}' | sed "s/[\'\"]//g")
+    SYSTEM_VERSION_NUMBER=$(cat $LinuxRelease | grep -E "VERSION_ID=" | awk -F '=' '{print$2}' | sed "s/[\'\"]//g")
     ## 判定系统名称、版本、版本号
     case ${SYSTEM_FACTIONS} in
     Debian)
@@ -158,7 +157,7 @@ function EnvJudgment() {
 ## 基础环境判断
 function PermissionJudgment() {
     if [ $UID -ne 0 ]; then
-        echo -e "\n${ERROR} Permission no enough, please use user ROOT! \n"
+        echo -e "\n$ERROR 权限不足，请使用 Root 用户\n"
         exit
     fi
 }
@@ -171,9 +170,8 @@ function NetWorkJudgment() {
 }
 
 ## 关闭防火墙
-function TurnOffFirewall() {
-    systemctl status firewalld | grep running -q
-    if [ $? -eq 0 ]; then
+function CloseFirewall() {
+    if [[ $(systemctl is-active firewalld) == "active" ]]; then
         systemctl disable --now firewalld >/dev/null 2>&1
         [ -s $SelinuxConfig ] && sed -i "s/SELINUX=enforcing/SELINUX=disabled/g" $SelinuxConfig && setenforce 0 >/dev/null 2>&1
     fi
@@ -201,10 +199,10 @@ function InstallationEnvironment() {
     esac
     VERIFICATION_SOURCESYNC=$?
     if [ ${VERIFICATION_SOURCESYNC} -ne 0 ]; then
-        echo -e "\n${ERROR} 软件源${SYNC_TXT}出错，请先确保软件包管理工具可用！\n"
+        echo -e "\n$ERROR 软件源${SYNC_TXT}出错，请先确保软件包管理工具可用！\n"
         exit
     fi
-    echo -e "\n${SUCCESS} 软件源${SYNC_TXT}结束\n"
+    echo -e "\n$COMPLETE 软件源${SYNC_TXT}结束\n"
     case ${SYSTEM_FACTIONS} in
     Debian)
         apt-get install -y apt-transport-https ca-certificates curl gnupg-agent software-properties-common
@@ -230,23 +228,6 @@ function RemoveOldVersion() {
         yum autoremove -y >/dev/null 2>&1
         ;;
     esac
-}
-
-## 查看可供安装的 Docker Engine 版本清单
-function DockerEngineVersionList() {
-    case ${SYSTEM_FACTIONS} in
-    Debian)
-        apt-cache madison docker-ce | awk '{print $3}' | grep -Eo "[0-9][0-9].[0-9][0-9].[0-9]{1,2}" >$DockerCEVersionFile
-        apt-cache madison docker-ce-cli | awk '{print $3}' | grep -Eo "[0-9][0-9].[0-9][0-9].[0-9]{1,2}" >$DockerCECLIVersionFile
-        grep -wf $DockerCEVersionFile $DockerCECLIVersionFile >$DockerVersionFile
-        ;;
-    RedHat)
-        yum list docker-ce --showduplicates | sort -r | awk '{print $2}' | grep -Eo "[0-9][0-9].[0-9][0-9].[0-9]{1,2}" >$DockerCEVersionFile
-        yum list docker-ce-cli --showduplicates | sort -r | awk '{print $2}' | grep -Eo "[0-9][0-9].[0-9][0-9].[0-9]{1,2}" >$DockerCECLIVersionFile
-        grep -wf $DockerCEVersionFile $DockerCECLIVersionFile >$DockerVersionFile
-        ;;
-    esac
-    rm -rf $DockerCEVersionFile $DockerCECLIVersionFile
 }
 
 ## 配置 Docker CE 源
@@ -280,6 +261,118 @@ function ConfigureDockerCEMirror() {
 
 ## 安装 Docker Engine
 function DockerEngine() {
+
+    ## 导出可安装的版本列表
+    function Export_VersionList() {
+        case ${SYSTEM_FACTIONS} in
+        Debian)
+            apt-cache madison docker-ce | awk '{print $3}' | grep -Eo "[0-9][0-9].[0-9][0-9].[0-9]{1,2}" >$DockerCEVersionFile
+            apt-cache madison docker-ce-cli | awk '{print $3}' | grep -Eo "[0-9][0-9].[0-9][0-9].[0-9]{1,2}" >$DockerCECLIVersionFile
+            grep -wf $DockerCEVersionFile $DockerCECLIVersionFile >$DockerVersionFile
+            ;;
+        RedHat)
+            yum list docker-ce --showduplicates | sort -r | awk '{print $2}' | grep -Eo "[0-9][0-9].[0-9][0-9].[0-9]{1,2}" >$DockerCEVersionFile
+            yum list docker-ce-cli --showduplicates | sort -r | awk '{print $2}' | grep -Eo "[0-9][0-9].[0-9][0-9].[0-9]{1,2}" >$DockerCECLIVersionFile
+            grep -wf $DockerCEVersionFile $DockerCECLIVersionFile >$DockerVersionFile
+            ;;
+        esac
+        rm -rf $DockerCEVersionFile $DockerCECLIVersionFile
+    }
+
+    ## 安装
+    function Install() {
+        if [[ ${DOCKER_VERSION_INSTALL_LATEST} == "True" ]]; then
+            case ${SYSTEM_FACTIONS} in
+            Debian)
+                apt-get install -y docker-ce docker-ce-cli containerd.io
+                ;;
+            RedHat)
+                yum install -y docker-ce docker-ce-cli containerd.io
+                ;;
+            esac
+        else
+            Export_VersionList
+            echo -e "\n${GREEN} --------- 请选择你要安装的版本，如：19.03.15 ---------- ${PLAIN}\n"
+            cat $DockerVersionFile
+            echo -e '\n注：以上可供选择的安装版本由官方源提供，若系统过新可能无法安装较旧的版本'
+            while true; do
+                CHOICE_F=$(echo -e "\n${BOLD}└─ 请根据上面的列表，输入你想要安装的具体版本号：${PLAIN}\n")
+                read -p "${CHOICE_F}" DOCKER_VERSION
+                echo ''
+                cat $DockerVersionFile | grep -Ew "${DOCKER_VERSION}" >/dev/null 2>&1
+                if [ $? -eq 0 ]; then
+                    echo ${DOCKER_VERSION} | grep -Ew '[1,2][0,8,9].[0,1][0-9].[0-9]{1,2}' >/dev/null 2>&1
+                    if [ $? -eq 0 ]; then
+                        rm -rf $DockerVersionFile
+                        break
+                    else
+                        echo -e "$ERROR 请输入正确的版本号！"
+                    fi
+                else
+                    echo -e "$ERROR 输入错误请重新输入！"
+                fi
+            done
+            case ${SYSTEM_FACTIONS} in
+            Debian)
+                CheckVersion=$(echo ${DOCKER_VERSION} | cut -c1-2)
+                CheckSubversion=$(echo ${DOCKER_VERSION} | cut -c4-5)
+                case ${CheckVersion} in
+                21 | 20 | 19)
+                    INSTALL_JUDGMENT="5:"
+                    ;;
+                18)
+                    if [ ${CheckSubversion} == "09" ]; then
+                        INSTALL_JUDGMENT="5:"
+                    else
+                        INSTALL_JUDGMENT=""
+                    fi
+                    ;;
+                *)
+                    INSTALL_JUDGMENT=""
+                    ;;
+                esac
+                apt-get install -y docker-ce=${INSTALL_JUDGMENT}${DOCKER_VERSION}* docker-ce-cli=5:${DOCKER_VERSION}* containerd.io
+                ;;
+            RedHat)
+                yum install -y docker-ce-${DOCKER_VERSION} docker-ce-cli-${DOCKER_VERSION} containerd.io
+                ;;
+            esac
+        fi
+    }
+
+    ## 修改 Docker Hub 源
+    function ConfigureMirror() {
+        if [[ ${REGISTRY_SOURCE_OFFICIAL} == "False" ]]; then
+            if [ -d $DockerDir ] && [ -e $DockerConfig ]; then
+                if [ -e $DockerConfigBackup ]; then
+                    CHOICE_BACKUP=$(echo -e "\n${BOLD}└─ 检测到已备份的 Docker 配置文件，是否覆盖备份? [Y/n] ${PLAIN}")
+                    read -p "${CHOICE_BACKUP}" INPUT
+                    [ -z ${INPUT} ] && INPUT=Y
+                    case $INPUT in
+                    [Yy] | [Yy][Ee][Ss])
+                        cp -rf $DockerConfig $DockerConfigBackup >/dev/null 2>&1
+                        ;;
+                    [Nn] | [Nn][Oo]) ;;
+                    *)
+                        echo -e "\n$WARN 输入错误，默认不覆盖！"
+                        ;;
+                    esac
+                else
+                    cp -rf $DockerConfig $DockerConfigBackup >/dev/null 2>&1
+                    echo -e "\n$COMPLETE 已备份原有 Docker 配置文件至 $DockerConfigBackup\n"
+                fi
+                sleep 2s
+            else
+                mkdir -p $DockerDir >/dev/null 2>&1
+                touch $DockerConfig
+            fi
+            echo -e '{\n  "registry-mirrors": ["https://SOURCE"]\n}' >$DockerConfig
+            sed -i "s/SOURCE/$REGISTRY_SOURCE/g" $DockerConfig
+            systemctl daemon-reload
+        fi
+    }
+
+    ## 判定是否已安装
     case ${SYSTEM_FACTIONS} in
     Debian)
         dpkg -l | grep docker-ce-cli -q
@@ -289,15 +382,14 @@ function DockerEngine() {
         ;;
     esac
     if [ $? -eq 0 ]; then
-        DockerEngineVersionList
+        Export_VersionList
         DOCKER_INSTALLED_VERSION=$(docker -v | grep -Eo "[0-9][0-9].[0-9][0-9].[0-9]{1,2}")
         DOCKER_VERSION_LATEST=$(cat $DockerVersionFile | head -n 1)
         if [[ ${DOCKER_INSTALLED_VERSION} == ${DOCKER_VERSION_LATEST} ]]; then
             if [[ ${DOCKER_VERSION_INSTALL_LATEST} == "True" ]]; then
-                echo -e "\n${SUCCESS} 检测到已安装最新版本的 Docker Engine，跳过安装"
-                ConfigureImageAccelerator
-                systemctl status docker | grep running -q
-                if [ $? -eq 0 ]; then
+                echo -e "\n$COMPLETE 检测到已安装最新版本的 Docker Engine，跳过安装"
+                ConfigureMirror
+                if [[ $(systemctl is-active docker) == "active" ]]; then
                     systemctl restart docker
                 fi
                 echo ''
@@ -307,13 +399,13 @@ function DockerEngine() {
                 AuthorSignature
                 exit
             else
-                CHOICE_E=$(echo -e "\n${BOLD}└ 检测到已安装最新版本的 Docker Engine，是否继续安装其它版本 [ Y/n ]：${PLAIN}")
+                CHOICE_E=$(echo -e "\n${BOLD}└─ 检测到已安装最新版本的 Docker Engine，是否继续安装其它版本? [Y/n] ${PLAIN}")
             fi
         else
             if [[ ${DOCKER_VERSION_INSTALL_LATEST} == "True" ]]; then
-                CHOICE_E=$(echo -e "\n${BOLD}└ 检测到已安装旧版本的 Docker Engine，是否覆盖安装为最新版本 [ Y/n ]：${PLAIN}")
+                CHOICE_E=$(echo -e "\n${BOLD}└─ 检测到已安装旧版本的 Docker Engine，是否覆盖安装为最新版本? [Y/n] ${PLAIN}")
             else
-                CHOICE_E=$(echo -e "\n${BOLD}└ 检测到已安装旧版本的 Docker Engine，是否继续安装其它版本 [ Y/n ]：${PLAIN}")
+                CHOICE_E=$(echo -e "\n${BOLD}└─ 检测到已安装旧版本的 Docker Engine，是否继续安装其它版本? [Y/n] ${PLAIN}")
             fi
         fi
         read -p "${CHOICE_E}" INPUT
@@ -322,113 +414,22 @@ function DockerEngine() {
         [Yy] | [Yy][Ee][Ss])
             echo -en "\n${WORKING} 正在卸载之前的版本..."
             RemoveOldVersion
-            echo -e "\n\n${SUCCESS} 卸载完毕\n"
-            DockerEngineInstall
+            echo -e "\n\n$COMPLETE 卸载完毕\n"
+            Install
             ;;
         [Nn] | [Nn][Oo]) ;;
         *)
-            echo -e "\n${WARN} 输入错误，默认不覆盖安装！\n"
+            echo -e "\n$WARN 输入错误，默认不覆盖安装！\n"
             ;;
         esac
         rm -rf $DockerVersionFile
     else
         RemoveOldVersion
-        DockerEngineInstall
+        Install
     fi
-    ConfigureImageAccelerator
+    ConfigureMirror
     systemctl stop docker >/dev/null 2>&1
     systemctl enable --now docker >/dev/null 2>&1
-}
-function DockerEngineInstall() {
-    if [[ ${DOCKER_VERSION_INSTALL_LATEST} == "True" ]]; then
-        case ${SYSTEM_FACTIONS} in
-        Debian)
-            apt-get install -y docker-ce docker-ce-cli containerd.io
-            ;;
-        RedHat)
-            yum install -y docker-ce docker-ce-cli containerd.io
-            ;;
-        esac
-    else
-        DockerEngineVersionList
-        echo -e "\n${GREEN} --------- 请选择你要安装的版本，如：19.03.15 ---------- ${PLAIN}\n"
-        cat $DockerVersionFile
-        echo -e '\n注：以上可供选择的安装版本由官方源提供，若系统过新可能无法安装较旧的版本'
-        while true; do
-            CHOICE_F=$(echo -e "\n${BOLD}└ 请根据上面的列表，输入你想要安装的具体版本号：${PLAIN}\n")
-            read -p "${CHOICE_F}" DOCKER_VERSION
-            echo ''
-            cat $DockerVersionFile | grep -Ew "${DOCKER_VERSION}" >/dev/null 2>&1
-            if [ $? -eq 0 ]; then
-                echo ${DOCKER_VERSION} | grep -Ew '[1,2][0,8,9].[0,1][0-9].[0-9]{1,2}' >/dev/null 2>&1
-                if [ $? -eq 0 ]; then
-                    rm -rf $DockerVersionFile
-                    break
-                else
-                    echo -e "${ERROR} 请输入正确的版本号！"
-                fi
-            else
-                echo -e "${ERROR} 输入错误请重新输入！"
-            fi
-        done
-        case ${SYSTEM_FACTIONS} in
-        Debian)
-            CheckVersion=$(echo ${DOCKER_VERSION} | cut -c1-2)
-            CheckSubversion=$(echo ${DOCKER_VERSION} | cut -c4-5)
-            case ${CheckVersion} in
-            21 | 20 | 19)
-                INSTALL_JUDGMENT="5:"
-                ;;
-            18)
-                if [ ${CheckSubversion} == "09" ]; then
-                    INSTALL_JUDGMENT="5:"
-                else
-                    INSTALL_JUDGMENT=""
-                fi
-                ;;
-            *)
-                INSTALL_JUDGMENT=""
-                ;;
-            esac
-            apt-get install -y docker-ce=${INSTALL_JUDGMENT}${DOCKER_VERSION}* docker-ce-cli=5:${DOCKER_VERSION}* containerd.io
-            ;;
-        RedHat)
-            yum install -y docker-ce-${DOCKER_VERSION} docker-ce-cli-${DOCKER_VERSION} containerd.io
-            ;;
-        esac
-    fi
-}
-
-## 修改 Docker Hub 源
-function ConfigureImageAccelerator() {
-    if [[ ${REGISTRY_SOURCE_OFFICIAL} == "False" ]]; then
-        if [ -d $DockerDir ] && [ -e $DockerConfig ]; then
-            if [ -e $DockerConfigBackup ]; then
-                CHOICE_BACKUP=$(echo -e "\n${BOLD}└ 检测到已备份的 Docker 配置文件，是否覆盖备份 [ Y/n ]：${PLAIN}")
-                read -p "${CHOICE_BACKUP}" INPUT
-                [ -z ${INPUT} ] && INPUT=Y
-                case $INPUT in
-                [Yy] | [Yy][Ee][Ss])
-                    cp -rf $DockerConfig $DockerConfigBackup >/dev/null 2>&1
-                    ;;
-                [Nn] | [Nn][Oo]) ;;
-                *)
-                    echo -e "\n${WARN} 输入错误，默认不覆盖！"
-                    ;;
-                esac
-            else
-                cp -rf $DockerConfig $DockerConfigBackup >/dev/null 2>&1
-                echo -e "\n${COMPLETE} 已备份原有 Docker 配置文件至 $DockerConfigBackup\n"
-            fi
-            sleep 2s
-        else
-            mkdir -p $DockerDir >/dev/null 2>&1
-            touch $DockerConfig
-        fi
-        echo -e '{\n  "registry-mirrors": ["https://SOURCE"]\n}' >$DockerConfig
-        sed -i "s/SOURCE/$REGISTRY_SOURCE/g" $DockerConfig
-        systemctl daemon-reload
-    fi
 }
 
 ## 安装 Docker Compose
@@ -444,7 +445,7 @@ function DockerCompose() {
             fi
             chmod +x $DockerCompose
         else
-            echo -e '\n[*] 由于本机非 x86 架构，开始通过 pip3 安装 Docker Compose ......\n'
+            echo -e "\n${WORKING} 由于本机非 x86 架构，开始通过 pip3 安装 Docker Compose ...\n"
             if [ ${SYSTEM_FACTIONS} = ${SYSTEM_DEBIAN} ]; then
                 apt-get install -y python3-pip python3-dev gcc libffi-dev openssl >/dev/null 2>&1
             elif [ ${SYSTEM_FACTIONS} = ${SYSTEM_REDHAT} ]; then
@@ -456,7 +457,7 @@ function DockerCompose() {
             else
                 pip3 install docker-compose
             fi
-            [ $? -ne 0 ] && echo -e "\n${ERROR} Docker Compose 安装失败\n\n检测到当前处理器架构为 ${ARCH} ，无法绝对保证安装成功，自行查看 pip 报错原因"
+            [ $? -ne 0 ] && echo -e "\n$ERROR Docker Compose 安装失败\n\n检测到当前处理器架构为 ${ARCH} ，无法绝对保证安装成功，自行查看 pip 报错原因"
         fi
     fi
     echo -e ''
@@ -469,9 +470,9 @@ function ShowVersion() {
     VERIFICATION_DOCKER=$?
     [[ ${DOCKER_COMPOSE} == "True" ]] && docker-compose -v
     if [ ${VERIFICATION_DOCKER} -eq 0 ]; then
-        echo -e "\n${SUCCESS} 安装完成"
+        echo -e "\n$COMPLETE 安装完成"
     else
-        echo -e "\n${ERROR} 安装失败"
+        echo -e "\n$ERROR 安装失败"
         case ${SYSTEM_FACTIONS} in
         Debian)
             echo -e "\n检查源文件： cat $DockerSourceList"
@@ -485,16 +486,14 @@ function ShowVersion() {
         esac
         exit
     fi
-    systemctl status docker | grep running -q
-    if [ $? -ne 0 ]; then
+    if [[ $(systemctl is-active docker) != "active" ]]; then
         sleep 2
         systemctl disable --now docker >/dev/null 2>&1
         sleep 2
         systemctl enable --now docker >/dev/null 2>&1
         sleep 2
-        systemctl status docker | grep running -q
-        if [ $? -ne 0 ]; then
-            echo -e "\n${ERROR} 检测到 Docker 服务启动异常，可能由于重复安装相同版本导致"
+        if [[ $(systemctl is-active docker) != "active" ]]; then
+            echo -e "\n$ERROR 检测到 Docker 服务启动异常，可能由于重复安装相同版本导致"
             echo -e "\n请执行 systemctl start docker 或 service docker start 命令尝试启动"
             echo -e "\n官方安装文档：https://docs.docker.com/engine/install"
         fi
@@ -551,14 +550,14 @@ function ChooseMirrors() {
     echo -e "        系统时间  $(date "+%Y-%m-%d %H:%M:%S")"
     echo -e ''
     echo -e '#####################################################'
-    CHOICE_A=$(echo -e "\n${BOLD}└ 请选择并输入你想使用的 Docker CE 源 [ 1~8 ]：${PLAIN}")
+    CHOICE_A=$(echo -e "\n${BOLD}└─ 请选择并输入你想使用的 Docker CE 源 [ 1~8 ]：${PLAIN}")
     read -p "${CHOICE_A}" INPUT
     case $INPUT in
     1)
         SOURCE="mirrors.aliyun.com/docker-ce"
         ;;
     2)
-        SOURCE="mirrors.cloud.tencent.com/docker-ce"
+        SOURCE="mirrors.tencent.com/docker-ce"
         ;;
     3)
         SOURCE="repo.huaweicloud.com/docker-ce"
@@ -580,12 +579,12 @@ function ChooseMirrors() {
         ;;
     *)
         SOURCE="mirrors.aliyun.com/docker-ce"
-        echo -e "\n${WARN} 输入错误，默认使用阿里云！"
+        echo -e "\n$WARN 输入错误，默认使用阿里云！"
         sleep 1s
         ;;
     esac
     ## 是否手动选择安装版本
-    CHOICE_C=$(echo -e "\n${BOLD}  └ 是否安装最新版本的 Docker Engine [ Y/n ]：${PLAIN}")
+    CHOICE_C=$(echo -e "\n  ${BOLD}└─ 是否安装最新版本的 Docker Engine? [Y/n] ${PLAIN}")
     read -p "${CHOICE_C}" INPUT
     [ -z ${INPUT} ] && INPUT=Y
     case $INPUT in
@@ -595,15 +594,15 @@ function ChooseMirrors() {
     [Nn] | [Nn][Oo])
         DOCKER_VERSION_INSTALL_LATEST="False"
         if [ ${SOURCE} != "download.docker.com" ]; then
-            echo -e "\n${WARN} Docker CE 源已替换成官方源！"
+            echo -e "\n$WARN Docker CE 源已替换成官方源！"
         fi
         ;;
     *)
         DOCKER_VERSION_INSTALL_LATEST="True"
-        echo -e "\n${WARN} 输入错误，默认安装最新版本！"
+        echo -e "\n$WARN 输入错误，默认安装最新版本！"
         ;;
     esac
-    CHOICE_B=$(echo -e "\n${BOLD}└ 请选择并输入你想使用的 Docker Hub 源 [ 1~12 ]：${PLAIN}")
+    CHOICE_B=$(echo -e "\n${BOLD}└─ 请选择并输入你想使用的 Docker Hub 源 [ 1~12 ]：${PLAIN}")
     read -p "${CHOICE_B}" INPUT
     case $INPUT in
     1)
@@ -657,21 +656,21 @@ function ChooseMirrors() {
     *)
         REGISTRY_SOURCE="registry.cn-hangzhou.aliyuncs.com"
         REGISTRY_SOURCE_OFFICIAL="False"
-        echo -e "\n${WARN} 输入错误，默认使用 ${BLUE}阿里云（杭州）${PLAIN}！"
+        echo -e "\n$WARN 输入错误，默认使用 ${BLUE}阿里云（杭州）${PLAIN}！"
         sleep 1s
         ;;
     esac
     if [ -x $DockerCompose ]; then
-        CHOICE_D=$(echo -e "\n${BOLD}└ 检测到已安装 Docker Compose ，是否覆盖安装 [ Y/n ]：${PLAIN}")
+        CHOICE_D=$(echo -e "\n${BOLD}└─ 检测到已安装 Docker Compose ，是否覆盖安装? [Y/n] ${PLAIN}")
     else
-        CHOICE_D=$(echo -e "\n${BOLD}└ 是否安装 Docker Compose [ Y/n ]：${PLAIN}")
+        CHOICE_D=$(echo -e "\n${BOLD}└─ 是否安装 Docker Compose? [Y/n] ${PLAIN}")
     fi
     read -p "${CHOICE_D}" INPUT
     [ -z ${INPUT} ] && INPUT=Y
     case $INPUT in
     [Yy] | [Yy][Ee][Ss])
         DOCKER_COMPOSE="True"
-        CHOICE_D1=$(echo -e "\n${BOLD}  └ 是否使用国内代理进行下载 [ Y/n ]：${PLAIN}")
+        CHOICE_D1=$(echo -e "\n  ${BOLD}└─ 是否使用国内代理进行下载? [Y/n] ${PLAIN}")
         read -p "${CHOICE_D1}" INPUT
         [ -z ${INPUT} ] && INPUT=Y
         case $INPUT in
@@ -683,7 +682,7 @@ function ChooseMirrors() {
             ;;
         *)
             DOCKER_COMPOSE_DOWNLOAD_PROXY="False"
-            echo -e "\n${WARN} 输入错误，默认不使用！\n"
+            echo -e "\n$WARN 输入错误，默认不使用！\n"
             ;;
         esac
         ;;
@@ -692,12 +691,12 @@ function ChooseMirrors() {
         ;;
     *)
         DOCKER_COMPOSE="False"
-        echo -e "\n${WARN} 输入错误，默认不安装！\n"
+        echo -e "\n$WARN 输入错误，默认不安装！\n"
         ;;
     esac
     echo -e ''
 
-    [ ${SYSTEM_FACTIONS} == ${SYSTEM_REDHAT} ] && TurnOffFirewall
+    [ ${SYSTEM_FACTIONS} == ${SYSTEM_REDHAT} ] && CloseFirewall
 }
 
 Combin_Function
