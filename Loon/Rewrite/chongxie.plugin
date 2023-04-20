@@ -1,3 +1,8 @@
+#!name = 重写去广告去广告
+#!desc = 收录常用软件的去广告
+#!open= 
+#!author = fmz200
+
 #############################################
 # 重写作用：针对部分APP开屏广告，应用内广告进行拦截
 # 重要提示：某些APP要清除缓存或者重新安装APP，拦截广告才会生效！
@@ -21,7 +26,6 @@
 # 2️⃣：有些常用的软件为什么没有去广告配置？
 # ✅：如果要利用重写去广告，就需要对请求或响应信息进行解密(MITM)，现在一些软件已经禁止了MITM，所以就无法去广告。
 #############################################
-
 
 
 [Rewrite]
@@ -445,7 +449,7 @@ http:\/\/analytics\.163\.com\/ntes reject
 
 [Script]
 # > 12306
-http-response ^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList script-path = https://raw.githubusercontent.com/kokoryh/Script/master/js/12306.js, requires-body = true, tag = 12306去广告
+http-request ^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList script-path=https://raw.githubusercontent.com/kokoryh/Script/master/js/12306.js, requires-body=true, timeout=10, tag=12306
 
 
 [MITM]
