@@ -1,0 +1,32 @@
+#!name=IP隐藏
+#!desc=IP隐藏
+# 针对部分网站显示IP归属地的QuantumultX分流规则
+
+
+# ======= 微博 ======= #
+DOMAIN,api.weibo.cn,IP
+DOMAIN,api.weibo.com,IP 
+DOMAIN-SUFFIX,weibocdn.com,IP 
+DOMAIN-KEYWORD,weibo,IP 
+
+# ======= 抖音 ======= #
+# 需要家宽IP才可生效
+DOMAIN-KEYWORD,core-c-lq,IP
+DOMAIN-KEYWORD,core-lq,IP
+DOMAIN-KEYWORD,normal-c-lq,IP
+DOMAIN-KEYWORD,normal-lq,IP
+DOMAIN-KEYWORD,search-quic-lq,IP
+DOMAIN-KEYWORD,search-lq,IP
+
+# ======= 头条 ======= #
+DOMAIN-SUFFIX,toutiaoapi.com,IP
+
+# ======= 快手 ======= #
+DOMAIN-SUFFIX,gifshow.com,IP
+DOMAIN-SUFFIX,ksapisrv.com,IP
+
+# ======= 小红书 ======= #
+DOMAIN-SUFFIX,xiaohongshu.com,IP
+
+# ======= 西瓜视频 ======= #
+DOMAIN-SUFFIX,ixigua.com,IP
