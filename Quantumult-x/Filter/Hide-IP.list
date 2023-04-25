@@ -3,20 +3,20 @@
 # 针对部分网站显示IP归属地的QuantumultX分流规则
 
 
-HOST-SUFFIX,weibo.cn
-HOST-SUFFIX,weibo.com
-HOST-SUFFIX,weibocdn.com
-HOST-SUFFIX,weibo
+HOST-SUFFIX,weibo.cn,Weibo
+HOST-SUFFIX,weibo.com,Weibo
+HOST-SUFFIX,weibocdn.com,Weibo
+HOST-SUFFIX,weibo,Weibo
 
 
-HOST-SUFFIX,amemv.com
-HOST-SUFFIX,douyincdn.com
-HOST-SUFFIX,douyinpic.com
-HOST-SUFFIX,douyinstatic.com
-HOST-SUFFIX,douyinvod.com
-HOST-SUFFIX,idouyinvod.com
-HOST-SUFFIX,ixigua.com
-HOST-SUFFIX,ixiguavideo.com
-HOST-SUFFIX,pstatp.com
-HOST-SUFFIX,snssdk.com
-HOST-SUFFIX,toutiao.com
+HOST-SUFFIX,amemv.com,douyin
+HOST-SUFFIX,douyincdn.com,douyin
+HOST-SUFFIX,douyinpic.com,douyin
+HOST-SUFFIX,douyinstatic.com,douyin
+HOST-SUFFIX,douyinvod.com,douyin
+HOST-SUFFIX,idouyinvod.com,douyin
+HOST-SUFFIX,ixigua.com,douyin
+HOST-SUFFIX,ixiguavideo.com,douyin
+HOST-SUFFIX,pstatp.com,douyin
+HOST-SUFFIX,snssdk.com,douyin
+HOST-SUFFIX,toutiao.com,douyin
