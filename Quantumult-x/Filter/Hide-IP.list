@@ -2,6 +2,8 @@
 #!desc=IP隐藏
 # 针对部分网站显示IP归属地的QuantumultX分流规则
 # 原项目地址：https://github.com/lwd-temp/anti-ip-attribution
+# 更新时间：2023-05-07
+
 
 # 微博
 DOMAIN-SUFFIX,weibo.cn,IP
