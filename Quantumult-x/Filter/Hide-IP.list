@@ -2,38 +2,38 @@
 #!desc=IP隐藏
 # 针对部分网站显示IP归属地的QuantumultX分流规则
 # 原项目地址：https://github.com/lwd-temp/anti-ip-attribution
-# 更新时间：2023-05-07
+# 更新时间：2023-05-11
 
 
 # 微博
-DOMAIN-SUFFIX,weibo.cn,IP
-DOMAIN-SUFFIX,weibo.com,IP
-DOMAIN-SUFFIX,weibocdn.com,IP
-DOMAIN-KEYWORD,weibo,IP
+host-suffix,weibo.cn,IP
+host-suffix,weibo.com,IP
+host-suffix,weibocdn.com,IP
+host-keyword,weibo,IP
 
 # 字节
-DOMAIN-KEYWORD,core-c-lq,IP
-DOMAIN-KEYWORD,core-lq,IP
-DOMAIN-KEYWORD,normal-c-lq,IP
-DOMAIN-KEYWORD,normal-lq,IP
-DOMAIN-KEYWORD,search-quic-lq,IP
-DOMAIN-KEYWORD,search-lq,IP
-DOMAIN-SUFFIX,zijieapi.com,DIRECT
-DOMAIN-SUFFIX,ecombdapi.com,DIRECT
-DOMAIN-KEYWORD,-normal-hl,IP
-DOMAIN-KEYWORD,-normal-c-hl,IP
-DOMAIN-KEYWORD,-core-c-hl,IP
-DOMAIN-KEYWORD,-normal-lf,IP
-DOMAIN-KEYWORD,-normal-c-lf,IP
-DOMAIN-KEYWORD,-core-c-lf,IP
-DOMAIN,sso.douyin.com,IP
-DOMAIN,www.douyin.com,IP
-DOMAIN-SUFFIX,snssdk.com,IP
-DOMAIN-SUFFIX,toutiaoapi.com,IP
+host-keyword,core-c-lq,IP
+host-keyword,core-lq,IP
+host-keyword,normal-c-lq,IP
+host-keyword,normal-lq,IP
+host-keyword,search-quic-lq,IP
+host-keyword,search-lq,IP
+host-suffix,zijieapi.com,DIRECT
+host-suffix,ecombdapi.com,DIRECT
+host-keyword,-normal-hl,IP
+host-keyword,-normal-c-hl,IP
+host-keyword,-core-c-hl,IP
+host-keyword,-normal-lf,IP
+host-keyword,-normal-c-lf,IP
+host-keyword,-core-c-lf,IP
+host,sso.douyin.com,IP
+host,www.douyin.com,IP
+host-suffix,snssdk.com,IP
+host-suffix,toutiaoapi.com,IP
 
 # 快手
-DOMAIN-SUFFIX,gifshow.com,IP
-DOMAIN-SUFFIX,ksapisrv.com,IP
+host-suffix,gifshow.com,IP
+host-suffix,ksapisrv.com,IP
 
 # 小红书
-DOMAIN-SUFFIX,xiaohongshu.com,IP
+host-suffix,xiaohongshu.com,IP
