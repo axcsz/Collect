@@ -1,74 +1,74 @@
 # China Area Network
-DOMAIN-SUFFIX,flyert.com
-DOMAIN-SUFFIX,gandi.net
-DOMAIN-SUFFIX,snapdrop.net
-DOMAIN,download.jetbrains.com
-DOMAIN,origin-a.akamaihd.net // Origin Download
+HOST-SUFFIX,flyert.com
+HOST-SUFFIX,gandi.net
+HOST-SUFFIX,snapdrop.net
+HOST,download.jetbrains.com
+HOST,origin-a.akamaihd.net // Origin Download
 # ---(Microsoft)---
 # > Outlook
-DOMAIN,outlook.office365.com
-DOMAIN,smtp-mail.outlook.com
-DOMAIN,smtp.office365.com
+HOST,outlook.office365.com
+HOST,smtp-mail.outlook.com
+HOST,smtp.office365.com
 # > Windows Server Update Services
-DOMAIN-SUFFIX,dl.delivery.mp.microsoft.com
-DOMAIN-SUFFIX,update.microsoft.com
-DOMAIN-SUFFIX,windowsupdate.com
-DOMAIN-SUFFIX,windowsupdate.microsoft.com
-DOMAIN,download.microsoft.com
-DOMAIN,wustat.windows.com
-DOMAIN,ntservicepack.microsoft.com
+HOST-SUFFIX,dl.delivery.mp.microsoft.com
+HOST-SUFFIX,update.microsoft.com
+HOST-SUFFIX,windowsupdate.com
+HOST-SUFFIX,windowsupdate.microsoft.com
+HOST,download.microsoft.com
+HOST,wustat.windows.com
+HOST,ntservicepack.microsoft.com
 # ------
 # > PayPal
-DOMAIN-SUFFIX,paypal.com
-DOMAIN-SUFFIX,paypal.me
-DOMAIN-SUFFIX,paypal-mktg.com
-DOMAIN-SUFFIX,paypalobjects.com
+HOST-SUFFIX,paypal.com
+HOST-SUFFIX,paypal.me
+HOST-SUFFIX,paypal-mktg.com
+HOST-SUFFIX,paypalobjects.com
 # > Steam
-DOMAIN-SUFFIX,cm.steampowered.com // Steam Connect Manager Servers
-DOMAIN-SUFFIX,steamserver.net
+HOST-SUFFIX,cm.steampowered.com // Steam Connect Manager Servers
+HOST-SUFFIX,steamserver.net
 # > Tencent
 IP-CIDR,182.254.116.0/24,no-resolve
 IP-CIDR,203.205.238.0/23,no-resolve
 IP-CIDR,203.205.254.0/23,no-resolve
 # > IP Query
-DOMAIN,ip.istatmenus.app
-DOMAIN,sms.imagetasks.com
+HOST,ip.istatmenus.app
+HOST,sms.imagetasks.com
 # > Speed Test
-DOMAIN-SUFFIX,netspeedtestmaster.com
-DOMAIN,speedtest.macpaw.com
+HOST-SUFFIX,netspeedtestmaster.com
+HOST,speedtest.macpaw.com
 # > Private Tracker
-DOMAIN-SUFFIX,acg.rip
-DOMAIN-SUFFIX,animebytes.tv
-DOMAIN-SUFFIX,awesome-hd.me
-DOMAIN-SUFFIX,broadcasthe.net
-DOMAIN-SUFFIX,chdbits.co
-DOMAIN-SUFFIX,classix-unlimited.co.uk
-DOMAIN-SUFFIX,comicat.org
-DOMAIN-SUFFIX,empornium.me
-DOMAIN-SUFFIX,gazellegames.net
-DOMAIN-SUFFIX,hdbits.org
-DOMAIN-SUFFIX,hdchina.org
-DOMAIN-SUFFIX,hddolby.com
-DOMAIN-SUFFIX,hdhome.org
-DOMAIN-SUFFIX,hdsky.me
-DOMAIN-SUFFIX,icetorrent.org
-DOMAIN-SUFFIX,jpopsuki.eu
-DOMAIN-SUFFIX,keepfrds.com
-DOMAIN-SUFFIX,madsrevolution.net
-DOMAIN-SUFFIX,morethan.tv
-DOMAIN-SUFFIX,m-team.cc
-DOMAIN-SUFFIX,myanonamouse.net
-DOMAIN-SUFFIX,nanyangpt.com
-DOMAIN-SUFFIX,ncore.cc
-DOMAIN-SUFFIX,open.cd
-DOMAIN-SUFFIX,ourbits.club
-DOMAIN-SUFFIX,passthepopcorn.me
-DOMAIN-SUFFIX,privatehd.to
-DOMAIN-SUFFIX,pterclub.com
-DOMAIN-SUFFIX,redacted.ch
-DOMAIN-SUFFIX,springsunday.net
-DOMAIN-SUFFIX,tjupt.org
-DOMAIN-SUFFIX,totheglory.im
+HOST-SUFFIX,acg.rip
+HOST-SUFFIX,animebytes.tv
+HOST-SUFFIX,awesome-hd.me
+HOST-SUFFIX,broadcasthe.net
+HOST-SUFFIX,chdbits.co
+HOST-SUFFIX,classix-unlimited.co.uk
+HOST-SUFFIX,comicat.org
+HOST-SUFFIX,empornium.me
+HOST-SUFFIX,gazellegames.net
+HOST-SUFFIX,hdbits.org
+HOST-SUFFIX,hdchina.org
+HOST-SUFFIX,hddolby.com
+HOST-SUFFIX,hdhome.org
+HOST-SUFFIX,hdsky.me
+HOST-SUFFIX,icetorrent.org
+HOST-SUFFIX,jpopsuki.eu
+HOST-SUFFIX,keepfrds.com
+HOST-SUFFIX,madsrevolution.net
+HOST-SUFFIX,morethan.tv
+HOST-SUFFIX,m-team.cc
+HOST-SUFFIX,myanonamouse.net
+HOST-SUFFIX,nanyangpt.com
+HOST-SUFFIX,ncore.cc
+HOST-SUFFIX,open.cd
+HOST-SUFFIX,ourbits.club
+HOST-SUFFIX,passthepopcorn.me
+HOST-SUFFIX,privatehd.to
+HOST-SUFFIX,pterclub.com
+HOST-SUFFIX,redacted.ch
+HOST-SUFFIX,springsunday.net
+HOST-SUFFIX,tjupt.org
+HOST-SUFFIX,totheglory.im
 
 # Just for Quantumult X, move GEOIP,CN to the bottom (local filter at the top by default)
 GEOIP,CN,no-resolve
