@@ -1,0 +1,19 @@
+# > bilibili
+HOST,api.biliapi.com
+HOST,api.biliapi.net
+HOST,api.bilibili.com
+HOST,app.biliapi.com
+HOST,app.biliapi.net
+HOST,app.bilibili.com
+HOST,grpc.biliapi.net
+HOST,m.bilibili.com
+HOST,upos-hz-mirrorakam.akamaized.net
+HOST,www.bilibili.com
+HOST-KEYWORD,cn-hk-eq-bcache-
+# > 愛奇藝台灣站
+HOST,cache.video.iqiyi.com
+IP-CIDR,116.211.202.206/32,no-resolve
+IP-CIDR,116.211.202.216/32,no-resolve
+# > MangoTV(芒果TV国际)
+HOST-SUFFIX,api.mgtv.com
+HOST,mobileso.bz.mgtv.com
