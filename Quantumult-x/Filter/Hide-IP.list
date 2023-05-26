@@ -6,34 +6,34 @@
 
 
 # 微博
-host-suffix,weibo.cn,IP
-host-suffix,weibo.com,IP
-host-suffix,weibocdn.com,IP
-host-keyword,weibo,IP
+HOST-SUFFIX,weibo.cn,IP
+HOST-SUFFIX,weibo.com,IP
+HOST-SUFFIX,weibocdn.com,IP
+HOST-KEYWORD,weibo,IP
 
 # 字节
-host-keyword,core-c-lq,IP
-host-keyword,core-lq,IP
-host-keyword,normal-c-lq,IP
-host-keyword,normal-lq,IP
-host-keyword,search-quic-lq,IP
-host-keyword,search-lq,IP
-host-suffix,zijieapi.com,DIRECT
-host-suffix,ecombdapi.com,DIRECT
-host-keyword,-normal-hl,IP
-host-keyword,-normal-c-hl,IP
-host-keyword,-core-c-hl,IP
-host-keyword,-normal-lf,IP
-host-keyword,-normal-c-lf,IP
-host-keyword,-core-c-lf,IP
-host,sso.douyin.com,IP
-host,www.douyin.com,IP
-host-suffix,snssdk.com,IP
-host-suffix,toutiaoapi.com,IP
+HOST-KEYWORD,core-c-lq,IP
+HOST-KEYWORD,core-lq,IP
+HOST-KEYWORD,normal-c-lq,IP
+HOST-KEYWORD,normal-lq,IP
+HOST-KEYWORD,search-quic-lq,IP
+HOST-KEYWORD,search-lq,IP
+HOST-SUFFIX,zijieapi.com,DIRECT
+HOST-SUFFIX,ecombdapi.com,DIRECT
+HOST-KEYWORD,-normal-hl,IP
+HOST-KEYWORD,-normal-c-hl,IP
+HOST-KEYWORD,-core-c-hl,IP
+HOST-KEYWORD,-normal-lf,IP
+HOST-KEYWORD,-normal-c-lf,IP
+HOST-KEYWORD,-core-c-lf,IP
+HOST,sso.douyin.com,IP
+HOST,www.douyin.com,IP
+HOST-SUFFIX,snssdk.com,IP
+HOST-SUFFIX,toutiaoapi.com,IP
 
 # 快手
-host-suffix,gifshow.com,IP
-host-suffix,ksapisrv.com,IP
+HOST-SUFFIX,gifshow.com,IP
+HOST-SUFFIX,ksapisrv.com,IP
 
 # 小红书
-host-suffix,xiaohongshu.com,IP
+HOST-SUFFIX,xiaohongshu.com,IP
