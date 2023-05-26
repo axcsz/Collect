@@ -1,0 +1,65 @@
+# (Video)
+# > Acfun
+HOST-SUFFIX,acfun.cn
+HOST-SUFFIX,aixifan.com
+# > bilibili
+HOST-SUFFIX,biliapi.net
+HOST-SUFFIX,bilibili.com
+HOST-SUFFIX,bilivideo.com
+HOST-SUFFIX,hdslb.com
+# > Tencent Video
+HOST-SUFFIX,video.qq.com
+HOST-SUFFIX,i.qq.com
+HOST-SUFFIX,v.qq.com
+# > iQiyi
+HOST-SUFFIX,iqiyi.com
+HOST-SUFFIX,71edge.com
+# > Youku
+HOST-SUFFIX,soku.com
+HOST-SUFFIX,youku.com
+HOST-SUFFIX,ykimg.com
+# > XiGua
+HOST-SUFFIX,ixigua.com
+HOST-SUFFIX,snssdk.com
+# > HunanTV
+HOST-SUFFIX,hitv.com
+HOST-SUFFIX,hunantv.com
+HOST-SUFFIX,mgtv.com
+# > Le
+HOST-SUFFIX,le.com
+# > PPLive
+HOST-SUFFIX,pplive.cn
+HOST-SUFFIX,pptv.com
+# > Sohu Video
+HOST-SUFFIX,itc.cn
+HOST-SUFFIX,sohu.com
+# > Migu Video
+HOST-SUFFIX,cmvideo.cn
+HOST-SUFFIX,miguvideo.com
+
+# (Music)
+# > QQ Music
+HOST-SUFFIX,music.qq.com
+HOST-SUFFIX,music.tc.qq.com
+HOST-SUFFIX,qqmusic.qq.com
+HOST-SUFFIX,tencentmusic.com
+HOST-SUFFIX,y.qq.com
+HOST,aqqmusic.tc.qq.com
+HOST,moo.qq.com
+# > China Music Corp
+HOST-SUFFIX,kuwo.cn
+HOST-SUFFIX,kugou.com
+# > Netease Cloud Music
+HOST-SUFFIX,music.163.com
+HOST-SUFFIX,music.126.net
+HOST,mam.netease.com
+HOST,api.iplay.163.com
+# > Qianqian Music
+HOST-SUFFIX,qianqian.com
+HOST-SUFFIX,taihe.com
+# > Migu Music
+HOST-SUFFIX,migu.cn
+# > Xiaomi
+HOST-SUFFIX,ai.xiaomi.com
+HOST-SUFFIX,music.xiaomi.com
+HOST-SUFFIX,dmhmusic.com
