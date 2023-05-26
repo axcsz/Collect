@@ -1,0 +1,340 @@
+# Streaming Media
+
+# (Live)
+# > Twitch
+HOST-SUFFIX,ext-twitch.tv
+HOST-SUFFIX,jtvnw.net
+HOST-SUFFIX,ttvnw.net
+HOST-SUFFIX,twitch.tv
+HOST-SUFFIX,twitchcdn.net
+HOST-SUFFIX,twitch-ext.rootonline.de
+
+# (Music)
+# > Deezer
+USER-AGENT,Deezer*
+HOST-SUFFIX,deezer.com
+HOST-SUFFIX,dzcdn.net
+# > JOOX
+USER-AGENT,JOOX*
+USER-AGENT,WeMusic*
+HOST-SUFFIX,joox.com
+HOST-KEYWORD,jooxweb-api
+# > KKBOX
+HOST-SUFFIX,kkbox.com
+HOST-SUFFIX,kkbox.com.tw
+HOST-SUFFIX,kfs.io
+# > Pandora
+USER-AGENT,Pandora*
+HOST-SUFFIX,pandora.com
+# > SoundCloud
+USER-AGENT,SoundCloud*
+HOST-SUFFIX,p-cdn.us
+HOST-SUFFIX,sndcdn.com
+HOST-SUFFIX,soundcloud.com
+# > Spotify
+USER-AGENT,Spotify*
+HOST-SUFFIX,pscdn.co
+HOST-SUFFIX,scdn.co
+HOST-SUFFIX,spotify.com
+HOST-SUFFIX,spoti.fi
+HOST-KEYWORD,spotify.com
+HOST-KEYWORD,-spotify-com
+# > TIDAL
+USER-AGENT,TIDAL*
+HOST-SUFFIX,tidal.com
+# > YouTubeMusic
+USER-AGENT,com.google.ios.youtubemusic*
+USER-AGENT,YouTubeMusic*
+
+# (Podcast)
+# > Himalaya
+USER-AGENT,Himalaya*
+HOST-SUFFIX,himalaya.com
+# > Overcast
+USER-AGENT,Overcast*
+HOST-SUFFIX,overcast.fm
+
+# (Video)
+# > AbemaTV
+USER-AGENT,AbemaTV*
+HOST-SUFFIX,abema.io
+HOST-SUFFIX,abema.tv
+HOST-SUFFIX,abema-tv.com
+HOST-SUFFIX,ameba.jp
+HOST-SUFFIX,hayabusa.io
+HOST-SUFFIX,hayabusa.media
+HOST,api-abematv.bucketeer.jp
+HOST-KEYWORD,abematv.akamaized.net
+# > All 4
+USER-AGENT,All4*
+HOST-SUFFIX,c4assets.com
+HOST-SUFFIX,channel4.com
+# > Amazon Prime Video
+USER-AGENT,InstantVideo.US*
+USER-AGENT,Prime%20Video*
+HOST-SUFFIX,aiv-cdn.net
+HOST-SUFFIX,aiv-delivery.net
+HOST-SUFFIX,amazonvideo.com
+HOST-SUFFIX,media-amazon.com
+HOST-SUFFIX,primevideo.com
+HOST-SUFFIX,pv-cdn.net
+HOST,atv-ps.amazon.com
+HOST,fls-na.amazon.com
+HOST,avodmp4s3ww-a.akamaihd.net
+HOST,d25xi40x97liuc.cloudfront.net
+HOST,dmqdd6hw24ucf.cloudfront.net
+HOST,dmqdd6hw24ucf.cloudfront.net
+HOST,d22qjgkvxw22r6.cloudfront.net
+HOST,d1v5ir2lpwr8os.cloudfront.net
+HOST,d27xxe7juh1us6.cloudfront.net
+# HOST,www.amazon.com
+HOST-KEYWORD,avoddashs
+# > Apple Music TV
+HOST,tv.applemusic.com
+# > Apple TV
+HOST,linear.tv.apple.com
+HOST,play-edge.itunes.apple.com
+HOST,uts-api.itunes.apple.com
+# > Bahamut
+USER-AGENT,Anime*
+HOST-SUFFIX,bahamut.com.tw
+HOST-SUFFIX,gamer.com.tw
+HOST,bahamut.akamaized.net
+HOST,gamer-cds.cdn.hinet.net
+HOST,gamer2-cds.cdn.hinet.net
+# > BBC iPlayer
+USER-AGENT,BBCiPlayer*
+HOST-SUFFIX,bbc.co.uk
+HOST-SUFFIX,bbci.co.uk
+HOST-KEYWORD,bbcfmt
+HOST-KEYWORD,uk-live
+# > bilibili Intl
+HOST-SUFFIX,biliintl.com
+HOST,apm-misaka.biliapi.net
+HOST,p.bstarstatic.com
+HOST,p-bstarstatic.akamaized.net
+HOST,upos-bstar-mirrorakam.akamaized.net
+HOST,upos-bstar1-mirrorakam.akamaized.net
+# > DAZN
+USER-AGENT,DAZN*
+HOST-SUFFIX,dazn.com
+HOST-SUFFIX,dazn-api.com
+HOST-SUFFIX,dazndn.com
+HOST-SUFFIX,indazn.com
+HOST,d151l6v8er5bdm.cloudfront.net
+HOST-KEYWORD,voddazn
+# > discovery+
+USER-AGENT,DPlus*
+USER-AGENT,discovery+*
+HOST-SUFFIX,disco-api.com
+HOST-SUFFIX,discoveryplus.co.uk
+HOST-SUFFIX,discoveryplus.com
+HOST-SUFFIX,discoveryplus.in
+HOST-SUFFIX,dnitv.com
+# HOST,go-prod-vz.akamaized.net
+HOST,x-default-stgec.uplynk.com
+HOST-KEYWORD,discovery.uplynk.com
+# > Disney+
+USER-AGENT,Disney+*
+HOST-SUFFIX,bamgrid.com
+HOST-SUFFIX,disneyplus.com
+HOST-SUFFIX,disney-plus.net
+HOST-SUFFIX,disneystreaming.com
+HOST-SUFFIX,dssott.com
+HOST,cdn.registerdisney.go.com
+# > DMM
+HOST-SUFFIX,dmm.co.jp
+HOST-SUFFIX,dmm.com
+HOST-SUFFIX,dmm-extension.com
+# > encoreTVB
+USER-AGENT,encoreTVB*
+HOST-SUFFIX,encoretvb.com
+HOST,edge.api.brightcove.com
+HOST,bcbolt446c5271-a.akamaihd.net
+# > Hami Video
+HOST-SUFFIX,ott.hinet.net
+HOST-SUFFIX,hamivideo.hinet.net
+HOST,hls-hichannel.cdn.hinet.net
+HOST-KEYWORD,hamivideo.cdn.hinet.net
+# > HBO NOW & Max
+USER-AGENT,HBO%20NOW*
+HOST-SUFFIX,hbo.com
+HOST-SUFFIX,hbogo.com
+HOST-SUFFIX,hbonow.com
+USER-AGENT,HBOMAX*
+HOST-SUFFIX,hbomax.com
+HOST-SUFFIX,hbomaxcdn.com
+# > HBO Asia
+USER-AGENT,HBO%20GO%20PROD*
+HOST-SUFFIX,hbogoasia.com
+HOST-SUFFIX,hbogoasia.hk
+HOST-KEYWORD,.hbogoasia.
+HOST,44wilhpljf.execute-api.ap-southeast-1.amazonaws.com
+HOST,bcbolthboa-a.akamaihd.net
+HOST,cf-images.ap-southeast-1.prod.boltdns.net
+HOST,dai3fd1oh325y.cloudfront.net
+HOST,hboasia1-i.akamaihd.net
+HOST,hboasia2-i.akamaihd.net
+HOST,hboasia3-i.akamaihd.net
+HOST,hboasia4-i.akamaihd.net
+HOST,hboasia5-i.akamaihd.net
+HOST,hboasialive.akamaized.net
+HOST,hbogoprod-vod.akamaized.net
+HOST,hbolb.onwardsmg.com
+HOST,hbounify-prod.evergent.com
+HOST,players.brightcove.net
+HOST,s3-ap-southeast-1.amazonaws.com
+# > 华文电视
+USER-AGENT,HWTVMobile*
+HOST-SUFFIX,5itv.tv
+HOST-SUFFIX,ocnttv.com
+# > Hulu
+HOST-SUFFIX,hulu.com
+HOST-SUFFIX,huluim.com
+HOST-SUFFIX,hulustream.com
+# > Hulu / フールー
+HOST-SUFFIX,happyon.jp
+HOST-SUFFIX,hjholdings.jp
+HOST-SUFFIX,hulu.jp
+# > ITV
+USER-AGENT,ITV_Player*
+HOST-SUFFIX,itv.com
+HOST-SUFFIX,itvstatic.com
+HOST,itvpnpmobile-a.akamaihd.net
+# > iQIYI
+HOST-SUFFIX,iq.com
+HOST,intl.iqiyi.com
+HOST,intl-rcd.iqiyi.com
+HOST,intl-subscription.iqiyi.com
+IP-CIDR,23.53.32.88/32,no-resolve
+IP-CIDR,23.211.15.99/32,no-resolve
+IP-CIDR,103.5.34.153/32,no-resolve
+IP-CIDR,104.109.129.153/32,no-resolve
+IP-CIDR,110.238.107.47/32,no-resolve
+IP-CIDR,118.26.32.178/32,no-resolve
+IP-CIDR,203.74.95.131/32,no-resolve
+IP-CIDR,203.74.95.139/32,no-resolve
+IP-CIDR,203.74.95.153/32,no-resolve
+IP-CIDR,203.211.4.169/32,no-resolve
+IP-CIDR,203.211.4.193/32,no-resolve
+IP-CIDR,210.71.227.200/32,no-resolve
+IP-CIDR,210.71.227.202/32,no-resolve
+IP-CIDR,210.201.32.8/32,no-resolve
+IP-CIDR,210.201.32.11/32,no-resolve
+# > KKTV
+USER-AGENT,KKTV*
+USER-AGENT,com.kktv.ios.kktv*
+HOST-SUFFIX,kktv.com.tw
+HOST-SUFFIX,kktv.me
+HOST,kktv-theater.kk.stream
+HOST,theater-kktv.cdn.hinet.net
+# > LINE TV
+USER-AGENT,LINE%20TV*
+HOST-SUFFIX,linetv.tw
+HOST,d3c7rimkq79yfu.cloudfront.net
+# > LiTV
+HOST-SUFFIX,litv.tv
+HOST,litvfreemobile-hichannel.cdn.hinet.net
+# > My5
+USER-AGENT,My5*
+HOST-SUFFIX,channel5.com
+HOST-SUFFIX,my5.tv
+HOST,d349g9zuie06uo.cloudfront.net
+# > myTV SUPER
+USER-AGENT,mytv*
+HOST-SUFFIX,mytvsuper.com
+HOST-SUFFIX,tvb.com
+# > Naver TV
+USER-AGENT,Naver%20TV*
+HOST-SUFFIX,naver.com
+HOST-SUFFIX,smartmediarep.com
+# > Netflix
+USER-AGENT,Argo*
+HOST-SUFFIX,netflix.com
+HOST-SUFFIX,netflix.net
+HOST-SUFFIX,nflxext.com
+HOST-SUFFIX,nflximg.com
+HOST-SUFFIX,nflximg.net
+HOST-SUFFIX,nflxso.net
+HOST-SUFFIX,nflxvideo.net
+HOST-KEYWORD,netflixdnstest
+HOST-KEYWORD,apiproxy-device-prod-nlb-
+HOST-KEYWORD,dualstack.apiproxy-
+# GEOIP,NETFLIX,no-resolve
+# > niconico
+USER-AGENT,Niconico*
+HOST-SUFFIX,dmc.nico
+HOST-SUFFIX,nicovideo.jp
+HOST-SUFFIX,nimg.jp
+# > Now E
+HOST-SUFFIX,nowe.com
+HOST-SUFFIX,nowestatic.com
+# > Paramount+
+USER-AGENT,PPlus*
+HOST-SUFFIX,cbsi.com
+HOST-SUFFIX,cbsaavideo.com
+HOST-SUFFIX,cbsivideo.com
+HOST-SUFFIX,paramountplus.com
+HOST-SUFFIX,pplusstatic.com
+HOST,cbsi.live.ott.irdeto.com
+HOST,cbsplaylistserver.aws.syncbak.com
+HOST,cbsservice.aws.syncbak.com
+HOST,link.theplatform.com
+# > PBS
+USER-AGENT,PBS*
+HOST-SUFFIX,pbs.org
+# > Peacock
+USER-AGENT,PeacockMobile*
+HOST-SUFFIX,peacocktv.com
+# > Pornhub
+HOST-SUFFIX,phncdn.com
+HOST-SUFFIX,phprcdn.com
+HOST-SUFFIX,pornhub.com
+HOST-SUFFIX,pornhubpremium.com
+# > 台湾好
+USER-AGENT,TaiwanGood*
+HOST-SUFFIX,skyking.com.tw
+HOST,hamifans.emome.net
+# > TikTok
+USER-AGENT,TikTok*
+HOST-SUFFIX,byteoversea.com
+HOST-SUFFIX,ibytedtos.com
+HOST-SUFFIX,muscdn.com
+HOST-SUFFIX,musical.ly
+HOST-SUFFIX,tiktok.com
+HOST-SUFFIX,tik-tokapi.com
+HOST-SUFFIX,tiktokcdn.com
+HOST-SUFFIX,tiktokv.com
+HOST-KEYWORD,tiktokcdn-
+# > TVer
+USER-AGENT,TVer-Release*
+HOST-SUFFIX,tver.jp
+HOST,edge.api.brightcove.com
+# > ViuTV
+USER-AGENT,Viu*
+HOST-SUFFIX,viu.com
+HOST-SUFFIX,viu.tv
+HOST,api.viu.now.com
+HOST,d1k2us671qcoau.cloudfront.net
+HOST,d2anahhhmp1ffz.cloudfront.net
+HOST,dfp6rglgjqszk.cloudfront.net
+# > WeTV
+USER-AGENT,WeTV*
+HOST-SUFFIX,wetv.vip
+HOST-SUFFIX,wetvinfo.com
+IP-CIDR,150.109.28.51/32,no-resolve
+# > YouTube
+USER-AGENT,com.google.ios.youtube*
+USER-AGENT,YouTube*
+HOST-SUFFIX,googlevideo.com
+HOST-SUFFIX,withyoutube.com
+HOST-SUFFIX,youtu.be
+HOST-SUFFIX,youtube.com
+HOST-SUFFIX,youtubeeducation.com
+HOST-SUFFIX,youtubegaming.com
+HOST-SUFFIX,youtubekids.com
+HOST-SUFFIX,youtube-nocookie.com
+HOST-SUFFIX,yt.be
+HOST-SUFFIX,ytimg.com
+HOST,youtubei.googleapis.com
+HOST,yt3.ggpht.com
