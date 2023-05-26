@@ -1,8 +1,7 @@
-#!name=广告拦截合集
-#!desc=(F)针对部分APP开屏广告，应用内广告进行拦截，某些APP要清除缓存或者重新安装APP，拦截广告才会生效！
-#!author=fmz200
-#!homepage=https://github.com/fmz200/wool_scripts
-#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/author/NaiSi_01.png
+#TITLE=广告拦截合集
+#VER=20230526023258
+#URL=https://github.com/fmz200/wool_scripts
+
 
 
 
