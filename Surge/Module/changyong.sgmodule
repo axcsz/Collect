@@ -27,7 +27,8 @@
 # ✅：如果要利用重写去广告，就需要对请求或响应信息进行解密(MITM)，现在一些软件已经禁止了MITM，所以就无法去广告。
 #############################################
 
-hostname = ad.12306.cn, intl.iqiyi.com, act.vip.iqiyi.com
+[MITM]
+hostname = %INSERT% ad.12306.cn, intl.iqiyi.com, act.vip.iqiyi.com
 
 [URL Rewrite]
 # > 爱奇艺
@@ -48,6 +49,10 @@ https?:\/\/t7z\.cupid\.iqiyi\.com\/show url reject
 ^https?:\/\/u\d\.iqiyipic\.com\/image\/[\w\/]+\/oad_ url reject
 ^http:\/\/.+\.iqiyipic\.com\/image\/.+\/ad\/.+\.jpg url reject
 https?:\/\/.+\.iqiyipic\.com\/image\/20*_100000 url reject
+
+
+[Map Local]
+
 
 [Script]
 # > 12306
