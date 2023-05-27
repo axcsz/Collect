@@ -1,0 +1,39 @@
+#!name=IP隐藏
+#!desc=IP隐藏
+# 针对部分网站显示IP归属地的QuantumultX分流规则
+# 原项目地址：https://github.com/lwd-temp/anti-ip-attribution
+# 更新时间：2023-05-11
+
+
+# 微博
+DOMAIN-SUFFIX,weibo.cn
+DOMAIN-SUFFIX,weibo.com
+DOMAIN-SUFFIX,weibocdn.com
+DOMAIN-KEYWORD,weibo
+
+# 字节
+DOMAIN-KEYWORD,core-c-lq
+DOMAIN-KEYWORD,core-lq
+DOMAIN-KEYWORD,normal-c-lq
+DOMAIN-KEYWORD,normal-lq
+DOMAIN-KEYWORD,search-quic-lq
+DOMAIN-KEYWORD,search-lq
+DOMAIN-SUFFIX,zijieapi.com,DIRECT
+DOMAIN-SUFFIX,ecombdapi.com,DIRECT
+DOMAIN-KEYWORD,-normal-hl
+DOMAIN-KEYWORD,-normal-c-hl
+DOMAIN-KEYWORD,-core-c-hl
+DOMAIN-KEYWORD,-normal-lf
+DOMAIN-KEYWORD,-normal-c-lf
+DOMAIN-KEYWORD,-core-c-lf
+DOMAIN,sso.douyin.com
+DOMAIN,www.douyin.com
+DOMAIN-SUFFIX,snssdk.com
+DOMAIN-SUFFIX,toutiaoapi.com
+
+# 快手
+DOMAIN-SUFFIX,gifshow.com
+DOMAIN-SUFFIX,ksapisrv.com
+
+# 小红书
+DOMAIN-SUFFIX,xiaohongshu.com
