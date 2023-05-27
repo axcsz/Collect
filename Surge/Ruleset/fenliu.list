@@ -558,9 +558,9 @@ DOMAIN,ads.nicovideo.jp
 DOMAIN,adsfs.oppomobile.com
 DOMAIN-SUFFIX,ads.oppomobile.com
 # > Outlook
-DOMAIN,acdn.adnxs.com,reject
-DOMAIN,mediation.adnxs.com,reject
-DOMAIN,sin3-ib.adnxs.com,reject
+DOMAIN,acdn.adnxs.com
+DOMAIN,mediation.adnxs.com
+DOMAIN,sin3-ib.adnxs.com
 
 # > PPTV
 DOMAIN,ads.aplus.pptv.com
@@ -1244,7 +1244,7 @@ DOMAIN,mqtt.zhihu.com
 DOMAIN,sugar.zhihu.com
 DOMAIN,118.89.204.198
 IP-CIDR,118.89.204.198/32
-IP6-CIDR,2402:4e00:1200:ed00:0:9089:6dac:96b6/128,REJECT
+IP6-CIDR,2402:4e00:1200:ed00:0:9089:6dac:96b6/128
 # > 中关村
 DOMAIN,apppv.zol.com.cn
 DOMAIN,pvnapp.zol.com.cn
