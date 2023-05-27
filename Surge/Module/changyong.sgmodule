@@ -41,9 +41,11 @@ https?:\/\/.+\.iqiyipic\.com\/image\/20*_100000 - reject
 
 [Script]
 # > 12306
-12306 = type=http-request,pattern=^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList,requires-body=1,script-path=https://raw.githubusercontent.com/kokoryh/Script/master/js/12306.js
+http-request ^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList requires-body=1,script-path=https://raw.githubusercontent.com/kokoryh/Script/master/js/12306.js
+# 微信公众号广告
+http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad requires-body=1,script-path=https://raw.githubusercontent.com/kokoryh/Script/master/js/self_use.js
 
 
 
 [MITM]
-hostname = %INSERT% ad.12306.cn, intl.iqiyi.com, act.vip.iqiyi.com, list-app-m.i4.cn, h5app.kuwo.cn, bodianimgcdn.kuwo.cn, bd-api.kuwo.cn, musicpay.kuwo.cn, *.kwcdn.kuwo.cn, rich.kuwo.cn, mobilead.kuwo.cn,vip1.kuwo.cn,
+hostname = %INSERT% ad.12306.cn, intl.iqiyi.com, act.vip.iqiyi.com, list-app-m.i4.cn, h5app.kuwo.cn, bodianimgcdn.kuwo.cn, bd-api.kuwo.cn, musicpay.kuwo.cn, *.kwcdn.kuwo.cn, rich.kuwo.cn, mobilead.kuwo.cn,vip1.kuwo.cn,mp.weixin.qq.com
