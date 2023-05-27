@@ -22,6 +22,12 @@ https?:\/\/t7z\.cupid\.iqiyi\.com\/show - reject
 https?:\/\/.+\.iqiyipic\.com\/image\/20*_100000 - reject
 # > 爱思助手
 ^https?:\/\/list-app-m\.i4\.cn\/getopfstadinfo\.xhtml - reject
+# > 大师兄
+^http?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/xgapp\.php\/v\d\/version - reject-200
+^http?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/xgapp\.php\/v\d\/advert\?position=[^2]+ - reject-200
+^http?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/xgapp\.php\/v\d\/top_notice\? - reject-200
+^https?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/(dsx|xgapp)\.php\/v\d\/(top_notice\?|version|advert\?position=[^2]+) - reject-200
+
 
 
 [Map Local]
@@ -48,4 +54,4 @@ http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad requires-body=1,s
 
 
 [MITM]
-hostname = %INSERT% ad.12306.cn, intl.iqiyi.com, act.vip.iqiyi.com, list-app-m.i4.cn, h5app.kuwo.cn, bodianimgcdn.kuwo.cn, bd-api.kuwo.cn, musicpay.kuwo.cn, *.kwcdn.kuwo.cn, rich.kuwo.cn, mobilead.kuwo.cn,vip1.kuwo.cn,mp.weixin.qq.com
+hostname = %INSERT% sdk.alibaba.com.ailbaba.me, sdk.alibaba.com, ad.12306.cn, intl.iqiyi.com, act.vip.iqiyi.com, list-app-m.i4.cn, h5app.kuwo.cn, bodianimgcdn.kuwo.cn, bd-api.kuwo.cn, musicpay.kuwo.cn, *.kwcdn.kuwo.cn, rich.kuwo.cn, mobilead.kuwo.cn,vip1.kuwo.cn,mp.weixin.qq.com
