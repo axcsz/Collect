@@ -1,30 +1,45 @@
-#!name = 哔哩哔哩
-#!desc = 没有广告的哔哩哔哩
-#!author = RuCu6 kokoryh app2smile blackmatrix7
-#!update = 2023-04-25 08:30
+#!name = Bilibili去广告
+#!desc = 过滤Bilibili广告，精简多余功能。
+#!openUrl = 
+#!author = RuCu6 app2smile kokoryh
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
+#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Bilibili.png
 
 [URL Rewrite]
-# IP请求,地理位置请求
+# 屏蔽默认搜索框关键词
+^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.interface\.v1\.Search\/DefaultWords - reject
+# 直播间商品广告浮窗 //api.live.bilibili.com
+^https:\/\/api\.live\.bilibili\.com\/xlive\/e-commerce-interface\/v1\/ecommerce-user\/get_shopping_info\? - reject
+# IP请求、地理位置请求 //api.bilibili.com
 ^https:\/\/app\.bilibili\.com\/x\/resource\/ip - reject
 ^https:\/\/api\.bilibili\.com\/x\/web-interface\/zone\?jsonp=jsonp$ - reject
-http-response ^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.interface\.v1\.Search\/DefaultWords$ - reject
-http-response ^https:\/\/api\.live\.bilibili\.com\/xlive\/e-commerce-interface\/v1\/ecommerce-user\/get_shopping_info\? - reject
+# 将香港CDN切换至腾讯CDN以提高视频加载速度
+# ^https?:\/\/upos-hz-mirrorakam\.akamaized\.net 302 https://upos-sz-mirrorcos.bilivideo.com
 
 [Script]
-# Proto 动态广告,后台播放限制,播放页广告
-http-response ^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.dynamic\.v2\.Dynamic\/DynAll$ requires-body=1,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/bilibili/biliProto.js
-# ^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.playurl\.v1\.PlayURL\/PlayView$ requires-body=1,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/bilibili/biliProto.js
-http-response ^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.view\.v1\.View\/View$ requires-body=1,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/bilibili/biliProto.js
-# 首页 DefaultWord,推荐,热搜发现,右上角活动,标签页,观影页,直播,直播间商品广告浮窗
-http-response ^https:\/\/app\.bilibili\.com\/x\/v2\/(feed\/index(\/story)?|search\/square)\? requires-body=1,script-path= https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/bilibili/bili.js
-http-response ^https:\/\/app\.bilibili\.com\/x\/resource\/(top\/activity|show\/tab\/v2)\? requires-body=1,script-path= https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/bilibili/bili.js
-http-response ^https:\/\/api\.bilibili\.com\/pgc\/page\/(bangumi|cinema\/tab\?) requires-body=1,script-path= https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/bilibili/bili.js
-http-response ^https:\/\/api\.live\.bilibili\.com\/xlive\/app-room\/v1\/index\/getInfoByRoom\?requires-body=1,script-path= https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/bilibili/bili.js
-# 开屏广告
-http-response ^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/(brand\/list|event\/list2|list|show)\? requires-body=1,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/bilibili/bili.js
-# 我的页面 解锁1080P高码率,4K画质,皮肤推送
-http-response ^https:\/\/app\.bilibili\.com\/x\/v2\/account\/(mine|myinfo)\? requires-body=1,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/bilibili/bili.js
-http-response ^https:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\? requires-body=1,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/bilibili/bili.js
+# Proto 动态去广告
+http-response ^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.dynamic\.v2\.Dynamic\/DynAll$ requires-body=1,script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Bilibili/Bilibili_proto.js
+# Proto 播放页去广告 //app.bilibili.com, grpc.biliapi.net
+# http-response ^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.playurl\.v1\.PlayURL\/PlayView$ requires-body=1,script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Bilibili/Bilibili_proto.js
+# Proto 去除后台播放限制 //app.bilibili.com
+http-response ^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.view\.v1\.View\/View$ requires-body=1,script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Bilibili/Bilibili_proto.js
+
+# 首页 推荐、热搜发现、右上角活动、标签页、观影页、直播
+http-response ^https:\/\/app\.bilibili\.com\/x\/v2\/(feed\/index(\/story)?|search\/square)\? requires-body=1,script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Bilibili/Bilibili_remove_ads.js
+http-response ^https:\/\/app\.bilibili\.com\/x\/resource\/(top\/activity|show\/tab\/v2)\? requires-body=1,script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Bilibili/Bilibili_remove_ads.js
+http-response ^https:\/\/api\.bilibili\.com\/pgc\/page\/(bangumi|cinema\/tab\?) requires-body=1,script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Bilibili/Bilibili_remove_ads.js
+http-response ^https:\/\/api\.live\.bilibili\.com\/xlive\/app-room\/v1\/index\/getInfoByRoom\? requires-body=1,script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Bilibili/Bilibili_remove_ads.js
+
+# 开屏广告 //app.bilibili.com
+http-response ^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/(brand\/list|event\/list2|list|show)\? requires-body=1,script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Bilibili/Bilibili_remove_ads.js
+
+# 去除皮肤推送 //app.bilibili.com
+http-response ^https:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\? requires-body=1,script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Bilibili/Bilibili_remove_ads.js
+# 我的页面处理 //app.bilibili.com
+http-response ^https:\/\/app\.bilibili\.com\/x\/v2\/account\/mine\? requires-body=1,script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Bilibili/Bilibili_remove_ads.js
+
+# 解锁4K画质及1080P高码率 //app.bilibili.com
+http-response ^https:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\? requires-body=1,script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Bilibili/Bilibili_remove_ads.js
 
 [MITM]
-hostname = %INSERT% app.bilibili.com, api.bilibili.com, api.live.bilibili.com, grpc.biliapi.net, ap*.bilibili.com
+hostname = %INSERT% app.bilibili.com, api.bilibili.com, api.live.bilibili.com, grpc.biliapi.net
