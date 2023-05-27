@@ -20,7 +20,8 @@ https?:\/\/t7z\.cupid\.iqiyi\.com\/show - reject
 ^https?:\/\/u\d\.iqiyipic\.com\/image\/[\w\/]+\/oad_ - reject
 ^http:\/\/.+\.iqiyipic\.com\/image\/.+\/ad\/.+\.jpg - reject
 https?:\/\/.+\.iqiyipic\.com\/image\/20*_100000 - reject
-
+# > 爱思助手
+^https?:\/\/list-app-m\.i4\.cn\/getopfstadinfo\.xhtml - reject
 
 
 [Map Local]
@@ -39,4 +40,4 @@ https?:\/\/.+\.iqiyipic\.com\/image\/20*_100000 - reject
 
 
 [MITM]
-hostname = %INSERT% ad.12306.cn, intl.iqiyi.com, act.vip.iqiyi.com
+hostname = %INSERT% ad.12306.cn, intl.iqiyi.com, act.vip.iqiyi.com, list-app-m.i4.cn
