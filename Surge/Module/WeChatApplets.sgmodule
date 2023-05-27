@@ -209,7 +209,7 @@ http-response ^https:\/\/mapi\.xiaotucc\.com\/(mall\/main|main_page\/index\/getA
 http-response ^https?:\/\/wx\.mygolbs\.com\/WxBusServer\/ApiData\.do requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/zhangshanggongjiao.js
 
 #AShare（2022-01-01）@ddgksf2013
-http-response ^https:\/\/tan\.ipnas\.ltd\/wp-json\/wp\/v2 requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xcx.js AShare
+#http-response ^https:\/\/tan\.ipnas\.ltd\/wp-json\/wp\/v2 requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xcx.js AShare
 
 #不完全指北（2021-12-15）@ddgksf2013
 http-response ^https:\/\/4thdimension\.top\/wp\-json\/watch\-life\-net\/v1\/posts requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xcx.js
@@ -266,9 +266,9 @@ http-response ^https:\/\/xcx\.xianbaow\.com\/wp\-json\/wp\/v2\/posts requires-bo
 http-response ^https:\/\/jabi\.coding\.net\/p\/xcx\/d\/xcx\/git\/raw\/master\/jabikj\.json requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/jabi.js
 
 #AppleAndroid 弹框显示内容（2020-12-14）@ddgksf2013
-http-response ^https:\/\/iosoi\.cn\/wp-json\/wp\/v2\/posts/\d+ requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xcx.js AppleAndroid
+#http-response ^https:\/\/iosoi\.cn\/wp-json\/wp\/v2\/posts/\d+ requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xcx.js AppleAndroid
 #辅助去除页面嵌入式式卡片广告（2020-12-14）
-http-response ^https:\/\/iosoi\.cn\/wp-content\/plugins requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xcx.js AppleAndroid
+#http-response ^https:\/\/iosoi\.cn\/wp-content\/plugins requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xcx.js AppleAndroid
 
 #森茂雅苑（2020-10-27）@ddgksf2013
 http-response ^https:\/\/d\.smkj33\.top\/wp\-json\/wp\/v2\/posts requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xcx.js
