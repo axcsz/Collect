@@ -30,8 +30,14 @@ https?:\/\/.+\.iqiyipic\.com\/image\/20*_100000 - reject
 ^https?:\/\/act\.vip\.iqiyi\.com\/interact\/api\/v2\/show data="https://raw.githubusercontent.com/Keywos/Rule/main/mocks/reject-dict.json"
 ^https?:\/\/iface\.iqiyi\.com\/api\/getNewAdInfo data="https://raw.githubusercontent.com/Keywos/Rule/main/mocks/reject-dict.json"
 ^https?:\/\/iface2\.iqiyi\.com\/fusion\/3\.0\/fusion_switch data="https://raw.githubusercontent.com/Keywos/Rule/main/mocks/reject-dict.json"
-
-
+# > 波点音乐 #开屏广告 感谢#林夕分享
+^https:\/\/bd-api\.kuwo\.cn\/api\/service\/finds\/module\?moduleId data="https://raw.githubusercontent.com/Keywos/Rule/main/mocks/reject-dict.json"
+^https:\/\/bd-api\.kuwo\.cn\/api\/service\/banner\/myPage\?uid data="https://raw.githubusercontent.com/Keywos/Rule/main/mocks/reject-dict.json"
+^https:\/\/bd-api\.kuwo\.cn\/api\/play\/listening\/entrance\/music\?musicId data="https://raw.githubusercontent.com/Keywos/Rule/main/mocks/reject-dict.json"
+^https:\/\/h5app\.kuwo\.cn\/m\/kwtemplatePage\/index\.html\?id=1157&app=bodianhdzx data="https://raw.githubusercontent.com/Keywos/Rule/main/mocks/reject-dict.json"
+^https:\/\/h5app\.kuwo\.cn\/m\/bdvipact2205\/index\.html\?fromsrc=huodong data="https://raw.githubusercontent.com/Keywos/Rule/main/mocks/reject-dict.json"
+^https:\/\/bodianimgcdn\.kuwo\.cn\/images\/0e83c1821cd2681de08e20bec73d1e75 data="https://raw.githubusercontent.com/Keywos/Rule/main/mocks/reject-dict.json"
+^https:\/\/bodianimgcdn\.kuwo\.cn\/images\/198c0b313fe9e53b03240c7b30b4acc9 data="https://raw.githubusercontent.com/Keywos/Rule/main/mocks/reject-dict.json"
 
 [Script]
 # > 12306
@@ -40,4 +46,4 @@ https?:\/\/.+\.iqiyipic\.com\/image\/20*_100000 - reject
 
 
 [MITM]
-hostname = %INSERT% ad.12306.cn, intl.iqiyi.com, act.vip.iqiyi.com, list-app-m.i4.cn
+hostname = %INSERT% ad.12306.cn, intl.iqiyi.com, act.vip.iqiyi.com, list-app-m.i4.cn, h5app.kuwo.cn, bodianimgcdn.kuwo.cn, bd-api.kuwo.cn, musicpay.kuwo.cn, *.kwcdn.kuwo.cn, rich.kuwo.cn, mobilead.kuwo.cn,vip1.kuwo.cn,
