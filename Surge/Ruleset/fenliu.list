@@ -598,9 +598,79 @@ DOMAIN-KEYWORD,api-access.pangolin-sdk-toutiao.com
 # > 影响端传媒正常运行，默认关闭
 # > DOMAIN-SUFFIX,cloudfront.net
 
+# > 蜻蜓FM
+DOMAIN,ad.qingting.fm
+DOMAIN,adlaunch.qingting.fm
+DOMAIN,ad-cdn.qingting.fm
+# > 汽车之家
+DOMAIN-KEYWORD,adm3.autoimg.cn
+DOMAIN-KEYWORD,audid-api.taobao.com
+DOMAIN-KEYWORD,collectionpv.che168.com
+DOMAIN-KEYWORD,adproxy.autohome.com
+DOMAIN-KEYWORD,applogapi.autohome.com
+DOMAIN,adproxy.autohome.com.cn
+DOMAIN,rd.autohome.com.cn
+DOMAIN,al.autohome.com.cn
+DOMAIN,applogapi.autohome.com.cn
+DOMAIN,adm0.autoimg.cn
+DOMAIN,adm1.autoimg.cn
+DOMAIN,adm2.autoimg.cn
+DOMAIN,adm3.autoimg.cn
+# > QQ音乐广告
+DOMAIN,tmeadcomm.y.qq.com
+DOMAIN,ad.tencentmusic.com
+DOMAIN,adstats.tencentmusic.com
+DOMAIN,tmead.y.qq.com
+DOMAIN-SUFFIX,rqd.qq.com
+DOMAIN-SUFFIX,wup.imtt.qq.com
+DOMAIN-SUFFIX,gdt.qq.com
+DOMAIN-SUFFIX,android.rqd.qq.com
+DOMAIN-SUFFIX,e.qq.com
+DOMAIN-SUFFIX,beacon.qq.com
+DOMAIN-SUFFIX,v.gdt.qq.com
 
+# > Snapchat
+DOMAIN,ads.snapchat.com
+DOMAIN,adsapi.snapchat.com
+# > 搜狐
+DOMAIN-SUFFIX,ad.sohu.com
+DOMAIN-SUFFIX,ads.sohu.com
+DOMAIN-SUFFIX,aty.sohu.com
+DOMAIN,hui.sohu.com
+# > 搜狗
+DOMAIN,indivi-cdn.shouji.sogou.com
+DOMAIN-SUFFIX,epro.sogou.com
+DOMAIN-SUFFIX,golden1.sogou.com
+DOMAIN-SUFFIX,inte.sogou.com
+DOMAIN-SUFFIX,inte.sogoucdn.com
+DOMAIN-SUFFIX,lu.sogoucdn.com
+DOMAIN-SUFFIX,theta.sogoucdn.com
+DOMAIN-SUFFIX,uranus.sogou.com
+DOMAIN-SUFFIX,123.sogou.com
+DOMAIN-SUFFIX,a1click.cpc.sogou.com
+DOMAIN-SUFFIX,adsence.sogou.com
+DOMAIN-SUFFIX,adstream.123.sogoucdn.com
+DOMAIN-SUFFIX,amfi.gou.sogou.com
+DOMAIN-SUFFIX,art.theta.sogoucdn.com
+DOMAIN-SUFFIX,athena.wan.sogou.com
+DOMAIN-SUFFIX,bazinga.mse.sogou.com
+DOMAIN-SUFFIX,bite.theta.sogoucdn.com
+DOMAIN-SUFFIX,brand.sogou.com
+DOMAIN-SUFFIX,bsiet.husky.sogou.com
+# > 搜狗输入法
+DOMAIN-KEYWORD,business-cdn.shouji.sogou.com
+# > 深圳通微信小程序
+DOMAIN-SUFFIX,wxsnsdythumb.wxs.qq.com
 
-
+# > TubeMax  感谢@可莉分享
+DOMAIN-SUFFIX,adjust.com
+DOMAIN-SUFFIX,applvn.com
+DOMAIN-SUFFIX,app-measurement.com
+DOMAIN-SUFFIX,pangle.io
+DOMAIN-SUFFIX,applovin.com
+DOMAIN-SUFFIX,appier.net
+DOMAIN-SUFFIX,adsmoloco.com
+DOMAIN-SUFFIX,adcanvas.com
 
 
 
