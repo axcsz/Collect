@@ -27,31 +27,38 @@
 # ✅：如果要利用重写去广告，就需要对请求或响应信息进行解密(MITM)，现在一些软件已经禁止了MITM，所以就无法去广告。
 #############################################
 
+
+
 [MITM]
 hostname = %INSERT% ad.12306.cn, intl.iqiyi.com, act.vip.iqiyi.com
 
+
+
 [URL Rewrite]
 # > 爱奇艺
-^https?:\/\/iface\.iqiyi\.com\/api\/getNewAdInfo url reject
-^https?:\/\/intl\.iqiyi\.com\/ad_external\/ url reject
-^https?:\/\/intl\.iqiyi\.com\/video\/advertise url reject
-^https?:\/\/act\.vip\.iqiyi\.com\/interact\/api\/show\.do url reject-200
-^https?:\/\/act\.vip\.iqiyi\.com\/interact\/api\/v2\/show url reject-200
-^https?:\/\/iface\.iqiyi\.com\/api\/getNewAdInfo url reject-200
-^https?:\/\/iface2\.iqiyi\.com\/fusion\/3\.0\/fusion_switch url reject-img
-^http:\/\/static-s\.iqiyi\.com\/common\/.+\/Small_video\/a2\/af\/.+\.png url reject
-^http:\/\/msga/.cupid/.iqiyi/.com\/scp2\.gif url reject
-https?:\/\/ssports\.iqiyi\.com/app\/ url reject
-https?:\/\/ssports\.iqiyi\.com/json\/shop\/shopInfo url reject
-https?:\/\/.+\.iqiyi\.com\/videos\/other\/20$ url reject
-https?:\/\/static\.iqiyi\.com\/js\/common\/.+\.js url reject
-https?:\/\/t7z\.cupid\.iqiyi\.com\/show url reject
-^https?:\/\/u\d\.iqiyipic\.com\/image\/[\w\/]+\/oad_ url reject
-^http:\/\/.+\.iqiyipic\.com\/image\/.+\/ad\/.+\.jpg url reject
-https?:\/\/.+\.iqiyipic\.com\/image\/20*_100000 url reject
+^https?:\/\/iface\.iqiyi\.com\/api\/getNewAdInfo - reject
+^https?:\/\/intl\.iqiyi\.com\/ad_external\/ - reject
+^https?:\/\/intl\.iqiyi\.com\/video\/advertise - reject
+^http:\/\/static-s\.iqiyi\.com\/common\/.+\/Small_video\/a2\/af\/.+\.png - reject
+^http:\/\/msga/.cupid/.iqiyi/.com\/scp2\.gif - reject
+https?:\/\/ssports\.iqiyi\.com/app\/ - reject
+https?:\/\/ssports\.iqiyi\.com/json\/shop\/shopInfo - reject
+https?:\/\/.+\.iqiyi\.com\/videos\/other\/20$ - reject
+https?:\/\/static\.iqiyi\.com\/js\/common\/.+\.js - reject
+https?:\/\/t7z\.cupid\.iqiyi\.com\/show - reject
+^https?:\/\/u\d\.iqiyipic\.com\/image\/[\w\/]+\/oad_ - reject
+^http:\/\/.+\.iqiyipic\.com\/image\/.+\/ad\/.+\.jpg - reject
+https?:\/\/.+\.iqiyipic\.com\/image\/20*_100000 - reject
+
 
 
 [Map Local]
+# > 爱奇艺
+^https?:\/\/act\.vip\.iqiyi\.com\/interact\/api\/show\.do data="https://raw.githubusercontent.com/Keywos/Rule/main/mocks/reject-dict.json"
+^https?:\/\/act\.vip\.iqiyi\.com\/interact\/api\/v2\/show data="https://raw.githubusercontent.com/Keywos/Rule/main/mocks/reject-dict.json"
+^https?:\/\/iface\.iqiyi\.com\/api\/getNewAdInfo data="https://raw.githubusercontent.com/Keywos/Rule/main/mocks/reject-dict.json"
+^https?:\/\/iface2\.iqiyi\.com\/fusion\/3\.0\/fusion_switch data="https://raw.githubusercontent.com/Keywos/Rule/main/mocks/reject-dict.json"
+
 
 
 [Script]
