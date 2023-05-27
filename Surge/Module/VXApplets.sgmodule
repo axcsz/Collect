@@ -1,0 +1,347 @@
+#!name = 微信小程序去广告
+#!desc = 收录常用小程序的去广告，作者署名在插件内。
+#!openUrl = 转换成surge
+#!author = 可莉🅥
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
+#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/WeixinMiniPrograms.png
+
+[URL Rewrite]
+#必胜客 @是豆豆呀 res.pizzahut.com.cn
+^https:\/\/res\.pizzahut\.com\.cn\/CRM - reject
+
+#肯德基 @是豆豆呀 orders.kfc.com.cn, dynamicad.kfc.com.cn, res.kfc.com.cn
+^https:\/\/orders\.kfc\.com\.cn\/preorder-portal\/api\/v2\/coupon - reject
+^https:\/\/dynamicad\.kfc\.com\.cn\/api - reject
+^https:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/custom_v2\/wxapp - reject
+^https:\/\/orders\.kfc\.com\.cn\/preorder-portal\/api\/v2\/activity - reject
+
+#麦当劳 @是豆豆呀 api.mcd.cn
+^https:\/\/api\.mcd\.cn\/bff\/portal\/home\/hotActivity - reject
+
+#星巴克 @是豆豆呀 3pp.starbucks.com.cn
+^https:\/\/3pp\.starbucks\.com\.cn\/wxmem\/popup - reject
+^https:\/\/3pp\.starbucks\.com\.cn\/wxmem\/index\/banner - reject
+^https:\/\/3pp\.starbucks\.com\.cn\/wxmem\/index\/global - reject
+
+#石家庄公交乘车码 @是豆豆呀 wechat-api.i-xiaoma.com.cn
+^https:\/\/wechat-api\.i-xiaoma\.com\.cn\/app\/v1\/bus\/wechat\/content - reject
+
+#神州租车 @是豆豆呀 apiproxy.zuche.com
+^https:\/\/apiproxy\.zuche\.com\/resource\/carrctapi\/home\/marketing - reject
+^https:\/\/apiproxy\.zuche\.com\/resource\/carrctapi\/home\/page\/advertising - reject
+
+#闪送 @是豆豆呀 miniprogram.ishansong.com, ads.ishansong.com
+^https:\/\/miniprogram\.ishansong\.com\/cms\/faq\/query - reject
+^https:\/\/ads\.ishansong\.com\/advert - reject
+
+#曹操出行 @是豆豆呀 minicap.caocaokeji.cn
+^https:\/\/minicap\.caocaokeji\.cn\/advert-bss\/pullAdvert - reject
+
+#羊城通 @是豆豆呀 r2.gzyct.com
+^https:\/\/r2\.gzyct\.com\/qrcode\/advert - reject
+
+#极兔快递 @是豆豆呀 applets.jtexpress.com.cn
+^https:\/\/applets\.jtexpress\.com\.cn - reject
+
+#哈啰 @是豆豆呀 api.hellobike.com
+^https:\/\/api\.hellobike\.com\/api\?adx - reject
+
+#微快递 @是豆豆呀 api.kuaidihelp.com
+^https:\/\/api\.kuaidihelp\.com\/g_order_core\/v2\/mina\/User\/getBannerList - reject
+
+#美柚 @是豆豆呀 wxproj.seeyouyima.com
+^https:\/\/wxproj\.seeyouyima\.com\/data\/today_tips - reject
+
+#快狗打车搬家 @是豆豆呀 suyun-user.daojia.com
+^https:\/\/suyun-guest\.daojia\.com\/api\/kuaigou\/banjia\/review - reject
+
+#货拉拉 @是豆豆呀 qapi.huolala.cn, appuser-static.huolala.cn
+^https:\/\/qapi\.huolala\.cn\/ads - reject
+^https:\/\/qapi\.huolala\.cn\/home_new_user - reject
+^https:\/\/qapi\.huolala\.cn\/get_service_list - reject
+^https:\/\/appuser-static\.huolala\.cn\/imgs - reject
+
+#广州地铁乘车码 @是豆豆呀 apis.alenable.com
+^https:\/\/apis\.alenable\.com\/mall\/v1\/api\/mall\/skin\/user\/get - reject
+^https:\/\/apis\.alenable\.com\/ycx\/v1\/api\/adPut - reject
+
+#上海地铁Metro大都会乘车码 @是豆豆呀 dock.tenchii.com
+^https:\/\/dock\.tenchii\.com\/DockCard\/api\/mini\/card\/list - reject
+
+#丰巢 @是豆豆呀 webchatapp.fcbox.com,dsp.fcbox.com
+^https:\/\/webchatapp\.fcbox\.com\/fcboxactivityweb\/api\/v2\/clientPage - reject
+^https:\/\/dsp\.fcbox\.com - reject
+
+#花小猪打车 @是豆豆呀 api.hongyibo.com.cn, res.hongyibo.com.cn
+^https:\/\/api\.hongyibo\.com\.cn - reject
+^https:\/\/res\.hongyibo\.com\.cn\/os\/gs\/resapi\/activity - reject
+
+#申通快递 @是豆豆呀 customer-app.sto.cn, sto-customer-app.oss-cn-shanghai.aliyuncs.co
+^https:\/\/customer-app\.sto\.cn\/api\/app\/banner\/banner - reject
+^https:\/\/sto-customer-app\.oss-cn-shanghai\.aliyuncs\.com\/images - reject
+
+#达达快送 @是豆豆呀 supplier-api.imdada.cn
+^https:\/\/supplier-api\.imdada\.cn\/fe\/public\/ad\/spot\?forwardServiceName=growth-activity - reject
+
+#滴滴出行 @是豆豆呀 common.diditaxi.com.cn, capis*.didapinche.com
+^https:\/\/capis(-\d)?\.didapinche\.com\/adbase reject
+
+#滴滴打车 @是豆豆呀 conf.diditaxi.com.cn 
+^https:\/\/conf\.diditaxi\.com\.cn\/homepage\/v1\/core - reject
+
+#中通快递 @是豆豆呀 fscdn.zto.com, hdgateway.zto.com
+^https:\/\/hdgateway\.zto\.com\/getApolloConfig - reject
+^https:\/\/hdgateway\.zto\.com\/track - reject
+^https:\/\/hdgateway\.zto\.com\/getAdInfo - reject
+^https:\/\/hdgateway\.zto\.com\/listJumperShow - reject
+^https:\/\/fscdn\.zto\.com\/fs1 - reject
+
+#来电 @是豆豆呀 mobile-api.imlaidian.com
+^https:\/\/mobile-api\.imlaidian\.com\/api\/args - reject
+
+#搜电充电 @是豆豆呀 wxs-weixin.sd.zhumanggroup.com
+^https:\/\/wxs-weixin\.sd\.zhumanggroup\.com\/api\/v2\/ad - reject
+
+#街电 @是豆豆呀 s.jiediankeji.com
+^https:\/\/s\.jiediankeji\.com\/adv - reject
+
+#小电充电 @是豆豆呀 smarket.dian.so,file.dian.so
+^https:\/\/smarket\.dian\.so - reject
+^https:\/\/file\.dian\.so\/c\/leto - reject
+
+#怪兽充电 @是豆豆呀 aag.enmonster.com
+^https:\/\/aag\.enmonster\.com\/apa\/index\/advert\/skin reject
+
+#小兔充充 @是豆豆呀 ad.xiaotucc.com, mapi.xiaotucc.com
+^https:\/\/ad\.xiaotucc\.com\/advert reject
+
+#U净 @是豆豆呀 api-marketing.zhinengxiyifang.cn
+^https:\/\/api-marketing\.zhinengxiyifang\.cn\/api\/v2\/cloudcode\/wechat\/bid reject
+
+#松果出行 @keywos api.songguo7.com
+^https:\/\/api\.songguo7\.com\/(\w{3})?mp\/v2\/misc\/(toast|user_operate_info|unlock_without_order|unlock_operate_info) - reject
+
+#花小猪打车 @是豆豆呀 api.hongyibo.com.cn, res.hongyibo.com.cn
+^https:\/\/api\.hongyibo\.com\.cn - reject
+^https:\/\/res\.hongyibo\.com\.cn\/os\/gs\/resapi\/activity - reject
+
+#乘车码 @jinlvei ccmsupport-sz.tenpay.com
+^https:\/\/ccmsupport-sz\.tenpay\.com\/cgi-bin\/common\/ccm_page_element.cgi reject
+
+#黑科技软件 @ddgksf2013
+^https:\/\/hkj178.com/wp-json/mp/v2/advert/wechat reject-200
+
+#奈雪 @是豆豆呀 tm-api.pin-dao.cn
+^https:\/\/tm-api\.pin-dao\.cn\/home\/api\/index\/activeConfig\/v2 - reject
+^https:\/\/tm-api\.pin-dao\.cn\/home\/api\/resource\/config\/homeBannerNodes - reject
+
+#华住会 @是豆豆呀 api-fouth-mem.huazhu.com
+^https:\/\/api-fouth-mem\.huazhu\.com\/api\/rights\/bannerList - reject
+
+#锦江酒店 @是豆豆呀 wxapp.bestwehotel.com
+^https:\/\/wxapp\.bestwehotel\.com\/gw3\/app-mini\/trip-hotel-banner\/activity\/getActivityInfo - reject
+
+#首旅如家 @是豆豆呀 app.homeinns.com, wx.bthhotels.com
+^https:\/\/wx\.bthhotels\.com\/miniapp\/weixin\/v1\/home\/index_banner - reject
+^https:\/\/app\.homeinns\.com\/api\/v6\/indexs - reject
+^https:\/\/app\.homeinns\.com\/api\/v5\/local - reject
+^https:\/\/app\.homeinns\.com\/api\/v5\/index - reject
+
+#蜜雪冰城 @是豆豆呀 mxsa.mxbc.net
+^https:\/\/mxsa\.mxbc\.net\/api\/v1\/adinfo\/adplace\/query - reject
+
+#滴滴青桔 @是豆豆呀 htwkop.xiaojukeji.com
+^https:\/\/htwkop\.xiaojukeji\.com\/gateway\?api=cms\.htw\.delivery - reject
+^https:\/\/htwkop\.xiaojukeji\.com\/gateway\?api=hm\.fa\.combineHomepageInfo - reject
+^https:\/\/htwkop\.xiaojukeji\.com\/gateway\?api=hm\.fa\.mallRecommend - reject
+
+#罗森点点 @是豆豆呀 lawsonapi.yorentown.com, plt.yorentown.com
+^https:\/\/lawsonapi\.yorentown\.com\/area\/sh-lawson\/app\/v1\/mina\/systemSetting - reject
+^https:\/\/plt\.yorentown\.com\/pltapp\/v1\/banner - reject
+
+#老乡鸡 @是豆豆呀 member.lxjchina.com.cn
+^https:\/\/member\.lxjchina\.com\.cn\/mini-server\/home\/page\/banner - reject
+
+#茶百道 @是豆豆呀 cbd-gateway-service-applets.hualala.com
+^https:\/\/cbd-gateway-service-applets\.hualala\.com\/arch\/api\/banner\/QueryBannerImgList - reject
+
+#一点点 @是豆豆呀 cappapi.alittle-tea.com, alittle-tea.oss-cn-shanghai.aliyuncs.com
+^https:\/\/alittle-tea\.oss-cn-shanghai\.aliyuncs\.com\/images\/platform\/alittle - reject
+
+#Manner @是豆豆呀 triangle.wearemanner.com
+^https:\/\/triangle\.wearemanner\.com\/mp-api\/v1\/ads - reject
+
+#M Stand @是豆豆呀 api.prod.dj.mstand.cn, api.prod.dj.mstand.cn
+^https:\/\/api\.prod\.dj\.mstand\.cn\/scrm\/app\/mdm\/index\/listAdv\?types - reject
+
+#挪瓦咖啡 @是豆豆呀 webapi.qmai.cn, images.qmai.cn
+^https:\/\/webapi\.qmai\.cn\/web\/catering\/advertising\/ad - reject
+^https:\/\/images\.qmai\.cn\/s214925\/2023 - reject
+
+#首汽约车 @是豆豆呀 gw-passenger-wap.01zhuanche.com
+^https:\/\/gw-passenger-wap\.01zhuanche\.com\/gw-passenger-wap\/zhuanche-passenger-token\/commonSkipToken\/common\/getAdList - reject
+
+#德邦快递 @是豆豆呀 www.deppon.com
+^https:\/\/www\.deppon\.com\/gwapi\/memberService\/eco\/member\/grade\/commonInterface - reject
+
+#享道出行 @是豆豆呀 passengerapi.saicmobility.com
+^https:\/\/passengerapi\.saicmobility\.com\/(ad\/requestAd|pay\/v1\/queryOpenedCouponPackages) - reject
+
+#T3出行 @是豆豆呀 passenger.t3go.cn
+^https:\/\/passenger\.t3go\.cn\/passenger-activity-api\/notoken\/api\/v1\/resource\/getSource - reject
+
+#携程旅行 @是豆豆呀 m.ctrip.com
+^https:\/\/m\.ctrip\.com\/restapi\/soa2\/13916\/tripAds - reject
+^https:\/\/m\.ctrip\.com\/restapi\/soa2\/12673\/queryWeChatHotEvent - reject
+
+
+[Script]
+#EMS中国邮政物流速递 @TEAXS ump.ems.com.cn
+http-response ^https:\/\/ump\.ems\.com\.cn\/new-generation-extend\/redis\/pageInfoByChannel requires-body=1,script-path=https://raw.githubusercontent.com/jizhi0520/QX/main/ems.js
+
+#滴滴出行 @TEAXS common.diditaxi.com.cn
+http-response ^https:\/\/common\.diditaxi\.com\.cn\/common\/v5 requires-body=1,script-path=https://raw.githubusercontent.com/jizhi0520/QX/main/didi.js
+
+#小兔充充 @TEAXS mapi.xiaotucc.com
+http-response ^https:\/\/mapi\.xiaotucc\.com\/(mall\/main|main_page\/index\/getActivity) requires-body=1,script-path=https://raw.githubusercontent.com/jizhi0520/QX/main/xiaotucc.js
+
+#掌上公交 @ddgksf2013 wx.mygolbs.com
+http-response ^https?:\/\/wx\.mygolbs\.com\/WxBusServer\/ApiData\.do requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/zhangshanggongjiao.js
+
+#AShare（2022-01-01）@ddgksf2013
+http-response ^https:\/\/tan\.ipnas\.ltd\/wp-json\/wp\/v2 requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xcx.js AShare
+
+#不完全指北（2021-12-15）@ddgksf2013
+http-response ^https:\/\/4thdimension\.top\/wp\-json\/watch\-life\-net\/v1\/posts requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xcx.js
+
+#科技窝（2020-12-28）@ddgksf2013
+http-response ^https:\/\/www\.benbenfx\.xyz\/wp\-json\/wp\/v2\/posts requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xcx.js
+
+#森茂小苑（2020-12-19）@ddgksf2013
+http-response ^https:\/\/[a-z]+\.smkj33\.top\/wp\-json\/wp\/v2\/posts requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xcx.js
+
+#电视盒子君（2020-12-18）@ddgksf2013
+http-response ^https:\/\/tvapp\.guilaile\.cn\/wp\-json\/wp\/v2\/posts requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xcx.js
+
+#公子黑科技（2020-12-18）@ddgksf2013
+http-response ^https:\/\/gz\.gongzijx\.com\/wp\-json\/wp\/v2\/posts requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xcx.js
+
+#世颜说（2020-12-17）@ddgksf2013
+http-response ^https:\/\/d\.syshhc\.top\/wp\-json\/wp\/v2\/posts requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xcx.js
+
+#搞机师兄（2020-12-16）@ddgksf2013
+http-response ^https:\/\/gjsx\.vip\/wp\-json\/wp\/v2\/posts requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xcx.js
+
+#火箭软件库（2020-12-16）@ddgksf2013
+http-response ^https:\/\/jt\.jxjt888\.top\/wp\-json\/wp\/v2\/posts requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xcx.js
+
+#天书乱谈（2020-12-15）@ddgksf2013
+http-response ^https:\/\/[a-z]+\.tslt\.xyz\/wp\-json\/wp\/v2\/posts requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xcx.js
+
+#老胡群英会（2020-12-15）@ddgksf2013
+http-response ^https:\/\/g\.syshhc\.top\/wp\-json\/wp\/v2\/posts requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xcx.js
+
+#天泽百宝箱（2020-12-15）@ddgksf2013
+http-response ^https:\/\/c\.jxjt888\.top\/wp\-json\/wp\/v2\/posts requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xcx.js
+
+#老鬼黑科技（2020-12-15）@ddgksf2013
+http-response ^https:\/\/www\.laoguikeji\.cn\/wp\-json\/wp\/v2\/posts requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xcx.js
+
+#黑科技软件源（2020-12-15）@ddgksf2013
+http-response ^https:\/\/qj\.bpojie\.com\/wp\-json\/wp\/v2\/posts requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xcx.js
+
+#天书X乱谈（2020-12-15）@ddgksf2013
+http-response ^https:\/\/b\.tslt\.xyz\/wp\-json\/wp\/v2\/posts requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xcx.js
+
+#图层黑科技（2020-12-15）@ddgksf2013
+http-response ^https:\/\/m\.xgjyouhui\.com\/wp\-json\/wp\/v2\/posts requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xcx.js
+
+#free黑科技（2020-12-15）@ddgksf2013
+http-response ^https:\/\/www\.freeheikeji\.cn\/wp\-json\/wp\/v2\/posts requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xcx.js
+
+#小纸箱助手（2020-12-15）@ddgksf2013
+http-response ^https:\/\/xcx\.xianbaow\.com\/wp\-json\/wp\/v2\/posts requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xcx.js
+
+#扎比科技资源箱 弹框显示内容（2020-12-14）@ddgksf2013
+http-response ^https:\/\/jabi\.coding\.net\/p\/xcx\/d\/xcx\/git\/raw\/master\/jabikj\.json requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/jabi.js
+
+#AppleAndroid 弹框显示内容（2020-12-14）@ddgksf2013
+http-response ^https:\/\/iosoi\.cn\/wp-json\/wp\/v2\/posts/\d+ requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xcx.js AppleAndroid
+#辅助去除页面嵌入式式卡片广告（2020-12-14）
+http-response ^https:\/\/iosoi\.cn\/wp-content\/plugins requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xcx.js AppleAndroid
+
+#森茂雅苑（2020-10-27）@ddgksf2013
+http-response ^https:\/\/d\.smkj33\.top\/wp\-json\/wp\/v2\/posts requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xcx.js
+
+#酸鸡汤、老爷花苑、御花园（2020-12-14）@ddgksf2013
+http-response ^https:\/\/[a-z]+\.ddly666\.top\/wp\-json\/wp\/v2\/posts requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xcx.js
+
+#黑科技软件（2020-09-01）@ddgksf2013
+http-response ^https:\/\/hkj178\.com\/wp\-json\/mp\/v2\/posts requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xcx.js
+
+#天泽后花园（2020-09-01）@ddgksf2013
+http-response ^https:\/\/a\.jxjt888\.top\/wp\-json\/wp\/v2\/posts requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xcx.js
+
+#小野分享（2020-12-15）@ddgksf2013
+http-response ^https:\/\/lysl2020\.com\/wp\-json\/wp\/v2\/posts requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xcx.js
+
+#搜罗好货（2020-09-24）@ddgksf2013
+http-response ^https:\/\/www\.i3zh\.com\/wp\-json\/wp\/v2\/posts requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xcx.js
+
+#漫画台 Lite@ddgksf2013
+http-response ^https?:\/\/comic\.321mh\.com\/app_api\/v\d\/getcomicinfo_body requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/manhuatailite.js
+
+#小打卡@ddgksf2013
+http-response ^https?:\/\/uranus\.sharedaka\.com\/api\/v3\/user\/info\/get requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xiaodaka.js
+
+#搜罗好货（2022-03-12）@ddgksf2013
+http-response ^https?:\/\/wp3\.lobdol\.cn\/wp-json\/wp\/v2\/posts requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xcx.js
+
+#APP基地（2022-03-20）@ddgksf2013
+http-response ^https:\/\/wx\.wxqqurl\.cn\/wp-json\/watch-life-net\/v1\/posts requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xcx.js
+
+#科技窝（2022-03-20）@ddgksf2013
+http-response ^https:\/\/www\.bbkj\.work\/wp-json\/watch-life-net\/v1\/posts requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xcx.js
+
+#喜茶 @是豆豆呀 go.heytea.com
+http-response ^https:\/\/go\.heytea\.com\/api\/service-portal\/vip requires-body=1,script-path=https://raw.githubusercontent.com/jizhi0520/QX/main/heytea.js
+#全家微会员 @是豆豆呀 minifm.maxxipoint.com
+http-response ^https:\/\/minifm\.maxxipoint\.com\/banner\/list requires-body=1,script-path=https://raw.githubusercontent.com/jizhi0520/QX/main/FamilyMart.js
+
+#罗森点点 @是豆豆呀 lawsonapi.yorentown.com, plt.yorentown.com
+http-response ^https:\/\/lawsonapi\.yorentown\.com\/area\/sh-lawson\/app\/v1\/home requires-body=1,script-path=https://raw.githubusercontent.com/jizhi0520/QX/main/lawson.js
+
+#茶颜悦色 @是豆豆呀 miniapp.sexytea2013.com
+http-response ^https:\/\/miniapp\.sexytea2013\.com\/cms\/slot\/queryByCodes\?codes=INDEX_TOP_BANNER requires-body=1,script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/WexinMiniPrograms/chayanyuese/chayanyuese_remove_ads.js
+
+#COCO点单 @是豆豆呀 coco-com.e.verystar.net
+http-response ^https:\/\/coco-com\.e\.verystar\.net\/v1\/home\/info requires-body=1,script-path=https://raw.githubusercontent.com/jizhi0520/QX/main/coco.js
+
+#滴滴青桔 @是豆豆呀 htwkop.xiaojukeji.com
+http-response ^https:\/\/htwkop\.xiaojukeji\.com\/gateway\?api=hm\.fa\.homeConfig requires-body=1,script-path=https://raw.githubusercontent.com/jizhi0520/QX/main/qingju.js
+
+#一点点+ @是豆豆呀 cappapi.alittle-tea.com, alittle-tea.oss-cn-shanghai.aliyuncs.com
+http-response ^https:\/\/cappapi\.alittle-tea\.com\/open\?method=catering\.set\.ad requires-body=1,script-path=https://raw.githubusercontent.com/jizhi0520/QX/main/alittle-tea.js
+
+#M Stand @是豆豆呀 api.prod.dj.mstand.cn, api.prod.dj.mstand.cn
+http-response ^https:\/\/api\.prod\.dj\.mstand\.cn\/scrm\/mini\/app\/index\/info requires-body=1,script-path=https://raw.githubusercontent.com/jizhi0520/QX/main/M_Stand.js
+
+#LINLEE @是豆豆呀 webapi.qmai.cn
+http-response ^https:\/\/webapi\.qmai\.cn\/web\/catering\/design\/homePage-Config requires-body=1,script-path=https://raw.githubusercontent.com/jizhi0520/QX/main/LINLEE.js
+
+#挪瓦咖啡 @是豆豆呀 webapi.qmai.cn, images.qmai.cn
+http-response ^https:\/\/webapi\.qmai\.cn\/web\/catering\/design\/homePage-Config requires-body=1,script-path=https://raw.githubusercontent.com/jizhi0520/QX/main/kff.js
+
+#T3出行 @是豆豆呀 passenger.t3go.cn
+http-response ^https:\/\/passenger\.t3go\.cn\/(solution\-|common\-)?(passenger\-)?(activity\-|app\-)?api\/notoken\/(trip\/)?api\/(home\/|common\/)?(v[1-3]\/)?(ad\/getNegativescreen|solution\/passenger\/open\/getHomeMenu|leftmenu|getHomeInfoGlobal) requires-body=1,script-path=https://raw.githubusercontent.com/jizhi0520/QX/main/T3.js
+
+#携程旅行 @是豆豆呀 m.ctrip.com
+http-response ^https:\/\/m\.ctrip\.com\/restapi\/soa2\/13012\/getWaterflowInfo requires-body=1,script-path=https://raw.githubusercontent.com/jizhi0520/QX/main/T3.js
+
+#古茗 @是豆豆呀 newton.gumingnc.com
+http-response ^https:\/\/newton\.gumingnc\.com\/newton-buyer\/newton\/buyer\/(ump|touch|external\/front) requires-body=1,script-path=https://raw.githubusercontent.com/jizhi0520/QX/main/ming.js
+
+
+
+[MITM]
+hostname = res.pizzahut.com.cn, orders.kfc.com.cn, dynamicad.kfc.com.cn, res.kfc.com.cn, api.mcd.cn, 3pp.starbucks.com.cn, wechat-api.i-xiaoma.com.cn, apiproxy.zuche.com, miniprogram.ishansong.com, ads.ishansong.com, minicap.caocaokeji.cn, r2.gzyct.com, applets.jtexpress.com.cn, ump.ems.com.cn, api.hellobike.com, api.kuaidihelp.com, wxproj.seeyouyima.com, suyun-user.daojia.com, qapi.huolala.cn, appuser-static.huolala.cn, apis.alenable.com, dock.tenchii.com, webchatapp.fcbox.com, dsp.fcbox.com, api.hongyibo.com.cn, res.hongyibo.com.cn, supplier-api.imdada.cn, common.diditaxi.com.cn, conf.diditaxi.com.cn, fscdn.zto.com, hdgateway.zto.com, mobile-api.imlaidian.com, wxs-weixin.sd.zhumanggroup.com, s.jiediankeji.com, smarket.dian.so,file.dian.so, aag.enmonster.com, ad.xiaotucc.com, mapi.xiaotucc.com, capis*.didapinche.com, api-marketing.zhinengxiyifang.cn, api.songguo7.com, api.hongyibo.com.cn, res.hongyibo.com.cn, api.songguo7.com, ccmsupport-sz.tenpay.com, wx.mygolbs.com, hkj178.com, tan.ipnas.ltd, 4thdimension.top, www.benbenfx.xyz, *.smkj33.top, tvapp.guilaile.cn, gz.gongzijx.com, d.syshhc.top, gjsx.vip, jt.jxjt888.top, *.tslt.xyz, g.syshhc.top, c.jxjt888.top, www.laoguikeji.cn, qj.bpojie.com, b.tslt.xyz, m.xgjyouhui.com, www.freeheikeji.cn, xcx.xianbaow.com, jabi.coding.net, iosoi.cn, d.smkj33.top, *.ddly666.top, hkj178.com, a.jxjt888.top, lysl2020.com, www.i3zh.com, comic.321mh.com, uranus.sharedaka.com, wp3.lobdol.cn, wx.wxqqurl.cn, www.bbkj.work, tm-api.pin-dao.cn, api-fouth-mem.huazhu.com, wxapp.bestwehotel.com, app.homeinns.com, wx.bthhotels.com, go.heytea.com, mxsa.mxbc.net, htwkop.xiaojukeji.com, minifm.maxxipoint.com, lawsonapi.yorentown.com, plt.yorentown.com, miniapp.sexytea2013.com, coco-com.e.verystar.net, cbd-gateway-service-applets.hualala.com, member.lxjchina.com.cn, cappapi.alittle-tea.com, alittle-tea.oss-cn-shanghai.aliyuncs.com, triangle.wearemanner.com, api.prod.dj.mstand.cn, api.prod.dj.mstand.cn, webapi.qmai.cn, gw-passenger-wap.01zhuanche.com, www.deppon.com, passengerapi.saicmobility.com, passenger.t3go.cn, m.ctrip.com, newton.gumingnc.com
