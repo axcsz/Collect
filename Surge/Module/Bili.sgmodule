@@ -64,5 +64,6 @@ bilibili_proto = type=http-response,pattern=^https?:\/\/(app\.bilibili\.com|grpc
 ^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/(Flash|ListFlash|GetActivityTab) data="https://raw.githubusercontent.com/Keywos/Rule/main/mocks/reject-dict.json"
 
 [MITM]
+hostname = %APPEND% -broadcast.chat.bilibili.com, -*cdn*.biliapi.net, -*tracker*.biliapi.net, app.bilibili.com, api.live.bilibili.com, *.bilibili.com, *.bilibili.*, grpc.biliapi.net,*biliapi.net
+hostname = %APPEND% aisubtitle.hdslb.com,i0.hdslb.com]@ddgksf2013
 
-hostname = %APPEND% -broadcast.chat.bilibili.com, -*cdn*.biliapi.net, -*tracker*.biliapi.net, app.bilibili.com, api.live.bilibili.com, *.bilibili.com, *.bilibili.*, grpc.biliapi.net,*biliapi.netaisubtitle.hdslb.com,i0.hdslb.com
