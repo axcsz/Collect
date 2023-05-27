@@ -1105,11 +1105,174 @@ DOMAIN-KEYWORD,s3-fe-scm.pglstatp-toutiao.com
 DOMAIN-KEYWORD,sf6-be-pack.pglstatp-toutiao.com
 DOMAIN-KEYWORD,p9-be-pack-sign.pglstatp-toutiao.com
 
+# > 讯飞输入法
+DOMAIN-KEYWORD,ossp.voicecloud.cn
+DOMAIN-KEYWORD,bj.imp.voiceads.cn
+DOMAIN-KEYWORD,m.panda.voiceads.cn
+DOMAIN-KEYWORD,iflyad.bj.openstorage.cn
+# > 喜马拉雅
+DOMAIN,adbehavior.ximalaya.com
+DOMAIN,adwbs.ximalaya.com
+DOMAIN-SUFFIX,ad.test.ximalaya.com
+DOMAIN-SUFFIX,adse.test.ximalaya.com
+DOMAIN-SUFFIX,adweb.test.ximalaya.com
+DOMAIN-SUFFIX,adweb.ximalaya.com
+DOMAIN-SUFFIX,linkeye.ximalaya.com
+DOMAIN-SUFFIX,location.ximalaya.com
+DOMAIN-SUFFIX,xdcs-collector.ximalaya.com
+DOMAIN-SUFFIX,ad.ximalaya.com
+DOMAIN-SUFFIX,adse.ximalaya.com
+DOMAIN-SUFFIX,adse.wsa.ximalaya.com
+DOMAIN-SUFFIX,adbehavior.wsa.ximalaya.com
+DOMAIN-SUFFIX,adsebs.ximalaya.com
+DOMAIN-SUFFIX,adbs.ximalaya.com
+# > 小红书
+DOMAIN,ads-img-qc.xhscdn.com
+DOMAIN,ads-video-al.xhscdn.com
+DOMAIN,ads-video-qc.xhscdn.com
+DOMAIN,t-ads.xiaohongshu.com
+# > 小米
+DOMAIN,data.mistat.xiaomi.com
+DOMAIN,tracking.intl.miui.com
+# > 小小影视
+DOMAIN,39d83s.com
+# > 小利生活
+DOMAIN-KEYWORD,mpos-pic.helipay.com
+# > 新浪
+DOMAIN-SUFFIX,beacon.sina.com.cn
+DOMAIN,u1.img.mobile.sina.cn
+DOMAIN,sax.sina.com.cn
+DOMAIN,saxs.sina.com.cn
+DOMAIN,saxn.sina.com.cn
+# > 雪球（可以去掉倒计时，但是误杀很多图片，默认关闭）
+# > DOMAIN-KEYWORD,xqimg.imedao.com
 
+# > 云闪付
+DOMAIN,ads.95516.com
+DOMAIN,cm-10-138.getui.com
+DOMAIN,sdk.open.talk.getui.net
+DOMAIN,sdk-conf.getui.com
+DOMAIN,switch.cup.com.cn
+DOMAIN,tysdk.95516.com
+# > 雅虎
+DOMAIN-SUFFIX,adserver.yahoo.com
+DOMAIN-SUFFIX,adspecs.yahoo.com
+DOMAIN-SUFFIX,advertising.yahoo.com
+DOMAIN-SUFFIX,gemini.yahoo.com
+DOMAIN,admarketing.yahoo.net
+DOMAIN,ads.auctions.yahoo.com
+DOMAIN,ads.finance.yahoo.com
+DOMAIN,ads.yahoo.com
+DOMAIN,ads.yahoo.de
+# > 优酷
+DOMAIN-SUFFIX,atm.youku.com
+DOMAIN,ad.mobile.youku.com
+DOMAIN,iyes.youku.com
+DOMAIN,pl.cp31.ott.cibntv.net
+DOMAIN-SUFFIX,actives.youku.com
+DOMAIN-SUFFIX,ad.api.3g.tudou.com
+DOMAIN-SUFFIX,ad.api.3g.youku.com
+DOMAIN-SUFFIX,ad.api.mobile.youku.com
+DOMAIN-SUFFIX,a-dxk.play.api.3g.youku.com
+DOMAIN-SUFFIX,b.smartvideo.youku.com
+DOMAIN-SUFFIX,c.yes.youku.com
+DOMAIN-SUFFIX,das.api.youku.com
+DOMAIN-SUFFIX,das.mobile.youku.com
+DOMAIN-SUFFIX,dev-push.m.youku.com
+DOMAIN-SUFFIX,dl.g.youku.com
+DOMAIN-SUFFIX,dmapp.youku.com
+DOMAIN-SUFFIX,gamex.mobile.youku.com
+DOMAIN-SUFFIX,hudong.pl.youku.com
+DOMAIN-SUFFIX,huodong.pl.youku.com
+DOMAIN-SUFFIX,huodong.vip.youku.com
+DOMAIN-SUFFIX,hz.youku.com
+DOMAIN-SUFFIX,l.ykimg.com
+DOMAIN-SUFFIX,lstat.youku.com
+DOMAIN-SUFFIX,m.yes.youku.com
+DOMAIN-SUFFIX,mobilemsg.youku.com
+DOMAIN-SUFFIX,msg.youku.com
+DOMAIN-SUFFIX,myes.youku.com
+DOMAIN-SUFFIX,p.l.youku.com
+DOMAIN-SUFFIX,passport-log.youku.com
+DOMAIN-SUFFIX,p-log.ykimg.com
+DOMAIN-SUFFIX,push.m.youku.com
+DOMAIN-SUFFIX,r.l.youku.com
+DOMAIN-SUFFIX,s.p.youku.com
+DOMAIN-SUFFIX,sdk.api.gamex.mobile.youku.com
+DOMAIN-SUFFIX,sdk.m.youku.com
+DOMAIN-SUFFIX,stat.youku.com
+DOMAIN-SUFFIX,store.tv.api.3g.youku.com
+DOMAIN-SUFFIX,store.xl.api.3g.youku.com
+DOMAIN-SUFFIX,tdrec.youku.com
+DOMAIN-SUFFIX,test.ott.youku.com
+DOMAIN-SUFFIX,urchin.lstat.youku.com
+DOMAIN-SUFFIX,v.l.youku.com
+DOMAIN-SUFFIX,val.api.youku.com
+DOMAIN-SUFFIX,wan.youku.com
+DOMAIN-SUFFIX,ykatr.youku.com
+DOMAIN-SUFFIX,ykrec.youku.com
+# > 易车
+DOMAIN,adx.yiche.com
+DOMAIN,log.ycapp.yiche.com
+# > 央视
+DOMAIN-SUFFIX,a.cctv.com
+DOMAIN-SUFFIX,ad.cctv.com
+DOMAIN-SUFFIX,ad.cntv.cn
+DOMAIN-SUFFIX,adguanggao.eee114.com
+DOMAIN-SUFFIX,afp.qiyi.com
+DOMAIN-SUFFIX,cctv.adsunion.com
+DOMAIN-SUFFIX,d.cntv.cn
+DOMAIN-SUFFIX,de.pandora.xiaomi.com
+DOMAIN-SUFFIX,mishop.pandora.xiaomi.com
+DOMAIN-SUFFIX,cws-cctv.conviva.com
+DOMAIN,galaxy.bjcathay.com
+DOMAIN,mdrecv.app.cntvwb.cn
+DOMAIN,sdapprecv.app.cntvwb.cn
+DOMAIN,vdapprecv.app.cntvwb.cn
+DOMAIN-SUFFIX,mdrecv.app.cntvwb.cn
+DOMAIN-SUFFIX,sdapprecv.app.cntvwb.cn
+DOMAIN-SUFFIX,vdapprecv.app.cntvwb.cn
+# > 一刻相册
+DOMAIN-KEYWORD,sf1-be-tos.pglstatp-toutiao.com
+DOMAIN-KEYWORD,sf3-fe-tos.pglstatp-toutiao.com
 
-
-
-
+# > 知乎
+USER-AGENT,AVOS*
+DOMAIN,appcloud2.in.zhihu.com
+DOMAIN,mqtt.zhihu.com
+DOMAIN,sugar.zhihu.com
+DOMAIN,118.89.204.198
+IP-CIDR,118.89.204.198/32
+IP-CIDR6,2402:4e00:1200:ed00:0:9089:6dac:96b6/128
+# > 中关村
+DOMAIN,apppv.zol.com.cn
+DOMAIN,pvnapp.zol.com.cn
+# > 中国联通
+DOMAIN-SUFFIX,m1.ad.10010.com
+# > 中国电信
+DOMAIN,ad.21cn.com
+DOMAIN,ad.k.21cn.com
+DOMAIN,admarket.21cn.com
+DOMAIN,adshows.21cn.com
+# > 中信银行
+DOMAIN-SUFFIX,sis.jpush.io
+DOMAIN-SUFFIX,s.jpush.cn
+DOMAIN-SUFFIX,jpush.cn
+DOMAIN-SUFFIX,im64.jpush.cn
+DOMAIN-SUFFIX,im.jpush.cn
+DOMAIN-SUFFIX,jpush.html5.qq.com
+# > 中华万年历广告
+DOMAIN-KEYWORD,lkme.cc
+DOMAIN-KEYWORD,api.freed.so
+DOMAIN-KEYWORD,log-dmp.suishenyun.cn
+DOMAIN-KEYWORD,client-dmp.suishenyun.cn
+DOMAIN-KEYWORD,pc.suishenyun.net
+DOMAIN-KEYWORD,v0-client-lz.rili.cn
+# > 招钱进宝
+DOMAIN-KEYWORD,p26-be-pack-sign.pglstatp-toutiao.com
+# > 真不卡
+DOMAIN-SUFFIX,ttayy.cn
+DOMAIN-SUFFIX,zhengxiaoliu.top
 
 
 
