@@ -28,12 +28,6 @@
 #############################################
 
 
-
-[MITM]
-hostname = %INSERT% ad.12306.cn, intl.iqiyi.com, act.vip.iqiyi.com
-
-
-
 [URL Rewrite]
 # > 爱奇艺
 ^https?:\/\/iface\.iqiyi\.com\/api\/getNewAdInfo - reject
@@ -64,3 +58,8 @@ https?:\/\/.+\.iqiyipic\.com\/image\/20*_100000 - reject
 [Script]
 # > 12306
 12306 = type=http-request,pattern=^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList,requires-body=1,script-path=https://raw.githubusercontent.com/kokoryh/Script/master/js/12306.js
+
+
+
+[MITM]
+hostname = %INSERT% ad.12306.cn, intl.iqiyi.com, act.vip.iqiyi.com
