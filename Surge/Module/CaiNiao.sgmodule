@@ -1,23 +1,24 @@
-#!name = 菜鸟去广告
-#!desc = 过滤菜鸟广告
-#!openUrl = 
-#!author = keywos RuCu6
-#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
-#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Cainiao.png
+#!name = 菜鸟
+#!desc = 移除推广模块
+#!author = RuCu6 Keywos
+#!update = 2023-05-27 08:25
+
 
 [URL Rewrite]
-# 首页 - 今日好物推荐、底部商品推广、底部标签页、问卷调查、主页图标
+# 其他
+^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch$ Cainiao4iPhone - reject
+# 发现页 裹裹券
+^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.com\.cainiao\.longquan\.place\.getpageresourcecontent\.cn\/1\.0\? - reject
+# 首页 今日好物推荐,底部商品推广,底部标签页,问卷调查,主页图标 //cn-acs.m.cainiao.com
 ^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.adkeyword\.get\.cn\/1\.0\? - reject
 ^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.index\.cn\/1\.0\? - reject
 ^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.nbmensa\.research\.researchservice\.(acquire|event|close)\.cn\/1\.0\? - reject
 
-[Script]
-# 不明请求
-http-response ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch requires-body=1,script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Cainiao/Cainiao_amdc_reject.js
 
-# 首页 - 今日好物推荐、底部商品推广、底部标签页、问卷调查、主页图标
-http-response ^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.m?show\.cn\/1\.0\? requires-body=1,script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Cainiao/Cainiao_remove_ads.js
-http-response ^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.nbpresentation\.protocol\.homepage\.get\.cn\/1\.0\? requires-body=1,script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Cainiao/Cainiao_remove_ads.js
+[Script]
+# 首页 今日好物推荐,底部商品推广,底部标签页,问卷调查,主页图标 //cn-acs.m.cainiao.com
+http-response ^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.m?show\.cn\/1\.0\? requires-body=1,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cainiao.js
+http-response ^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.nbpresentation\.(homepage\.merge|pickup\.empty\.page|protocol\.homepage)\.get\.cn\/1\.0\? requires-body=1,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cainiao.js
 
 [MITM]
-hostname = %INSERT% cn-acs.m.cainiao.com, guide-acs.m.taobao.com
+hostname = %INSERT% cn-acs.m.cainiao.com
