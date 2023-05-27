@@ -284,3 +284,311 @@ DOMAIN-SUFFIX,ad.duoduo.link
 # > 盯盯拍
 DOMAIN,pglstatp-toutiao.com
 
+# > 凤凰新媒体
+DOMAIN-SUFFIX,deliver.ifeng.com
+DOMAIN,api.newad.ifeng.com
+DOMAIN,ifengad.3g.ifeng.com
+
+# > GozenData
+DOMAIN-SUFFIX,gozendata.com
+DOMAIN-SUFFIX,gzads.com
+DOMAIN-SUFFIX,gz-data.com
+# > GrowingIO
+DOMAIN-SUFFIX,giocdn.com
+# > 光大银行阳光惠生活
+DOMAIN-KEYWORD,talk.bz.getui.com
+# > 谷歌
+DOMAIN-SUFFIX,google-analytics.com
+DOMAIN,safebrowsing.googleapis.com
+DOMAIN-SUFFIX,doubleclick.net
+DOMAIN-SUFFIX,googleadservices.com
+DOMAIN-SUFFIX,googleadsserving.cn
+DOMAIN-SUFFIX,googlesyndication.com
+DOMAIN-SUFFIX,googletagservices.com
+DOMAIN-SUFFIX,googletagmanager.com
+DOMAIN-SUFFIX,video-ad-stats.googlesyndication.com
+DOMAIN-SUFFIX,tpc.googlesyndication.com
+DOMAIN-SUFFIX,pagead.google.com
+DOMAIN-SUFFIX,pagead.l.google.com
+DOMAIN-SUFFIX,pagead2.googlesyndication.com
+DOMAIN-SUFFIX,pagead-tpc.l.google.com
+DOMAIN-SUFFIX,mobileads.google.com
+DOMAIN-SUFFIX,googlecommerce.com
+DOMAIN-SUFFIX,blaaaa12.googlecode.com
+DOMAIN-SUFFIX,badad.googleplex.com
+DOMAIN-SUFFIX,afs.googlesyndication.com
+DOMAIN-SUFFIX,afd.l.google.com
+DOMAIN-SUFFIX,www.googleadservices.com
+DOMAIN-SUFFIX,www.google-analytics.com
+DOMAIN,ads.youtube.com
+# > 高德
+DOMAIN-SUFFIX,adiu.amap.com,REJECT
+DOMAIN,aboard.apilocate.amap.com,REJECT
+DOMAIN,apiinit.amap.com,REJECT
+DOMAIN,icloud-amap.com,REJECT
+DOMAIN,logs.amap.com,REJECT
+DOMAIN-SUFFIX,dualstack-logs.amap.com,REJECT
+DOMAIN-SUFFIX,logs.amap.com,REJECT
+DOMAIN-SUFFIX,optimus-ads.amap.com,REJECT
+DOMAIN-SUFFIX,page.amap.com,REJECT
+DOMAIN,optimus-ads.amap.com
+DOMAIN,optimus-ads.amap.com.w.alikunlun.com
+DOMAIN-SUFFIX,shouji.sougou.com
+DOMAIN,u51.me
+DOMAIN-SUFFIX,u51.me
+
+# > HDO
+# DOMAIN-SUFFIX,applovin.com,REJECT
+# DOMAIN-SUFFIX,applvn.com,REJECT
+# > 湖南卫视
+DOMAIN-SUFFIX,da.mgtv.com
+DOMAIN-SUFFIX,da.hunantv.com
+DOMAIN-SUFFIX,log.hunantv.com
+DOMAIN-SUFFIX,v2.hunantv.com
+# > 虎扑
+DOMAIN,adx.hupu.com
+DOMAIN,adx-api.hupu.com
+DOMAIN,goblin.hupu.com
+# > 虎牙直播 开屏广告
+DOMAIN,pp-cdnfile2pcdn.msstatic.com
+DOMAIN,livewebbs2pcdn.msstatic.com
+DOMAIN,huyafile.msstatic.com
+DOMAIN,livewebbs2.msstatic.com
+DOMAIN,business.msstatic.com
+# > 哈啰
+DOMAIN-KEYWORD,assets.51downapp.cn
+# > 黄油相机 #开屏广告 感谢#Dragon分享
+DOMAIN-SUFFIX,anythinktech.com
+DOMAIN-SUFFIX,adkwai.com
+DOMAIN-SUFFIX,mob.com
+
+# > jxedt
+DOMAIN,richmanapi.jxedt.com
+DOMAIN,richmanmain.jxedt.com
+DOMAIN,richmanrules.jxedt.com
+# > 金山词霸
+DOMAIN,ad-stat.ksosoft.com
+DOMAIN,img.auction-ads.wpscdn.cn
+DOMAIN,counter.kingsoft.com
+DOMAIN,counter.ksosoft.com
+DOMAIN,minfo.wps.cn
+DOMAIN,mobad.ijinshan.com
+DOMAIN,ups.ksmobile.net
+DOMAIN,ws.ksmobile.net
+# > 今日头条
+DOMAIN,dm.toutiao.com
+DOMAIN-KEYWORD,ad.toutiao.com
+DOMAIN-KEYWORD,clk.gentags.net
+DOMAIN-KEYWORD,dm.toutiao.com
+DOMAIN-KEYWORD,dm.pstatp.com
+DOMAIN-KEYWORD,dm.bytedance.com
+DOMAIN-KEYWORD,uop.umeng.com
+DOMAIN-KEYWORD,policy.jd.com
+DOMAIN-KEYWORD,kepler.jd.com
+DOMAIN-KEYWORD,bdsp.x.jd.com
+DOMAIN-KEYWORD,keplerapi.jd.com
+DOMAIN-KEYWORD,m.suning.com
+DOMAIN-KEYWORD,adshare.toutiao.com
+DOMAIN-KEYWORD,tunion-api.m.taobao.com
+DOMAIN-KEYWORD,mapi.m.jd.com
+DOMAIN-KEYWORD,s1.pstatp.com
+DOMAIN-KEYWORD,s2.pstatp.com
+DOMAIN-KEYWORD,s3.pstatp.com
+DOMAIN-KEYWORD,a3.pstatp.com
+DOMAIN-KEYWORD,a3.bytecdn.cn
+# DOMAIN-KEYWORD,ichannel.snssdk.com
+DOMAIN-SUFFIX,pangolin-sdk-toutiao.com
+DOMAIN-SUFFIX,pangolin-sdk-toutiao-b.com
+DOMAIN-SUFFIX,api-access.pangolin-sdk-toutiao-b.com
+DOMAIN,ad.toutiao.com
+DOMAIN,dsp.toutiao.com
+DOMAIN-KEYWORD,pangolin.snssdk.com
+# > 屏蔽京东和搜狗收集信息 @jFrecht
+DOMAIN-SUFFIX,jdqd.jd.com
+DOMAIN-SUFFIX,shouji.sougou.com
+
+# > keep
+DOMAIN,apm.gotokeep.com
+DOMAIN,kad.gotokeep.com
+# > 快乐广播
+DOMAIN,ad.hpplay.cn
+DOMAIN,adc.hpplay.cn
+DOMAIN,adcdn.hpplay.cn
+DOMAIN,adeng.hpplay.cn
+DOMAIN,pin.hpplay.cn
+DOMAIN,rp.hpplay.cn
+DOMAIN,rpt.hpplay.cn
+# > 快手
+# DOMAIN-SUFFIX,yximgs.com
+DOMAIN-SUFFIX,e.kuaishou.com
+# DOMAIN,js-ad.a.yximgs.com
+DOMAIN-SUFFIX,cm.downloader.commercial.kuaishou.com
+DOMAIN-SUFFIX,cm.ad.gifshow.com
+DOMAIN-SUFFIX,cm.kwad.com
+# > 酷狗音乐
+DOMAIN-KEYWORD,searchrecommend.kugou.com
+DOMAIN-KEYWORD,nbcollectretry.kugou.com
+DOMAIN-KEYWORD,rtmretry.kugou.com
+DOMAIN-KEYWORD,rt-m.kugou.com
+DOMAIN-KEYWORD,nbcollect.kugou.com
+DOMAIN-KEYWORD,c1img.ali.kugou.com
+DOMAIN-KEYWORD,kgstaticdlbssdlbig.tx.kugou.com
+DOMAIN-KEYWORD,adsfilebssdlbig.ali.kugou.com
+DOMAIN-KEYWORD,splashimgbssdl.yun.kugou.com
+DOMAIN-KEYWORD,adservice.kugou.com,REJECT
+DOMAIN-KEYWORD,kgipadstat.kugou.com,REJECT
+DOMAIN-KEYWORD,kgipadstatbak.kugou.com,REJECT
+DOMAIN-KEYWORD,logwebs.kugou.com,REJECT
+DOMAIN-KEYWORD,tracker.kugou.com,REJECT
+DOMAIN-KEYWORD,trackercdnbj.kugou.com,REJECT
+DOMAIN-KEYWORD,rich.kuwo.cn
+DOMAIN-KEYWORD,mobilead.kuwo.cn
+DOMAIN,adsfile.bssdlbig.kugou.com
+DOMAIN-SUFFIX,oth.eve.mdt.qq.com
+DOMAIN,pgdt.gtimg.cn
+DOMAIN-SUFFIX,pgdt.gtimg.cn
+DOMAIN,pgdt.gtimg.com
+DOMAIN,adsmind.gdtimg.com
+DOMAIN-SUFFIX,channel.fanxing.kugou.com
+DOMAIN-SUFFIX,d.kugou.com
+DOMAIN-SUFFIX,downmobile.kugou.com
+DOMAIN-SUFFIX,gad.kugou.com
+DOMAIN-SUFFIX,game.kugou.com
+DOMAIN-SUFFIX,gamebox.kugou.com
+DOMAIN-SUFFIX,gcapi.sy.kugou.com
+DOMAIN-SUFFIX,gg.kugou.com
+DOMAIN-SUFFIX,install.kugou.com
+DOMAIN-SUFFIX,install2.kugou.com
+DOMAIN-SUFFIX,minidcsc.kugou.com
+DOMAIN-SUFFIX,mo.kugou.com
+DOMAIN-SUFFIX,msg.mobile.kugou.com
+DOMAIN-SUFFIX,mvads.kugou.com
+DOMAIN-SUFFIX,p.kugou.com
+DOMAIN-SUFFIX,push.mobile.kugou.com
+DOMAIN-SUFFIX,rtmonitor.kugou.com
+DOMAIN-SUFFIX,sdn.kugou.com
+DOMAIN-SUFFIX,song.fanxing.kugou.com
+DOMAIN-SUFFIX,update.mobile.kugou.com
+DOMAIN-SUFFIX,youxi.kugou.com
+DOMAIN-SUFFIX,adserviceretry.kugou.com
+DOMAIN-SUFFIX,ads.service.kugou.com
+DOMAIN-SUFFIX,adsfile.bssdlbig.kugou.com
+DOMAIN-SUFFIX,log.stat.kugou.com
+DOMAIN-SUFFIX,log.web.kugou.com
+DOMAIN-SUFFIX,kgmobilestat.kugou.com
+DOMAIN-SUFFIX,kgmobilestatbak.kugou.com
+DOMAIN-SUFFIX,mobilelog.kugou.com
+# > 酷我音乐
+DOMAIN-SUFFIX,c.kuwo.cn
+DOMAIN-SUFFIX,deliver.kuwo.cn
+DOMAIN-SUFFIX,game.kuwo.cn
+DOMAIN-SUFFIX,kuwoyy.com
+DOMAIN-SUFFIX,kwmsg.kuwo.cn
+DOMAIN-SUFFIX,msclick2.kuwo.cn
+DOMAIN-SUFFIX,msphoneclick.kuwo.cn
+DOMAIN-SUFFIX,updatepage.kuwo.cn
+DOMAIN-SUFFIX,wa.kuwo.cn
+DOMAIN-SUFFIX,webstat.kuwo.cn
+DOMAIN-SUFFIX,mobilead.kuwo.cn
+DOMAIN-SUFFIX,rich.kuwo.cn
+# > 酷安
+# > DOMAIN-KEYWORD,p6-be-pack-sign.pglstatp-toutiao.com
+
+# > 乐视
+DOMAIN-SUFFIX,webp2p.letv.com
+DOMAIN,ark.letv.com
+DOMAIN,emma-414870e223.huodonghezi.com
+DOMAIN,g3.letv.com
+DOMAIN,n.mark.letv.com
+# > LinkWiFi
+DOMAIN,a.wkanx.com
+DOMAIN,cwx.lianwangtech.com
+DOMAIN,c1wx.lianwangtech.com
+# > 蓝基因（弹窗还在，需要手动关闭）
+DOMAIN-KEYWORD,medicine.lanjiyin.com.cn
+# > 两步路
+DOMAIN-SUFFIX,admobile.top
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
