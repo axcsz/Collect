@@ -986,7 +986,124 @@ DOMAIN-KEYWORD,stsdk.vivoglobal.com
 # > VIVO商城
 DOMAIN-KEYWORD,paradisestatic.vivo.com.cn
 
-
+# > 万能钥匙专业版 感谢#All in 梭哈分享
+DOMAIN-SUFFIX,mi.gdt.qq.com
+DOMAIN-SUFFIX,p9-be-pack-sign.pglstatp-toutiao.com
+DOMAIN-SUFFIX,p6-be-pack-sign.pglstatp-toutiao.com
+DOMAIN-SUFFIX,p3-be-pack-sign.pglstatp-toutiao.com
+# > 微博
+DOMAIN-KEYWORD,fastimage.uve.weibo.com
+DOMAIN-KEYWORD,adimg.uve.weibo.com
+DOMAIN-SUFFIX,adimg.vue.weibo.com
+DOMAIN-SUFFIX,zymo.mps.weibo.com
+DOMAIN-SUFFIX,weibomingzi.com
+DOMAIN-SUFFIX,sdkapp.uve.weibo.com
+DOMAIN-SUFFIX,s.alitui.weibo.com
+DOMAIN-SUFFIX,promote.biz.weibo.cn
+DOMAIN-SUFFIX,gw5.push.mcp.weibo.cn
+DOMAIN-SUFFIX,game.weibo.cn
+DOMAIN-SUFFIX,biz.weibo.com
+DOMAIN-SUFFIX,adimg.uve.weibo.com
+DOMAIN-SUFFIX,game.weibo.com
+DOMAIN-SUFFIX,gw6.push.mcp.weibo.cn
+DOMAIN-KEYWORD,ads.viber.com
+DOMAIN-KEYWORD,ads-d.viber.com
+DOMAIN-KEYWORD,ads.aws.viber.com
+DOMAIN-SUFFIX,alitui.weibo.com
+DOMAIN,adimg.uve.weibo.com
+DOMAIN,adimg.vue.weibo.com
+DOMAIN-KEYWORD,adimg.uve.weibo.com,REJECT
+DOMAIN-KEYWORD,alitui.weibo.com,REJECT
+DOMAIN-KEYWORD,biz.weibo.com,REJECT
+DOMAIN-KEYWORD,game.weibo.cn,REJECT
+DOMAIN-KEYWORD,game.weibo.com,REJECT
+DOMAIN-KEYWORD,gw5.push.mcp.weibo.cn,REJECT
+DOMAIN-KEYWORD,gw6.push.mcp.weibo.cn,REJECT
+DOMAIN-KEYWORD,promote.biz.weibo.cn,REJECT
+DOMAIN-KEYWORD,s.alitui.weibo.com,REJECT
+DOMAIN-KEYWORD,sdkapp.uve.weibo.com,REJECT
+DOMAIN-KEYWORD,weibomingzi.com,REJECT
+DOMAIN-KEYWORD,zymo.mps.weibo.com,REJECT
+DOMAIN-KEYWORD,adimg.vue.weibo.com,REJECT
+DOMAIN-KEYWORD,dp.im.weibo.cn,REJECT
+DOMAIN-KEYWORD,m.game.weibo.cn,REJECT
+DOMAIN-KEYWORD,c.biz.weibo.com,REJECT
+DOMAIN-KEYWORD,c.wcpt.biz.weibo.com,REJECT
+DOMAIN-KEYWORD,click.uve.weibo.com,REJECT
+DOMAIN-KEYWORD,wax.weibo.com,REJECT
+DOMAIN-KEYWORD,wbapp.uve.weibo.com,REJECT
+DOMAIN-KEYWORD,widget.weibo.com,REJECT
+DOMAIN-KEYWORD,zc.biz.weibo.com,REJECT
+DOMAIN-KEYWORD,dsp.edm.weibo.cn,REJECT
+DOMAIN-KEYWORD,alitui.weibo.com.cn,REJECT
+DOMAIN-KEYWORD,biz.weibo.com.cn,REJECT
+DOMAIN-KEYWORD,game.weibo.com.cn,REJECT
+DOMAIN-KEYWORD,tui.weibo.com,REJECT
+DOMAIN-KEYWORD,wax.weibo.com.cn,REJECT
+DOMAIN-KEYWORD,ad.weibo.com,REJECT
+DOMAIN-KEYWORD,adstrategy.biz.weibo.com,REJECT
+# DOMAIN-KEYWORD,s.weibo.com,REJECT
+DOMAIN-KEYWORD,vs.biz.weibo.com,REJECT
+# 微博开屏广告预加载
+DOMAIN,bootpreload.uve.weibo.com
+# > 网易
+DOMAIN-SUFFIX,dsp.youdao.com
+DOMAIN-SUFFIX,union.youdao.com
+DOMAIN,ad.bn.netease.com
+DOMAIN,ad.yixin.im
+DOMAIN,admusicpic.music.126.net
+DOMAIN,g1.163.com
+DOMAIN,gorgon.youdao.com
+DOMAIN,iad.g.163.com
+DOMAIN,iadmat.nosdn.127.net
+DOMAIN,iadmusicmat.music.126.net
+DOMAIN,iadmusicmatvideo.music.126.net
+DOMAIN,impservice.dictapp.youdao.com
+DOMAIN,impservice.youdao.com
+DOMAIN,n.3g.163.com
+DOMAIN,nex.163.com
+DOMAIN,yt-adp.nosdn.127.net
+DOMAIN,yt-adp.ws.126.net
+# > 网易云
+DOMAIN-KEYWORD,ossgw.alicdn.com
+# > 微软
+DOMAIN-SUFFIX,ads.msn.com
+DOMAIN-SUFFIX,ads1.msn.com
+DOMAIN-SUFFIX,ads2.msn.com
+DOMAIN-SUFFIX,bingads.microsoft.com
+DOMAIN-SUFFIX,rads.msn.com
+DOMAIN,mobileads.msn.com
+# > WiFi万能钥匙
+DOMAIN-KEYWORD,app.51y5.net
+DOMAIN-KEYWORD,apiinit.amap.com
+DOMAIN-KEYWORD,c.51y5.net
+DOMAIN-KEYWORD,msg.push.51y5.net
+DOMAIN-KEYWORD,a.wkanx.com
+DOMAIN-KEYWORD,c.wkanx.com
+DOMAIN-KEYWORD,c1.wkanx.com
+DOMAIN-KEYWORD,ap.51y5.net
+DOMAIN-KEYWORD,dc.51y5.net
+DOMAIN-KEYWORD,push-dc.51y5.net
+DOMAIN-KEYWORD,news-log.51y5.net
+DOMAIN-KEYWORD,login.push.51y5.net
+DOMAIN-KEYWORD,news.51y5.net
+DOMAIN-KEYWORD,cds.51y5.net
+DOMAIN-KEYWORD,insurance.lianwifi.com
+DOMAIN-KEYWORD,config.51y5.net
+DOMAIN-KEYWORD,static.wkanx.com
+DOMAIN-KEYWORD,config.y5en.com
+# > 威锋
+DOMAIN-KEYWORD,p3-be-pack-sign.pglstatp-toutiao.com
+DOMAIN-KEYWORD,sf3-be-pack.pglstatp-toutiao.com
+DOMAIN-KEYWORD,sf1-be-pack.pglstatp-toutiao.com
+DOMAIN-KEYWORD,sf1-fe-tos.pglstatp-toutiao.com
+DOMAIN-KEYWORD,sf1-ttcdn-tos.pstatp.com
+DOMAIN-KEYWORD,sf3-fe-tos.pglstatp-toutiao.com
+DOMAIN-KEYWORD,sf3-ttcdn-tos.pstatp.com
+DOMAIN-KEYWORD,sf6-fe-tos.pglstatp-toutiao.com
+DOMAIN-KEYWORD,s3-fe-scm.pglstatp-toutiao.com
+DOMAIN-KEYWORD,sf6-be-pack.pglstatp-toutiao.com
+DOMAIN-KEYWORD,p9-be-pack-sign.pglstatp-toutiao.com
 
 
 
