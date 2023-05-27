@@ -1,0 +1,23 @@
+#!name = 菜鸟去广告
+#!desc = 过滤菜鸟广告
+#!openUrl = 
+#!author = keywos RuCu6
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
+#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Cainiao.png
+
+[URL Rewrite]
+# 首页 - 今日好物推荐、底部商品推广、底部标签页、问卷调查、主页图标
+^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.adkeyword\.get\.cn\/1\.0\? - reject
+^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.index\.cn\/1\.0\? - reject
+^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.nbmensa\.research\.researchservice\.(acquire|event|close)\.cn\/1\.0\? - reject
+
+[Script]
+# 不明请求
+http-response ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch requires-body=1,script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Cainiao/Cainiao_amdc_reject.js
+
+# 首页 - 今日好物推荐、底部商品推广、底部标签页、问卷调查、主页图标
+http-response ^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.m?show\.cn\/1\.0\? requires-body=1,script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Cainiao/Cainiao_remove_ads.js
+http-response ^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.nbpresentation\.protocol\.homepage\.get\.cn\/1\.0\? requires-body=1,script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Cainiao/Cainiao_remove_ads.js
+
+[MITM]
+hostname = %INSERT% cn-acs.m.cainiao.com, guide-acs.m.taobao.com
