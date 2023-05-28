@@ -7,20 +7,20 @@
 # HOST-SUFFIX: 13
 # USER-AGENT: 1
 # TOTAL: 17
-HOST,p16-tiktokcdn-com.akamaized.net
-HOST-SUFFIX,byteoversea.com
-HOST-SUFFIX,ibytedtos.com
-HOST-SUFFIX,ibyteimg.com
-HOST-SUFFIX,ipstatp.com
-HOST-SUFFIX,isnssdk.com
-HOST-SUFFIX,muscdn.com
-HOST-SUFFIX,musical.ly
-HOST-SUFFIX,sgpstatp.com
-HOST-SUFFIX,snssdk.com
-HOST-SUFFIX,tik-tokapi.com
-HOST-SUFFIX,tiktok.com
-HOST-SUFFIX,tiktokcdn.com
-HOST-SUFFIX,tiktokv.com
-HOST-KEYWORD,musical.ly
-HOST-KEYWORD,tiktok
-USER-AGENT,TikTok*
+HOST,p16-tiktokcdn-com.akamaized.net,TikTok
+HOST-SUFFIX,byteoversea.com,TikTok
+HOST-SUFFIX,ibytedtos.com,TikTok
+HOST-SUFFIX,ibyteimg.com,TikTok
+HOST-SUFFIX,ipstatp.com,TikTok
+HOST-SUFFIX,isnssdk.com,TikTok
+HOST-SUFFIX,muscdn.com,TikTok
+HOST-SUFFIX,musical.ly,TikTok
+HOST-SUFFIX,sgpstatp.com,TikTok
+HOST-SUFFIX,snssdk.com,TikTok
+HOST-SUFFIX,tik-tokapi.com,TikTok
+HOST-SUFFIX,tiktok.com,TikTok
+HOST-SUFFIX,tiktokcdn.com,TikTok
+HOST-SUFFIX,tiktokv.com,TikTok
+HOST-KEYWORD,musical.ly,TikTok
+HOST-KEYWORD,tiktok,TikTok
+USER-AGENT,TikTok*,TikTok
