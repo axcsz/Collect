@@ -1,38 +1,38 @@
 # Unbreak
 # > General
-HOST,app.adjust.com
-HOST,app.appsflyer.com
-HOST,bdtj.tagtic.cn
+DOMAIN,app.adjust.com,DIRECT
+DOMAIN,app.appsflyer.com,DIRECT
+DOMAIN,bdtj.tagtic.cn,DIRECT
 # > Alibaba
-HOST,log.mmstat.com
-HOST,sycm.mmstat.com
+DOMAIN,log.mmstat.com,DIRECT
+DOMAIN,sycm.mmstat.com,DIRECT
 # > Google
-HOST-SUFFIX,blog.google // Google Blog
-HOST-SUFFIX,googletraveladservices.com // Google Flights
-HOST,clientservices.googleapis.com
-HOST,update.googleapis.com
-HOST,dl.google.com
-HOST,dl.l.google.com
-HOST,update.googleapis.com
+DOMAIN-SUFFIX,blog.google,DIRECT
+DOMAIN-SUFFIX,googletraveladservices.com,DIRECT
+DOMAIN,clientservices.googleapis.com,DIRECT
+DOMAIN,update.googleapis.com,DIRECT
+DOMAIN,dl.google.com,DIRECT
+DOMAIN,dl.l.google.com,DIRECT
+DOMAIN,update.googleapis.com,DIRECT
 # >> Firebase Cloud Messaging
-HOST,mtalk.google.com
-HOST,alt1-mtalk.google.com
-HOST,alt2-mtalk.google.com
-HOST,alt3-mtalk.google.com
-HOST,alt4-mtalk.google.com
-HOST,alt5-mtalk.google.com
-HOST,alt6-mtalk.google.com
-HOST,alt7-mtalk.google.com
-HOST,alt8-mtalk.google.com
+DOMAIN,mtalk.google.com,DIRECT
+DOMAIN,alt1-mtalk.google.com,DIRECT
+DOMAIN,alt2-mtalk.google.com,DIRECT
+DOMAIN,alt3-mtalk.google.com,DIRECT
+DOMAIN,alt4-mtalk.google.com,DIRECT
+DOMAIN,alt5-mtalk.google.com,DIRECT
+DOMAIN,alt6-mtalk.google.com,DIRECT
+DOMAIN,alt7-mtalk.google.com,DIRECT
+DOMAIN,alt8-mtalk.google.com,DIRECT
 # >> Paramount+
-# HOST,pubads.g.doubleclick.net
+# DOMAIN,pubads.g.doubleclick.net,DIRECT
 # > Tencent
-HOST,fairplay.l.qq.com
-HOST,livew.l.qq.com
-HOST,vd.l.qq.com
-HOST,vi.l.qq.com
+DOMAIN,fairplay.l.qq.com,DIRECT
+DOMAIN,livew.l.qq.com,DIRECT
+DOMAIN,vd.l.qq.com,DIRECT
+DOMAIN,vi.l.qq.com,DIRECT
 # > Strava
-HOST,analytics.strava.com
+DOMAIN,analytics.strava.com,DIRECT
 # > Umeng
-HOST,msg.umeng.com
-HOST,msg.umengcloud.com
+DOMAIN,msg.umeng.com,DIRECT
+DOMAIN,msg.umengcloud.com,DIRECT
