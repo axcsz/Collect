@@ -1,65 +1,65 @@
 # (Video)
 # > Acfun
-HOST-SUFFIX,acfun.cn
-HOST-SUFFIX,aixifan.com
+DOMAIN-SUFFIX,acfun.cn,PROXY
+DOMAIN-SUFFIX,aixifan.com,PROXY
 # > bilibili
-HOST-SUFFIX,biliapi.net
-HOST-SUFFIX,bilibili.com
-HOST-SUFFIX,bilivideo.com
-HOST-SUFFIX,hdslb.com
+DOMAIN-SUFFIX,biliapi.net,PROXY
+DOMAIN-SUFFIX,bilibili.com,PROXY
+DOMAIN-SUFFIX,bilivideo.com,PROXY
+DOMAIN-SUFFIX,hdslb.com,PROXY
 # > Tencent Video
-HOST-SUFFIX,video.qq.com
-HOST-SUFFIX,i.qq.com
-HOST-SUFFIX,v.qq.com
+DOMAIN-SUFFIX,video.qq.com,PROXY
+DOMAIN-SUFFIX,i.qq.com,PROXY
+DOMAIN-SUFFIX,v.qq.com,PROXY
 # > iQiyi
-HOST-SUFFIX,iqiyi.com
-HOST-SUFFIX,71edge.com
+DOMAIN-SUFFIX,iqiyi.com,PROXY
+DOMAIN-SUFFIX,71edge.com,PROXY
 # > Youku
-HOST-SUFFIX,soku.com
-HOST-SUFFIX,youku.com
-HOST-SUFFIX,ykimg.com
+DOMAIN-SUFFIX,soku.com,PROXY
+DOMAIN-SUFFIX,youku.com,PROXY
+DOMAIN-SUFFIX,ykimg.com,PROXY
 # > XiGua
-HOST-SUFFIX,ixigua.com
-HOST-SUFFIX,snssdk.com
+DOMAIN-SUFFIX,ixigua.com,PROXY
+DOMAIN-SUFFIX,snssdk.com,PROXY
 # > HunanTV
-HOST-SUFFIX,hitv.com
-HOST-SUFFIX,hunantv.com
-HOST-SUFFIX,mgtv.com
+DOMAIN-SUFFIX,hitv.com,PROXY
+DOMAIN-SUFFIX,hunantv.com,PROXY
+DOMAIN-SUFFIX,mgtv.com,PROXY
 # > Le
-HOST-SUFFIX,le.com
+DOMAIN-SUFFIX,le.com,PROXY
 # > PPLive
-HOST-SUFFIX,pplive.cn
-HOST-SUFFIX,pptv.com
+DOMAIN-SUFFIX,pplive.cn,PROXY
+DOMAIN-SUFFIX,pptv.com,PROXY
 # > Sohu Video
-HOST-SUFFIX,itc.cn
-HOST-SUFFIX,sohu.com
+DOMAIN-SUFFIX,itc.cn,PROXY
+DOMAIN-SUFFIX,sohu.com,PROXY
 # > Migu Video
-HOST-SUFFIX,cmvideo.cn
-HOST-SUFFIX,miguvideo.com
+DOMAIN-SUFFIX,cmvideo.cn,PROXY
+DOMAIN-SUFFIX,miguvideo.com,PROXY
 
 # (Music)
 # > QQ Music
-HOST-SUFFIX,music.qq.com
-HOST-SUFFIX,music.tc.qq.com
-HOST-SUFFIX,qqmusic.qq.com
-HOST-SUFFIX,tencentmusic.com
-HOST-SUFFIX,y.qq.com
-HOST,aqqmusic.tc.qq.com
-HOST,moo.qq.com
+DOMAIN-SUFFIX,music.qq.com,PROXY
+DOMAIN-SUFFIX,music.tc.qq.com,PROXY
+DOMAIN-SUFFIX,qqmusic.qq.com,PROXY
+DOMAIN-SUFFIX,tencentmusic.com,PROXY
+DOMAIN-SUFFIX,y.qq.com,PROXY
+DOMAIN,aqqmusic.tc.qq.com,PROXY
+DOMAIN,moo.qq.com,PROXY
 # > China Music Corp
-HOST-SUFFIX,kuwo.cn
-HOST-SUFFIX,kugou.com
+DOMAIN-SUFFIX,kuwo.cn,PROXY
+DOMAIN-SUFFIX,kugou.com,PROXY
 # > Netease Cloud Music
-HOST-SUFFIX,music.163.com
-HOST-SUFFIX,music.126.net
-HOST,mam.netease.com
-HOST,api.iplay.163.com
+DOMAIN-SUFFIX,music.163.com,PROXY
+DOMAIN-SUFFIX,music.126.net,PROXY
+DOMAIN,mam.netease.com,PROXY
+DOMAIN,api.iplay.163.com,PROXY
 # > Qianqian Music
-HOST-SUFFIX,qianqian.com
-HOST-SUFFIX,taihe.com
+DOMAIN-SUFFIX,qianqian.com,PROXY
+DOMAIN-SUFFIX,taihe.com,PROXY
 # > Migu Music
-HOST-SUFFIX,migu.cn
+DOMAIN-SUFFIX,migu.cn,PROXY
 # > Xiaomi
-HOST-SUFFIX,ai.xiaomi.com
-HOST-SUFFIX,music.xiaomi.com
-HOST-SUFFIX,dmhmusic.com
+DOMAIN-SUFFIX,ai.xiaomi.com,PROXY
+DOMAIN-SUFFIX,music.xiaomi.com,PROXY
+DOMAIN-SUFFIX,dmhmusic.com,PROXY
