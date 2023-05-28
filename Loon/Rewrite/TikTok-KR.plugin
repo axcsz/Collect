@@ -1,16 +1,34 @@
-#!name=TikTok KR
-#!desc=解锁TikTok韩国 地区
-#!openUrl=https://github.com/Semporia/TikTok-Unlock
-#!author=Semporia
-#!homepage=https://github.com/Semporia/TikTok-Unlock
-#!icon= https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/TikTok.png
+#!name = TikTok韩区解锁
+#!desc = 解锁韩区TikTok，需要配置此插件至韩国节点。
+#!openUrl = 
+#!author = 可莉🅥
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
+#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/TikTok.png
 
+[Rule]
+DOMAIN, p16-tiktokcdn-com.akamaized.net, PROXY
+DOMAIN-SUFFIX, byteoversea.com, PROXY
+DOMAIN-SUFFIX, ibytedtos.com, PROXY
+DOMAIN-SUFFIX, ibyteimg.com, PROXY
+DOMAIN-SUFFIX, ipstatp.com, PROXY
+DOMAIN-SUFFIX, isnssdk.com, PROXY
+DOMAIN-SUFFIX, muscdn.com, PROXY
+DOMAIN-SUFFIX, musical.ly, PROXY
+DOMAIN-SUFFIX, sgpstatp.com, PROXY
+DOMAIN-SUFFIX, snssdk.com, PROXY
+DOMAIN-SUFFIX, tik-tokapi.com, PROXY
+DOMAIN-SUFFIX, tiktok.com, PROXY
+DOMAIN-SUFFIX, tiktokcdn.com, PROXY
+DOMAIN-SUFFIX, tiktokv.com, PROXY
+DOMAIN-KEYWORD, musical.ly, PROXY
+DOMAIN-KEYWORD, tiktok, PROXY
+USER-AGENT, TikTok*, PROXY
 
-[URL Rewrite]
-(?<=_region=)CN(?=&) KR 307
+[Rewrite]
 (?<=&mcc_mnc=)4 2 307
-^(https?:\/\/(tnc|dm)[\w-]+\.\w+\.com\/.+)(\?)(.+) $1$4 302
 (?<=\d\/\?\w{7}_\w{4}=)1[6-9]..(?=.?.?&) 18.4 307
+(?<=_region=)CN(?=&) KR 307
+^(https?:\/\/(tnc|dm)[\w-]+\.\w+\.com\/.+)(\?)(.+) $1$4 302
 
 [MITM]
-hostname = *.tiktokv.com,*.byteoversea.com,*.tik-tokapi.com
+hostname = *.byteoversea.com,*.tik-tokapi.com,*.tiktokv.com
