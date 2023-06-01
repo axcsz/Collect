@@ -1,5 +1,11 @@
 #!name=0.0 全局抓包
-#!desc=全局MITM
+#!desc=---
 
 [MITM]
-hostname =  -*.icloud.com.cn,-*.icloud.com, -*.mzstatic.com, -*.crashlytics.com, -*.facebook.com, -*.instagram.com, -ap-*.spotify.com,  -<ip-address>, -*apple.com, -*.apple.com,
+hostname =  -*.icloud.com.cn,-*.icloud.com, -*.mzstatic.com, -*.crashlytics.com, -*.facebook.com, -*.instagram.com, -ap-*.spotify.com,  -<ip-address>,  -*apple.com, -*.apple.com,*
+
+tcp-connection = true
+
+[General]
+
+force-http-engine-hosts = %APPEND% *
