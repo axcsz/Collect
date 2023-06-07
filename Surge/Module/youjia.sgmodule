@@ -1,0 +1,8 @@
+#!name=油价显示
+#!desc=显示今日油价和下次调价！
+
+
+[Panel]
+YJ = script-name=YJ,update-interval=43200
+[Script]
+YJ = type=generic,timeout=5,script-path=https://raw.githubusercontent.com/Keywos/rule/main/JS/yj.js, argument=hubei/wuhan
