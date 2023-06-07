@@ -1,7 +1,5 @@
 #!name=油价显示
-#!desc=显示今日油价和下次调价！
-//持久化适合远程引用不添加本地模块
-//工具>脚本编辑器>左下角齿轮图标>$persistentStore 添加key 为 yj 里面内容为地区
+#!desc=显示今日油价和下次调价！持久化适合远程引用不添加本地模块。工具>脚本编辑器>左下角齿轮图标>$persistentStore 添加key 为 yj 里面内容为地区
 
 [Panel]
 YJ = script-name=YJ,update-interval=43200
