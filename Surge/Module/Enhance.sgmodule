@@ -45,6 +45,7 @@ apple.com = server:119.29.29.29
 ^https?:\/\/(ditu|maps).google\.cn https://maps.google.com 302
 
 [MITM]
+h2 = true
 # > 开启TCP连接
 tcp-connection = true
 hostname = %APPEND% www.google.cn
