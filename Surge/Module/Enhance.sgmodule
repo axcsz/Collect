@@ -7,7 +7,8 @@
 #hide-vpn-icon = true
 # > 兼容模式 (仅 iOS)
 compatibility-mode = 3
-force-http-engine-hosts = -<ip-address>, *
+# > 
+force-http-engine-hosts = %APPEND% sdk.alibaba.com.ailbaba.me, -<ip-address>, *
 # > VIF Excluded Routes
 tun-excluded-routes = 239.255.255.250/32
 # > Always Real IP Hosts
@@ -20,15 +21,22 @@ show-error-page-for-reject = true
 AND,((PROTOCOL,UDP), (DEST-PORT,443)),REJECT-NO-DROP
 # > 12306
 DOMAIN, ad.12306.cn, direct
+# > B站自动换区
+IP-CIDR,203.107.1.1/24,REJECT,no-resolve
 
 [Host]
 # > 本地DNS映射
+# 腾讯
 *.tencent.com = server:119.29.29.29
 *.weixin.com = server:119.29.29.29
-*icloud.com.cn = server:119.29.29.29
-*icloud.com = server:119.29.29.29
+# 京东
 *.jd.com = server:119.29.29.29
 *.360buyimg.com = server:119.29.29.29
+# Apple
+apple.com = server:119.29.29.29
+*icloud.com = server:119.29.29.29
+*icloud.com.cn = server:119.29.29.29
+*testflight.apple.com = server:8.8.4.4
 
 [URL Rewrite]
 # Redirect Google Search Service
@@ -37,4 +45,6 @@ DOMAIN, ad.12306.cn, direct
 ^https?:\/\/(ditu|maps).google\.cn https://maps.google.com 302
 
 [MITM]
+# > 开启TCP连接
+tcp-connection = true
 hostname = %APPEND% www.google.cn
