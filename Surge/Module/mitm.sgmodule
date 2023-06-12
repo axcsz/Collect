@@ -1,5 +1,6 @@
-#!name=MitM All Hostnames
-#!desc=Perform MitM on all hostnames with port 443, except those to Apple and other common sites which can't be inspected. You still need configure CA certificate and enable the main switch of MitM.
+#!name=MitM（抓包模块）
+#!desc=抓包的时候才开启此模块，抓完后请及时关闭！！！
+
 
 [MITM]
 hostname = -*.icloud.com.cn,-*.icloud.com, -*.mzstatic.com, -*.crashlytics.com, -*.facebook.com, -*.instagram.com, -ap-*.spotify.com,  -<ip-address>,  -*apple.com, -*.apple.com,*
