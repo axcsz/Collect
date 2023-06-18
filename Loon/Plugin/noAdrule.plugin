@@ -1,12 +1,12 @@
 #!name=去广告合集
 #!desc=APP开屏广告，应用内广告进行拦截，某些APP要清除缓存或者重新安装APP，拦截广告才会生效！
-#!openUrl = https://github.com/axcsz/Collect/tree/master/Loon/Plugin
+#!open= https://github.com/axcsz/Collect/tree/master/Loon/Plugin
 #!author = key, fmz200
 #!homepage = 
 #!icon = 
 
 
-[URL Rewrite]
+[Rewrite]
 # > 爱思开屏
 ^https?:\/\/list-app-m\.i4\.cn\/getopfstadinfo\.xhtml reject
 
@@ -16,6 +16,9 @@
 
 # > 大师兄 sdk.alibaba.com.ailbaba.me
 ^https?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/(dsx|xgapp)\.php\/v\d\/(top_notice\?|version|advert\?position=[^2]+) reject
+^http?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/xgapp\.php\/v\d\/version reject-200
+^http?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/xgapp\.php\/v\d\/advert\?position=[^2]+ reject-200
+^http?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/xgapp\.php\/v\d\/top_notice\? reject-200
 
 # > qq邮箱开屏 rescdn.qqmail.com
 ^https:\/\/rescdn\.qqmail\.com\/qqmail\/images\/.+\.(png|jpg)$ reject
@@ -57,6 +60,58 @@
 ^https:\/\/gab\.122\.gov\.cn\/eapp\/m\/sysquery\/adver$ reject
 ^https:\/\/gab\.122\.gov\.cn\/eapp\/m\/sysquery reject
 
+# > 京东
+^https?:\/\/m15\.360buyimg\.com\/mobilecms\/jfs\/t1\/202220\/24\/21575\/134711\/625b821bE5d642d73\/77636692989bd2be\.jpg reject
+^https?:\/\/m\.360buyimg\.com\/mobilecms\/s1125x2436_jfs\/t1\/96405\/17\/28473\/168578\/625cd144E7997a990\/8233ce8a10c4e463\.jpg reject
+^https?:\/\/m\.360buyimg\.com\/mobilecms\/s1125x2436_jfs\/t1\/182114\/23\/23904\/121433\/62593c9cEd77c4519\/2e3f4c518b771094\.jpg reject
+^https?:\/\/m\.360buyimg\.com\/mobilecms\/s1125x2436_jfs\/t1\/202971\/34\/26906\/282671\/6319c862E1818d3fa\/0597464cf6bc8e2f\.jpg reject
+^https?:\/\/m\.360buyimg\.com\/mobilecms\/s1125x2436_jfs\/t1\/143222\/27\/29233\/141967\/631b1f8cE3a112e54\/d3fe0b2f9f0a9f30\.jpg reject
+^https?:\/\/m\.360buyimg\.com\/mobilecms\/s1125x2436_jfs reject
+^https?:\/\/m15\.360buyimg\.com\/mobilecms\/jfs\/t1\/197429\/22/22400\/119193\/62562ef0Eff59b4d4 reject
+^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start$ reject-array
+^https?://union.click.jd.com/jda? header ^(.+?\s).+?(\s[\s\S]+?Host:).+?(\r\n) header $1/jda?adblock=$2union.click.jd.com$3
+^https?://union.click.jd.com/sem.php? header ^(.+?\s).+?(\s[\s\S]+?Host:).+?(\r\n) header $1/sem.php?adblock=$2union.click.jd.com$3
+^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/(aladdin\/na\/m\/getLoadingPicture|aladdin\/na\/m\/getLoadingPicture) reject
+^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/aladdin\/na\/m\/getLoadingPicture reject
+^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/base\/(new)?na\/m\/adInfo reject
+^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/base\/na\/m\/adInfo reject
+^https?:\/\/bdsp-x\.jd\.com\/adx\/ reject
+^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=(start|queryMaterialAdverts) reject
+^https?:\/\/(bdsp-x|dsp-x)\.jd\.com\/adx\/ reject
+^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start$ reject-200
+^https?:\/\/img\d+\.360buyimg\.com\/jddjadvertise\/ reject
+^https?:\/\/m15\.360buyimg\.com\/mobilecms\/jfs\/t1\/197429\/22\/22400\/119193\/62562ef0Eff59b4d4 reject
+^https?:\/\/m15\.360buyimg\.com\/mobilecms\/jfs\/t1\/220846\/5\/16214\/41327 reject
+^https?:\/\/m15\.360buyimg\.com\/mobilecms\/jfs\/t1\/202818 reject
+^https?:\/\/storage\.360buyimg\.com\/kepler-app reject-img
+^https?:\/\/m\.360buyimg\.com\/mobilecms\/s640x1136_jfs\/ reject-img
+
+# > 酷安
+^https?://api-access\.pangolin-sdk-toutiao\.com/api/ad/union/sdk reject
+^https?:\/\/api\.coolapk\.com\/v6\/search\?.*type=hotSearch reject-dict
+
+# > 美团
+^https?:\/\/img\.meituan\.net\/(?>adunion|display|midas)\/.+?\.(gif|jpg|jpg\.webp)$ reject-200
+^https?:\/\/p\d\.meituan\.net\/wmbanner\/[A-Za-z0-9]+?\.jpg reject-200
+^https?:\/\/p\d\.meituan\.net\/movie\/[A-Za-z0-9]+?\.jpg\?may_covertWebp reject-200
+^https?:\/\/s3plus\.meituan\.net\/.+?\/linglong\/ reject
+^https?:\/\/s3plus\.meituan\.net\/v1\/mss_a002 reject-img
+^https?:\/\/www\.meituan\.com\/api\/v\d\/appstatus\? reject
+^https?:\/\/wmapi\.meituan\.com\/api\/v\d+\/loadInfo\? reject
+^https?:\/\/wmapi\.meituan\.com\/api\/v\d\/startpicture reject
+^https?:\/\/flowplus\.meituan\.net\/v\d\/\w+\/linglong\/\d+\.(gif|jpg|mp4) reject
+^https?:\/\/(s3plus|flowplus)\.meituan\.net\/v\d\/\w+\/linglong\/\w+\.(gif|jpg|mp4) reject
+^https?:\/\/apimobile\.meituan\.com\/appupdate\/mach\/checkUpdate? reject
+^https?:\/\/img\.meituan\.net\/(adunion|display|midas)\/\w+\.(gif|jpg|jpg\.webp)$ reject
+^https?:\/\/p\d.meituan.net\/movie\/.*?\?may_covertWebp reject-img
+^https?:\/\/p\d{1}\.meituan\.net\/(adunion|display|mmc|wmbanner)\/ reject
+
+# > 美团外卖
+^https?:\/\/wmapi\.meituan\.com\/api\/v7\/startpicture reject-200
+^https?:\/\/img\.meituan\.net\/bizad\/.*.jpg reject-200
+
+
+
 
 
 [Script]
@@ -69,7 +124,10 @@ http-response ^https:\/\/napi\.ithome\.com\/api\/news\/index script-path=https:/
 # > 12306
 http-response ^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList script-path=https://raw.githubusercontent.com/kokoryh/Script/master/js/12306.js, requires-body=true, timeout=10, tag=12306
 
+# > 酷安
+http-response ^https?:\/\/api\.coolapk\.com\/v6\/(feed\/(replyList|detail)|main\/indexV8|dataList) script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/coolapk.js, requires-body=true, timeout=10, tag=酷安
+
 
 
 [MITM]
-hostname = %APPEND% mps.95508.com, static.95508.com, ad.12306.cn, gab.122.gov, client.app.coc.10086.cn, list-app-m.i4.cn, search-app-m.i4.cn, mp.weixin.qq.com, webappcfg.paas.cmbchina.com, rescdn.qqmail.com, us.l.qq.com, napi.ithome.com, api.zuihuimai.com, dat.ruanmei.com, pv.elife.icbc.com.cn, v.icbc.com.cn
+hostname = %APPEND% flowplus.meituan.net, wmapi.meituan.com, img.meituan.net, peisongapi.meituan.com, api-access.pangolin-sdk-toutiao.com, api.coolapk.com, dns.jd.com, api.m.jd.com, m.jd.com, jdread-api.jd.com, router-app-api.jdcloud.com, m.360buyimg.com, mps.95508.com, static.95508.com, ad.12306.cn, gab.122.gov, client.app.coc.10086.cn, list-app-m.i4.cn, search-app-m.i4.cn, mp.weixin.qq.com, webappcfg.paas.cmbchina.com, rescdn.qqmail.com, us.l.qq.com, napi.ithome.com, api.zuihuimai.com, dat.ruanmei.com, pv.elife.icbc.com.cn, v.icbc.com.cn
