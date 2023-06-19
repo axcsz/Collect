@@ -1,0 +1,31 @@
+#!name = Apple分流规则
+#!desc = 需要配置此插件分流策略
+#!openUrl = 
+#!author = 
+#!homepage =
+#!icon = 
+
+
+[Rule]
+DOMAIN-KEYWORD,apple-support.akadns.net, PROXY
+DOMAIN-KEYWORD,apple.com.akadns.net, PROXY
+DOMAIN-KEYWORD,apple.com.edgekey.net, PROXY
+DOMAIN-KEYWORD,testflight, PROXY
+DOMAIN-KEYWORD,icloud.com.akadns.net, PROXY
+USER-AGENT,com.apple.appstored*, PROXY
+USER-AGENT,Music*, PROXY
+USER-AGENT,AppleNews*, PROXY
+USER-AGENT,com.apple.news*, PROXY
+USER-AGENT,com.apple.trustd*, PROXY
+USER-AGENT,AppleTV*, PROXY
+USER-AGENT,com.apple.tv*, PROXY
+IP-CIDR,139.178.128.0/18,no-resolve, PROXY
+IP-CIDR,144.178.0.0/19,no-resolve, PROXY
+IP-CIDR,144.178.36.0/22,no-resolve, PROXY
+IP-CIDR,144.178.48.0/20,no-resolve, PROXY
+IP-CIDR,17.0.0.0/8,no-resolve, PROXY
+IP-CIDR,192.35.50.0/24,no-resolve, PROXY
+IP-CIDR,198.183.17.0/24,no-resolve, PROXY
+IP-CIDR,205.180.175.0/24,no-resolve, PROXY
+IP-CIDR,63.92.224.0/19,no-resolve, PROXY
+IP-CIDR,65.199.22.0/23,no-resolve, PROXY
