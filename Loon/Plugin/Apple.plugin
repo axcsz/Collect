@@ -7,18 +7,27 @@
 
 
 [Rule]
-DOMAIN-KEYWORD,apple-support.akadns.net, PROXY
+# Apple
+DOMAIN-SUFFIX,aaplimg.com, PROXY
+DOMAIN-SUFFIX,apple.co, PROXY
+DOMAIN-SUFFIX,apple.com, PROXY
+DOMAIN-SUFFIX,apple.com.cn, PROXY
+DOMAIN-SUFFIX,apple-cloudkit.com, PROXY
+DOMAIN-SUFFIX,apple-livephotoskit.com, PROXY
+DOMAIN-SUFFIX,apple-mapkit.com, PROXY
+DOMAIN-SUFFIX,applemusic.com, PROXY
+DOMAIN-SUFFIX,appstore.com, PROXY
+DOMAIN-SUFFIX,apzones.com, PROXY
+DOMAIN-SUFFIX,cdn-apple.com, PROXY
+DOMAIN-SUFFIX,icloud.com, PROXY
+DOMAIN-SUFFIX,icloud.com.cn, PROXY
+DOMAIN-SUFFIX,icloud-content.com, PROXY
+DOMAIN-SUFFIX,me.com, PROXY
+DOMAIN-SUFFIX,mzstatic.com, PROXY
 DOMAIN-KEYWORD,apple.com.akadns.net, PROXY
 DOMAIN-KEYWORD,apple.com.edgekey.net, PROXY
-DOMAIN-KEYWORD,testflight, PROXY
+DOMAIN-KEYWORD,apple-support.akadns.net, PROXY
 DOMAIN-KEYWORD,icloud.com.akadns.net, PROXY
-USER-AGENT,com.apple.appstored*, PROXY
-USER-AGENT,Music*, PROXY
-USER-AGENT,AppleNews*, PROXY
-USER-AGENT,com.apple.news*, PROXY
-USER-AGENT,com.apple.trustd*, PROXY
-USER-AGENT,AppleTV*, PROXY
-USER-AGENT,com.apple.tv*, PROXY
 IP-CIDR,139.178.128.0/18,no-resolve, PROXY
 IP-CIDR,144.178.0.0/19,no-resolve, PROXY
 IP-CIDR,144.178.36.0/22,no-resolve, PROXY
