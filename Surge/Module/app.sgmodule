@@ -9,15 +9,21 @@
 [Panel]
 YJ = script-name=YJ,update-interval=43200
 Timecard = script-name=Timecard,update-interval=3600
+DaysMatter = script-name=DaysMatter,title=倒数日,content=请刷新,style=info,update-interval=28800
+wnCalendar = script-name= wnCalendar,title=今日黄历,content=请刷新,style=info,update-interval=28800
+
 
 [Script]
-摸鱼摸鱼 = type=cron,cronexp="0 9 0 * * ?",wake-system=1,script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/moyu.js
-每日推荐 = type=cron,cronexp="0 9 0 * * ?",wake-system=1,script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/douban.js
-今日油价 = type=cron,cronexp="0 9 0 * * ?",wake-system=1,script-path=https://raw.githubusercontent.com/Toperlock/Quantumult/main/task/oil_price.js
-节假提醒 = type=cron,cronexp="0 9 0 * * ?",wake-system=1,script-path=https://raw.githubusercontent.com/Toperlock/Quantumult/main/task/TimeCard.js
-今日黄历 = type=cron,cronexp="0 9 0 * * ?",wake-system=1,script-path=https://raw.githubusercontent.com/TributePaulWalker/Profiles/main/JavaScript/Surge/wnCalendar.js
-每日一言 = type=cron,cronexp="0 9 0 * * ?",wake-system=1,script-path=https://raw.githubusercontent.com/Toperlock/Quantumult/main/task/One.js
-汇率监控 = type=cron,cronexp="0 9 0 * * ?",wake-system=1,script-path=https://raw.githubusercontent.com/Toperlock/Quantumult/main/task/exchange.js
-黑料爆料 = type=cron,cronexp="0 9 0 * * ?",wake-system=1,script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/hlbdy.js
-YJ = type=generic,timeout=5,script-path=https://raw.githubusercontent.com/getsomecat/GetSomeCats/Surge/script/youjia.js,argument=guangdong/guangzhou
+摸鱼摸鱼 = type=cron,cronexp="15 9 * * *",script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/moyu.js
+每日推荐 = type=cron,cronexp="15 9 * * *",script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/douban.js
+今日油价 = type=cron,cronexp="15 9 * * *",script-path=https://raw.githubusercontent.com/Toperlock/Quantumult/main/task/oil_price.js
+节假提醒 = type=cron,cronexp="15 9 * * *",script-path=https://raw.githubusercontent.com/Toperlock/Quantumult/main/task/TimeCard.js
+今日黄历 = type=cron,cronexp="15 9 * * *",script-path=https://raw.githubusercontent.com/TributePaulWalker/Profiles/main/JavaScript/Surge/wnCalendar.js
+每日一言 = type=cron,cronexp="15 9 * * *",script-path=https://raw.githubusercontent.com/Toperlock/Quantumult/main/task/One.js
+汇率监控 = type=cron,cronexp="15 9 * * *",script-path=https://raw.githubusercontent.com/Toperlock/Quantumult/main/task/exchange.js
+黑料爆料 = type=cron,cronexp="15 9 * * *",script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/hlbdy.js
+
 Timecard = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/smartmimi/conf/master/surge/timecard.js
+YJ = type=generic,timeout=5,script-path=https://raw.githubusercontent.com/getsomecat/GetSomeCats/Surge/script/youjia.js,argument=guangdong/guangzhou
+DaysMatter = type = generic,script-path=https://raw.githubusercontent.com/zqzess/rule_for_quantumultX/master/js/Mine/wnCalendar/DaysMatter.js,timeout=10
+wnCalendar = type = generic,script-path= https://raw.githubusercontent.com/zqzess/rule_for_quantumultX/master/js/Mine/wnCalendar/wnCalendar.js,timeout=10
