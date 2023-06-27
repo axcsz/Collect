@@ -11,7 +11,7 @@
 # > 今日油价
 YJ = script-name=YJ,update-interval=43200
 # > 摸鱼
-Timecard = script-name=Timecard,update-interval=3600
+#Timecard = script-name=Timecard,update-interval=3600
 # > 倒数日
 DaysMatter = script-name=DaysMatter,title=倒数日,content=请刷新,style=info,update-interval=28800
 # > 今日黄历
