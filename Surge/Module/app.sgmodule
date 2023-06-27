@@ -1,15 +1,19 @@
 #!name=软件订阅合集
 #!desc=常用软件定时通知，默认上午9点通知！！！
 #!system=ios
-# 实时油价模块
-# 显示本省实时油价
-# @RS0485 由 @keywos进行surge和Loon兼容性修改。复制到本地后argument=后面接本省/城市 名称拼音，或者去http://m.qiyoujiage.com/shanxi-3.shtml 查看自己省份拼音（陕西和山西比较特殊）
+# > 实时油价模块
+# > 显示本省实时油价
+# > @RS0485 由 @keywos进行surge和Loon兼容性修改。复制到本地后argument=后面接本省/城市 名称拼音，或者去http://m.qiyoujiage.com/shanxi-3.shtml 查看自己省份拼音（陕西和山西比较特殊）
 
 
 [Panel]
+# > 今日油价
 YJ = script-name=YJ,update-interval=43200
+# > 摸鱼
 Timecard = script-name=Timecard,update-interval=3600
+# > 倒数日
 DaysMatter = script-name=DaysMatter,title=倒数日,content=请刷新,style=info,update-interval=28800
+# > 今日黄历
 wnCalendar = script-name= wnCalendar,title=今日黄历,content=请刷新,style=info,update-interval=28800
 
 
@@ -23,7 +27,16 @@ wnCalendar = script-name= wnCalendar,title=今日黄历,content=请刷新,style=
 汇率监控 = type=cron,cronexp="15 9 * * *",script-path=https://raw.githubusercontent.com/Toperlock/Quantumult/main/task/exchange.js
 黑料爆料 = type=cron,cronexp="15 9 * * *",script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/hlbdy.js
 
+# > 摸鱼
 Timecard = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/smartmimi/conf/master/surge/timecard.js
+# > 今日油价
 YJ = type=generic,timeout=5,script-path=https://raw.githubusercontent.com/getsomecat/GetSomeCats/Surge/script/youjia.js,argument=guangdong/guangzhou
+# > 倒数日
 DaysMatter = type = generic,script-path=https://raw.githubusercontent.com/zqzess/rule_for_quantumultX/master/js/Mine/wnCalendar/DaysMatter.js,timeout=10
+# > 今日黄历
 wnCalendar = type = generic,script-path= https://raw.githubusercontent.com/zqzess/rule_for_quantumultX/master/js/Mine/wnCalendar/wnCalendar.js,timeout=10
+# > 京东比价
+http-response ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig) requires-body=1,script-path= https://raw.githubusercontent.com/zwf234/rules/master/js/jd_price.js
+
+[MITM]
+hostname = %APPEND% api.m.jd.com
