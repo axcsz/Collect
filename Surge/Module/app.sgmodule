@@ -8,7 +8,7 @@
 
 [Panel]
 YJ = script-name=YJ,update-interval=43200
-
+Timecard = script-name=Timecard,update-interval=3600
 
 [Script]
 摸鱼摸鱼 = type=cron,cronexp="0 9 0 * * ?",wake-system=1,script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/moyu.js
@@ -20,3 +20,4 @@ YJ = script-name=YJ,update-interval=43200
 汇率监控 = type=cron,cronexp="0 9 0 * * ?",wake-system=1,script-path=https://raw.githubusercontent.com/Toperlock/Quantumult/main/task/exchange.js
 黑料爆料 = type=cron,cronexp="0 9 0 * * ?",wake-system=1,script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/hlbdy.js
 YJ = type=generic,timeout=5,script-path=https://raw.githubusercontent.com/getsomecat/GetSomeCats/Surge/script/youjia.js,argument=guangdong/guangzhou
+Timecard = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/smartmimi/conf/master/surge/timecard.js
