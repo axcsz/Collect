@@ -1,0 +1,19 @@
+# > bilibili
+DOMAIN,api.biliapi.com,PROXY
+DOMAIN,api.biliapi.net,PROXY
+DOMAIN,api.bilibili.com,PROXY
+DOMAIN,app.biliapi.com,PROXY
+DOMAIN,app.biliapi.net,PROXY
+DOMAIN,app.bilibili.com,PROXY
+DOMAIN,grpc.biliapi.net,PROXY
+DOMAIN,m.bilibili.com,PROXY
+DOMAIN,upos-hz-mirrorakam.akamaized.net,PROXY
+DOMAIN,www.bilibili.com,PROXY
+DOMAIN-KEYWORD,cn-hk-eq-bcache-,PROXY
+# > 愛奇藝台灣站
+DOMAIN,cache.video.iqiyi.com,PROXY
+IP-CIDR,116.211.202.206/32,PROXY,no-resolve
+IP-CIDR,116.211.202.216/32,PROXY,no-resolve
+# > MangoTV(芒果TV国际)
+DOMAIN-SUFFIX,api.mgtv.com,PROXY
+DOMAIN,mobileso.bz.mgtv.com,PROXY
