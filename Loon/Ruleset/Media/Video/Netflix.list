@@ -1,12 +1,12 @@
 # > Netflix
-USER-AGENT,Argo*,PROXY
-DOMAIN-SUFFIX,netflix.com,PROXY
-DOMAIN-SUFFIX,netflix.net,PROXY
-DOMAIN-SUFFIX,nflxext.com,PROXY
-DOMAIN-SUFFIX,nflximg.com,PROXY
-DOMAIN-SUFFIX,nflximg.net,PROXY
-DOMAIN-SUFFIX,nflxso.net,PROXY
-DOMAIN-SUFFIX,nflxvideo.net,PROXY
-DOMAIN-KEYWORD,netflixdnstest,PROXY
-DOMAIN-KEYWORD,apiproxy-device-prod-nlb-,PROXY
-DOMAIN-KEYWORD,dualstack.apiproxy-,PROXY
+USER-AGENT,Argo*,Netflix
+DOMAIN-SUFFIX,netflix.com,Netflix
+DOMAIN-SUFFIX,netflix.net,Netflix
+DOMAIN-SUFFIX,nflxext.com,Netflix
+DOMAIN-SUFFIX,nflximg.com,Netflix
+DOMAIN-SUFFIX,nflximg.net,Netflix
+DOMAIN-SUFFIX,nflxso.net,Netflix
+DOMAIN-SUFFIX,nflxvideo.net,Netflix
+DOMAIN-KEYWORD,netflixdnstest,Netflix
+DOMAIN-KEYWORD,apiproxy-device-prod-nlb-,Netflix
+DOMAIN-KEYWORD,dualstack.apiproxy-,Netflix
