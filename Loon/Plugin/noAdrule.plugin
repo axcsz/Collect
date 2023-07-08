@@ -4,6 +4,8 @@
 #!author = key, fmz200
 #!homepage = 
 #!icon = 
+#!select = 去除轮播图,开启,关闭
+#!select = 去除置顶,开启,关闭
 
 
 [Rewrite]
@@ -116,16 +118,16 @@
 
 [Script]
 # > 爱思推广全部干掉只保留搜索 list-app-m.i4.cn, search-app-m.i4.cn
-http-response ^https?:\/\/(search|list)-app-m\.i4\.cn\/(getHotSearchList|getAppList)\.xhtml script-path=https://github.com/Keywos/rule/raw/main/JS/aisi.js, requires-body=true, timeout=10, tag=爱思助手
+http-response ^https?:\/\/(search|list)-app-m\.i4\.cn\/(getHotSearchList|getAppList)\.xhtml script-path = https://github.com/Keywos/rule/raw/main/JS/aisi.js, requires-body=true, timeout=10, tag=爱思助手
 
 # > it之家 napi.ithome.com
-http-response ^https:\/\/napi\.ithome\.com\/api\/news\/index script-path=https://github.com/Keywos/rule/raw/main/JS/surgeithome.js, requires-body=true, timeout=10, tag=it之家
+http-response ^https:\/\/napi\.ithome\.com\/api\/news\/index script-path = https://github.com/Keywos/rule/raw/main/JS/ithomes.js, requires-body=true, timeout=10, tag=it之家
 
 # > 12306
-http-response ^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList script-path=https://raw.githubusercontent.com/kokoryh/Script/master/js/12306.js, requires-body=true, timeout=10, tag=12306
+http-response ^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList script-path = https://raw.githubusercontent.com/kokoryh/Script/master/js/12306.js, requires-body=true, timeout=10, tag=12306
 
 # > 酷安
-http-response ^https?:\/\/api\.coolapk\.com\/v6\/(feed\/(replyList|detail)|main\/indexV8|dataList) script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/coolapk.js, requires-body=true, timeout=10, tag=酷安
+http-response ^https?:\/\/api\.coolapk\.com\/v6\/(feed\/(replyList|detail)|main\/indexV8|dataList) script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/coolapk.js, requires-body=true, timeout=10, tag=酷安
 
 
 
