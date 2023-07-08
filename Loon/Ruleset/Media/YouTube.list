@@ -1,0 +1,15 @@
+# > YouTube
+USER-AGENT,com.google.ios.youtube*,PROXY
+USER-AGENT,YouTube*,PROXY
+DOMAIN-SUFFIX,googlevideo.com,PROXY
+DOMAIN-SUFFIX,withyoutube.com,PROXY
+DOMAIN-SUFFIX,youtu.be,PROXY
+DOMAIN-SUFFIX,youtube.com,PROXY
+DOMAIN-SUFFIX,youtubeeducation.com,PROXY
+DOMAIN-SUFFIX,youtubegaming.com,PROXY
+DOMAIN-SUFFIX,youtubekids.com,PROXY
+DOMAIN-SUFFIX,youtube-nocookie.com,PROXY
+DOMAIN-SUFFIX,yt.be,PROXY
+DOMAIN-SUFFIX,ytimg.com,PROXY
+DOMAIN,youtubei.googleapis.com,PROXY
+DOMAIN,yt3.ggpht.com,PROXY
