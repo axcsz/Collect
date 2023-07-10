@@ -39,13 +39,9 @@ apple.com = server:119.29.29.29
 *testflight.apple.com = server:8.8.4.4
 
 [URL Rewrite]
-# Redirect Google Search Service
-^https?:\/\/(www.)?(g|google)\.cn https://www.google.com 302
-# Redirect Google Maps Service
-^https?:\/\/(ditu|maps).google\.cn https://maps.google.com 302
 
 [MITM]
 h2 = true
 # > 开启TCP连接
 tcp-connection = true
-hostname = %APPEND% www.google.cn
+hostname = %APPEND% 
