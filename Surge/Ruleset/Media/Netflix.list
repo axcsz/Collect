@@ -1,9 +1,10 @@
 #!name=Netflix分流
-#!desc=对Netflix相关服务进行分流
+#!desc=Netflix相关服务进行分流
 #!author=Axcsz5
 #!homepage=https://github.com/axcsz/Collect/edit/master/Surge
 #!icon=
 # updatetime=2023.07.11
+
 
 
 USER-AGENT,Argo*
