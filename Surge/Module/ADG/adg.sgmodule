@@ -1,5 +1,9 @@
 #!name=去广告合集
-#!desc=目前只有:爱思,中国移动,网易邮箱大师,qq邮箱,大师兄,腾讯手机管家,招商银行,it之家
+#!desc=去广告合集，以下app请使用单独配置文件：高德地图,哔哩哔哩,网易云音乐,微博,YouTube,知乎,小红书
+#!author=Axcsz5
+#!homepage=https://github.com/axcsz/Collect/edit/master/Surge
+#!icon=
+# updatetime=2023.07.11
 
 
 [General]
