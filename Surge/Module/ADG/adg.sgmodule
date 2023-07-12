@@ -14,6 +14,15 @@ force-http-engine-hosts = %APPEND% sdk.alibaba.com.ailbaba.me, *.cp31.ott.cibntv
 # 百度移动广告联盟，可能误杀
 DOMAIN-SUFFIX,mobads.baidu.com,REJECT
 
+# 高德地图
+DOMAIN,optimus-ads.amap.com,REJECT
+
+# 优酷去片头广告(by Choler)
+URL-REGEX,^http:\/\/.*\.cp31\.ott\.cibntv\.net\/youku\/,REJECT-TINYGIF
+
+# 京东开屏广告屏蔽
+URL-REGEX,https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start$,REJECT-TINYGIF
+
 # 腾讯广告联盟，可能误杀
 DOMAIN-SUFFIX,mi.gdt.qq.com,REJECT
 DOMAIN-SUFFIX,jcollection.shuqireader.com,REJECT
@@ -27,6 +36,25 @@ DOMAIN-SUFFIX,api.poll.video.qq.com,REJECT
 DOMAIN-SUFFIX,static-res.qq.com,REJECT
 DOMAIN-SUFFIX,stat.tpns.tencent.com,REJECT
 DOMAIN,h.trace.qq.com,REJECT
+
+# QQ音乐去广告
+DOMAIN,adstats.tencentmusic.com,REJECT
+DOMAIN,ad.tencentmusic.com,REJECT
+DOMAIN,adcdn.tencentmusic.com,REJECT
+DOMAIN,adexpo.tencentmusic.com,REJECT
+DOMAIN,adclick.tencentmusic.com,REJECT
+DOMAIN,otheve.beacon.qq.com,REJECT
+DOMAIN,monitor.music.qq.com,REJECT
+DOMAIN,stat.y.qq.com,REJECT
+DOMAIN,tmead.y.qq.com,REJECT
+DOMAIN,oth.str.mdt.qq.com,REJECT
+DOMAIN,h.trace.qq.com,REJECT
+DOMAIN,tmead.y.qq.com,REJECT
+DOMAIN-SUFFIX,imtmp.net,REJECT
+DOMAIN,sdk.e.qq.com,REJECT
+DOMAIN,p.l.qq.com,REJECT
+DOMAIN,us.l.qq.com,REJECT
+DOMAIN,tangram.e.qq.com,REJECT
 
 # 爱奇艺
 DOMAIN,cr-status.iqiyi.com,REJECT
@@ -45,15 +73,6 @@ DOMAIN,www.qchannel01.cn,REJECT
 DOMAIN,iqiyi-mipdx.cn.miaozhen.com,REJECT
 DOMAIN,show.ssports.com,REJECT
 DOMAIN-SUFFIX,afdback.ppsimg.com,REJECT
-
-# 京东开屏广告屏蔽
-URL-REGEX,https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start$,REJECT-TINYGIF
-
-# 优酷去片头广告(by Choler)
-URL-REGEX,^http:\/\/.*\.cp31\.ott\.cibntv\.net\/youku\/,REJECT-TINYGIF
-
-# 高德地图
-DOMAIN,optimus-ads.amap.com,REJECT
 
 # 番茄小说
 DOMAIN,p6-ad-sign.byteimg.com,REJECT
@@ -113,8 +132,25 @@ URL-REGEX,^http:\/\/.+\.byteimg\.com\/web\.business\.image,REJECT
 # 交管12123 //gab.122.gov.cn
 ^https:\/\/gab\.122\.gov\.cn\/eapp\/m\/sysquery\/adver$ - reject
 
-# 京东 //api.m.jd.com
-^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=start - reject
+#  京东 m15.360buyimg.com, m.360buyimg.com, ms.jr.jd.com, bdsp-x.jd.com, bdsp-x.jd.com, dsp-x.jd.com
+^https?:\/\/m15\.360buyimg\.com\/mobilecms\/jfs\/t1\/202220\/24\/21575\/134711\/625b821bE5d642d73\/77636692989bd2be\.jpg - reject
+^https?:\/\/m\.360buyimg\.com\/mobilecms\/s1125x2436_jfs\/t1\/96405\/17\/28473\/168578\/625cd144E7997a990\/8233ce8a10c4e463\.jpg - reject
+^https?:\/\/m\.360buyimg\.com\/mobilecms\/s1125x2436_jfs\/t1\/182114\/23\/23904\/121433\/62593c9cEd77c4519\/2e3f4c518b771094\.jpg - reject
+^https?:\/\/m\.360buyimg\.com\/mobilecms\/s1125x2436_jfs\/t1\/202971\/34\/26906\/282671\/6319c862E1818d3fa\/0597464cf6bc8e2f\.jpg - reject
+^https?:\/\/m\.360buyimg\.com\/mobilecms\/s1125x2436_jfs\/t1\/143222\/27\/29233\/141967\/631b1f8cE3a112e54\/d3fe0b2f9f0a9f30\.jpg - reject
+^https?:\/\/m\.360buyimg\.com\/mobilecms\/s1125x2436_jfs - reject
+^https?:\/\/m15\.360buyimg\.com\/mobilecms\/jfs\/t1\/197429\/22/22400\/119193\/62562ef0Eff59b4d4 - reject
+^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/(aladdin\/na\/m\/getLoadingPicture|aladdin\/na\/m\/getLoadingPicture) - reject
+^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/aladdin\/na\/m\/getLoadingPicture - reject
+^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/base\/(new)?na\/m\/adInfo - reject
+^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/base\/na\/m\/adInfo - reject
+^https?:\/\/bdsp-x\.jd\.com\/adx\/ - reject
+^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=(start|queryMaterialAdverts) - reject
+^https?:\/\/(bdsp-x|dsp-x)\.jd\.com\/adx\/ - reject
+^https?:\/\/img\d+\.360buyimg\.com\/jddjadvertise\/ - reject
+^https?:\/\/m15\.360buyimg\.com\/mobilecms\/jfs\/t1\/197429\/22\/22400\/119193\/62562ef0Eff59b4d4 - reject
+^https?:\/\/m15\.360buyimg\.com\/mobilecms\/jfs\/t1\/220846\/5\/16214\/41327 - reject
+^https?:\/\/m15\.360buyimg\.com\/mobilecms\/jfs\/t1\/202818 - reject
 
 # 闲鱼 //gw.alicdn.com, acs.m.taobao.com
 ^https:\/\/gw\.alicdn\.com\/mt\/ - reject
@@ -189,6 +225,12 @@ https?:\/\/t7z\.cupid\.iqiyi\.com\/show - reject
 # 微信移除公众号中的推广内容 //mp.weixin.qq.com
 ^https:\/\/mp\.weixin\.qq\.com\/mp\/(cps_product_info|getappmsgad|masonryfeed|relatedarticle)\? data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 
+#  京东 storage.360buyimg.com, m.360buyimg.com, api.m.jd.com
+^https?:\/\/storage\.360buyimg\.com\/kepler-app data="https://raw.githubusercontent.com/axcsz/Collect/master/Surge/mocks/reject-img.gif"
+^https?:\/\/m\.360buyimg\.com\/mobilecms\/s640x1136_jfs\/ data="https://raw.githubusercontent.com/axcsz/Collect/master/Surge/mocks/reject-img.gif"
+^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start$ data="https://raw.githubusercontent.com/axcsz/Collect/master/Surge/mocks/reject-array.json"
+^https?+:\/\/api\.m\.jd\.com\/client\.action\?functionId=start$ data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-200.txt"
+
 
 [Script]
 # 爱思推广全部干掉只保留搜索 list-app-m.i4.cn, search-app-m.i4.cn
@@ -204,9 +246,17 @@ it之家 = type=http-response,pattern=^https:\/\/napi\.ithome\.com\/api\/news\/i
 微信 = type=http-response,pattern=^https\:\/\/(weixin110\.qq|security\.wechat)\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/wechat/wechat110.js
 
 # 酷安
-酷安去广告 = type=http-response,pattern=^https?:\/\/api.coolapk.com\/v6\/(feed\/(replyList|detail)|main\/indexV8|dataList),requires-body=1,max-size=0,script-path=https://github.com/ddgksf2013/Cuttlefish/raw/master/Script/coolapk.js,script-update-interval=0
+酷安去广告 = type=http-response,pattern=^https?:\/\/api.coolapk.com\/v6\/(feed\/(replyList|detail)|main\/indexV8|dataList),requires-body=1,max-size=0,script-path=https://github.com/ddgksf2013/Cuttlefish/raw/master/Script/coolapk.js
+
+# 奈飞评分
+nf_rating.js = type=http-request,pattern=^https?:\/\/ios(-.*)?\.prod\.ftl\.netflix\.com\/iosui\/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js
+nf_rating.js = type=http-response,requires-body=1,pattern=^https?:\/\/ios(-.*)?\.prod\.ftl\.netflix\.com\/iosui\/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js
+
+# 单集评分
+nf_rating_season.js = type=http-response,pattern=^https?:\/\/ios(-.*)?\.prod\.ftl\.netflix\.com\/iosui\/warmer/.+type=show-ath,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating_season.js
+
 
 [MITM]
 h2 = true
 tcp-connection = true
-hostname = %APPEND% client.app.coc.10086.cn, list-app-m.i4.cn, search-app-m.i4.cn, mp.weixin.qq.com, webappcfg.paas.cmbchina.com, rescdn.qqmail.com, us.l.qq.com, napi.ithome.com, api.zuihuimai.com, dat.ruanmei.com, ad.12306.cn, gab.122.gov.cn, api.m.jd.com, gw.alicdn.com, acs.m.taobao.com， mp.weixin.qq.com, weixin110.qq.com, security.wechat.com, api.pinduoduo.com, api.yangkeduo.com, act.vip.iqiyi.com, gw.alicdn.com, heic.alicdn.com,apiwz.midukanshu.com,*.iqiyipic.com, *.iqiyi.com, api.coolapk.com, *.pangolin-sdk-toutiao,*.pangolin-sdk-toutiao.*,*.pstatp.com,*.pstatp.com.*,*.pglstatp-toutiao.com.*,*.pglstatp-toutiao.com,gurd.snssdk.com,gurd.snssdk.com.*,*default.ixigua.com
+hostname = %APPEND% client.app.coc.10086.cn, list-app-m.i4.cn, search-app-m.i4.cn, mp.weixin.qq.com, webappcfg.paas.cmbchina.com, rescdn.qqmail.com, us.l.qq.com, napi.ithome.com, api.zuihuimai.com, dat.ruanmei.com, ad.12306.cn, gab.122.gov.cn, api.m.jd.com, gw.alicdn.com, acs.m.taobao.com， mp.weixin.qq.com, weixin110.qq.com, security.wechat.com, api.pinduoduo.com, api.yangkeduo.com, act.vip.iqiyi.com, gw.alicdn.com, heic.alicdn.com,apiwz.midukanshu.com,*.iqiyipic.com, *.iqiyi.com, api.coolapk.com, *.pangolin-sdk-toutiao,*.pangolin-sdk-toutiao.*,*.pstatp.com,*.pstatp.com.*,*.pglstatp-toutiao.com.*,*.pglstatp-toutiao.com,gurd.snssdk.com,gurd.snssdk.com.*,*default.ixigua.com, storage.360buyimg.com, m.360buyimg.com, api.m.jd.com, m15.360buyimg.com, m.360buyimg.com, ms.jr.jd.com, bdsp-x.jd.com, bdsp-x.jd.com, dsp-x.jd.com, ios-*.prod.ftl.netflix.com, ios.prod.ftl.netflix.com
