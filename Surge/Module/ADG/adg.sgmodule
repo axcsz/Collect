@@ -72,7 +72,7 @@ force-http-engine-hosts = %APPEND% sdk.alibaba.com.ailbaba.me
 it之家 = type=http-response,pattern=^https:\/\/napi\.ithome\.com\/api\/news\/index,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Keywos/rule/main/JS/surgeithome.js
 
 # 12306 开屏广告 //ad.12306.cn
-12306 = type=http-response,pattern=^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/kokoryh/Script/master/js/12306.js
+12306 = type=http-response,pattern=^https:\/\/ad\.12306\.cn\/ad\/ser\/getAdList,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/12306.js
 
 # 微信跳过微信中转页面,解除被封禁链接 //weixin110.qq.com, security.wechat.com
 微信 = type=http-response,pattern=^https\:\/\/(weixin110\.qq|security\.wechat)\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/wechat/wechat110.js
