@@ -3,11 +3,12 @@
 #!author=Axcsz5
 #!homepage=https://github.com/axcsz/Collect/edit/master/Surge
 #!icon=
-# updatetime=2023.07.11
+# updatetime=2023.07.13
 
 
 
-DOMAIN-KEYWORD,openai
+DOMAIN,cdn.auth0.com
+DOMAIN,o33249.ingest.sentry.io
 DOMAIN-SUFFIX,ai.com
 DOMAIN-SUFFIX,auth0.com
 DOMAIN-SUFFIX,challenges.cloudflare.com
@@ -21,3 +22,9 @@ DOMAIN-SUFFIX,openai.com
 DOMAIN-SUFFIX,openaiapi-site.azureedge.net
 DOMAIN-SUFFIX,sentry.io
 DOMAIN-SUFFIX,stripe.com
+DOMAIN-SUFFIX,poe.com
+DOMAIN-SUFFIX,chat.openai.com.cdn.cloudflare.net
+DOMAIN-SUFFIX,openaicom.imgix.net
+DOMAIN-SUFFIX,openaicomproductionae4b.blob.core.windows.net
+DOMAIN-SUFFIX,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net
+DOMAIN-KEYWORD,openai
