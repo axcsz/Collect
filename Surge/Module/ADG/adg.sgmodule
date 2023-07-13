@@ -1,9 +1,10 @@
 #!name=去广告合集
 #!desc=去广告合集，以下app请使用单独配置文件：高德地图,哔哩哔哩,网易云音乐,微博,YouTube,知乎,小红书
-#!author= Keywos kokoryh RuCu6 fm200 Axcsz5（整理）
+#!author= Keywos kokoryh RuCu6 fm200 Axcsz5（搬运整理）
 #!homepage=https://github.com/axcsz/Collect/edit/master/Surge
 #!icon=
 # updatetime=2023.07.13
+
 
 
 [General]
@@ -33,10 +34,6 @@ force-http-engine-hosts = %APPEND% sdk.alibaba.com.ailbaba.me, *.cp31.ott.cibntv
 
 # 交管12123 //gab.122.gov.cn
 ^https:\/\/gab\.122\.gov\.cn\/eapp\/m\/sysquery\/adver$ - reject
-
-# 高德地图广告
-^http:\/\/ems\.youku\.com\/imp\? - reject
-^http:\/\/optimus-ads\.amap\.com\/uploadimg\/.+ - reject
 
 #  京东 m15.360buyimg.com, m.360buyimg.com, ms.jr.jd.com, bdsp-x.jd.com, bdsp-x.jd.com, dsp-x.jd.com
 ^https?:\/\/m15\.360buyimg\.com\/mobilecms\/jfs\/t1\/202220\/24\/21575\/134711\/625b821bE5d642d73\/77636692989bd2be\.jpg - reject
