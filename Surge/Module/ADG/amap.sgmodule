@@ -8,9 +8,9 @@
 
 
 [Rule]
-DOMAIN, amap-aos-info-nogw.amap.com, REJECT
-DOMAIN, awaken.amap.com, REJECT
-DOMAIN, free-aos-cdn-image.amap.com, REJECT
+DOMAIN,amap-aos-info-nogw.amap.com,REJECT
+DOMAIN,awaken.amap.com,REJECT
+DOMAIN,free-aos-cdn-image.amap.com,REJECT
 
 
 [URL Rewrite]
