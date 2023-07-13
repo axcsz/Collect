@@ -40,31 +40,31 @@ DOMAIN,free-aos-cdn-image.amap.com,REJECT
 
 [Script]
 # 移除阿里巴巴通用广告请求
-高德地图 = type=http-response,pattern=^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch,requires-body=1,script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Alibaba/Alibaba_amdc_reject.js,script-update-interval=0,max-size=0
+高德_移除通用广告 = type=http-response,pattern=^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch,requires-body=1,script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Alibaba/Alibaba_amdc_reject.js,script-update-interval=0,max-size=0
 
 # 导航详情页 - 路线规划、地点详情页、搜索详情页
-高德地图 = type=http-response,pattern=^https:\/\/m5\.amap\.com\/ws\/shield\/search\/(common\/coupon\/info|poi\/detail)\?,requires-body=1,script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Amap/Amap_remove_ads.js,script-update-interval=0,max-size=0
-高德地图 = type=http-response,pattern=^https:\/\/m5\.amap\.com\/ws\/shield\/search_poi\/(city_feed|mps|search\/sp|tips_operation_location)\?,requires-body=1,script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Amap/Amap_remove_ads.js,script-update-interval=0,max-size=0
-高德地图 = type=http-response,pattern=^https:\/\/m5\.amap\.com\/ws\/shield\/search(_poi)?\/sug\?,requires-body=1,script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Amap/Amap_remove_ads.js,script-update-interval=0,max-size=0
+高德_详情 = type=http-response,pattern=^https:\/\/m5\.amap\.com\/ws\/shield\/search\/(common\/coupon\/info|poi\/detail)\?,requires-body=1,script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Amap/Amap_remove_ads.js,script-update-interval=0,max-size=0
+高德_路线 = type=http-response,pattern=^https:\/\/m5\.amap\.com\/ws\/shield\/search_poi\/(city_feed|mps|search\/sp|tips_operation_location)\?,requires-body=1,script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Amap/Amap_remove_ads.js,script-update-interval=0,max-size=0
+高德_搜索 = type=http-response,pattern=^https:\/\/m5\.amap\.com\/ws\/shield\/search(_poi)?\/sug\?,requires-body=1,script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Amap/Amap_remove_ads.js,script-update-interval=0,max-size=0
 
 # 首页 - 推广卡片、红点角标、右上角动图、搜索框热词、左下角天气、消息横幅
-高德地图 = type=http-response,pattern=^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/main-page\?,requires-body=1,script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Amap/Amap_remove_ads.js,script-update-interval=0,max-size=0
-高德地图 = type=http-response,pattern=^https:\/\/m5\.amap\.com\/ws\/mapapi\/poi\/infolite\/\?,requires-body=1,script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Amap/Amap_remove_ads.js,script-update-interval=0,max-size=0
-高德地图 = type=http-response,pattern=^https:\/\/m5\.amap\.com\/ws\/shield\/frogserver\/aocs\/updatable\/1\?,requires-body=1,script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Amap/Amap_remove_ads.js,script-update-interval=0,max-size=0
+高德_推广 = type=http-response,pattern=^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/main-page\?,requires-body=1,script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Amap/Amap_remove_ads.js,script-update-interval=0,max-size=0
+高德_天气 = type=http-response,pattern=^https:\/\/m5\.amap\.com\/ws\/mapapi\/poi\/infolite\/\?,requires-body=1,script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Amap/Amap_remove_ads.js,script-update-interval=0,max-size=0
+高德_搜索 = type=http-response,pattern=^https:\/\/m5\.amap\.com\/ws\/shield\/frogserver\/aocs\/updatable\/1\?,requires-body=1,script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Amap/Amap_remove_ads.js,script-update-interval=0,max-size=0
 
 # 我的页面 - 个人主页、推广卡片
-高德地图 = type=http-response,pattern=^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/usr-profile-fc\/(highlightV2|home)\?,requires-body=1,script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Amap/Amap_remove_ads.js,script-update-interval=0,max-size=0
-高德地图 = type=http-response,pattern=^https:\/\/m5\.amap\.com\/ws\/shield\/dsp\/profile\/index\/nodefaasv3\?,requires-body=1,script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Amap/Amap_remove_ads.js,script-update-interval=0,max-size=0
+高德_主页 = type=http-response,pattern=^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/usr-profile-fc\/(highlightV2|home)\?,requires-body=1,script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Amap/Amap_remove_ads.js,script-update-interval=0,max-size=0
+高德_推广卡片 = type=http-response,pattern=^https:\/\/m5\.amap\.com\/ws\/shield\/dsp\/profile\/index\/nodefaasv3\?,requires-body=1,script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Amap/Amap_remove_ads.js,script-update-interval=0,max-size=0
 
 # 附近页
-高德地图 = type=http-response,pattern=^https:\/\/m5\.amap\.com\/ws\/shield\/search\/nearbyrec_smart\?,requires-body=1,script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Amap/Amap_remove_ads.js,script-update-interval=0,max-size=0
+高德_附近 = type=http-response,pattern=^https:\/\/m5\.amap\.com\/ws\/shield\/search\/nearbyrec_smart\?,requires-body=1,script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Amap/Amap_remove_ads.js,script-update-interval=0,max-size=0
 
 # 开屏广告
-高德地图 = type=http-response,pattern=^https:\/\/m5\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\?,requires-body=1,script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Amap/Amap_remove_ads.js,script-update-interval=0,max-size=0
+高德_开屏 = type=http-response,pattern=^https:\/\/m5\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\?,requires-body=1,script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Amap/Amap_remove_ads.js,script-update-interval=0,max-size=0
 
 # 打车页 - 红点角标、弹窗、推广卡片
-高德地图 = type=http-response,pattern=^https:\/\/m5-zb\.amap\.com\/ws\/promotion-web\/resource\??,requires-body=1,script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Amap/Amap_remove_ads.js,script-update-interval=0,max-size=0
-高德地图 = type=http-response,pattern=^https:\/\/m5-zb\.amap\.com\/ws\/sharedtrip\/taxi\/order_detail_car_tips\?,requires-body=1,script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Amap/Amap_remove_ads.js,script-update-interval=0,max-size=0
+高德_红点 = type=http-response,pattern=^https:\/\/m5-zb\.amap\.com\/ws\/promotion-web\/resource\??,requires-body=1,script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Amap/Amap_remove_ads.js,script-update-interval=0,max-size=0
+高德_弹窗 = type=http-response,pattern=^https:\/\/m5-zb\.amap\.com\/ws\/sharedtrip\/taxi\/order_detail_car_tips\?,requires-body=1,script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Amap/Amap_remove_ads.js,script-update-interval=0,max-size=0
 
 
 [MITM]
