@@ -384,9 +384,9 @@ IP-CIDR,218.94.207.205/32,no-resolve
 IP-CIDR,117.92.229.188/32,no-resolve
 IP-CIDR,101.36.166.16/32,no-resolve
 IP-CIDR,180.96.2.114/32,no-resolve
-URL-REGEX,*-default.ixigua.com
-URL-REGEX,^http:\/\/.+\.byteimg\.com\/ad-app-package
-URL-REGEX,^http:\/\/.+\.byteimg\.com\/web\.business\.image
+#URL-REGEX,*-default.ixigua.com
+#URL-REGEX,^http:\/\/.+\.byteimg\.com\/ad-app-package
+#URL-REGEX,^http:\/\/.+\.byteimg\.com\/web\.business\.image
 
 # >>>>>>>>>>>>>>> ✅ G ✅ <<<<<<<<<<<<<<
 # > GozenData
@@ -514,7 +514,7 @@ DOMAIN-KEYWORD,pangolin.snssdk.com
 DOMAIN-SUFFIX,jdqd.jd.com
 DOMAIN-SUFFIX,shouji.sougou.com
 # 京东开屏广告屏蔽
-URL-REGEX,https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start$-TINYGIF
+#URL-REGEX,https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start$-TINYGIF
 
 
 
@@ -1350,7 +1350,7 @@ DOMAIN,ads.finance.yahoo.com
 DOMAIN,ads.yahoo.com
 DOMAIN,ads.yahoo.de
 # 优酷去片头广告(by Choler)
-URL-REGEX,^http:\/\/.*\.cp31\.ott\.cibntv\.net\/youku\/-TINYGIF
+#URL-REGEX,^http:\/\/.*\.cp31\.ott\.cibntv\.net\/youku\/-TINYGIF
 # > 优酷
 DOMAIN-SUFFIX,atm.youku.com
 DOMAIN,ad.mobile.youku.com
@@ -1474,7 +1474,6 @@ DOMAIN-KEYWORD,-ad-sign.byteimg.com
 
 # >>>>>>>>>>>>>>> ✅ 其他广告 ✅ <<<<<<<<<<<<<<
 DOMAIN-KEYWORD,extlog.snssdk.com
-# DOMAIN-KEYWORD,is.snssdk.com
 DOMAIN-KEYWORD,mobads.baidu.com
 DOMAIN-KEYWORD,s3a.pstatp.com
 DOMAIN-KEYWORD,sdfp.snssdk.com
@@ -9895,6 +9894,7 @@ DOMAIN-SUFFIX,kuaizip.com
 # https://www.lizhi.io/blog/40002904
 DOMAIN-SUFFIX,zryydi.com
 # > Adobe Flash China Special Edition
+# https://www.zhihu.com/question/28,no-resolve1163698/answer/441388130
 DOMAIN,geo2.adobe.com
 
 # > 隐私保护
