@@ -797,7 +797,6 @@ DOMAIN-SUFFIX,ads.sohu.com
 DOMAIN-SUFFIX,aty.sohu.com
 DOMAIN,hui.sohu.com
 # > 搜狗
-;DOMAIN,indivi-cdn.shouji.sogou.com
 DOMAIN-SUFFIX,epro.sogou.com
 DOMAIN-SUFFIX,golden1.sogou.com
 DOMAIN-SUFFIX,inte.sogou.com
@@ -816,8 +815,6 @@ DOMAIN-SUFFIX,bazinga.mse.sogou.com
 DOMAIN-SUFFIX,bite.theta.sogoucdn.com
 DOMAIN-SUFFIX,brand.sogou.com
 DOMAIN-SUFFIX,bsiet.husky.sogou.com
-# > 搜狗输入法
-;DOMAIN-KEYWORD,business-cdn.shouji.sogou.com
 # > 深圳通微信小程序
 DOMAIN-SUFFIX,wxsnsdythumb.wxs.qq.com
 
@@ -851,7 +848,6 @@ DOMAIN-SUFFIX,apoll.m.taobao.com
 DOMAIN-SUFFIX,h-adashx.ut.taobao.com
 DOMAIN-SUFFIX,w.m.taobao.com
 DOMAIN,tunion-api.m.taobao.com
-;DOMAIN-SUFFIX,ai.m.taobao.com
 DOMAIN-SUFFIX,re.m.taobao.com
 DOMAIN-SUFFIX,agoodm.m.taobao.com
 DOMAIN-SUFFIX,ai.taobao.com
@@ -1129,7 +1125,6 @@ DOMAIN-SUFFIX,hao.uc.cn
 DOMAIN-SUFFIX,lobmuc.cn
 DOMAIN-SUFFIX,open-uc.cn
 DOMAIN-SUFFIX,puds.test.uae.uc.cn
-;DOMAIN-SUFFIX,t.uc.cn
 DOMAIN-SUFFIX,track.uc.cn
 DOMAIN-SUFFIX,wmedia-track.uc.cn
 DOMAIN-SUFFIX,woodpecker.uc.cn
@@ -1576,7 +1571,6 @@ DOMAIN-KEYWORD,dlads
 DOMAIN,dagonghuzhu.com
 DOMAIN-KEYWORD,xxshuyuan
 DOMAIN-KEYWORD,haowanyou
-;DOMAIN-KEYWORD,dat8
 DOMAIN-KEYWORD,112wan
 DOMAIN-KEYWORD,dfkj8
 DOMAIN-KEYWORD,mifengv
@@ -1627,7 +1621,6 @@ DOMAIN-KEYWORD,bongacash
 DOMAIN-KEYWORD,bngpt
 DOMAIN-KEYWORD,stunninglover
 DOMAIN-KEYWORD,highwebmedia
-;DOMAIN-KEYWORD,jads
 DOMAIN-KEYWORD,trwl1
 DOMAIN-KEYWORD,vidoza
 DOMAIN-KEYWORD,o333o
@@ -9596,7 +9589,6 @@ DOMAIN-SUFFIX,mmstat.com
 DOMAIN-SUFFIX,4paradigm.com
 DOMAIN-SUFFIX,catch.gift
 DOMAIN-SUFFIX,pubnative.net
-# DOMAIN-SUFFIX,applovin.com
 DOMAIN-SUFFIX,inner-active.mobi
 DOMAIN-SUFFIX,mdfull.com
 DOMAIN-SUFFIX,openx.net
@@ -9894,7 +9886,7 @@ DOMAIN-SUFFIX,kuaizip.com
 # https://www.lizhi.io/blog/40002904
 DOMAIN-SUFFIX,zryydi.com
 # > Adobe Flash China Special Edition
-# https://www.zhihu.com/question/28,no-resolve1163698/answer/441388130
+# https://www.zhihu.com/question/28,1163698/answer/441388130
 DOMAIN,geo2.adobe.com
 
 # > 隐私保护
