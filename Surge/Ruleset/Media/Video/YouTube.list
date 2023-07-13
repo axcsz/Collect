@@ -3,14 +3,17 @@
 #!author=Axcsz5
 #!homepage=https://github.com/axcsz/Collect/edit/master/Surge
 #!icon=
-# updatetime=2023.07.11
+# updatetime=2023.07.13
 
 
 
-USER-AGENT,com.google.ios.youtube*
 USER-AGENT,*youtube*
 USER-AGENT,YouTube*
-DOMAIN-KEYWORD,youtube
+USER-AGENT,com.google.ios.youtube*
+DOMAIN,yt3.ggpht.com
+DOMAIN-SUFFIX,youtubei.googleapis.com
+DOMAIN-SUFFIX,ggpht.cn
+DOMAIN-SUFFIX,ggpht.com
 DOMAIN-SUFFIX,gvt1.com
 DOMAIN-SUFFIX,gvt2.com
 DOMAIN-SUFFIX,video.google.com
@@ -24,8 +27,9 @@ DOMAIN-SUFFIX,youtubekids.com
 DOMAIN-SUFFIX,youtube-nocookie.com
 DOMAIN-SUFFIX,yt.be
 DOMAIN-SUFFIX,ytimg.com
-DOMAIN,youtubei.googleapis.com
-DOMAIN,yt3.ggpht.com
+DOMAIN-SUFFIX,wide-youtube.l.google.com
+DOMAIN-SUFFIX,youtube-ui.l.google.com
+DOMAIN-KEYWORD,youtube
 IP-CIDR,172.110.32.0/21,no-resolve
 IP-CIDR,216.73.80.0/20,no-resolve
 IP-CIDR6,2620:120:e000::/40,no-resolve
