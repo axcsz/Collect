@@ -73,4 +73,4 @@ http-response ^https:\/\/m5-zb\.amap\.com\/ws\/sharedtrip\/taxi\/order_detail_ca
 
 
 [MITM]
-hostname = %INSERT% m5*.amap.com, sns.amap.com
+hostname = %APPEND% m5*.amap.com, sns.amap.com
