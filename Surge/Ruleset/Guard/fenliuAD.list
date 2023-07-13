@@ -324,7 +324,7 @@ DOMAIN,ad.chelaile.net.cn
 DOMAIN-KEYWORD,image.bianxianmao.com
 # > 滴滴青桔（支付界面图片有误杀）
 # > DOMAIN-KEYWORD,pt-starimg.didistatic.com
-ip-cidr,203.107.1.1/24,no-resolve
+IP-CIDR,203.107.1.1/24,no-resolve
 # > 懂车帝
 DOMAIN-KEYWORD,p3-pack.byteimg.com
 DOMAIN-KEYWORD,p6-pack.byteimg.com
@@ -9895,7 +9895,6 @@ DOMAIN-SUFFIX,kuaizip.com
 # https://www.lizhi.io/blog/40002904
 DOMAIN-SUFFIX,zryydi.com
 # > Adobe Flash China Special Edition
-# https://www.zhihu.com/question/28,no-resolve1163698/answer/441388130
 DOMAIN,geo2.adobe.com
 
 # > 隐私保护
