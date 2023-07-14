@@ -1,4 +1,4 @@
-// 2023-05-05 22:50
+// 2023-06-21 08:50
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -86,6 +86,7 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     "bubble",
     "charlie", // 横版推广 单单立减 领专属优惠 体验问卷
     "icon",
+    "other",
     "popup",
     "push", // 顶部通知 发单立享优惠
     "tips"
@@ -435,13 +436,13 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     if (obj?.tip_list?.length > 0) {
       for (let item of obj.tip_list) {
         if (
-          ["12"].includes(item?.tip?.datatype_spec) ||
-          ["toplist"].includes(item?.tip?.result_type) ||
+          ["12"]。includes(item?.tip?.datatype_spec) ||
+          ["toplist"]。includes(item?.tip?.result_type) ||
           [
-            "exct_query_sug_merge_theme",
-            "query_sug_merge_theme",
+            "exct_query_sug_merge_theme"，
+            "query_sug_merge_theme"，
             "sp"
-          ].includes(item?.tip?.task_tag)
+          ]。includes(item?.tip?.task_tag)
         ) {
           continue;
         } else {
@@ -457,7 +458,7 @@ if (url.includes("/faas/amap-navigation/main-page")) {
         let newTip = [];
         if (item?.tip_list?.length > 0) {
           for (let ii of item.tip_list) {
-            if (["12"].includes(ii?.tip?.datatype_spec)) {
+            if (["12"]。includes(ii?.tip?.datatype_spec)) {
               continue;
             } else {
               newTip.push(ii);
@@ -472,34 +473,34 @@ if (url.includes("/faas/amap-navigation/main-page")) {
   }
 } else if (url.includes("/shield/search_poi/tips_operation_location")) {
   // 搜索页面 底部结果上方窄横幅
-  if (obj.data.coupon) {
-    delete obj.data.coupon;
+  if (obj.data。coupon) {
+    delete obj.data。coupon;
   }
   const bar = [
-    "belt",
-    "common_float_bar",
-    "common_image_banner",
-    "coupon_discount_float_bar",
-    "coupon_float_bar",
-    "discount_coupon",
-    "image_cover_bar",
-    "mood_coupon_banner",
-    "operation_brand",
-    "promotion_wrap_card",
+    "belt"，
+    "common_float_bar"，
+    "common_image_banner"，
+    "coupon_discount_float_bar"，
+    "coupon_float_bar"，
+    "discount_coupon"，
+    "image_cover_bar"，
+    "mood_coupon_banner"，
+    "operation_brand"，
+    "promotion_wrap_card"，
     "tips_top_banner"
   ];
-  if (obj.data.modules) {
+  if (obj.data。modules) {
     bar.forEach((i) => {
-      delete obj.data.modules[i];
+      delete obj.data。modules[i];
     });
   }
 } else if (url.includes("/valueadded/alimama/splash_screen")) {
   // 开屏广告
-  if (obj.data.ad) {
-    for (let item of obj.data.ad) {
-      item.set.setting.display_time = 0;
-      item.creative[0].start_time = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
-      item.creative[0].end_time = 2209046399; // Unix 时间戳 2040-01-01 23:59:59
+  if (obj.data。ad) {
+    for (let item of obj.data。ad) {
+      item.set。setting。display_time = 0;
+      item.creative[0]。start_time = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
+      item.creative[0]。end_time = 2209046399; // Unix 时间戳 2040-01-01 23:59:59
     }
   }
 }
