@@ -18,6 +18,7 @@ always-real-ip = *.msftconnecttest.com, *.msftncsi.com, *.srv.nintendo.net, *.st
 # 当遇到 REJECT 策略时返回错误页
 show-error-page-for-reject = true
 
+
 [Rule]
 # AND规则:当所含规则全部匹配时，会被触发
 AND,((PROTOCOL,UDP), (DEST-PORT,443)),REJECT-NO-DROP
@@ -66,7 +67,6 @@ mtalk.google.com = 108.177.125.188
 dl.google.com = server:119.29.29.29
 dl.l.google.com = server:119.29.29.29
 
-[URL Rewrite]
 
 [MITM]
 # 开启HTTP2
