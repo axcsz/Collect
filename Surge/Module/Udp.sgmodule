@@ -1,6 +1,11 @@
 #!name=内置模块
 #!desc=最后更新时间 2022-03-20 16:40
+#!author=Axcsz5（搬运整理）
+#!homepage=https://github.com/axcsz/Collect/edit/master/Surge
 #!system=ios
+#!icon=
+#!update=2023.07.15
+
 
 # > 阻止所有UDP流量到端口443，使HTTP3请求退回到TCP流量
 [Rule]
