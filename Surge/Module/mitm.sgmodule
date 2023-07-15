@@ -1,5 +1,10 @@
 #!name=MitM（抓包模块）
 #!desc=抓包的时候才开启此模块，抓完后请及时关闭！！！
+#!author=Axcsz5（搬运整理）
+#!homepage=https://github.com/axcsz/Collect/edit/master/Surge
+#!icon=
+#!update=2023.07.15
+
 
 
 [MITM]
