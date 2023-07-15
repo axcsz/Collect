@@ -3,7 +3,7 @@
 #!author= fmz200  DivineEngine Axcsz5（搬运整理）
 #!homepage=https://github.com/axcsz/Collect/edit/master/Surge
 #!icon=
-#!update=2023.07.13
+#!update=2023.07.15
 
 
 
@@ -71,10 +71,8 @@ DOMAIN,tracklog.58.com
 # > Apple
 DOMAIN,api-adservices.apple.com
 DOMAIN-SUFFIX,iadsdk.apple.com
-
 # > 阿里云
 IP-CIDR,203.107.1.1/24,no-resolve
-
 # > 爱奇艺
 DOMAIN,paopao-monitor.iqiyi.com
 DOMAIN,puma-api.iqiyi.com
@@ -262,6 +260,8 @@ DOMAIN,lc.map.baidu.com
 # > 百度贴吧 屏蔽域名dns查询
 IP-CIDR,180.76.76.200/32,no-resolve
 # > 哔哩哔哩
+DOMAIN,mall.bilibili.com
+DOMAIN,passport.bilibili.com
 DOMAIN-SUFFIX,cm.bilibili.com
 DOMAIN-KEYWORD,api.sobot.com
 DOMAIN-SUFFIX,cm.ad.bilibili.com
@@ -316,7 +316,21 @@ DOMAIN,data-hoisin.coocaa.com
 DOMAIN-SUFFIX,atrace.chelaile.net.cn
 DOMAIN,logs.chelaile.net.cn
 DOMAIN,ad.chelaile.net.cn
-
+# 菜鸟
+DOMAIN,iyes.youku.com,REJECT
+DOMAIN,vali.cp31.ott.cibntv.net
+IP-CIDR,117.161.156.227/32,no-resolve
+# 彩云天气
+DOMAIN,ad.cyapi.cn
+# ChatGPT
+DOMAIN,o33249.ingest.sentry.io
+# Clue 智库
+DOMAIN,api.helloclue.com
+DOMAIN,brahe.apptimize.com
+DOMAIN,collector.clue.run
+DOMAIN,mapi.apptimize.com
+DOMAIN,md-i-s.apptimize.com
+DOMAIN,images.ctfassets.net
 
 
 # >>>>>>>>>>>>>>> ✅ D ✅ <<<<<<<<<<<<<<
@@ -343,6 +357,7 @@ DOMAIN,track.tiara.kakao.com
 DOMAIN-SUFFIX,ad.duoduo.link
 # > 盯盯拍
 DOMAIN,pglstatp-toutiao.com
+
 
 
 # >>>>>>>>>>>>>>> ✅ E ✅ <<<<<<<<<<<<<<
@@ -384,9 +399,20 @@ IP-CIDR,218.94.207.205/32,no-resolve
 IP-CIDR,117.92.229.188/32,no-resolve
 IP-CIDR,101.36.166.16/32,no-resolve
 IP-CIDR,180.96.2.114/32,no-resolve
-#URL-REGEX,*-default.ixigua.com
-#URL-REGEX,^http:\/\/.+\.byteimg\.com\/ad-app-package
-#URL-REGEX,^http:\/\/.+\.byteimg\.com\/web\.business\.image
+URL-REGEX,*-default.ixigua.com
+URL-REGEX,^http:\/\/.+\.byteimg\.com\/ad-app-package
+URL-REGEX,^http:\/\/.+\.byteimg\.com\/web\.business\.image
+# Flurry
+DOMAIN,data.flurry.com
+# Foreca & Google
+DOMAIN,adservice.google.com
+DOMAIN,googleads.g.doubleclick-cn.net
+DOMAIN,googleads.g.doubleclick.net
+DOMAIN,pubads.g.doubleclick.net
+DOMAIN,pagead2.googlesyndication.com
+DOMAIN,www.googleadservices.com
+
+
 
 # >>>>>>>>>>>>>>> ✅ G ✅ <<<<<<<<<<<<<<
 # > GozenData
@@ -423,6 +449,9 @@ DOMAIN-SUFFIX,www.googleadservices.com
 DOMAIN-SUFFIX,www.google-analytics.com
 DOMAIN,ads.youtube.com
 # > 高德
+DOMAIN,amap-aos-info-nogw.amap.com
+DOMAIN,awaken.amap.com
+DOMAIN,free-aos-cdn-image.amap.com
 DOMAIN-SUFFIX,adiu.amap.com
 DOMAIN,aboard.apilocate.amap.com
 DOMAIN,apiinit.amap.com
@@ -437,6 +466,14 @@ DOMAIN,optimus-ads.amap.com.w.alikunlun.com
 DOMAIN-SUFFIX,shouji.sougou.com
 DOMAIN,u51.me
 DOMAIN-SUFFIX,u51.me
+# 工商银行 开屏广告
+DOMAIN,pageviewp.icbc.com.cn
+# 广告联盟
+DOMAIN,is.snssdk.com
+DOMAIN,mi.gdt.qq.com
+DOMAIN,open.e.kuaishou.com
+DOMAIN-SUFFIX,pangolin-sdk-toutiao.com
+DOMAIN-SUFFIX,pangolin-sdk-toutiao-b.com
 
 
 
@@ -465,7 +502,8 @@ DOMAIN-KEYWORD,assets.51downapp.cn
 DOMAIN-SUFFIX,anythinktech.com
 DOMAIN-SUFFIX,adkwai.com
 DOMAIN-SUFFIX,mob.com
-
+# 海尔智家
+DOMAIN-SUFFIX,ehaier.com
 
 
 # >>>>>>>>>>>>>>> ✅ J ✅ <<<<<<<<<<<<<<
@@ -603,6 +641,11 @@ DOMAIN-SUFFIX,wa.kuwo.cn
 DOMAIN-SUFFIX,webstat.kuwo.cn
 DOMAIN-SUFFIX,mobilead.kuwo.cn
 DOMAIN-SUFFIX,rich.kuwo.cn
+# 酷我音乐
+DOMAIN,ad.tencentmusic.com
+DOMAIN,g.koowo.com
+DOMAIN,tmead.y.qq.com
+DOMAIN,tmeadcomm.y.qq.com
 # > 酷安
 # > DOMAIN-KEYWORD,p6-be-pack-sign.pglstatp-toutiao.com
 
@@ -623,6 +666,8 @@ DOMAIN,c1wx.lianwangtech.com
 DOMAIN-KEYWORD,medicine.lanjiyin.com.cn
 # > 两步路
 DOMAIN-SUFFIX,admobile.top
+# 蓝奏云
+DOMAIN,statics.woozooo.com
 
 
 
@@ -685,7 +730,6 @@ DOMAIN-SUFFIX,ads.oppomobile.com
 DOMAIN,acdn.adnxs.com
 DOMAIN,mediation.adnxs.com
 DOMAIN,sin3-ib.adnxs.com
-
 
 
 
@@ -784,7 +828,10 @@ DOMAIN,xj-landing.gdtimg.com
 
 
 # >>>>>>>>>>>>>>> ✅ R ✅ <<<<<<<<<<<<<<
-
+# RARBG 推广跳转
+DOMAIN,bravetense.com
+DOMAIN,furiousfar.com
+DOMAIN,swallowcrockerybless.com
 
 
 # >>>>>>>>>>>>>>> ✅ S ✅ <<<<<<<<<<<<<<
@@ -817,6 +864,10 @@ DOMAIN-SUFFIX,brand.sogou.com
 DOMAIN-SUFFIX,bsiet.husky.sogou.com
 # > 深圳通微信小程序
 DOMAIN-SUFFIX,wxsnsdythumb.wxs.qq.com
+# 什么值得买
+DOMAIN,api.zuihuimai.com
+# 数字联盟
+DOMAIN-SUFFIX,shuzilm.cn
 
 
 
@@ -830,7 +881,6 @@ DOMAIN-SUFFIX,applovin.com
 DOMAIN-SUFFIX,appier.net
 DOMAIN-SUFFIX,adsmoloco.com
 DOMAIN-SUFFIX,adcanvas.com
-
 # > The Paper
 DOMAIN,admonitor.thepaper.cn
 DOMAIN,adpai.thepaper.cn
@@ -876,6 +926,8 @@ DOMAIN-SUFFIX,click.tz.simba.taobao.com
 DOMAIN-SUFFIX,stat.simba.taobao.com
 DOMAIN-SUFFIX,m-adash.m.taobao.com
 DOMAIN-SUFFIX,adashbc.m.taobao.com
+# 腾讯 无法使用的推送服务
+DOMAIN,tpns.qq.com
 # >  腾讯
 DOMAIN-SUFFIX,news.ssp.qq.com
 DOMAIN-SUFFIX,news.l.qq.com
@@ -1162,7 +1214,11 @@ DOMAIN-SUFFIX,mi.gdt.qq.com
 DOMAIN-SUFFIX,p9-be-pack-sign.pglstatp-toutiao.com
 DOMAIN-SUFFIX,p6-be-pack-sign.pglstatp-toutiao.com
 DOMAIN-SUFFIX,p3-be-pack-sign.pglstatp-toutiao.com
-
+# 微博 开屏广告
+DOMAIN,kadmimage.biz.weibo.com
+DOMAIN,sdkaction.biz.weibo.com
+DOMAIN,sdkclick.biz.weibo.com
+DOMAIN,sdkmonitor.biz.weibo.com
 # > 微博
 DOMAIN-KEYWORD,fastimage.uve.weibo.com
 DOMAIN-KEYWORD,adimg.uve.weibo.com
@@ -1218,7 +1274,6 @@ DOMAIN-KEYWORD,adstrategy.biz.weibo.com
 DOMAIN-KEYWORD,vs.biz.weibo.com
 # 微博开屏广告预加载
 DOMAIN,bootpreload.uve.weibo.com
-
 # > 网易
 DOMAIN-SUFFIX,dsp.youdao.com
 DOMAIN-SUFFIX,union.youdao.com
@@ -1237,6 +1292,9 @@ DOMAIN,n.3g.163.com
 DOMAIN,nex.163.com
 DOMAIN,yt-adp.nosdn.127.net
 DOMAIN,yt-adp.ws.126.net
+DOMAIN,gdt.qq.com
+DOMAIN,httpdns.n.netease.com
+DOMAIN-SUFFIX,163jiasu.com
 # > 网易云
 DOMAIN-KEYWORD,ossgw.alicdn.com
 # > 微软
@@ -1310,6 +1368,7 @@ DOMAIN,t-ads.xiaohongshu.com
 # > 小米
 DOMAIN,data.mistat.xiaomi.com
 DOMAIN,tracking.intl.miui.com
+DOMAIN,sdkconfig.ad.xiaomi.com
 # > 小小影视
 DOMAIN,39d83s.com
 # > 小利生活
@@ -1322,8 +1381,10 @@ DOMAIN,saxs.sina.com.cn
 DOMAIN,saxn.sina.com.cn
 # > 雪球（可以去掉倒计时，但是误杀很多图片，默认关闭）
 # > DOMAIN-KEYWORD,xqimg.imedao.com
-# > 向日葵 见重写
-
+# 迅雷 解除版权限制
+DOMAIN,hub5btmain.v6.shub.sandai.net
+DOMAIN,hub5emu.v6.shub.sandai.net
+DOMAIN,hub5idx.v6.shub.sandai.net
 
 
 # >>>>>>>>>>>>>>> ✅ Y ✅ <<<<<<<<<<<<<<
@@ -9849,8 +9910,6 @@ IP-CIDR,180.166.52.24/32,no-resolve
 IP-CIDR,211.161.101.106/32,no-resolve
 IP-CIDR,220.115.251.25/32,no-resolve
 IP-CIDR,222.73.156.235/32,no-resolve
-# > 知乎
-IP-CIDR,188.89.204.198/32,no-resolve
 # > 运营商劫持
 DOMAIN-SUFFIX,189key.com
 DOMAIN-SUFFIX,bkyhq.cn
@@ -9930,7 +9989,6 @@ DOMAIN-SUFFIX,wowanalytics.co.uk
 DOMAIN-SUFFIX,zoomanalytics.co
 DOMAIN-SUFFIX,ads.linkedin.com
 DOMAIN,analytics.slashdotmedia.com
-
 DOMAIN-SUFFIX,1phads.com
 DOMAIN-SUFFIX,1rtb.com
 DOMAIN-SUFFIX,1xl.co.uk
@@ -10435,11 +10493,9 @@ DOMAIN-SUFFIX,zucks.net
 DOMAIN-SUFFIX,zumobi.com
 DOMAIN-SUFFIX,zwaar.org
 DOMAIN-SUFFIX,zxrtb.com
-	
 DOMAIN-SUFFIX,ad.daum.net
 DOMAIN-SUFFIX,ad.g.daum.net
 DOMAIN-SUFFIX,ads.roku.com
-	
 DOMAIN-SUFFIX,abema-adx.ameba.jp
 DOMAIN-SUFFIX,ad.12306.cn
 DOMAIN-SUFFIX,ad.caiyunapp.com
