@@ -18,9 +18,13 @@ show-error-page-for-reject = true
 # AND规则:当所含规则全部匹配时，会被触发
 AND,((PROTOCOL,UDP), (DEST-PORT,443)),REJECT-NO-DROP
 # 12306
-DOMAIN, ad.12306.cn, direct
+DOMAIN,ad.12306.cn,DIRECT
 # B站自动换区
 IP-CIDR,203.107.1.1/24,REJECT,no-resolve
+# 修正广告拦截
+DOMAIN,amdc.m.taobao.com,DIRECT
+DOMAIN,ca.iadsdk.apple.com,DIRECT
+
 
 [Host]
 # 本地DNS映射
