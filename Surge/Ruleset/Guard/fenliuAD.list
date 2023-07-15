@@ -552,7 +552,7 @@ DOMAIN-KEYWORD,pangolin.snssdk.com
 DOMAIN-SUFFIX,jdqd.jd.com
 DOMAIN-SUFFIX,shouji.sougou.com
 # 京东开屏广告屏蔽
-#URL-REGEX,https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start$-TINYGIF
+URL-REGEX,https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start$-TINYGIF
 
 
 
@@ -1406,7 +1406,7 @@ DOMAIN,ads.finance.yahoo.com
 DOMAIN,ads.yahoo.com
 DOMAIN,ads.yahoo.de
 # 优酷去片头广告(by Choler)
-#URL-REGEX,^http:\/\/.*\.cp31\.ott\.cibntv\.net\/youku\/-TINYGIF
+URL-REGEX,^http:\/\/.*\.cp31\.ott\.cibntv\.net\/youku\/-TINYGIF
 # > 优酷
 DOMAIN-SUFFIX,atm.youku.com
 DOMAIN,ad.mobile.youku.com
