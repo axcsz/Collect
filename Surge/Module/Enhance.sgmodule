@@ -28,6 +28,7 @@ IP-CIDR,203.107.1.1/24,REJECT,no-resolve
 # 修正广告拦截
 DOMAIN,amdc.m.taobao.com,DIRECT
 DOMAIN,ca.iadsdk.apple.com,DIRECT
+DOMAIN-KEYWORD,anti-ad.net,DIRECT
 
 
 [Host]
