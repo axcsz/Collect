@@ -400,8 +400,6 @@ DOMAIN,pgdt.ugdtimg.com
 DOMAIN,splashqqlive.gtimg.com
 DOMAIN,vv.video.qq.com
 DOMAIN,wa.gtimg.com
-# DOMAIN,wxsnsdy.wxs.qq.com
-# DOMAIN,wxsnsdythumb.wxs.qq.com
 # > 腾讯视频
 DOMAIN-SUFFIX,tetrack.qq.com
 DOMAIN-SUFFIX,tpns.tencent.com
@@ -441,6 +439,7 @@ DOMAIN,t-ads.xiaohongshu.com
 DOMAIN,data.mistat.xiaomi.com
 DOMAIN,tracking.intl.miui.com
 DOMAIN,sdkconfig.ad.xiaomi.com
+DOMAIN-SUFFIX,tracking.miui.com
 # > 小米米家
 DOMAIN,sdkconfig.ad.xiaomi.com
 
@@ -823,18 +822,11 @@ DOMAIN-SUFFIX,gz-data.com
 # > GrowingIO
 DOMAIN-SUFFIX,giocdn.com
 DOMAIN-SUFFIX,growingio.com
-# > MI
-DOMAIN-SUFFIX,tracking.miui.com
-# DOMAIN,api.miwifi.com
-DOMAIN,data.mistat.xiaomi.com
-DOMAIN,tracking.intl.miui.com
 # > TalkingData
 DOMAIN-SUFFIX,cpatrk.net
 DOMAIN-SUFFIX,talkingdata.com
 DOMAIN-SUFFIX,talkingdata.net
 DOMAIN-SUFFIX,udrig.com
-# > Tencent
-DOMAIN,safebrowsing.urlsec.qq.com
 # > Tenjin
 DOMAIN,track.tenjin.com
 DOMAIN,track.tenjin.io
