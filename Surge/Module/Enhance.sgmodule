@@ -24,12 +24,6 @@ show-error-page-for-reject = true
 AND,((PROTOCOL,UDP), (DEST-PORT,443)),REJECT-NO-DROP
 # 12306
 DOMAIN,ad.12306.cn,DIRECT
-# B站自动换区
-IP-CIDR,203.107.1.1/24,REJECT,no-resolve
-# 修正广告拦截
-DOMAIN,amdc.m.taobao.com,REJECT
-DOMAIN,ca.iadsdk.apple.com,DIRECT
-DOMAIN-KEYWORD,anti-ad.net,DIRECT
 
 
 [Host]
