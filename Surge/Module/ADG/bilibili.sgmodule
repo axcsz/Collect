@@ -2,9 +2,17 @@
 #!desc= 去除动态综合页话题,最常访问,弹幕,青少年弹窗,播放页广告 MartinsKing、VirgilClyne、app2smile、RuCu6、Maasea、kokoryh、key
 #!system=ios
 # 2023-06-04 17:51:21
+
+
+
+
+
+
 [URL Rewrite]
-^https?:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.interface\.v1\.Search\/DefaultWords - reject
 ^https?:\/\/app\.bilibili\.com\/x\/resource\/ip - reject
+^https?:\/\/((app\.bilibili\.com)|(app\.biliapi\.net))\/x\/v2\/search\/(defaultwords|square) - reject
+^https?:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.interface\.v1\.Search\/DefaultWords - reject
+^https?:\/\/((app\.bilibili\.com)|(grpc\.biliapi\.net))\/bilibili\.app\.interface\.v\d\.Search\/DefaultWords$ - reject
 
 [Map Local]
 # 可能的一些推广
