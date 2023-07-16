@@ -1,11 +1,10 @@
 #!name=Billbili 
-#!desc= 去除动态综合页话题,最常访问,弹幕,青少年弹窗,播放页广告 MartinsKing、VirgilClyne、app2smile、RuCu6、Maasea、kokoryh、key
+#!desc= 去除动态综合页话题,最常访问,弹幕,青少年弹窗,播放页广告 
+#!author= MartinsKing、VirgilClyne、app2smile、RuCu6、Maasea、kokoryh、key、srk24
 #!system=ios
-# 2023-06-04 17:51:21
-
-
-
-
+#!homepage=https://github.com/axcsz/Collect/edit/master/Surge
+#!icon=
+#!update=2023.07.15
 
 
 [URL Rewrite]
