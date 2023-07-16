@@ -12,7 +12,7 @@ DOMAIN-SUFFIX,flyert.com
 DOMAIN-SUFFIX,gandi.net
 DOMAIN-SUFFIX,snapdrop.net
 DOMAIN,download.jetbrains.com
-DOMAIN,origin-a.akamaihd.net // Origin Download
+DOMAIN,origin-a.akamaihd.net
 # ---(Microsoft)---
 # > Outlook
 DOMAIN,outlook.office365.com
@@ -33,7 +33,7 @@ DOMAIN-SUFFIX,paypal.me
 DOMAIN-SUFFIX,paypal-mktg.com
 DOMAIN-SUFFIX,paypalobjects.com
 # > Steam
-DOMAIN-SUFFIX,cm.steampowered.com // Steam Connect Manager Servers
+DOMAIN-SUFFIX,cm.steampowered.com
 DOMAIN-SUFFIX,steamserver.net
 # > Tencent
 IP-CIDR,182.254.116.0/24,no-resolve
