@@ -1,10 +1,10 @@
 #!name=解锁 & TikTok JP
 #!desc=解锁 TikTok 日本 地区
-#!openUrl=https://github.com/Semporia/TikTok-Unlock
 #!author= Semporia
 #!homepage=https://github.com/axcsz/Collect/edit/master/Surge
 #!icon=
 #!update=2023.07.17
+
 
 
 [URL Rewrite]
