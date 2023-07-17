@@ -409,6 +409,12 @@ DOMAIN-SUFFIX,stat.tpns.tencent.com
 DOMAIN,h.trace.qq.com
 DOMAIN-KEYWORD,omgmta.qq.com
 DOMAIN-KEYWORD,omgmta1.qq.com
+DOMAIN,adsmind.gdtimg.com
+DOMAIN,btrace.qq.com
+DOMAIN,info6.video.qq.com
+DOMAIN,ios.video.mpush.qq.com
+DOMAIN,mtrace.qq.com
+DOMAIN,pgdt.gtimg.cn
 # 腾讯广告联盟，可能误杀
 DOMAIN-SUFFIX,mi.gdt.qq.com
 DOMAIN-SUFFIX,jcollection.shuqireader.com
