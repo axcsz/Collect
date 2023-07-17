@@ -1,4 +1,4 @@
-#!name= 增强 & 模块集
+#!name= 增强 & 模块
 #!desc= 本模块是在基本配置上添加的补充模块，此模块添不添加并不影响配置的正常使用
 #!author= Axcsz5（搬运整理）
 #!homepage= https://github.com/axcsz/Collect/edit/master/Surge
@@ -9,19 +9,22 @@
 
 [General]
 # 启用 Tun Only 模式 (仅 iOS)，强制 80 端口流量使用 HTTP 引擎处理
-compatibility-mode = 3
+# compatibility-mode = 3
 force-http-engine-hosts = %APPEND% sdk.alibaba.com.ailbaba.me, -<ip-address>, *
-# VIF Excluded Routes
-tun-excluded-routes = 239.255.255.250/32
-# Always Real IP Hosts
-always-real-ip = *.msftconnecttest.com, *.msftncsi.com, *.srv.nintendo.net, *.stun.playstation.net, xbox.*.microsoft.com, *.xboxlive.com, *.logon.battlenet.com.cn, *.logon.battle.net, stun.l.google.com
 # 当遇到 REJECT 策略时返回错误页
 show-error-page-for-reject = true
+# Always Real IP Hosts
+always-real-ip = *.msftconnecttest.com, *.msftncsi.com, *.srv.nintendo.net, *.stun.playstation.net, xbox.*.microsoft.com, *.xboxlive.com, *.logon.battlenet.com.cn, *.logon.battle.net, stun.l.google.com
+# VIF Excluded Routes
+tun-excluded-routes = 239.255.255.250/32
+# 如果没有代理服务器支持 UDP 转发，可修改为「 direct 」或注释下条，但需注意同一目标主机名 TCP 请求与 UDP 请求的源地址不同所造成的隐私及安全风险。
+udp-policy-not-supported-behaviour = reject
+
 
 
 [Rule]
 # AND规则:当所含规则全部匹配时，会被触发
-AND,((PROTOCOL,UDP), (DEST-PORT,443)),REJECT-NO-DROP
+AND,((PROTOCOL,UDP),(DEST-PORT,443)),REJECT-NO-DROP
 # 12306
 DOMAIN,ad.12306.cn,DIRECT
 
