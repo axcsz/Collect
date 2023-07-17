@@ -1,9 +1,9 @@
-#!name=增强 & 模块集
-#!desc=本模块是在基本配置上添加的补充模块，此模块添不添加并不影响配置的正常使用
+#!name= 增强 & 模块集
+#!desc= 本模块是在基本配置上添加的补充模块，此模块添不添加并不影响配置的正常使用
 #!author= Axcsz5（搬运整理）
-#!homepage=https://github.com/axcsz/Collect/edit/master/Surge
+#!homepage= https://github.com/axcsz/Collect/edit/master/Surge
 #!icon=
-#!update=2023.07.15
+#!update= 2023.07.15
 
 
 
@@ -35,31 +35,6 @@ DOMAIN,ad.12306.cn,DIRECT
 # 京东
 *.jd.com = server:119.29.29.29
 *.360buyimg.com = server:119.29.29.29
-# Apple
-apple.com = server:119.29.29.29
-*icloud.com = server:119.29.29.29
-*icloud.com.cn = server:119.29.29.29
-*testflight.apple.com = server:8.8.4.4
-# 淘宝
-*.taobao.com = server:223.5.5.5
-*.tmall.com = server:223.5.5.5
-*.alicdn.com = server:223.5.5.5
-*.aliyun.com = server:223.5.5.5
-# 网易
-*.163.com = server:119.29.29.29
-*.126.com = server:119.29.29.29
-*.126.net = server:119.29.29.29
-*.127.net = server:119.29.29.29
-*.netease.com = server:119.29.29.29
-# 小米
-*.mi.com = server:119.29.29.29
-*.xiaomi.com = server:119.29.29.29
-# 哔哩哔哩
-*.bilibili.com = server:119.29.29.29
-# 谷歌
-mtalk.google.com = 108.177.125.188
-dl.google.com = server:119.29.29.29
-dl.l.google.com = server:119.29.29.29
 
 
 [MITM]
