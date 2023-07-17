@@ -9,7 +9,7 @@
 
 [General]
 # 启用 Tun Only 模式 (仅 iOS)，强制 80 端口流量使用 HTTP 引擎处理
-# compatibility-mode = 3
+#compatibility-mode = 0
 force-http-engine-hosts = %APPEND% sdk.alibaba.com.ailbaba.me, -<ip-address>, *
 # 当遇到 REJECT 策略时返回错误页
 show-error-page-for-reject = true
