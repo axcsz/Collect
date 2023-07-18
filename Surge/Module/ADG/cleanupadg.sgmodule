@@ -1,0 +1,15 @@
+#!name= 广告 & 常用小程序去广告合集
+#!desc= 去广告合集，包含app开屏广告和部分app内广告，以下app请使用单独配置文件：高德地图,哔哩哔哩,网易云音乐,微博,YouTube,知乎,小红书等
+#!author= Keywos kokoryh RuCu6 fm200
+#!homepage= https://github.com/axcsz/Collect/edit/master/Surge
+#!icon=
+#!update= 2023.07.15
+
+
+
+
+# > 曹操出行 微信小程序净化
+^https:\/\/minicap\.caocaokeji\.cn\/advert-bss\/pullAdvert url reject-dict
+
+# > 乘车码 @jinlvei
+^https:\/\/ccmsupport-sz\.tenpay\.com\/cgi-bin\/common\/ccm_page_element.cgi url reject
