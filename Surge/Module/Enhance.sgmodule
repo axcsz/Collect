@@ -21,6 +21,11 @@ tun-excluded-routes = 239.255.255.250/32
 udp-policy-not-supported-behaviour = reject
 
 
+[Rule]
+# AND规则:当所含规则全部匹配时，会被触发
+AND,((PROTOCOL,UDP),(DEST-PORT,443)),REJECT-NO-DROP
+
+
 [Host]
 # 本地DNS映射
 # 腾讯
