@@ -1,9 +1,9 @@
-#!name=Unbreak分流
-#!desc=Unbreak相关服务进行分流
+#!name= Unbreak分流
+#!desc= Unbreak相关服务进行分流
 #!author= DivineEngine Axcsz5（搬运整理）
-#!homepage=https://github.com/axcsz/Collect/edit/master/Surge
+#!homepage= https://github.com/axcsz/Collect/edit/master/Surge
 #!icon=
-# updatetime=2023.07.11
+# updatetime= 2023.07.18
 
 
 
@@ -33,8 +33,6 @@ DOMAIN,alt5-mtalk.google.com
 DOMAIN,alt6-mtalk.google.com
 DOMAIN,alt7-mtalk.google.com
 DOMAIN,alt8-mtalk.google.com
-# >> Paramount+
-# DOMAIN,pubads.g.doubleclick.net
 # > Tencent
 DOMAIN,fairplay.l.qq.com
 DOMAIN,livew.l.qq.com
@@ -45,3 +43,14 @@ DOMAIN,analytics.strava.com
 # > Umeng
 DOMAIN,msg.umeng.com
 DOMAIN,msg.umengcloud.com
+# > QQ空间
+DOMAIN-KEYWORD,ctc.qzs.qzone.qq.com
+# > 路由器后台
+IP-CIDR,192.168.0.1/24
+# > 天翼网关
+IP-CIDR,192.168.1.1/24
+# > 其他分流修正
+DOMAIN-KEYWORD,anti-ad.net
+DOMAIN,ad.12306.cn
+# > AND规则:当所含规则全部匹配时，会被触发
+AND,((PROTOCOL,UDP),(DEST-PORT,443)),REJECT-NO-DROP
