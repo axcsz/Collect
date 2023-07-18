@@ -7,9 +7,6 @@
 
 
 
-[URL Rewrite]
-
-
 [Map Local]
 # 其他
 ^https:\/\/m5\.amap\.com\/ws\/asa\/ads_attribution\? data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
