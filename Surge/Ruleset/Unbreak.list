@@ -52,5 +52,3 @@ IP-CIDR,192.168.1.1/24
 # > 其他分流修正
 DOMAIN-KEYWORD,anti-ad.net
 DOMAIN,ad.12306.cn
-# > AND规则:当所含规则全部匹配时，会被触发
-AND,((PROTOCOL,UDP),(DEST-PORT,443)),REJECT-NO-DROP
