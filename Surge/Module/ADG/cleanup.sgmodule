@@ -1,0 +1,5 @@
+# > 曹操出行 微信小程序净化
+^https:\/\/minicap\.caocaokeji\.cn\/advert-bss\/pullAdvert url reject-dict
+
+# > 乘车码 @jinlvei
+^https:\/\/ccmsupport-sz\.tenpay\.com\/cgi-bin\/common\/ccm_page_element.cgi url reject
