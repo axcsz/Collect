@@ -12,7 +12,6 @@
 
 [Map Local]
 # 其他
-^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
 ^https:\/\/m5\.amap\.com\/ws\/asa\/ads_attribution\? data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
 ^https:\/\/m5\.amap\.com\/ws\/shield\/scene\/recommend\? data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
 # 导航详情页,路线规划,地点详情页,搜索详情页
@@ -47,6 +46,8 @@
 # 打车页,红点角标,弹窗,推广卡
 高德地图 = type=http-response,pattern=^https:\/\/m5-zb\.amap\.com\/ws\/promotion-web\/resource\??,requires-body=1,script-update-interval=1,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/amap.js
 高德地图 = type=http-response,pattern=^https:\/\/m5-zb\.amap\.com\/ws\/sharedtrip\/taxi\/order_detail_car_tips\?,requires-body=1,script-update-interval=1,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/amap.js
+# 其他
+高德地图 = type=http-response,pattern=^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch,requires-body=1,script-update-interval=1,script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/amdc.js
 
 
 [MITM]
