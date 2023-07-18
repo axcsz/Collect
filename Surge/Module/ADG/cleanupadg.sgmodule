@@ -3,13 +3,53 @@
 #!author= Keywos kokoryh RuCu6 fm200
 #!homepage= https://github.com/axcsz/Collect/edit/master/Surge
 #!icon=
-#!update= 2023.07.15
+#!update= 2023.07.18
 
 
 
+[URL Rewrite]
+# > 嘀嗒出行 小程序净化 感谢#豆豆分享
+^https:\/\/capis(-\d)?\.didapinche\.com\/adbase - reject
 
-# > 曹操出行 微信小程序净化
-^https:\/\/minicap\.caocaokeji\.cn\/advert-bss\/pullAdvert url reject-dict
 
-# > 乘车码 @jinlvei
-^https:\/\/ccmsupport-sz\.tenpay\.com\/cgi-bin\/common\/ccm_page_element.cgi url reject
+[Map Local]
+# > 滴滴打车 小程序净化 感谢#豆豆分享
+^https:\/\/conf\.diditaxi\.com\.cn\/homepage\/v1\/core data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
+# > 德邦快递 微信小程序净化（删除Top轮播）
+^https:\/\/www\.deppon\.com\/gwapi\/memberService\/eco\/member\/grade\/commonInterface data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
+# > 花小猪打车 微信小程序净化
+^https:\/\/api\.hongyibo\.com\.cn data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
+^https:\/\/res\.hongyibo\.com\.cn\/os\/gs\/resapi\/activity data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
+# > 哈啰 微信小程序首页弹窗屏蔽
+^https:\/\/api\.hellobike\.com\/api\?adx data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
+# > 美柚 微信小程序净化
+^https:\/\/wxproj\.seeyouyima\.com\/data\/today_tips data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
+# > 麦当劳 微信小程序净化
+^https:\/\/api\.mcd\.cn\/bff\/portal\/home\/hotActivity data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
+# > 蜜雪冰城 微信小程序净化
+^https:\/\/mxsa\.mxbc\.net\/api\/v1\/adinfo\/adplace\/query data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
+# > 猫眼电影小程序
+# 弹窗广告+横幅广告 #主机名ad.maoyan.com
+^https:\/\/ad\.maoyan\.com\/api\/position\/detail data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
+# 电竞赛事+热门赛事 #主机名wx.maoyan.com
+^https:\/\/wx\.maoyan\.com\/maoyansh\/api\/mobile\/(hotMatchList|eSportsIps) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
+# 猫眼放映厅 #主机名vod-movie.maoyan.com
+^https:\/\/vod-movie\.maoyan\.com\/vod\/video\/onlineMovies\.json data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
+# > 中通快递 微信小程序净化
+^https:\/\/hdgateway\.zto\.com\/getApolloConfig data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
+^https:\/\/hdgateway\.zto\.com\/track data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
+^https:\/\/hdgateway\.zto\.com\/getAdInfo data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
+^https:\/\/hdgateway\.zto\.com\/listJumperShow data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
+
+
+[Script]
+# > 滴滴出行 微信小程序个人中心净化 由TEXAS和豆豆提供
+滴滴出行 = type=http-response,pattern=^https:\/\/common\.diditaxi\.com\.cn\/common\/v5,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/didi.js
+# > EMS 微信小程序净化 由TEXAS和豆豆提供
+EMS = type=http-response,pattern=^https:\/\/ump\.ems\.com\.cn\/new-generation-extend\/redis\/pageInfoByChannel,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/ems.js
+
+
+[MITM]
+h2 = true
+tcp-connection = true
+hostname = %APPEND% capis*.didapinche.com, conf.diditaxi.com.cn, www.deppon.com, api.hongyibo.com, res.hongyibo.com.cn, api.hellobike.com, wxproj.seeyouyima.com, api.mcd.cn, mxsa.mxbc.net, ad.maoyan.com, wx.maoyan.com, vod-movie.maoyan.com, hdgateway.zto.com, common.diditaxi.com.cn, ump.ems.com.cn
