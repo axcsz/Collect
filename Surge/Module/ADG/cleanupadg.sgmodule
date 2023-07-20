@@ -40,6 +40,14 @@
 ^https:\/\/hdgateway\.zto\.com\/track data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 ^https:\/\/hdgateway\.zto\.com\/getAdInfo data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 ^https:\/\/hdgateway\.zto\.com\/listJumperShow data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
+# > 微快递 微信小程序净化
+^https:\/\/api\.kuaidihelp\.com\/g_order_core\/v2\/mina\/User\/getBannerList data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
+# > 黑科技软件
+^https:\/\/hkj178\.com/wp-json/mp/v2/advert/wechat data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-200.txt"
+# > 青桔 微信小程序净化
+^https:\/\/htwkop\.xiaojukeji\.com\/gateway\?api=cms\.htw\.delivery data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
+^https:\/\/htwkop\.xiaojukeji\.com\/gateway\?api=hm\.fa\.combineHomepageInfo data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
+^https:\/\/htwkop\.xiaojukeji\.com\/gateway\?api=hm\.fa\.mallRecommend data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 
 
 [Script]
@@ -47,9 +55,13 @@
 滴滴出行 = type=http-response,pattern=^https:\/\/common\.diditaxi\.com\.cn\/common\/v5,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/didi.js
 # > EMS 微信小程序净化 由TEXAS和豆豆提供
 EMS = type=http-response,pattern=^https:\/\/ump\.ems\.com\.cn\/new-generation-extend\/redis\/pageInfoByChannel,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/ems.js
+# > 黑科技软件
+黑科技软件 = type=http-response,pattern=^https:\/\/hkj178\.com\/wp\-json\/mp\/v2\/posts,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/applet.js
+# > 青桔 微信小程序净化
+青桔 = type=http-response,pattern=^https:\/\/htwkop\.xiaojukeji\.com\/gateway\?api=hm\.fa\.homeConfig,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/qingju.js
 
 
 [MITM]
 h2 = true
 tcp-connection = true
-hostname = %APPEND% capis*.didapinche.com, conf.diditaxi.com.cn, www.deppon.com, api.hongyibo.com, res.hongyibo.com.cn, api.hellobike.com, wxproj.seeyouyima.com, api.mcd.cn, mxsa.mxbc.net, ad.maoyan.com, wx.maoyan.com, vod-movie.maoyan.com, hdgateway.zto.com, common.diditaxi.com.cn, ump.ems.com.cn
+hostname = %APPEND% htwkop.xiaojukeji.com, hkj178.com, api.kuaidihelp.com, capis*.didapinche.com, conf.diditaxi.com.cn, www.deppon.com, api.hongyibo.com, res.hongyibo.com.cn, api.hellobike.com, wxproj.seeyouyima.com, api.mcd.cn, mxsa.mxbc.net, ad.maoyan.com, wx.maoyan.com, vod-movie.maoyan.com, hdgateway.zto.com, common.diditaxi.com.cn, ump.ems.com.cn
