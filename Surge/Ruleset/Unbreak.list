@@ -15,13 +15,13 @@ DOMAIN,bdtj.tagtic.cn
 # > 苹果推送服务
 DOMAIN-KEYWORD,push.apple.com
 # > 苹果时间同步
-host, time.apple.com
+DOMAIN,time.apple.com
 # > 苹果天气服务
 DOMAIN-KEYWORD,weather-edge.apple.com
 DOMAIN-KEYWORD,weather-adge.apple.com
-host-suffix, weather-data.apple.com
-host-suffix, weather-map.apple.com
-host-suffix, weather-analytics-events.apple.com
+DOMAIN-KEYWORD,weather-data.apple.com
+DOMAIN-KEYWORD,weather-map.apple.com
+DOMAIN-KEYWORD,weather-analytics-events.apple.com
 # > 苹果内购服务
 DOMAIN-KEYWORD,buy.itunes.apple.com
 # > 苹果icloud
