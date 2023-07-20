@@ -8,7 +8,7 @@
 
 
 [Map Local]
-# 其他 - amdc.m。taobao。com
+# 其他 - amdc.m.taobao.com
 ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch Cainiao4iPhone data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
 # 首页 好物推荐,商品推广,底部标签页,快递详情页,问卷调查,主页图标 - cn-acs.m.cainiao.com
 ^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.adkeyword\.get\.cn data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
@@ -23,7 +23,7 @@
 
 
 [Script]
-# 首页 好物推荐,商品推广,底部标签页,快递详情页,问卷调查,主页图标 - cn-acs.m。cainiao。com
+# 首页 好物推荐,商品推广,底部标签页,快递详情页,问卷调查,主页图标 - cn-acs.m.cainiao.com
 菜鸟驿站 = type=http-response,pattern=^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.batch\.show\.v2\.cn，requires-body=1,max-size=0,script-update-interval=-1,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cainiao.js
 菜鸟驿站 = type=http-response,pattern=^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.m?show\.cn，requires-body=1,max-size=0,script-update-interval=-1,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cainiao.js
 菜鸟驿站 = type=http-response,pattern=^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.nbpresentation\.(homepage\.merge|pickup\.空的\.page|protocol\.homepage)\.get\.cn，requires-body=1,max-size=0,script-update-interval=-1,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cainiao.js
@@ -35,4 +35,4 @@
 
 [MITM]
 h2 = true
-hostname = %APPEND% cn-acs.m。cainiao。com, guide-acs.m。taobao。com
+hostname = %APPEND% cn-acs.m.cainiao.com, guide-acs.m.taobao.com
