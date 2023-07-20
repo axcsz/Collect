@@ -329,7 +329,7 @@ DOMAIN-SUFFIX,cm-10-134.getui.com
 DOMAIN-SUFFIX,sdk.open.talk.getui.com
 DOMAIN-SUFFIX,cm-10-35.getui.com
 DOMAIN-SUFFIX,c-hzgt2.getui.com
-HOST-SUFFIX,sdk.open.talk.igexin.com
+DOMAIN-SUFFIX,sdk.open.talk.igexin.com
 # > 墨迹天气
 DOMAIN-SUFFIX,fds.api.moji.com
 DOMAIN-SUFFIX,me.api.moji.com
