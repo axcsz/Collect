@@ -3,7 +3,7 @@
 #!author= fmz200 RuCu6 DivineEngine
 #!homepage= https://github.com/axcsz/Collect/edit/master/Surge
 #!icon=
-#!update= 2023.07.18
+#!update= 2023.07.20
 
 
 
@@ -87,15 +87,6 @@ DOMAIN,advertise.baicizhan.com
 DOMAIN,advertise.baicizhan.org
 
 # > ======= C =======
-# > 汽车之家
-DOMAIN,adproxy.autohome.com.cn
-DOMAIN,rd.autohome.com.cn
-DOMAIN,al.autohome.com.cn
-DOMAIN,applogapi.autohome.com.cn
-DOMAIN,adm0.autoimg.cn
-DOMAIN,adm1.autoimg.cn
-DOMAIN,adm2.autoimg.cn
-DOMAIN,adm3.autoimg.cn
 # > 菜鸟
 DOMAIN,iyes.youku.com,REJECT
 DOMAIN,vali.cp31.ott.cibntv.net
@@ -104,6 +95,20 @@ IP-CIDR,117.161.156.227/32,no-resolve
 DOMAIN,ad.cyapi.cn
 # > ChatGPT
 DOMAIN,o33249.ingest.sentry.io
+# > Camera360
+DOMAIN,dispatcher.360in.com
+DOMAIN,ad.360in.com
+DOMAIN,exp.360in.com
+# > 车来乐
+DOMAIN,atrace.chelaile.net.cn
+DOMAIN,logs.chelaile.net.cn
+# > 创维
+DOMAIN-SUFFIX,hoisin.coocaa.com
+DOMAIN-SUFFIX,hoisin.coocaatv.com
+DOMAIN,data-hoisin.coocaa.com
+# > 车来了（包括小程序）
+DOMAIN-suffix, atrace.chelaile.net.cn
+DOMAIN,ad.chelaile.net.cn
 
 # > ======= D =======
 # > 豆瓣
@@ -158,6 +163,10 @@ IP-CIDR,180.96.2.114/32,no-resolve
 URL-REGEX,*-default.ixigua.com
 URL-REGEX,^http:\/\/.+\.byteimg\.com\/ad-app-package
 URL-REGEX,^http:\/\/.+\.byteimg\.com\/web\.business\.image
+# > 凤凰新媒体
+DOMAIN-SUFFIX,deliver.ifeng.com
+DOMAIN,api.newad.ifeng.com
+DOMAIN,ifengad.3g.ifeng.com
 
 # > ======= G =======
 # > 高德地图
@@ -198,7 +207,6 @@ DOMAIN-SUFFIX,googlesyndication.com
 DOMAIN-SUFFIX,googletagservices.com
 DOMAIN-KEYWORD, adservice.google.com.
 # > GozenData
-# https://www.v2ex.com/t/772523
 DOMAIN-SUFFIX,gozendata.com
 DOMAIN-SUFFIX,gzads.com
 DOMAIN-SUFFIX,gz-data.com
@@ -206,7 +214,18 @@ DOMAIN-SUFFIX,gz-data.com
 # > ======= H =======
 # 海尔智家
 DOMAIN-SUFFIX,ehaier.com
-
+# > 虎牙直播 开屏广告
+DOMAIN,pp-cdnfile2pcdn.msstatic.com
+DOMAIN,livewebbs2pcdn.msstatic.com
+DOMAIN,huyafile.msstatic.com
+DOMAIN,livewebbs2.msstatic.com
+DOMAIN,business.msstatic.com
+# > 哈啰
+DOMAIN-keyword, assets.51downapp.cn
+# > 黄油相机 #开屏广告 感谢#Dragon分享
+DOMAIN-SUFFIX,anythinktech.com
+DOMAIN-SUFFIX,adkwai.com
+DOMAIN-SUFFIX,mob.com
 # > ======= I =======
 
 # > ======= J =======
@@ -297,13 +316,6 @@ DOMAIN-SUFFIX,wmlog.meituan.com
 # > 美颜相机 去首页和轮播广告
 DOMAIN,adui.tg.meitu.com
 DOMAIN,aaid.uyunad.com
-# > Microsoft
-DOMAIN-SUFFIX,ads.msn.com
-DOMAIN-SUFFIX,ads1.msn.com
-DOMAIN-SUFFIX,ads2.msn.com
-DOMAIN-SUFFIX,bingads.microsoft.com
-DOMAIN-SUFFIX,rads.msn.com
-DOMAIN,mobileads.msn.com
 # > 咪咕
 DOMAIN-SUFFIX,ad.cmvideo.cn
 DOMAIN,ggc.cmvideo.cn
@@ -312,6 +324,24 @@ DOMAIN,ggmk.miguvideo.com
 DOMAIN,ggv.cmvideo.cn
 DOMAIN,ggx.cmvideo.cn
 DOMAIN,ggx03.miguvideo.com
+# > 民生银行
+DOMAIN-SUFFIX,cm-10-134.getui.com
+DOMAIN-SUFFIX,sdk.open.talk.getui.com
+DOMAIN-SUFFIX,cm-10-35.getui.com
+DOMAIN-SUFFIX,c-hzgt2.getui.com
+HOST-SUFFIX,sdk.open.talk.igexin.com
+# > 墨迹天气
+DOMAIN-SUFFIX,fds.api.moji.com
+DOMAIN-SUFFIX,me.api.moji.com
+DOMAIN-SUFFIX,android.bugly.qq.com
+DOMAIN-SUFFIX,av1.xdrig.com
+DOMAIN-SUFFIX,adash.man.aliyuncs.com
+DOMAIN-SUFFIX,v1.log.moji.com
+DOMAIN-SUFFIX,ad.api.moji.com
+DOMAIN,ad.api.moji.com
+DOMAIN,adlaunch.moji.com
+DOMAIN,ads.mojicdn.com
+DOMAIN,v1.log.moji.com
 
 # > ======= N =======
 
@@ -325,8 +355,27 @@ DOMAIN-SUFFIX,ads.oppomobile.com
 DOMAIN,adsfs.oppomobile.com
 
 # > ======= P =======
+# > PPTV
+DOMAIN,ads.aplus.pptv.com
+DOMAIN,ads.aplusapi.pptv.com
+DOMAIN,asimgs.pplive.cn
+DOMAIN,de.as.pptv.com
 
 # > ======= Q =======
+# > 汽车之家
+DOMAIN-KEYWORD,adm3.autoimg.cn
+DOMAIN-KEYWORD,audid-api.taobao.com
+DOMAIN-KEYWORD,collectionpv.che168.com
+DOMAIN-KEYWORD,adproxy.autohome.com
+DOMAIN-KEYWORD,applogapi.autohome.com
+DOMAIN,adproxy.autohome.com.cn
+DOMAIN,rd.autohome.com.cn
+DOMAIN,al.autohome.com.cn
+DOMAIN,applogapi.autohome.com.cn
+DOMAIN,adm0.autoimg.cn
+DOMAIN,adm1.autoimg.cn
+DOMAIN,adm2.autoimg.cn
+DOMAIN,adm3.autoimg.cn
 # > 蜻蜓FM
 DOMAIN,ad.qingting.fm
 DOMAIN,adlaunch.qingting.fm
@@ -565,6 +614,9 @@ DOMAIN,splashimgbssdl.yun.kugou.com
 DOMAIN,adsfilebssdlbig.tx.kugou.com
 # > 团油
 DOMAIN-KEYWORD,img1.czb365.com
+# > 同花顺
+DOMAIN,adm.10jqka.com.cn
+DOMAIN,stat.10jqka.com.cn
 
 # > ======= U =======
 
@@ -605,6 +657,16 @@ DOMAIN,n.3g.163.com
 DOMAIN,nex.163.com
 DOMAIN,yt-adp.nosdn.127.net
 DOMAIN,yt-adp.ws.126.net
+# > 微软
+DOMAIN-SUFFIX,ads.msn.com
+DOMAIN-SUFFIX,ads1.msn.com
+DOMAIN-SUFFIX,ads2.msn.com
+DOMAIN-SUFFIX,bingads.microsoft.com
+DOMAIN-SUFFIX,rads.msn.com
+DOMAIN,mobileads.msn.com
+# > 网上国网
+DOMAIN,h5-api.feiersmart.com
+
 # > ======= X =======
 # > 新浪
 DOMAIN-SUFFIX,alitui.weibo.com
@@ -644,6 +706,11 @@ DOMAIN-SUFFIX,adse.wsa.ximalaya.com
 DOMAIN-SUFFIX,adbehavior.wsa.ximalaya.com
 DOMAIN-SUFFIX,adsebs.ximalaya.com
 DOMAIN-SUFFIX,adbs.ximalaya.com
+# > 讯飞输入法
+DOMAIN-KEYWORD,ossp.voicecloud.cn
+DOMAIN-KEYWORD,bj.imp.voiceads.cn
+DOMAIN-KEYWORD,m.panda.voiceads.cn
+DOMAIN-KEYWORD,iflyad.bj.openstorage.cn
 
 # > ======= Y =======
 # > 优酷
@@ -706,7 +773,7 @@ DOMAIN,sdk.open.talk.getui.net
 DOMAIN,sdk-conf.getui.com
 DOMAIN,switch.cup.com.cn
 DOMAIN,tysdk.95516.com
-# > Yahoo
+# > 雅虎
 DOMAIN-SUFFIX,adserver.yahoo.com
 DOMAIN-SUFFIX,adspecs.yahoo.com
 DOMAIN-SUFFIX,advertising.yahoo.com
@@ -762,9 +829,29 @@ IP-CIDR,222.186.61.91/32,no-resolve
 IP-CIDR,222.186.61.95/32,no-resolve
 IP-CIDR,222.186.61.96/32,no-resolve
 IP-CIDR,222.186.61.97/32,no-resolve
+# > 中信银行
+DOMAIN-SUFFIX,sis.jpush.io
+DOMAIN-SUFFIX,s.jpush.cn
+DOMAIN-SUFFIX,jpush.cn
+DOMAIN-SUFFIX,im64.jpush.cn
+DOMAIN-SUFFIX,im.jpush.cn
+DOMAIN-SUFFIX,jpush.html5.qq.com
+# > 中关村
+DOMAIN,apppv.zol.com.cn
+DOMAIN,pvnapp.zol.com.cn
 # > 字节跳动
 DOMAIN,ad.zijieapi.com
 DOMAIN-KEYWORD,-ad-sign.byteimg.com
+# > 中华万年历广告
+DOMAIN-KEYWORD,lkme.cc
+DOMAIN-KEYWORD,api.freed.so
+DOMAIN-KEYWORD,log-dmp.suishenyun.cn
+DOMAIN-KEYWORD,client-dmp.suishenyun.cn
+DOMAIN-KEYWORD,pc.suishenyun.net
+DOMAIN-KEYWORD,v0-client-lz.rili.cn
+# > 真不卡
+DOMAIN-KEYWORD,ttayy.cn
+DOMAIN-KEYWORD,zhengxiaoliu.top
 
 # > ======= 其他 =======
 # Internet Service Providers Hijacking
@@ -890,7 +977,6 @@ IP-CIDR,47.89.59.182/32,no-resolve
 IP-CIDR,103.49.209.27/32,no-resolve
 IP-CIDR,123.56.152.96/32,no-resolve
 # > Dr.Peng
-# IP-CIDR,10.72.25.0/24,no-resolve
 IP-CIDR,115.182.16.79/32,no-resolve
 IP-CIDR,118.144.88.126/32,no-resolve
 IP-CIDR,118.144.88.215/32,no-resolve
@@ -907,18 +993,14 @@ IP-CIDR,222.73.156.235/32,no-resolve
 # > Huawei AspiegelBot
 IP-CIDR,114.119.160.0/21,no-resolve
 # > KuaiZip
-# https://zhuanlan.zhihu.com/p/39534279
 DOMAIN-SUFFIX,kuaizip.com
 # > MacKeeper
-# https://www.lizhi.io/blog/40002904
 DOMAIN-SUFFIX,mackeeper.com
 DOMAIN-SUFFIX,zryydi.com
 # > Adobe Flash China Special Edition
-# https://www.zhihu.com/question/281163698/answer/441388130
 DOMAIN-SUFFIX,flash.cn
 DOMAIN,geo2.adobe.com
 # > C&J Marketing
-# https://www.zhihu.com/question/46746200
 DOMAIN-SUFFIX,4009997658.com
 DOMAIN-SUFFIX,abbyychina.com
 DOMAIN-SUFFIX,alienskins.cn
