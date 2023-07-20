@@ -1,9 +1,9 @@
 #!name= Unbreak分流
 #!desc= Unbreak相关服务进行分流
-#!author= DivineEngine Axcsz5（搬运整理）
+#!author= DivineEngine RuCu6 fm200
 #!homepage= https://github.com/axcsz/Collect/edit/master/Surge
 #!icon=
-# updatetime= 2023.07.18
+# updatetime= 2023.07.20
 
 
 
@@ -12,6 +12,33 @@
 DOMAIN,app.adjust.com
 DOMAIN,app.appsflyer.com
 DOMAIN,bdtj.tagtic.cn
+# > 苹果推送服务
+DOMAIN-KEYWORD,push.apple.com
+# > 苹果时间同步
+host, time.apple.com
+# > 苹果天气服务
+DOMAIN-KEYWORD,weather-edge.apple.com
+DOMAIN-KEYWORD,weather-adge.apple.com
+host-suffix, weather-data.apple.com
+host-suffix, weather-map.apple.com
+host-suffix, weather-analytics-events.apple.com
+# > 苹果内购服务
+DOMAIN-KEYWORD,buy.itunes.apple.com
+# > 苹果icloud
+DOMAIN-KEYWORD,icloud.com
+# > 苹果输入法相关服务
+DOMAIN-KEYWORD,api.smoot.apple.com
+DOMAIN-KEYWORD,api.smoot.apple.cn
+# > 苹果iMessage服务
+DOMAIN,init.ess.apple.com
+# > 苹果其他服务
+DOMAIN-KEYWORD,ssl.apple.com
+DOMAIN-KEYWORD,humb.apple.com
+DOMAIN,smp-device-content.apple.com
+DOMAIN-KEYWORD,api-adservices.apple.com
+DOMAIN-KEYWORD,ls.apple.com
+DOMAIN-KEYWORD,gsa.apple.com
+DOMAIN-KEYWORD,ess.apple.com
 # > Alibaba
 DOMAIN,log.mmstat.com
 DOMAIN,sycm.mmstat.com
@@ -52,3 +79,4 @@ IP-CIDR,192.168.1.1/24
 # > 其他分流修正
 DOMAIN-KEYWORD,anti-ad.net
 DOMAIN,ad.12306.cn
+DOMAIN,ca.iadsdk.apple.com
