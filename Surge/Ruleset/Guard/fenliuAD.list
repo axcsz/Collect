@@ -243,7 +243,7 @@ DOMAIN,huyafile.msstatic.com
 DOMAIN,livewebbs2.msstatic.com
 DOMAIN,business.msstatic.com
 # > 哈啰
-DOMAIN-keyword, assets.51downapp.cn
+DOMAIN-KEYWORD, assets.51downapp.cn
 # > 黄油相机 #开屏广告 感谢#Dragon分享
 DOMAIN-SUFFIX,anythinktech.com
 DOMAIN-SUFFIX,adkwai.com
