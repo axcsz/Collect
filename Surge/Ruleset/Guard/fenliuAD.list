@@ -71,7 +71,7 @@ DOMAIN,nsclick.baidu.com
 DOMAIN-SUFFIX,duapps.com
 DOMAIN-SUFFIX,cpro.baidu.com
 DOMAIN-SUFFIX,pos.baidu.com
-# 百度输入法
+# > 百度输入法
 DOMAIN,res.mi.baidu.com
 DOMAIN,r6.mo.baidu.com
 DOMAIN-KEYWORD,jomodns
@@ -99,8 +99,8 @@ DOMAIN,advertise.baicizhan.com
 DOMAIN,advertise.baicizhan.org
 # > 波点音乐
 URL-REGEX,^https:\/\/bodiancdn\.kuwo\.cn\/.+\.mp4
-URL-REGEX,^http:\/\/bd-api\.kuwo\.cn\/api\/service\/resource\/view\?uid 
-URL-REGEX,^http:\/\/bd-api\.kuwo\.cn\/api\/service\/music\/recommendList\?uid 
+URL-REGEX,^http:\/\/bd-api\.kuwo\.cn\/api\/service\/resource\/view\?uid
+URL-REGEX,^http:\/\/bd-api\.kuwo\.cn\/api\/service\/music\/recommendList\?uid
 
 # > ======= C =======
 # > CCTVVideo
@@ -351,7 +351,7 @@ DOMAIN-SUFFIX,cm-10-134.getui.com
 DOMAIN-SUFFIX,sdk.open.talk.getui.com
 DOMAIN-SUFFIX,cm-10-35.getui.com
 DOMAIN-SUFFIX,c-hzgt2.getui.com
-HOST-SUFFIX,sdk.open.talk.igexin.com
+DOMAIN-SUFFIX,sdk.open.talk.igexin.com
 # > 墨迹天气
 DOMAIN-SUFFIX,fds.api.moji.com
 DOMAIN-SUFFIX,me.api.moji.com
@@ -465,7 +465,7 @@ DOMAIN-SUFFIX,bazinga.mse.sogou.com
 DOMAIN-SUFFIX,bite.theta.sogoucdn.com
 DOMAIN-SUFFIX,brand.sogou.com
 DOMAIN-SUFFIX,bsiet.husky.sogou.com
-# 书旗广告域名,这广告实在太多了，可能误杀，不认识的全禁止了
+# > 书旗广告域名
 DOMAIN-SUFFIX,xwuad.com
 DOMAIN-SUFFIX,tobapplog.ctobsnssdk.com
 DOMAIN-SUFFIX,render.shuqireader.com
