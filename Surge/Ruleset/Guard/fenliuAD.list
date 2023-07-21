@@ -121,15 +121,13 @@ DOMAIN,o33249.ingest.sentry.io
 DOMAIN,dispatcher.360in.com
 DOMAIN,ad.360in.com
 DOMAIN,exp.360in.com
-# > 车来乐
-DOMAIN,atrace.chelaile.net.cn
-DOMAIN,logs.chelaile.net.cn
 # > 创维
 DOMAIN-SUFFIX,hoisin.coocaa.com
 DOMAIN-SUFFIX,hoisin.coocaatv.com
 DOMAIN,data-hoisin.coocaa.com
-# > 车来了（包括小程序）
-DOMAIN-suffix, atrace.chelaile.net.cn
+# > 车来乐
+DOMAIN,atrace.chelaile.net.cn
+DOMAIN,logs.chelaile.net.cn
 DOMAIN,ad.chelaile.net.cn
 
 # > ======= D =======
@@ -364,6 +362,10 @@ DOMAIN,ad.api.moji.com
 DOMAIN,adlaunch.moji.com
 DOMAIN,ads.mojicdn.com
 DOMAIN,v1.log.moji.com
+#米读
+URL-REGEX,^https:\/\/apiwz\.midukanshu\.com\/advert\/getPopup$
+URL-REGEX,^https:\/\/apiwz\.midukanshu\.com\/advert\/treasureInfo$
+URL-REGEX,^https:\/\/apiwz\.midukanshu\.com\/config\/getAds$
 
 # > ======= N =======
 
@@ -754,6 +756,19 @@ DOMAIN-KEYWORD,ossp.voicecloud.cn
 DOMAIN-KEYWORD,bj.imp.voiceads.cn
 DOMAIN-KEYWORD,m.panda.voiceads.cn
 DOMAIN-KEYWORD,iflyad.bj.openstorage.cn
+# 下厨房
+DOMAIN,ulogs.umengcloud.com
+DOMAIN,ulogs.umeng.com
+DOMAIN,sdk.e.qq.com
+DOMAIN,mi.gdt.qq.com
+DOMAIN,open.e.kuaishou.com
+DOMAIN,api-access.pangolin-sdk-toutiao.com
+DOMAIN,sdk.open.talk.getui.net
+DOMAIN,sdk.open.talk.getui.com
+DOMAIN,errlog.umeng.com
+DOMAIN,tnc3-aliec2.snssdk.com
+DOMAIN,sf3-fe-tos.pglstatp-toutiao.com
+DOMAIN,qzs.gdtimg.com
 
 # > ======= Y =======
 # > 优酷
