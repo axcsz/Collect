@@ -3,18 +3,23 @@
 #!author= fmz200 RuCu6 DivineEngine
 #!homepage= https://github.com/axcsz/Collect/edit/master/Surge
 #!icon=
-#!update= 2023.07.20
+#!update= 2023.07.21
 
 
 
 # > ======= 0~9 =======
-# > 交管12123
+# > 12123
 DOMAIN,static.122.gov.cn
 DOMAIN-SUFFIX,v3.fstats.xyz
 DOMAIN-SUFFIX,alexametrics.com
 DOMAIN-SUFFIX,wss.haoyundmn.com
 DOMAIN-SUFFIX,new.xiongzhangad.com
 DOMAIN-KEYWORD,in-page-push
+# > 51wnl
+DOMAIN,ad.51wnl-cq.com
+DOMAIN,adextra.51wnl-cq.com
+DOMAIN,log.51wnl-cq.com
+DOMAIN,r.51wnl-cq.com
 # > 58同城
 DOMAIN,track.58.com
 DOMAIN,tracklog.58.com
@@ -66,6 +71,13 @@ DOMAIN,nsclick.baidu.com
 DOMAIN-SUFFIX,duapps.com
 DOMAIN-SUFFIX,cpro.baidu.com
 DOMAIN-SUFFIX,pos.baidu.com
+# 百度输入法
+DOMAIN,res.mi.baidu.com
+DOMAIN,r6.mo.baidu.com
+DOMAIN-KEYWORD,jomodns
+URL-REGEX,^https:\/\/mime\.baidu\.com\/v5\/activity\/advertisementnonrealtime
+URL-REGEX,^https:\/\/mime\.baidu\.com\/v5\/start_screen_ads\/list
+URL-REGEX,^https:\/\/mime\.baidu\.com\/v5\/hotpatch\/check\?hotpatch
 # > 百度地图
 DOMAIN,afd.baidu.com
 DOMAIN,afdconf.baidu.com
@@ -85,10 +97,20 @@ DOMAIN-SUFFIX,cm.track.biligame.bilibili.com
 # > 百词斩
 DOMAIN,advertise.baicizhan.com
 DOMAIN,advertise.baicizhan.org
+# > 波点音乐
+URL-REGEX,^https:\/\/bodiancdn\.kuwo\.cn\/.+\.mp4
+URL-REGEX,^http:\/\/bd-api\.kuwo\.cn\/api\/service\/resource\/view\?uid 
+URL-REGEX,^http:\/\/bd-api\.kuwo\.cn\/api\/service\/music\/recommendList\?uid 
 
 # > ======= C =======
+# > CCTVVideo
+DOMAIN,adstore-index-1252524079.file.myqcloud.com
+# > CNTV
+DOMAIN,galaxy.bjcathay.com
+DOMAIN,mdrecv.app.cntvwb.cn
+DOMAIN,sdapprecv.app.cntvwb.cn
+DOMAIN,vdapprecv.app.cntvwb.cn
 # > 菜鸟
-DOMAIN,iyes.youku.com,REJECT
 DOMAIN,vali.cp31.ott.cibntv.net
 IP-CIDR,117.161.156.227/32,no-resolve
 # > 彩云天气
@@ -107,7 +129,7 @@ DOMAIN-SUFFIX,hoisin.coocaa.com
 DOMAIN-SUFFIX,hoisin.coocaatv.com
 DOMAIN,data-hoisin.coocaa.com
 # > 车来了（包括小程序）
-DOMAIN-SUFFIX,atrace.chelaile.net.cn
+DOMAIN-suffix, atrace.chelaile.net.cn
 DOMAIN,ad.chelaile.net.cn
 
 # > ======= D =======
@@ -221,7 +243,7 @@ DOMAIN,huyafile.msstatic.com
 DOMAIN,livewebbs2.msstatic.com
 DOMAIN,business.msstatic.com
 # > 哈啰
-DOMAIN-KEYWORD,assets.51downapp.cn
+DOMAIN-keyword, assets.51downapp.cn
 # > 黄油相机 #开屏广告 感谢#Dragon分享
 DOMAIN-SUFFIX,anythinktech.com
 DOMAIN-SUFFIX,adkwai.com
@@ -261,7 +283,7 @@ DOMAIN-KEYWORD,pangolin.snssdk.com
 DOMAIN-SUFFIX,jdqd.jd.com
 DOMAIN-SUFFIX,shouji.sougou.com
 # > 京东开屏广告屏蔽
-URL-REGEX,https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start$-TINYGIF
+URL-REGEX,https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start$
 # > 驾校一点通
 DOMAIN,richmanapi.jxedt.com
 DOMAIN,richmanmain.jxedt.com
@@ -329,7 +351,7 @@ DOMAIN-SUFFIX,cm-10-134.getui.com
 DOMAIN-SUFFIX,sdk.open.talk.getui.com
 DOMAIN-SUFFIX,cm-10-35.getui.com
 DOMAIN-SUFFIX,c-hzgt2.getui.com
-DOMAIN-SUFFIX,sdk.open.talk.igexin.com
+HOST-SUFFIX,sdk.open.talk.igexin.com
 # > 墨迹天气
 DOMAIN-SUFFIX,fds.api.moji.com
 DOMAIN-SUFFIX,me.api.moji.com
@@ -443,6 +465,18 @@ DOMAIN-SUFFIX,bazinga.mse.sogou.com
 DOMAIN-SUFFIX,bite.theta.sogoucdn.com
 DOMAIN-SUFFIX,brand.sogou.com
 DOMAIN-SUFFIX,bsiet.husky.sogou.com
+# 书旗广告域名,这广告实在太多了，可能误杀，不认识的全禁止了
+DOMAIN-SUFFIX,xwuad.com
+DOMAIN-SUFFIX,tobapplog.ctobsnssdk.com
+DOMAIN-SUFFIX,render.shuqireader.com
+DOMAIN-SUFFIX,ali-stats.jpush.cn
+DOMAIN-SUFFIX,toblog.ctobsnssdk.com
+DOMAIN-SUFFIX,sdk.kaijia.com
+DOMAIN-SUFFIX,amdc.m.taobao.com
+DOMAIN-SUFFIX,iyes.youku.com
+DOMAIN-SUFFIX,sq.sljkj.com
+DOMAIN-SUFFIX,s2s.adjust.com
+DOMAIN-SUFFIX,pglstatp-toutiao
 
 # > ======= T =======
 # > 淘宝
@@ -596,6 +630,7 @@ DOMAIN-SUFFIX,static-res.qq.com
 DOMAIN-SUFFIX,stat.tpns.tencent.com
 DOMAIN-KEYWORD,omgmta.qq.com
 DOMAIN-KEYWORD,omgmta1.qq.com
+
 # > 腾讯广告联盟，可能误杀
 DOMAIN-SUFFIX,jcollection.shuqireader.com
 DOMAIN-SUFFIX,stats.jpush.cn
@@ -617,6 +652,14 @@ DOMAIN-KEYWORD,img1.czb365.com
 # > 同花顺
 DOMAIN,adm.10jqka.com.cn
 DOMAIN,stat.10jqka.com.cn
+# > TalkingData
+DOMAIN-SUFFIX,cpatrk.net
+DOMAIN-SUFFIX,talkingdata.com
+DOMAIN-SUFFIX,talkingdata.net
+DOMAIN-SUFFIX,udrig.com
+# > Tenjin
+DOMAIN,track.tenjin.com
+DOMAIN,track.tenjin.io
 
 # > ======= U =======
 
@@ -1117,11 +1160,3 @@ DOMAIN-SUFFIX,zoomanalytics.co
 DOMAIN-SUFFIX,ads.linkedin.com
 DOMAIN,analytics.slashdotmedia.com
 DOMAIN,zgsdk.zhugeio.com
-# > TalkingData
-DOMAIN-SUFFIX,cpatrk.net
-DOMAIN-SUFFIX,talkingdata.com
-DOMAIN-SUFFIX,talkingdata.net
-DOMAIN-SUFFIX,udrig.com
-# > Tenjin
-DOMAIN,track.tenjin.com
-DOMAIN,track.tenjin.io
