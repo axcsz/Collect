@@ -3,7 +3,7 @@
 #!author= Keywos kokoryh RuCu6 fm200
 #!homepage= https://github.com/axcsz/Collect/edit/master/Surge
 #!icon=
-#!update= 2023.07.22
+#!update= 2023.07.21
 
 
 
@@ -122,11 +122,11 @@
 
 # ======= R =======
 # ======= S =======
-#四川电信小程序 - sctel10000.cn
+# 四川电信小程序 - sctel10000.cn
 ^https:\/\/sctel10000\.cn\/config\/ads\/adsInfo data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 ^https:\/\/sctel10000\.cn\/config\/myZoneConfig\/getMyHomeMenus data="https://raw.githubusercontent.com/axcsz/Collect/master/Script/sichuandianxinshouye.json"
 # ======= T =======
-#途虎养车小程序 - mkt-gateway.tuhu.cn
+# 途虎养车小程序 - mkt-gateway.tuhu.cn
 ^https:\/\/mkt-gateway\.tuhu\.cn\/mkt-scene-marketing-service\/api\/scene\/queryScheme data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 # ======= U =======
 # ======= V =======
