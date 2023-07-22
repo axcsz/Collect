@@ -3,7 +3,7 @@
 #!author= Keywos kokoryh RuCu6 fm200
 #!homepage= https://github.com/axcsz/Collect/edit/master/Surge
 #!icon=
-#!update= 2023.07.22
+#!update= 2023.07.21
 
 
 
@@ -221,7 +221,7 @@ https:\/\/pan\.baidu\.com\/component\/view\/(1510|1130)\?(vip|from) - reject
 
 [Map Local]
 # ======= 0~9 =======
-#2345天气王 - tianqi.2345.com
+# 2345天气王 - tianqi.2345.com
 ^http?:\/\/tianqi\.2345\.com\/api\/content\/getContentFeeds\.php data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 
 # ======= A =======
@@ -318,12 +318,27 @@ https:\/\/pan\.baidu\.com\/component\/view\/(1510|1130)\?(vip|from) - reject
 # QQ音乐 - y.gtimg.cn, us.l.qq.com
 ^https?:\/\/y\.gtimg\.cn\/music\/common\/\/upload\/kg_ad/.*?\d{4}\.jpg data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-img.gif"
 ^https?:\/\/y\.gtimg\.cn\/music\/common\/upload\/targeted_ads data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-img.gif"
+# 全球购骑士卡 - api.black-unique.com
+^https:\/\/facade-api\.black-unique\.com\/advertise\/v1\/get\?cityId=102923&positions=mine_popup data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
+^https:\/\/facade-api\.black-unique\.com\/app\/v1\/startScreen\?cityId=102923&channelId=0&width=1170&height=2532 data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 
 # ======= R =======
 
 # ======= S =======
 
 # ======= T =======
+# 淘宝 - acs.m.taobao.com, guide-acs.m.taobao.com
+^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.taobao\.idle\.home\.welcome\/ data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-200.txt"
+^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.tmall\.wireless data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-200.txt"
+^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alibaba\.advertisementservice\.getadv data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-200.txt"
+^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alimama\.etao\.config\.query\/ data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-200.txt"
+^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.film\.mtopadvertiseapi\.queryadvertise\/ data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-200.txt"
+^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.o2o\.ad\.gateway\.get\/ data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-200.txt"
+^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.trip\.activity\.querytmsresources\/ data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-200.txt"
+# 淘宝开屏广告
+^https?:\/\/gw\.alicdn\.com\/imgextra\/i\d\/.+1125-1602\.jpg data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-200.txt"
+^https:\/\/heic\.alicdn\.com\/imgextra\/\w{2}\/[\w!]+-\d-tps-\d{3,4}-\d{4}\.jpg_(1\d{3}|9\d{2})x(1\d{3}|9\d{2})q[59]0\.jpg_\.heic$ data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-200.txt"
+^https:\/\/(heic|gw)\.alicdn\.com\/imgextra\/i\d\/.+-tps-(702-758|1125-1602)\.(heic|jpg|png) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-200.txt"
 
 # ======= U =======
 
@@ -399,7 +414,7 @@ it之家 = type=http-response,pattern=^https:\/\/napi\.ithome\.com\/api\/news\/i
 # ======= J =======
 # 京喜
 京喜 = type=http-response,pattern=^https?:\/\/api\.m\.jd\.com\/api\?functionId=delivery_show,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/jingxiAd.js
-# > 京东比价
+# 京东比价
 http-response ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig) requires-body=1,script-path= https://raw.githubusercontent.com/zwf234/rules/master/js/jd_price.js
 
 # ======= K =======
@@ -449,4 +464,4 @@ http-response ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(wareBusin
 [MITM]
 h2 = true
 tcp-connection = true
-hostname = %APPEND% tianqi.2345.com, imcs.citicbank.com, h5app.kuwo.cn, bodianimgcdn.kuwo.cn, pgdt.gtimg.cn, rp.hpplay.cn, pan.baidu.com, sofire.baidu.com, ndstatic.cdn.bcebos.com, staticsns.cdn.bcebos.com, issuecdn.baidupcs.com, dss0.bdstatic.com,client.app.coc.10086.cn, list-app-m.i4.cn, search-app-m.i4.cn, mp.weixin.qq.com, webappcfg.paas.cmbchina.com, rescdn.qqmail.com, us.l.qq.com, napi.ithome.com, api.zuihuimai.com, dat.ruanmei.com, *.58cdn.com.cn, app.58.com, pic?.ajkimg.com, acs.m.taobao.com, gw.alicdn.com, heic.alicdn.com, pan.baidu.com, app-gw.csdn.net, api.douban.com, zj.haier.net, gab.122.gov.cn, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, api.pinduoduo.com, api.yangkeduo.com, tiebac.baidu.com, weixin110.qq.com, security.wechat.com, mp.weixin.qq.com, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, gw.alicdn.com, acs.m.taobao.com, api.m.mi.com, api-mifit.huami.com, api.jr.mi.com, home.mi.com, wallet.95516.com, clientaccess.10086.cn, wap.js.10086.cn, iface.iqiyi.com, intl.iqiyi.com, act.vip.iqiyi.com, iface2.iqiyi.com, static-s.iqiyi.com, msga.cupid.iqiyi.com, ssports.iqiyi.com, *.iqiyi.com, static.iqiyi.com, t7z.cupid.iqiyi.com, *.iqiyipic.com, u.iqiyipic.com, d.iqiyipic.com,*.51fanli.net, static.95508.com, m5.amap.com, optimus-ads.amap.com, m.amap.com, d.amap.com, gfp.veta.naver.com, api.hanju.koudaibaobao.com, storage.360buyimg.com, m.360buyimg.com, api.m.jd.com, img11.360buyimg.com, m15.360buyimg.com, ms.jr.jd.com, bdsp-x.jd.com, dsp-x.jd.com, img14.360buyimg.com, *.pstatp.com, static1.keepcdn.com, open.e.kuaishou.com, api.coolapk.com, api-access.pangolin-sdk-toutiao.com, img.meituan.net, wmapi.meituan.com, s3plus.meituan.net,  *.meituan.net, video.dispatch.tc.qq.com, wa.gtimg.com, *.+vmind.qqvideo.tc.qq.com, y.gtimg.cn, us.l.qq.com, ad.12306.cn, ios-*.prod.ftl.netflix.com, ios.prod.ftl.netflix.com, vali.cp31.ott.cibntv.net, *.ott.cibntv.net, ups.youku.com, api.mobile.youku.com, ems.youku.com, ossgw.alicdn.com, r.l.youku.com, m.youku.com, ad.api.3g.youku.com
+hostname = %APPEND% acs.m.taobao.com, guide-acs.m.taobao.com, api.black-unique.com, tianqi.2345.com, imcs.citicbank.com, h5app.kuwo.cn, bodianimgcdn.kuwo.cn, pgdt.gtimg.cn, rp.hpplay.cn, pan.baidu.com, sofire.baidu.com, ndstatic.cdn.bcebos.com, staticsns.cdn.bcebos.com, issuecdn.baidupcs.com, dss0.bdstatic.com,client.app.coc.10086.cn, list-app-m.i4.cn, search-app-m.i4.cn, mp.weixin.qq.com, webappcfg.paas.cmbchina.com, rescdn.qqmail.com, us.l.qq.com, napi.ithome.com, api.zuihuimai.com, dat.ruanmei.com, *.58cdn.com.cn, app.58.com, pic?.ajkimg.com, acs.m.taobao.com, gw.alicdn.com, heic.alicdn.com, pan.baidu.com, app-gw.csdn.net, api.douban.com, zj.haier.net, gab.122.gov.cn, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, api.pinduoduo.com, api.yangkeduo.com, tiebac.baidu.com, weixin110.qq.com, security.wechat.com, mp.weixin.qq.com, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, gw.alicdn.com, acs.m.taobao.com, api.m.mi.com, api-mifit.huami.com, api.jr.mi.com, home.mi.com, wallet.95516.com, clientaccess.10086.cn, wap.js.10086.cn, iface.iqiyi.com, intl.iqiyi.com, act.vip.iqiyi.com, iface2.iqiyi.com, static-s.iqiyi.com, msga.cupid.iqiyi.com, ssports.iqiyi.com, *.iqiyi.com, static.iqiyi.com, t7z.cupid.iqiyi.com, *.iqiyipic.com, u.iqiyipic.com, d.iqiyipic.com,*.51fanli.net, static.95508.com, m5.amap.com, optimus-ads.amap.com, m.amap.com, d.amap.com, gfp.veta.naver.com, api.hanju.koudaibaobao.com, storage.360buyimg.com, m.360buyimg.com, api.m.jd.com, img11.360buyimg.com, m15.360buyimg.com, ms.jr.jd.com, bdsp-x.jd.com, dsp-x.jd.com, img14.360buyimg.com, *.pstatp.com, static1.keepcdn.com, open.e.kuaishou.com, api.coolapk.com, api-access.pangolin-sdk-toutiao.com, img.meituan.net, wmapi.meituan.com, s3plus.meituan.net,  *.meituan.net, video.dispatch.tc.qq.com, wa.gtimg.com, *.+vmind.qqvideo.tc.qq.com, y.gtimg.cn, us.l.qq.com, ad.12306.cn, ios-*.prod.ftl.netflix.com, ios.prod.ftl.netflix.com, vali.cp31.ott.cibntv.net, *.ott.cibntv.net, ups.youku.com, api.mobile.youku.com, ems.youku.com, ossgw.alicdn.com, r.l.youku.com, m.youku.com, ad.api.3g.youku.com
