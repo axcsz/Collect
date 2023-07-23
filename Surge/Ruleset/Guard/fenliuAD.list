@@ -324,7 +324,6 @@ DOMAIN-SUFFIX,cm.ad.bilibili.com
 DOMAIN-SUFFIX,cm.adcommon.bilibili.com
 DOMAIN-SUFFIX,cm.game.bilibili.com
 DOMAIN-SUFFIX,cm.track.biligame.bilibili.com
-IP-CIDR,203.107.1.1/24,no-resolve
 URL-REGEX,^https?:\/\/api\.bilibili\.com\/x\/v2\/dm\/ad
 URL-REGEX,^https?:\/\/api\.bilibili\.com\/pgc\/season\/app\/related\/recommend\?
 URL-REGEX,^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.comic\/flash
