@@ -315,7 +315,7 @@ DOMAIN,lc.map.baidu.com
 # > 百度贴吧 屏蔽域名dns查询
 IP-CIDR,180.76.76.200/32,no-resolve
 # > 哔哩哔哩
-DOMAIN,grpc.biliapi.net
+#DOMAIN,grpc.biliapi.net
 DOMAIN,mall.bilibili.com
 DOMAIN,passport.bilibili.com
 DOMAIN-SUFFIX,cm.bilibili.com
