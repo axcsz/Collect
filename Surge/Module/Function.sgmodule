@@ -19,7 +19,9 @@ TF下载修正 = type=http-request,pattern=^https?:\/\/testflight\.apple\.com\/v
 # 奈飞评分 - ios-*.prod.ftl.netflix.com, ios.prod.ftl.netflix.com
 奈飞评分 = type=http-request,pattern=^https?:\/\/ios(-.*)?\.prod\.ftl\.netflix\.com\/iosui\/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js
 奈飞评分 = type=http-response,requires-body=1,pattern=^https?:\/\/ios(-.*)?\.prod\.ftl\.netflix\.com\/iosui\/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js
+# 跳过微信中转页面,解除被封禁链接  - weixin110.qq.com, security.wechat.com
+微信解除 = type=http-response,pattern=^https\:\/\/(weixin110\.qq|security\.wechat)\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/wechat/wechat110.js
 
 
 [MITM]
-hostname = %APPEND% testflight.apple.com, ios-*.prod.ftl.netflix.com, ios.prod.ftl.netflix.com, api.m.jd.com
+hostname = %APPEND% testflight.apple.com, ios-*.prod.ftl.netflix.com, ios.prod.ftl.netflix.com, api.m.jd.com, weixin110.qq.com, security.wechat.com
