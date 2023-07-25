@@ -1428,6 +1428,9 @@ DOMAIN,qzs.gdtimg.com
 
 # > ======= Y =======
 # > 优酷
+DOMAIN,amdc.m.youku.com
+DOMAIN,yk-ssp.ad.youku.com
+DOMAIN,ykad-data.youku.com
 DOMAIN,adx.op.cp18.ott.cibntv.net
 DOMAIN,ad.mobile.youku.com
 DOMAIN,iyes.youku.com
