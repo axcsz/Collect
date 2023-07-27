@@ -3,7 +3,7 @@
 #!author= Axcsz5（搬运整理）
 #!homepage= https://github.com/axcsz/Collect/edit/master/Surge
 #!icon=
-#!update= 2023.07.15
+#!update= 2023.07.27
 
 
 
@@ -27,6 +27,7 @@ udp-policy-not-supported-behaviour = reject
 *.tencent.com = server:119.29.29.29
 *.weixin.com = server:119.29.29.29
 *.qq.com = server:119.29.29.29
+*.qpic.cn = server:119.29.29.29
 # 京东
 *.jd.com = server:119.29.29.29
 *.360buyimg.com = server:119.29.29.29
@@ -50,6 +51,13 @@ udp-policy-not-supported-behaviour = reject
 *.xiaomi.com = server:119.29.29.29
 # 哔哩哔哩
 *.bilibili.com = server:119.29.29.29
+# Google
+mtalk.google.com = 108.177.125.188
+dl.google.com = server:119.29.29.29
+dl.l.google.com = server:119.29.29.29
+update.googleapis.com = server:119.29.29.29
+# PlayStation
+*.dl.playstation.net = server:119.29.29.29
 
 
 [MITM]
