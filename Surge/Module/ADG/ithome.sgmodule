@@ -1,0 +1,24 @@
+#!name= 广告 & IT之家
+#!desc= 移除广告
+#!author= RuCu6
+#!homepage= https://github.com/axcsz/Collect/edit/master/Surge
+#!icon=
+#!update= 2023-02-15 19:50
+
+
+
+[URL Rewrite]
+
+
+[Map Local]
+
+
+[Script]
+# IT之家
+IT之家 = type=http-response,pattern=^https:\/\/api\.ithome\.com\/json\/(listpage\/news|newslist\/news|slide\/index),requires-body=1,script-update-interval=1,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/ithome.js
+IT之家 = type=http-response,pattern=^https:\/\/m\.ithome\.com\/api\/news\/newslistpageget,requires-body=1,script-update-interval=1,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/ithome.js
+IT之家 = type=http-response,pattern=^https:\/\/napi\.ithome\.com\/api\/(news\/index|topmenu\/getfeeds),requires-body=1,script-update-interval=1,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/ithome.js
+
+
+[MITM]
+hostname = %APPEND% api.ithome.com, m.ithome.com, napi.ithome.com
