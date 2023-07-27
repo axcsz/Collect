@@ -30,6 +30,26 @@ udp-policy-not-supported-behaviour = reject
 # 京东
 *.jd.com = server:119.29.29.29
 *.360buyimg.com = server:119.29.29.29
+# Apple
+*icloud.com = server:119.29.29.29
+*icloud.com.cn = server:119.29.29.29
+*testflight.apple.com = server:8.8.4.4
+# 淘宝
+*.taobao.com = server:223.5.5.5
+*.tmall.com = server:223.5.5.5
+*.alicdn.com = server:223.5.5.5
+*.aliyun.com = server:223.5.5.5
+# 网易
+*.163.com = server:119.29.29.29
+*.126.com = server:119.29.29.29
+*.126.net = server:119.29.29.29
+*.127.net = server:119.29.29.29
+*.netease.com = server:119.29.29.29
+# 小米
+*.mi.com = server:119.29.29.29
+*.xiaomi.com = server:119.29.29.29
+# 哔哩哔哩
+*.bilibili.com = server:119.29.29.29
 
 
 [MITM]
