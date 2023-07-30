@@ -28,7 +28,7 @@ force-http-engine-hosts = %APPEND% sdk.alibaba.com.ailbaba.me, *.cp31.ott.cibntv
 # 爱回收 - gw.aihuishou.com
 ^https:\/\/gw.aihuishou.com\/app-portal\/home\/getadvertisement - reject
 # 爱思开屏
-^https?:\/\/list-app-m\.i4\.cn\/getopfstadinfo\.xhtml - reject
+^https:\/\/list-app-m\.i4\.cn\/(adclickcb|getthirdpartyadkeys|getopfstadinfo)\.xhtml - reject
 # 爱奇艺 - iface.iqiyi.com, intl.iqiyi.com, act.vip.iqiyi.com, iface2.iqiyi.com, static-s.iqiyi.com, msga.cupid.iqiyi.com, ssports.iqiyi.com, *.iqiyi.com, static.iqiyi.com, t7z.cupid.iqiyi.com, *.iqiyipic.com, u.iqiyipic.com, d.iqiyipic.com
 ^https?:\/\/iface\.iqiyi\.com\/api\/getNewAdInfo - reject
 ^https?:\/\/intl\.iqiyi\.com\/ad_external\/ - reject
