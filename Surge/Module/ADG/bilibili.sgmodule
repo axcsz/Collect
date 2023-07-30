@@ -3,25 +3,27 @@
 #!author= Keywos RuCu6 kokoryh app2smile blackmatrix7 ClydeTime
 #!homepage= https://github.com/axcsz/Collect/edit/master/Surge
 #!icon=
-#!update= 2023.07.17
+#!update= 2023.07.25
 
 
 
 [URL Rewrite]
-^https?:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.interface\.v1\.Search\/DefaultWords - reject
-^https?:\/\/app\.bilibili\.com\/x\/resource\/ip - reject
+# IP请求,地理位置请求 //api.bilibili.com
+^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.interface\.v1\.Search\/DefaultWords$ - reject
+^https:\/\/app\.bilibili\.com\/x\/resource\/ip - reject
 
 
 [Map Local]
 # 可能的一些推广
 ^https?:\/\/api\.bili(bili\.com|api\.net)\/pgc\/season\/app\/related\/recommend\? data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
 # 屏蔽直播间广告浮窗
-^https?:\/\/api\.live\.bilibili\.com\/xlive\/e-commerce-interface\/v1\/ecommerce-user\/get_shopping_info\? data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
+^https:\/\/api\.live\.bilibili\.com\/xlive\/e-commerce-interface\/v1\/ecommerce-user\/get_shopping_info\? data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
 # BiliBili漫画去广告
 ^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/(Flash|ListFlash|GetActivityTab) data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
 # 屏蔽首页右上活动
 ^https?:\/\/app\.bilibili\.com\/x\/resource\/top\/activity data="https://github.com/Keywos/rule/raw/main/mocks/biliactivity.json"
-
+# IP请求,地理位置请求
+^https:\/\/api\.bilibili\.com\/x\/web-interface\/zone\?jsonp=jsonp$ data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-200.txt"
 
 [Script]
 # 开屏广告 | 推荐页banner和广告 | 我的页面 | 1080P | 热搜 | 标签栏 | 下发皮肤
@@ -34,8 +36,11 @@ bili-bangumis = type=http-response,pattern=^https?:\/\/api\.bilibili\.com\/pgc\/
 Blproto = type=http-response, pattern=^https?:\/\/grpc\.biliapi\.net\/bilibili\.app\.(view\.v1\.View\/View$|dynamic\.v2\.Dynamic\/Dyn(All|Video)$|playurl\.v1\.PlayURL\/PlayView$|interface\.v1\.Teenagers\/ModeStatus), requires-body=1, binary-body-mode=1, script-path=https://github.com/Keywos/rule/raw/main/JS/bproto.js
 # 弹幕 | 评论列表广告去除
 Blprotos = type=http-response, pattern=^https?:\/\/grpc\.biliapi\.net\/bilibili\.(community\.service\.dm\.v1\.DM\/(DmView|DmSegMobile)|main\.community\.reply\.v1\.Reply\/MainList), requires-body=1, binary-body-mode=1, script-path=https://github.com/Keywos/rule/raw/main/JS/bproto.js
+# 我的页面 解锁1080P高码率,4K画质,皮肤推送 
+解锁1080P = type=http-response, pattern=^https:\/\/app\.bilibili\.com\/x\/v2\/account\/(mine(\/ipad)?|myinfo)\?,requires-body=1,script-update-interval=1,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/bilibili/bili.js
+解锁1080P = type=http-response, pattern=^https:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\?,requires-body=1,script-update-interval=1,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/bilibili/bili.js
 
 
 [MITM]
-hostname = %APPEND% manga.bilibili.com, api.live.bilibili.com, api.vc.bilibili.com, app.bilibili.com, app.biliapi.net, api.bilibili.com, api.biliapi.net, grpc.biliapi.net
 h2 = true
+hostname = %APPEND% manga.bilibili.com, api.live.bilibili.com, api.vc.bilibili.com, app.bilibili.com, app.biliapi.net, api.bilibili.com, api.biliapi.net, grpc.biliapi.net
