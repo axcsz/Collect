@@ -73,9 +73,7 @@ DOMAIN,msg.umengcloud.com
 # > QQ空间
 DOMAIN-KEYWORD,ctc.qzs.qzone.qq.com
 # > 路由器后台
-IP-CIDR,192.168.0.1/24
-# > 天翼网关
-IP-CIDR,192.168.1.1/24
+IP-CIDR,192.168.0.1/16
 # > 其他分流修正
 DOMAIN-KEYWORD,anti-ad.net
 DOMAIN,ad.12306.cn
