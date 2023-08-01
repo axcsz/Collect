@@ -486,7 +486,7 @@ https:\/\/pan\.baidu\.com\/component\/view\/(1510|1130)\?(vip|from) - reject
 # 招商银行开屏 - webappcfg.paas.cmbchina.com
 ^https?:\/\/webappcfg\.paas\.cmbchina\.com\/v\d\/func\/getmarketconfig data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 # 中信银行 - imcs.citicbank.com
-^https:\/\/imcs\.citicbank\.com\/cloud\/.+1125.+2436 data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
+^https:\/\/imcs\.citicbank\.com\/cloud\/.+(1125.+2436|1242.+2688) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 # 中通快递 微信小程序净化 - hdgateway.zto.com
 ^https:\/\/hdgateway\.zto\.com\/getApolloConfig data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 ^https:\/\/hdgateway\.zto\.com\/track data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
