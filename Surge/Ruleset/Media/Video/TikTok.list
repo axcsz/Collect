@@ -1,30 +1,32 @@
-#!name=TikTok分流
-#!desc=TikTok相关服务进行分流
-#!author= Axcsz5（整理）
-#!homepage=https://github.com/axcsz/Collect/edit/master/Surge
-#!icon=
-# updatetime=2023.07.13
+#!name = TikTok分流
+#!desc = TikTok相关服务进行分流
+#!icon =
+#!author = Axcsz5（整理）
+#!homepage = https://github.com/axcsz/Collect/blob/master/Surge/Ruleset/Media/Video/TikTok.list
+#!updatetime = 2023.08.05
 
 
 
+USER-AGENT,TikTok*
 DOMAIN,p16-tiktokcdn-com.akamaized.net
-DOMAIN-SUFFIX,bytedapm.com
-DOMAIN-SUFFIX,bytegecko-i18n.com
-DOMAIN-SUFFIX,bytegecko.com
-DOMAIN-SUFFIX,byteoversea.com
-DOMAIN-SUFFIX,ibytedtos.com
-DOMAIN-SUFFIX,ibyteimg.com
+DOMAIN-SUFFIX,musical.ly
+DOMAIN-SUFFIX,tiktok.com
+DOMAIN-SUFFIX,snssdk.com
+DOMAIN-SUFFIX,muscdn.com
 DOMAIN-SUFFIX,ipstatp.com
 DOMAIN-SUFFIX,isnssdk.com
-DOMAIN-SUFFIX,muscdn.com
-DOMAIN-SUFFIX,musical.ly
-DOMAIN-SUFFIX,sgpstatp.com
-DOMAIN-SUFFIX,snssdk.com
-DOMAIN-SUFFIX,tik-tokapi.com
-DOMAIN-SUFFIX,tiktok.com
-DOMAIN-SUFFIX,tiktokcdn-us.com
-DOMAIN-SUFFIX,tiktokcdn.com
+DOMAIN-SUFFIX,tiktokd.net
+DOMAIN-SUFFIX,tiktokd.org
 DOMAIN-SUFFIX,tiktokv.com
-DOMAIN-KEYWORD,musical.ly
+DOMAIN-SUFFIX,sgpstatp.com
+DOMAIN-SUFFIX,ibyteimg.com
+DOMAIN-SUFFIX,bytedapm.com
+DOMAIN-SUFFIX,bytegecko.com
+DOMAIN-SUFFIX,ibytedtos.com
+DOMAIN-SUFFIX,tiktokcdn.com
+DOMAIN-SUFFIX,tik-tokapi.com
+DOMAIN-SUFFIX,byteoversea.com
+DOMAIN-SUFFIX,tiktokcdn-us.com
+DOMAIN-SUFFIX,bytegecko-i18n.com
 DOMAIN-KEYWORD,tiktok
-USER-AGENT,TikTok*
+DOMAIN-KEYWORD,musical.ly
