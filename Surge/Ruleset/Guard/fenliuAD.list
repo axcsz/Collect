@@ -1,10 +1,7 @@
-# >!name= 分流 & 广告拦截合集
-# >!desc= 分流广告拦截合集
-# >!author= fmz200 RuCu6 DivineEngine limbopro
-# >!homepage= https://github.com/axcsz/Collect/edit/master/Surge
-# >!icon=
-# >!update= 2023.07.23
-
+#!name = 分流 & 广告拦截合集
+#!desc = 分流广告拦截合集
+#!author = fmz200 RuCu6 DivineEngine limbopro
+#!update = 2023.08.05
 
 
 # > ======= 0~9 =======
@@ -232,7 +229,6 @@ DOMAIN-SUFFIX,pups.baidu.com
 DOMAIN-SUFFIX,pups.bdimg.com
 DOMAIN-SUFFIX,push.music.baidu.com
 DOMAIN-SUFFIX,push.zhanzhang.baidu.com
-DOMAIN-SUFFIX,qchannel0d.cn
 DOMAIN-SUFFIX,qianclick.baidu.com
 DOMAIN-SUFFIX,release.baidu.com
 DOMAIN-SUFFIX,res.limei.com
@@ -350,13 +346,7 @@ URL-REGEX,^http:\/\/bd-api\.kuwo\.cn\/api\/service\/music\/recommendList\?uid
 # > ======= C =======
 # > CCTVVideo
 DOMAIN,adstore-index-1252524079.file.myqcloud.com
-# > CNTV
-DOMAIN,galaxy.bjcathay.com
-DOMAIN,mdrecv.app.cntvwb.cn
-DOMAIN,sdapprecv.app.cntvwb.cn
-DOMAIN,vdapprecv.app.cntvwb.cn
 # > 菜鸟
-DOMAIN,iyes.youku.com
 DOMAIN,vali.cp31.ott.cibntv.net
 IP-CIDR,117.161.156.227/32,no-resolve
 # > 彩云天气
@@ -402,7 +392,6 @@ DOMAIN,track.tiara.daum.net
 DOMAIN,track.tiara.kakao.com
 
 # > ======= E =======
-
 # > ======= F =======
 # Flurry
 DOMAIN,data.flurry.com
@@ -470,9 +459,6 @@ DOMAIN-SUFFIX,page.amap.com
 DOMAIN-SUFFIX,u51.me
 # > 工商银行 开屏广告
 DOMAIN,pageviewp.icbc.com.cn
-# > 广告联盟
-DOMAIN,mi.gdt.qq.com
-DOMAIN,open.e.kuaishou.com
 # > Google
 DOMAIN,ads.youtube.com
 DOMAIN,adservice.google.com
@@ -512,11 +498,6 @@ DOMAIN,apis.alenable.com
 # > ======= H =======
 # >海尔智家
 DOMAIN-SUFFIX,ehaier.com
-# > 湖南卫视
-DOMAIN-SUFFIX,da.mgtv.com
-DOMAIN-SUFFIX,da.hunantv.com
-DOMAIN-SUFFIX,log.hunantv.com
-DOMAIN-SUFFIX,v2.hunantv.com
 # > 虎牙直播 开屏广告
 DOMAIN,pp-cdnfile2pcdn.msstatic.com
 DOMAIN,livewebbs2pcdn.msstatic.com
@@ -530,10 +511,10 @@ DOMAIN-SUFFIX,anythinktech.com
 DOMAIN-SUFFIX,adkwai.com
 DOMAIN-SUFFIX,mob.com
 # > ======= I =======
-
 # > ======= J =======
 # > 今日头条
 DOMAIN-SUFFIX,pangolin-sdk-toutiao.com
+DOMAIN-SUFFIX,pangolin-sdk-toutiao1.com
 DOMAIN-SUFFIX,pangolin-sdk-toutiao-b.com
 DOMAIN,pangolin.snssdk.com
 DOMAIN,dm.toutiao.com
@@ -564,7 +545,6 @@ DOMAIN-SUFFIX,log.snssdk.com
 DOMAIN-SUFFIX,nativeapp.toutiao.com
 DOMAIN-SUFFIX,pangolin.snssdk.com
 DOMAIN-SUFFIX,partner.toutiao.com
-DOMAIN-SUFFIX,pglstatp-toutiao.com
 DOMAIN-SUFFIX,sm.toutiao.com
 # > 屏蔽京东和搜狗收集信息 @jFrecht
 DOMAIN-SUFFIX,jdqd.jd.com
@@ -654,6 +634,11 @@ DOMAIN-SUFFIX,meituan.yoga
 DOMAIN-SUFFIX,meituangov.cn
 DOMAIN-SUFFIX,report.meituan.com
 DOMAIN-SUFFIX,wmlog.meituan.com
+DOMAIN,al-log.d.meituan.net
+DOMAIN,babel-statistics-android.d.meituan.net
+DOMAIN,maplocatesdksnapshot.d.meituan.net
+DOMAIN,metrics-picture.d.meituan.net
+DOMAIN,route-stats.d.meituan.net
 # > 美颜相机 去首页和轮播广告
 DOMAIN,adui.tg.meitu.com
 DOMAIN,aaid.uyunad.com
@@ -709,7 +694,6 @@ URL-REGEX,^https:\/\/apiwz\.midukanshu\.com\/advert\/treasureInfo$
 URL-REGEX,^https:\/\/apiwz\.midukanshu\.com\/config\/getAds$
 
 # > ======= N =======
-
 # > ======= O =======
 # > Outlook
 DOMAIN,acdn.adnxs.com
@@ -773,31 +757,8 @@ DOMAIN-SUFFIX,dload.qd.qingting.fm
 DOMAIN-SUFFIX,logger.qingting.fm
 DOMAIN-SUFFIX,s.qd.qingting.fm
 DOMAIN-SUFFIX,s.qd.qingtingfm.com
-# > QQ
-DOMAIN-KEYWORD,omgmtaw
-DOMAIN,adsmind.apdcdn.tc.qq.com
-DOMAIN,adsmind.tc.qq.com
-DOMAIN,pgdt.gtimg.cn
-DOMAIN,pgdt.gtimg.com
-DOMAIN,pgdt.ugdtimg.com
-DOMAIN,splashqqlive.gtimg.com
-DOMAIN,wa.gtimg.com
-DOMAIN,wxsnsdy.wxs.qq.com
-DOMAIN,wxsnsdythumb.wxs.qq.com
-DOMAIN-SUFFIX,act.qq.com
-DOMAIN-SUFFIX,ad.qun.qq.com
-DOMAIN-SUFFIX,adsfile.qq.com
-DOMAIN-SUFFIX,bugly.qq.com
-DOMAIN-SUFFIX,buluo.qq.com
-DOMAIN-SUFFIX,l.qq.com
-DOMAIN-SUFFIX,monitor.qq.com
-DOMAIN-SUFFIX,pingma.qq.com
-DOMAIN-SUFFIX,pingtcss.qq.com
-DOMAIN-SUFFIX,report.qq.com
-DOMAIN-SUFFIX,tajs.qq.com
-DOMAIN-SUFFIX,tcss.qq.com
-DOMAIN-SUFFIX,uu.qq.com
 # > QQ音乐广告
+DOMAIN,gdt.qq.com
 DOMAIN,tmeadcomm.y.qq.com
 DOMAIN,ad.tencentmusic.com
 DOMAIN,adstats.tencentmusic.com
@@ -818,7 +779,6 @@ DOMAIN,stat.y.qq.com
 DOMAIN,oth.str.mdt.qq.com
 DOMAIN,h.trace.qq.com
 DOMAIN-SUFFIX,imtmp.net
-DOMAIN,sdk.e.qq.com
 DOMAIN,p.l.qq.com
 DOMAIN,us.l.qq.com
 DOMAIN,tangram.e.qq.com
@@ -860,25 +820,17 @@ DOMAIN-SUFFIX,bd.hd.sohu.com
 DOMAIN-SUFFIX,click.hd.sohu.com
 DOMAIN-SUFFIX,click2.hd.sohu.com
 DOMAIN-SUFFIX,ctr.hd.sohu.com
-DOMAIN-SUFFIX,epro.sogou.com
 DOMAIN-SUFFIX,epro.sohu.com
 DOMAIN-SUFFIX,go.sohu.com
-DOMAIN-SUFFIX,golden1.sogou.com
 DOMAIN-SUFFIX,golden1.sohu.com
 DOMAIN-SUFFIX,hui.sohu.com
-DOMAIN-SUFFIX,inte.sogou.com
-DOMAIN-SUFFIX,inte.sogoucdn.com
 DOMAIN-SUFFIX,inte.sohu.com
 DOMAIN-SUFFIX,lm.tv.sohu.com
-DOMAIN-SUFFIX,lu.sogoucdn.com
 DOMAIN-SUFFIX,pb.hd.sohu.com
 DOMAIN-SUFFIX,push.tv.sohu.com
 DOMAIN-SUFFIX,pv.hd.sohu.com
-DOMAIN-SUFFIX,pv.sogou.com
 DOMAIN-SUFFIX,pv.sohu.com
-DOMAIN-SUFFIX,theta.sogoucdn.com
 DOMAIN-SUFFIX,um.hd.sohu.com
-DOMAIN-SUFFIX,uranus.sogou.com
 DOMAIN-SUFFIX,uranus.sohu.com
 DOMAIN-SUFFIX,wan.sohu.com
 DOMAIN-SUFFIX,wl.hd.sohu.com
@@ -924,7 +876,6 @@ DOMAIN-SUFFIX,ali-stats.jpush.cn
 DOMAIN-SUFFIX,toblog.ctobsnssdk.com
 DOMAIN-SUFFIX,sdk.kaijia.com
 DOMAIN-SUFFIX,amdc.m.taobao.com
-DOMAIN-SUFFIX,iyes.youku.com
 DOMAIN-SUFFIX,sq.sljkj.com
 DOMAIN-SUFFIX,s2s.adjust.com
 DOMAIN-SUFFIX,pglstatp-toutiao
@@ -955,7 +906,6 @@ DOMAIN-SUFFIX,stat.simba.taobao.com
 DOMAIN-SUFFIX,m-adash.m.taobao.com
 DOMAIN-SUFFIX,adashbc.m.taobao.com
 DOMAIN,m.ykimg.com
-DOMAIN,iyes.youku.com
 DOMAIN,adashx.m.taobao.com
 DOMAIN,apoll.m.taobao.com
 DOMAIN-SUFFIX,acjs.aliyun.com
@@ -995,6 +945,16 @@ URL-REGEX,^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.film\.mtopadvertiseapi\.que
 URL-REGEX,^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.o2o\.ad\.gateway\.get\/
 URL-REGEX,^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.trip\.activity\.querytmsresources\/
 # >  腾讯
+DOMAIN-KEYWORD,omgmtaw
+DOMAIN,wxsnsdy.wxs.qq.com
+DOMAIN,wxsnsdythumb.wxs.qq.com
+DOMAIN-SUFFIX,act.qq.com
+DOMAIN-SUFFIX,ad.qun.qq.com
+DOMAIN-SUFFIX,bugly.qq.com
+DOMAIN-SUFFIX,buluo.qq.com
+DOMAIN-SUFFIX,monitor.qq.com
+DOMAIN-SUFFIX,report.qq.com
+DOMAIN-SUFFIX,uu.qq.com
 DOMAIN-SUFFIX,news.ssp.qq.com
 DOMAIN-SUFFIX,news.l.qq.com
 DOMAIN-SUFFIX,activeqq.3g.qq.com
@@ -1205,7 +1165,6 @@ DOMAIN-SUFFIX,syndication.twitter.com
 DOMAIN-SUFFIX,tellapart.com
 DOMAIN-SUFFIX,urls.api.twitter.com
 # > TubeMax  感谢@可莉分享
-DOMAIN-SUFFIX,adjust.com
 DOMAIN-SUFFIX,applvn.com
 DOMAIN-SUFFIX,app-measurement.com
 DOMAIN-SUFFIX,pangle.io
@@ -1260,6 +1219,8 @@ URL-REGEX,^https?:\/\/tqt\.weibo\.cn\/overall\/redirect\.php\?r=(tqt_sdkad|tqtad
 URL-REGEX,^https?:\/\/wbapp\.uve\.weibo\.com\/wbapplua\/wbpullad\.lua
 URL-REGEX,^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=get_coopen_ads
 # > 网易
+DOMAIN,httpdns.n.netease.com
+DOMAIN-SUFFIX,163jiasu.com
 DOMAIN-SUFFIX,dsp.youdao.com
 DOMAIN-SUFFIX,union.youdao.com
 DOMAIN,ad.bn.netease.com
@@ -1476,10 +1437,7 @@ DOMAIN,sdk.e.qq.com
 DOMAIN,mi.gdt.qq.com
 DOMAIN,open.e.kuaishou.com
 DOMAIN,api-access.pangolin-sdk-toutiao.com
-DOMAIN,sdk.open.talk.getui.net
 DOMAIN,sdk.open.talk.getui.com
-DOMAIN,errlog.umeng.com
-DOMAIN,tnc3-aliec2.snssdk.com
 DOMAIN,sf3-fe-tos.pglstatp-toutiao.com
 DOMAIN,qzs.gdtimg.com
 
@@ -1624,7 +1582,6 @@ DOMAIN-SUFFIX,adguanggao.eee114.com
 DOMAIN-SUFFIX,afp.qiyi.com
 DOMAIN-SUFFIX,cctv.adsunion.com
 DOMAIN-SUFFIX,d.cntv.cn
-DOMAIN-SUFFIX,de.pandora.xiaomi.com
 DOMAIN-SUFFIX,mishop.pandora.xiaomi.com
 DOMAIN-SUFFIX,cws-cctv.conviva.com
 DOMAIN,galaxy.bjcathay.com
@@ -1643,6 +1600,7 @@ DOMAIN,appcloud2.in.zhihu.com
 DOMAIN,mqtt.zhihu.com
 DOMAIN,sugar.zhihu.com
 DOMAIN,crash2.zhihu.com
+DOMAIN,zxid-m.mobileservice.cn
 DOMAIN,118.89.204.198
 IP-CIDR,118.89.204.198/32,no-resolve
 IP-CIDR6,2402:4e00:1200:ed00:0:9089:6dac:96b6/128,no-resolve
@@ -1723,7 +1681,6 @@ DOMAIN,lookup.api.bsb.baidu.com
 DOMAIN,proxy.safebrowsing.apple
 DOMAIN,safebrowsing.g.applimg.com
 DOMAIN,safebrowsing.googleapis.com
-DOMAIN,safebrowsing.urlsec.qq.com
 DOMAIN,token.safebrowsing.apple
 DOMAIN,vs6.bj2ct.u3.ucweb.com
 DOMAIN-SUFFIX,safebrowsing.apple
