@@ -1,10 +1,7 @@
-#!name= 净化 & 菜鸟裹裹
-#!desc= 去除推广模块，净化
-#!author= Keywos RuCu6 
-#!homepage= https://github.com/axcsz/Collect/edit/master/Surge
-#!icon=
-#!update= 2023.07.30
-
+#!name = 净化 & 菜鸟裹裹
+#!desc = 去除推广模块
+#!author = Keywos RuCu6 
+#!update = 2023.08.05
 
 
 [Rule]
@@ -23,6 +20,7 @@ AND,((OR,((USER-AGENT,Cainiao*), (USER-AGENT,AMap*))), (URL-REGEX,^http:\/\/(amd
 ^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.nbmensa\.research\.researchservice\.(acquire|event|close)\.cn data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
 # 发现页 裹裹券
 ^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.com\.cainiao\.longquan\.place\.getpageresourcecontent\.cn\/\d\. data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
+^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.com\.cainiao\.cnactivitycenter\.getavailabletaskcredit\.cn data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
 # 支付宝 菜鸟小程序 
 ^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.(nbmensa\.research\.researchservice\.consultmerge|adx\.flyad\.getad) data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
 
