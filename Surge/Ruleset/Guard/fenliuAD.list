@@ -95,6 +95,39 @@ URL-REGEX,^https?:\/\/iface\.iqiyi\.com\/api\/getNewAdInfo
 
 # > ======= B =======
 # > 百度
+DOMAIN-SUFFIX,bce.baidu.com
+DOMAIN-SUFFIX,baiduyubaidu.com
+DOMAIN-SUFFIX,baifen.music.baidu.com
+DOMAIN-SUFFIX,10086.cn.baidu.cdn.yiwk.com
+DOMAIN-SUFFIX,360baidus.com
+DOMAIN-SUFFIX,app.ibaiducdn.com
+DOMAIN-SUFFIX,baidu.cybcyw.com
+DOMAIN-SUFFIX,baidu.dsp.tansuotv.com
+DOMAIN-SUFFIX,baidu.greenxf.cn
+DOMAIN-SUFFIX,baidu.jz5u.net
+DOMAIN-SUFFIX,baiduace.com
+DOMAIN-SUFFIX,baidujs.cnys.com
+DOMAIN-SUFFIX,baidulao.com
+DOMAIN-SUFFIX,baidut.github.io
+DOMAIN-SUFFIX,baidu-union-js.xiachufang.com
+DOMAIN-SUFFIX,baidu-union-pos.xiachufang.com
+DOMAIN-SUFFIX,baiduzhidahao.cc
+DOMAIN-SUFFIX,duiwai.baidu.com
+DOMAIN-SUFFIX,entry.baidu.com
+DOMAIN-SUFFIX,feed.baidu.com
+DOMAIN-SUFFIX,hdj.baidu.com
+DOMAIN-SUFFIX,iwanad.baidu.com
+DOMAIN-SUFFIX,jb.mbaidu.top
+DOMAIN-SUFFIX,js.mbaidu.top
+DOMAIN-SUFFIX,m.baidu.com.yiqisee.cn
+DOMAIN-SUFFIX,m.baidu.com.zhiduo.org
+DOMAIN-SUFFIX,msite.baidu.com
+DOMAIN-SUFFIX,mssp.baidu.com
+DOMAIN-SUFFIX,nlog.baidu.com
+DOMAIN-SUFFIX,paimgcdn.baidu.com
+DOMAIN-SUFFIX,union.baidustatic.guannin.com
+DOMAIN-SUFFIX,yingxiao.baidu.com
+DOMAIN-SUFFIX,duclick.baidu.com
 DOMAIN-SUFFIX,a.baidu.cn
 DOMAIN-SUFFIX,a.baidu.com
 DOMAIN-SUFFIX,ad.duapps.com
@@ -387,9 +420,16 @@ IP-CIDR,203.107.1.1/24
 # > 懂车帝
 DOMAIN-KEYWORD,p3-pack.byteimg.com
 DOMAIN-KEYWORD,p6-pack.byteimg.com
+DOMAIN-KEYWORD,apimg.qunliao.info
+# > 多多视频
+DOMAIN-SUFFIX,bayescom.com
 # > Daum
 DOMAIN,track.tiara.daum.net
 DOMAIN,track.tiara.kakao.com
+# > 朵朵校友圈 微信小程序去广告
+DOMAIN-SUFFIX,ad.duoduo.link
+# > 盯盯拍
+DOMAIN,pglstatp-toutiao.com
 
 # > ======= E =======
 # > ======= F =======
@@ -488,12 +528,24 @@ DOMAIN-SUFFIX,pagead-tpc.l.google.com
 DOMAIN-SUFFIX,pagead.google.com
 DOMAIN-SUFFIX,pagead.l.google.com
 DOMAIN-SUFFIX,service.urchin.com
+DOMAIN-SUFFIX,googletagmanager.com
+DOMAIN-SUFFIX,video-ad-stats.googlesyndication.com
+DOMAIN-SUFFIX,tpc.googlesyndication.com
+DOMAIN-SUFFIX,pagead2.googlesyndication.com
+DOMAIN-SUFFIX,blaaaa12.googlecode.com
+DOMAIN-SUFFIX,afs.googlesyndication.com
+DOMAIN-SUFFIX,www.googleadservices.com
+DOMAIN-SUFFIX,www.google-analytics.com
 # > GozenData
 DOMAIN-SUFFIX,gozendata.com
 DOMAIN-SUFFIX,gzads.com
 DOMAIN-SUFFIX,gz-data.com
 # > 广州地铁乘车码 感谢CtrlMusic🐓分享
 DOMAIN,apis.alenable.com
+# > GrowingIO
+DOMAIN-SUFFIX,giocdn.com
+# > 光大银行阳光惠生活
+DOMAIN-KEYWORD,talk.bz.getui.com
 
 # > ======= H =======
 # >海尔智家
@@ -510,9 +562,17 @@ DOMAIN-KEYWORD,assets.51downapp.cn
 DOMAIN-SUFFIX,anythinktech.com
 DOMAIN-SUFFIX,adkwai.com
 DOMAIN-SUFFIX,mob.com
+# > 虎扑
+DOMAIN,adx.hupu.com
+DOMAIN,adx-api.hupu.com
+DOMAIN,goblin.hupu.com
+
 # > ======= I =======
 # > ======= J =======
 # > 今日头条
+DOMAIN,ad.toutiao.com
+DOMAIN,dsp.toutiao.com
+DOMAIN-KEYWORD,pangolin.snssdk.com
 DOMAIN-SUFFIX,pangolin-sdk-toutiao.com
 DOMAIN-SUFFIX,pangolin-sdk-toutiao1.com
 DOMAIN-SUFFIX,pangolin-sdk-toutiao-b.com
@@ -587,6 +647,7 @@ DOMAIN-SUFFIX,yximgs.com
 DOMAIN-SUFFIX,cm.downloader.commercial.kuaishou.com
 DOMAIN-SUFFIX,cm.ad.gifshow.com
 DOMAIN-SUFFIX,cm.kwad.com
+DOMAIN-SUFFIX,e.kuaishou.com
 
 # > ======= L =======
 # > 乐播
@@ -613,8 +674,21 @@ DOMAIN-SUFFIX,pro.hoye.letv.com
 DOMAIN-SUFFIX,pro.letv.com
 DOMAIN-SUFFIX,stat.letv.com
 DOMAIN-SUFFIX,static.app.m.letv.com
+DOMAIN-SUFFIX,webp2p.letv.com
+DOMAIN,ark.letv.com
+DOMAIN,emma-414870e223.huodonghezi.com
+DOMAIN,g3.letv.com
+DOMAIN,n.mark.letv.com
 # > 蓝奏云
 DOMAIN,statics.woozooo.com
+# > LinkWiFi
+DOMAIN,a.wkanx.com
+DOMAIN,cwx.lianwangtech.com
+DOMAIN,c1wx.lianwangtech.com
+# > 蓝基因（弹窗还在，需要手动关闭）
+DOMAIN-KEYWORD,medicine.lanjiyin.com.cn
+# > 两步路
+DOMAIN-SUFFIX,admobile.top
 
 # > ======= M =======
 # > 芒果
@@ -1089,6 +1163,34 @@ DOMAIN-SUFFIX,jcollection.shuqireader.com
 DOMAIN-SUFFIX,stats.jpush.cn
 DOMAIN-SUFFIX,sdk.kaijiawan.com
 # > 腾讯音乐
+DOMAIN-SUFFIX,song.fanxing.kugou.com
+DOMAIN-SUFFIX,youxi.kugou.com
+DOMAIN-SUFFIX,adserviceretry.kugou.com
+DOMAIN-SUFFIX,kgmobilestatbak.kugou.com
+DOMAIN-SUFFIX,c.kuwo.cn
+DOMAIN-SUFFIX,game.kuwo.cn
+DOMAIN-SUFFIX,kuwoyy.com
+DOMAIN-SUFFIX,rich.kuwo.cn
+DOMAIN-KEYWORD,searchrecommend.kugou.com
+DOMAIN-KEYWORD,nbcollectretry.kugou.com
+DOMAIN-KEYWORD,rtmretry.kugou.com
+DOMAIN-KEYWORD,rt-m.kugou.com
+DOMAIN-KEYWORD,nbcollect.kugou.com
+DOMAIN-KEYWORD,c1img.ali.kugou.com
+DOMAIN-KEYWORD,kgstaticdlbssdlbig.tx.kugou.com
+DOMAIN-KEYWORD,adsfilebssdlbig.ali.kugou.com
+DOMAIN-KEYWORD,splashimgbssdl.yun.kugou.com
+DOMAIN-KEYWORD,adservice.kugou.com
+DOMAIN-KEYWORD,kgipadstat.kugou.com
+DOMAIN-KEYWORD,kgipadstatbak.kugou.com
+DOMAIN-KEYWORD,logwebs.kugou.com
+DOMAIN-KEYWORD,tracker.kugou.com
+DOMAIN-KEYWORD,trackercdnbj.kugou.com
+DOMAIN-KEYWORD,rich.kuwo.cn
+DOMAIN-KEYWORD,mobilead.kuwo.cn
+DOMAIN-SUFFIX,oth.eve.mdt.qq.com
+DOMAIN-SUFFIX,pgdt.gtimg.cn
+DOMAIN-SUFFIX,channel.fanxing.kugou.com
 DOMAIN-SUFFIX,ads.service.kugou.com
 DOMAIN-SUFFIX,adsfile.bssdlbig.kugou.com
 DOMAIN-SUFFIX,d.kugou.com
@@ -1193,6 +1295,105 @@ DOMAIN-SUFFIX,u.ucfly.com
 DOMAIN-SUFFIX,uc.ucweb.com
 DOMAIN-SUFFIX,ucsec.ucweb.com
 DOMAIN-SUFFIX,ucsec1.ucweb.com
+DOMAIN-KEYWORD,m.atm.youku.com
+DOMAIN-KEYWORD,adp.atm.youku.com
+DOMAIN-KEYWORD,clickc.admaster.com
+DOMAIN-KEYWORD,count.atm.youku.com
+DOMAIN-KEYWORD,ems.youku.com
+DOMAIN-KEYWORD,fans.m.tmall.com
+DOMAIN-KEYWORD,ktd.m.cn.miaozhen.com
+DOMAIN-KEYWORD,r1.ykimg.com
+DOMAIN-KEYWORD,v.admaster.com
+DOMAIN-KEYWORD,v2.reachmax.cn
+DOMAIN-KEYWORD,val.atm.youku.com
+DOMAIN-KEYWORD,yktd.m.cn.miaozhen.com
+DOMAIN-KEYWORD,server.m.pp.cn
+DOMAIN-KEYWORD,puds.ucweb.com
+DOMAIN-KEYWORD,wgo.mmstat.com
+DOMAIN-KEYWORD,log.cs.pp.cn
+DOMAIN-KEYWORD,applog.uc.cn
+DOMAIN-KEYWORD,afpapi.alimama.com
+DOMAIN-KEYWORD,a.9game.cn
+DOMAIN-KEYWORD,track.uc.cn
+DOMAIN-KEYWORD,adtrack.ucweb.com
+DOMAIN-KEYWORD,utp-dmp.ucweb.com
+DOMAIN-KEYWORD,utp.ucweb.com
+DOMAIN-KEYWORD,huichuan.sm.cn
+DOMAIN-KEYWORD,ynuf.alipay.com
+DOMAIN-KEYWORD,pdds.ucweb.com
+DOMAIN-KEYWORD,js.union-wifi.com
+DOMAIN-KEYWORD,www.qmlog.cn
+DOMAIN-KEYWORD,cpu.baidu.com
+DOMAIN-KEYWORD,caclick.baidu.com
+DOMAIN-KEYWORD,rescn.u3.ucweb.com
+DOMAIN,safe.ucweb.com
+DOMAIN,px.ucweb.com
+DOMAIN-KEYWORD,editor.sm.cn
+DOMAIN-KEYWORD,fc-video.cdn.bcebos.com
+DOMAIN-KEYWORD,vs10.bj2ct.u3.ucweb.com
+DOMAIN,navigis.uc.cn
+DOMAIN,order.sm.cn
+DOMAIN,ucdc-upaas.uc.cn
+DOMAIN,access.open.uc.cn
+DOMAIN,uc.ucweb.com
+DOMAIN,emoji.uc.cn
+DOMAIN,ssp-partner.alibaba.com
+DOMAIN,voice-service.uc.cn
+DOMAIN,v.uc.cn
+DOMAIN,coral.uc.cn
+DOMAIN,wolong-dsp.sm.cn
+DOMAIN,cartoonapi.uc.cn
+DOMAIN,umessage-online-zb.uc.cn
+DOMAIN,sealine.youku.com
+DOMAIN,api.c.uc.cn
+DOMAIN,aid.m.taobao.com
+DOMAIN,cms.uc.cn
+DOMAIN,applog-perf.uc.cn
+DOMAIN-SUFFIX,m.atm.youku.com
+DOMAIN-SUFFIX,adp.atm.youku.com
+DOMAIN-SUFFIX,clickc.admaster.com.cn
+DOMAIN-SUFFIX,count.atm.youku.com
+DOMAIN-SUFFIX,ems.youku.com
+DOMAIN-SUFFIX,fans.m.tmall.com
+DOMAIN-SUFFIX,ktd.m.cn.miaozhen.com
+DOMAIN-SUFFIX,r1.ykimg.com
+DOMAIN-SUFFIX,v.admaster.com.cn
+DOMAIN-SUFFIX,v2.reachmax.cn
+DOMAIN-SUFFIX,val.atm.youku.com
+DOMAIN-SUFFIX,yktd.m.cn.miaozhen.com
+DOMAIN-SUFFIX,wgo.mmstat.com
+DOMAIN-SUFFIX,afpapi.alimama.com
+DOMAIN-SUFFIX,a.9game.cn
+DOMAIN-SUFFIX,adtrack.ucweb.com
+DOMAIN-SUFFIX,utp-dmp.ucweb.com
+DOMAIN-SUFFIX,utp.ucweb.com
+DOMAIN-SUFFIX,ynuf.alipay.com
+DOMAIN-SUFFIX,pdds.ucweb.com
+DOMAIN-SUFFIX,js.union-wifi.com
+DOMAIN-SUFFIX,qmlog.cn
+DOMAIN-SUFFIX,cpu.baidu.com
+DOMAIN-SUFFIX,caclick.baidu.com
+DOMAIN-SUFFIX,rescn.u3.ucweb.com
+DOMAIN,feedback.uc.cn
+DOMAIN,gj.applog.uc.cn
+DOMAIN,gj.track.uc.cn
+DOMAIN,gjapplog.uc.cn
+DOMAIN,gjtrack.uc.cn
+DOMAIN,holmeshelptest.uc.cn
+DOMAIN-SUFFIX,ads.uc.cn
+DOMAIN-SUFFIX,alissl.ucdl.pp.uc.cn
+DOMAIN-SUFFIX,applogios.uc.cn
+DOMAIN-SUFFIX,bench.uc.cn
+DOMAIN-SUFFIX,client.tv.uc.cn
+DOMAIN-SUFFIX,coral-task.uc.cn
+DOMAIN-SUFFIX,hcadv.video.ums.uc.cn
+DOMAIN-SUFFIX,lobmuc.cn
+DOMAIN-SUFFIX,open-uc.cn
+DOMAIN-SUFFIX,wmedia-track.uc.cn
+DOMAIN,gecko-pangle-lf.snssdk.com
+DOMAIN,mercury-sdk.snssdk.com
+DOMAIN,tbm.snssdk.com
+DOMAIN,toblog.ctobsnssdk.com
 
 # > ======= V =======
 # > vivo
@@ -1214,11 +1415,57 @@ DOMAIN,kadmimage.biz.weibo.com
 DOMAIN,sdkaction.biz.weibo.com
 DOMAIN,sdkclick.biz.weibo.com
 DOMAIN,sdkmonitor.biz.weibo.com
+DOMAIN-KEYWORD,fastimage.uve.weibo.com
+DOMAIN-SUFFIX,adimg.vue.weibo.com
+DOMAIN-SUFFIX,weibomingzi.com
+DOMAIN-SUFFIX,s.alitui.weibo.com
+DOMAIN-SUFFIX,promote.biz.weibo.cn
+DOMAIN-SUFFIX,game.weibo.cn
+DOMAIN-SUFFIX,biz.weibo.com
+DOMAIN-SUFFIX,adimg.uve.weibo.com
+DOMAIN-SUFFIX,game.weibo.com
+DOMAIN-SUFFIX,gw6.push.mcp.weibo.cn
+DOMAIN-KEYWORD,ads.viber.com
+DOMAIN-KEYWORD,ads-d.viber.com
+DOMAIN-KEYWORD,ads.aws.viber.com
+DOMAIN-KEYWORD,adimg.uve.weibo.com
+DOMAIN-KEYWORD,alitui.weibo.com
+DOMAIN-KEYWORD,biz.weibo.com
+DOMAIN-KEYWORD,game.weibo.cn
+DOMAIN-KEYWORD,game.weibo.com
+DOMAIN-KEYWORD,gw5.push.mcp.weibo.cn
+DOMAIN-KEYWORD,gw6.push.mcp.weibo.cn
+DOMAIN-KEYWORD,promote.biz.weibo.cn
+DOMAIN-KEYWORD,s.alitui.weibo.com
+DOMAIN-KEYWORD,sdkapp.uve.weibo.com
+DOMAIN-KEYWORD,weibomingzi.com
+DOMAIN-KEYWORD,zymo.mps.weibo.com
+DOMAIN-KEYWORD,adimg.vue.weibo.com
+DOMAIN-KEYWORD,dp.im.weibo.cn
+DOMAIN-KEYWORD,m.game.weibo.cn
+DOMAIN-KEYWORD,c.biz.weibo.com
+DOMAIN-KEYWORD,c.wcpt.biz.weibo.com
+DOMAIN-KEYWORD,click.uve.weibo.com
+DOMAIN-KEYWORD,wax.weibo.com
+DOMAIN-KEYWORD,wbapp.uve.weibo.com
+DOMAIN-KEYWORD,widget.weibo.com
+DOMAIN-KEYWORD,zc.biz.weibo.com
+DOMAIN-KEYWORD,dsp.edm.weibo.cn
+DOMAIN-KEYWORD,alitui.weibo.com.cn
+DOMAIN-KEYWORD,biz.weibo.com.cn
+DOMAIN-KEYWORD,game.weibo.com.cn
+DOMAIN-KEYWORD,tui.weibo.com
+DOMAIN-KEYWORD,wax.weibo.com.cn
+DOMAIN-KEYWORD,ad.weibo.com
+DOMAIN-KEYWORD,adstrategy.biz.weibo.com
+DOMAIN-KEYWORD,vs.biz.weibo.com
+DOMAIN,bootpreload.uve.weibo.com
 URL-REGEX,^https?:\/\/tqt\.weibo\.cn\/api\/advert\/
 URL-REGEX,^https?:\/\/tqt\.weibo\.cn\/overall\/redirect\.php\?r=(tqt_sdkad|tqtad)
 URL-REGEX,^https?:\/\/wbapp\.uve\.weibo\.com\/wbapplua\/wbpullad\.lua
 URL-REGEX,^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=get_coopen_ads
 # > 网易
+DOMAIN-KEYWORD,ossgw.alicdn.com
 DOMAIN,httpdns.n.netease.com
 DOMAIN-SUFFIX,163jiasu.com
 DOMAIN-SUFFIX,dsp.youdao.com
@@ -1383,6 +1630,7 @@ DOMAIN,ads-video-al.xhscdn.com
 DOMAIN,ads-video-qc.xhscdn.com
 DOMAIN,t-ads.xiaohongshu.com
 # > 小米
+DOMAIN,data.mistat.xiaomi.com
 DOMAIN,tracking.intl.miui.com
 DOMAIN,sdkconfig.ad.xiaomi.com
 DOMAIN-SUFFIX,tracking.miui.com
