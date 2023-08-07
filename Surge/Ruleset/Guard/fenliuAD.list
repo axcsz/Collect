@@ -415,8 +415,6 @@ DOMAIN-KEYWORD,p6-ad-sign.byteimg.com
 DOMAIN-KEYWORD,p3.pstatp.com
 # > 叮嗒出行
 DOMAIN-KEYWORD,image.bianxianmao.com
-# > 滴滴青桔
-IP-CIDR,203.107.1.1/24
 # > 懂车帝
 DOMAIN-KEYWORD,p3-pack.byteimg.com
 DOMAIN-KEYWORD,p6-pack.byteimg.com
