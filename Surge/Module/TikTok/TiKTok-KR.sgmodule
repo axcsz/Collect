@@ -1,10 +1,7 @@
-#!name= 解锁 & TikTok 韩国
-#!desc= 解锁 TikTok 韩国 地区
-#!author= Semporia
-#!homepage= https://github.com/axcsz/Collect/edit/master/Surge
-#!icon=
-#!update= 2023.07.27
-
+#!name = 解锁 & TikTok 韩国
+#!desc = 解锁 TikTok 韩国 地区
+#!author = Semporia
+#!update = 2023.07.27
 
 
 [URL Rewrite]
