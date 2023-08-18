@@ -16,12 +16,6 @@
 ^https:\/\/api\.live\.bilibili\.com\/xlive\/e-commerce-interface\/v1\/ecommerce-user\/get_shopping_info\? data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
 # IP请求,地理位置请求 //api.bilibili.com
 ^https:\/\/api\.bilibili\.com\/x\/web-interface\/zone\?jsonp=jsonp$ data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-200.txt"
-# 可能的一些推广
-^https?:\/\/api\.bili(bili\.com|api\.net)\/pgc\/season\/app\/related\/recommend\? data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
-# BiliBili漫画去广告
-^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/(Flash|ListFlash|GetActivityTab) data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
-# 屏蔽首页右上活动
-^https?:\/\/app\.bilibili\.com\/x\/resource\/top\/activity data="https://github.com/Keywos/rule/raw/main/mocks/biliactivity.json"
 
 
 [Script]
