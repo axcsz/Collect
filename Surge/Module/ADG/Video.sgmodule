@@ -44,6 +44,11 @@ https?:\/\/ssports\.iqiyi\.com\/json\/shop\/shopInfo - reject
 
 
 [Map Local]
+# 爱奇艺
+^https?:\/\/act\.vip\.iqiyi\.com\/interact\/api\/show\.do data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-200.txt"
+^https?:\/\/act\.vip\.iqiyi\.com\/interact\/api\/v2\/show data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-200.txt"
+^https?:\/\/iface\.iqiyi\.com\/api\/getNewAdInfo data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-200.txt"
+
 # 芒果tv *.mgtv.com
 ^http://dflow.bz.mgtv.com/flow/getExtensionPosition data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-200.txt"
 ^http://iphone.v0.mgtv.com/show.php?abroad.+ data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-200.txt"
@@ -72,7 +77,8 @@ https?:\/\/ssports\.iqiyi\.com\/json\/shop\/shopInfo - reject
 ^https?:\/\/recom\.api\.mgtv\.com\/xyt\/banner.+ data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-200.txt"
 ^https?:\/\/vip\.bz\.mgtv\.com\/client\/dynamic_entry.+ data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-200.txt"
 
-# 腾讯视频
+# 腾讯视频 apd-vlive.apdcdn.tc.qq.com
+^http:\/\/[0-9\.:]*\/?(defaultts|vmind\.qqvideo)\.tc\.qq\.com\/\w+ data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 ^http:\/\/apd-vlive\.apdcdn\.tc\.qq\.com\/vmind\.qqvideo\.tc\.qq\.com\/\w+ data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 
 
@@ -90,4 +96,5 @@ https?:\/\/ssports\.iqiyi\.com\/json\/shop\/shopInfo - reject
 优酷视频 = type=http-response,pattern=^https:\/\/un-acs\.youku\.com\/gw\/mtop\.youku\.play\.ups\.appinfo\.get,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
 
 [MITM]
+h2 = true
 hostname = %APPEND% video.dispatch.tc.qq.com, wa.gtimg.com, *.+vmind.qqvideo.tc.qq.com, vali.cp31.ott.cibntv.net, *.ott.cibntv.net, ups.youku.com, api.mobile.youku.com, ems.youku.com, cards.iqiyi.com, iface2.iqiyi.com, search.video.iqiyi.com, *.mgtv.com, un-acs.youku.com, iface.iqiyi.com, intl.iqiyi.com, act.vip.iqiyi.com, iface2.iqiyi.com, static-s.iqiyi.com, msga.cupid.iqiyi.com, ssports.iqiyi.com, *.iqiyi.com, static.iqiyi.com, t7z.cupid.iqiyi.com, *.iqiyipic.com, u.iqiyipic.com, d.iqiyipic.com
