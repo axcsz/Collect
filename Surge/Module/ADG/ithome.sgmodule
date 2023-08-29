@@ -4,10 +4,16 @@
 #!update = 2023-08-21 10:25
 
 
+[URL Rewrite]
+# it之家 api.zuihuimai.com, dat.ruanmei.com
+^https?:\/\/api\.zuihuimai\.com\/static\/.*\/hongbao - reject
+^https?:\/\/dat\.ruanmei\.com\/ithome\/money\/acd\.json$ - reject
+
+
 [Script]
 # IT之家 首页,轮播图,置顶文章,信息流广告
 IT之家 = type=http-response,pattern=^https:\/\/napi\.ithome\.com\/api\/(news\/index|topmenu\/getfeeds),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/ithome.js
 
 
 [MITM]
-hostname = %APPEND% napi.ithome.com
+hostname = %APPEND% napi.ithome.com, api.zuihuimai.com, dat.ruanmei.com
