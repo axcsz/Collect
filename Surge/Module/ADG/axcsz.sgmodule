@@ -1,7 +1,7 @@
 #!name = 净化 & 视频软件广告
 #!desc = 删除视频软件开屏广告
 #!author = RuCu6 Zoo
-#!update = 2023-08-29 18:25
+#!update = 2023-08-30 11:00
 
 
 [URL Rewrite]
@@ -94,10 +94,9 @@ https?:\/\/.+\.iqiyipic\.com\/image\/20*_100000 - reject
 ^https?:\/\/vv\.video\.qq\.com\/getvmind\? data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-200.txt"
 ^https?:\/\/[\s\S]*\/.+?\.tc\.qq\.com/.*?p201.1\.mp4 data="https://raw.githubusercontent.com/axcsz/Collect/master/Surge/mocks/reject-img.gif"
 ^https?:\/\/(?:(?:25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(?:25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/.+?\.tc\.qq\.com\/.+?p201\.1\.mp4\? data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-200.txt"
+^http:\/\/apd-\w+\.v\.smtcdns\.com\/(defaultts|omts|varietyts|vmind\.qqvideo)\.tc\.qq\.com\/\w+ data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 
 # ========== 优酷视频 ==========
-# 青少年模式弹窗
-^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.huluwa\.dispatcher\.youthmode\.config2 data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 
 
 [Script]
@@ -123,12 +122,18 @@ https?:\/\/.+\.iqiyipic\.com\/image\/20*_100000 - reject
 芒果tv = type=http-response,pattern=^http://dc.bz.mgtv.com/dynamic/v1/channel/index/.+,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
 
 # ========== 优酷视频 ==========
-# 首页,我的页面
+# 首页信息流,首页菜单,我的页面,底部菜单
+优酷视频 = type=http-response,pattern=^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.relationrecommend\.wirelessrecommend\.recommend,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
 优酷视频 = type=http-response,pattern=^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.columbus\.(home|uc)\.query,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
+优酷视频 = type=http-response,pattern=^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.haidai\.lantern\.appconfig\.get,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
 # 青少年模式弹窗
+优酷视频 = type=http-response,pattern=^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.huluwa\.dispatcher\.youthmode\.config2,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
+# 热剧弹窗
+优酷视频 = type=http-response,pattern=^https:\/\/push\.m\.youku\.com\/collect-api\/get_push_interval_config_wx\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
+# 开屏广告
 优酷视频 = type=http-response,pattern=^https:\/\/un-acs\.youku\.com\/gw\/mtop\.youku\.play\.ups\.appinfo\.get,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
 
 
 [MITM]
 h2 = true
-hostname = %APPEND% -i.vip.iqiyi.com, *.iqiyi.com, *.mgtv.com, acs.youku.com, un-acs.youku.com
+hostname = %APPEND% -i.vip.iqiyi.com, *.iqiyi.com, *.mgtv.com, acs.youku.com, push.m.youku.com, un-acs.youku.com
