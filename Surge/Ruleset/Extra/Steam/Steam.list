@@ -1,3 +1,9 @@
+#!name = Steam分流
+#!desc = Steam相关服务进行分流
+#!author = Axcsz5（整理）
+# updatetime = 2023.09.03
+
+
 DOMAIN,f3b7q2p3.ssl.hwcdn.net
 DOMAIN,steammobile.akamaized.net
 DOMAIN,steampipe-kr.akamaized.net
