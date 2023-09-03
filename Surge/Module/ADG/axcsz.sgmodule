@@ -1,114 +1,58 @@
 #!name = 净化 & 视频软件广告
 #!desc = 删除视频软件开屏广告
-#!author = RuCu6 Zoo
-#!update = 2023-08-30 11:00
+#!author = RuCu6
+#!update = 2023-09-02 13:45
 
 
 [URL Rewrite]
 # ========== 爱奇艺 ==========
-^https?:\/\/iface\.iqiyi\.com\/api\/getNewAdInfo - reject
-^https?:\/\/intl\.iqiyi\.com\/ad_external\/ - reject
-^https?:\/\/intl\.iqiyi\.com\/video\/advertise - reject
-^http:\/\/static-s\.iqiyi\.com\/common\/.+\/Small_video\/a2\/af\/.+\.png - reject
-^http:\/\/msga/.cupid/.iqiyi/.com\/scp2\.gif - reject
-https?:\/\/ssports\.iqiyi\.com/app\/ - reject
-https?:\/\/ssports\.iqiyi\.com/json\/shop\/shopInfo - reject
-https?:\/\/.+\.iqiyi\.com\/videos\/other\/20$ - reject
-https?:\/\/static\.iqiyi\.com\/js\/common\/.+\.js - reject
-https?:\/\/t7z\.cupid\.iqiyi\.com\/show - reject
-^https?:\/\/u\d\.iqiyipic\.com\/image\/[\w\/]+\/oad_ - reject
-^http:\/\/.+\.iqiyipic\.com\/image\/.+\/ad\/.+\.jpg - reject
-https?:\/\/.+\.iqiyipic\.com\/image\/20*_100000 - reject
 
-# ========== 芒果TV ==========
+# ========== 芒果视频 ==========
 
 # ========== 腾讯视频 ==========
-^https://news.l.qq.com\/app\? - reject
-^http:\/\/.+/\?tk=9901afb195dcf9a34db6088a4a221dba38b3d980e4db86009f8a08be4d4099ee323f6e7f03b881db21133b1bf2ae5bc5 - reject
-^http:\/\/video\.dispatch\.tc\.qq\.com\/.+\.mp4 - reject
-^http:\/\/.+\/vmind\.qqvideo\.tc\.qq\.com\/.+\.mp4 - reject
-^http:\/\/wa\.gtimg\.com\/adxcdn\/.+\.jpg - reject
-^https?:\/\/.+?\/omts.tc.qq.com\/ - reject
-^https?:\/\/.+?\/variety.tc.qq.com\/ - reject
-^https?:\/\/.+?\.tc\.qq\.com\/.+?_p20\d_ - reject
-^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/.+\.tc\.qq\.com\/.+p201\.1\.mp4\? - reject
-^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/[a-z.]+\.tc\.qq\.com\/[\w\W]+=v3004 - reject
-^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/[a-z.]+\.tc\.qq\.com\/[\w\W]+_p20\d - reject
-^https?:\/\/video\.dispatch\.tc\.qq\.com\/\w+\.p20\d\.1\.mp4 - reject
+# 腾讯视频
+^http:\/\/[0-9\.:]*\/?(defaultts|vmind\.qqvideo)\.tc\.qq\.com\/\w+ - reject
+^http:\/\/apd-vlive\.apdcdn\.tc\.qq\.com\/vmind\.qqvideo\.tc\.qq\.com\/\w+ - reject
+^http:\/\/apd-\w+\.v\.smtcdns\.com\/(defaultts|omts|varietyts|vmind\.qqvideo)\.tc\.qq\.com\/\w+ - reject
+
+# ========== 优酷视频 ==========
 
 
 [Map Local]
 # ========== 爱奇艺 ==========
-^https?:\/\/act\.vip\.iqiyi\.com\/interact\/api\/show\.do data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-200.txt"
-^https?:\/\/act\.vip\.iqiyi\.com\/interact\/api\/v2\/show data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-200.txt"
-^https?:\/\/iface\.iqiyi\.com\/api\/getNewAdInfo data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-200.txt"
-^https?:\/\/iface2\.iqiyi\.com\/fusion\/3\.0\/fusion_switch data="https://raw.githubusercontent.com/axcsz/Collect/master/Surge/mocks/reject-img.gif"
-# 首页,信息流广告,我的页面,左上角天气,底部菜单,顶部菜单,青少年弹窗
+# 首页,信息流广告,我的页面,二楼,左上角天气,底部菜单,顶部菜单,青少年弹窗
 ^https:\/\/iface2\.iqiyi\.com\/views_pop\/3\.0\/pop_control\? data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 # 播放页,开通会员提示
 ^https:\/\/act\.vip\.iqiyi\.com\/interact\/api\/v2\/show\? data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 
-# ========== 芒果TV ==========
-^http://dflow.bz.mgtv.com/flow/getExtensionPosition data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-200.txt"
-^http://iphone.v0.mgtv.com/show.php?abroad.+ data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-200.txt"
-^http://rc-topic-api.bz.mgtv.com/rc/topic/rank data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-200.txt"
-^https://credits.bz.mgtv.com/credits/selectedToast data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
-^https://credits.bz.mgtv.com/credits/url data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-200.txt"
-^https://dc.bz.mgtv.com/dynamic/v1/channel/vrsList data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
-^https://floor.bz.mgtv.com/floor/detail.+ data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-200.txt"
-^https://img.da.mgtv.com/mediafiles/wiad_creative/1008/*.gif data="https://raw.githubusercontent.com/axcsz/Collect/master/Surge/mocks/reject-img.gif"
-^https://layer.bz.mgtv.com/layer/conf.* data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
-^https://layer.bz.mgtv.com/layer/confv2 data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-200.txt"
-^https://layer.bz.mgtv.com/layer/report data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-200.txt"
-^https://me.bz.mgtv.com/v3/module/list data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-200.txt"
-^https://me2.bz.mgtv.com/v3/module/list.+ data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
-^https://mob.bz.mgtv.com/odin/c1/channel/ads data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-200.txt"
-^https://mob.bz.mgtv.com/odin/c1/skin/config data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-200.txt"
-^https://mobile.api.mgtv.com/v2/mobile/checkUpdate data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-200.txt"
-^https://mobile.da.mgtv.com/app/el data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-200.txt"
-^https://mobile.da.mgtv.com/creative/list data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
-^https://mobile.da.mgtv.com/json/app/bdboot data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-200.txt"
-^https://mobile.da.mgtv.com/m/page data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-200.txt"
-^https://pcvideoaliyun.titan.mgtv.com data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
-^https://playgift.api.mgtv.com/play/gift/api/play/config data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-200.txt"
-^https://video.da.mgtv.com data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
-^https://vipcdn.mgtv.com/act_ugc/billing/20220825/tmp/acf2efcc245911edbe6e00163e308875.png data="https://raw.githubusercontent.com/axcsz/Collect/master/Surge/mocks/reject-img.gif"
-^https?:\/\/recom\.api\.mgtv\.com\/xyt\/banner.+ data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-200.txt"
-^https?:\/\/vip\.bz\.mgtv\.com\/client\/dynamic_entry.+ data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-200.txt"
-# 芒果TV
-^https?:\/\/nuc\.api\.mgtv.com\/Logout data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-200.txt"
-^https?:\/\/pcvideoyd\.titan\.mgtv\.com\/pb\/ data="https://raw.githubusercontent.com/axcsz/Collect/master/Surge/mocks/reject-img.gif"
-^https?:\/\/api-access\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk\/ data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-200.txt"
-^https?:\/\/sf3-fe-tos\.pglstatp-toutiao\.com\/obj\/ad-pattern\/renderer\/package\.json data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-200.txt"
-^https?:\/\/api-access\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/server_bidding\/pre_fetch\/ data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-200.txt"
-^https?:\/\/api-access\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk\/stats\/batch\/ data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-200.txt"
-^https?:\/\/mob\.bz\.mgtv\.com\/odin\/c1\/channel\/ads\?_ data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-200.txt"
-^https?:\/\/mobile\.da\.mgtv\.com\/json\/app\/bdboot data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-200.txt"
-^https?:\/\/mobile\.api\.mgtv\.com\/mobile\/config\?_support data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-200.txt"
-^https?:\/\/sf3-fe-tos\.pglstatp-toutiao\.com\/obj\/ad-pattern\/renderer\/ data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-200.txt"
+# ========== 芒果视频 ==========
+# 首页,左上角推广,信息流,底部菜单红点,顶部菜单,搜索框
+^http:\/\/[0-9\.]+\/odin\/c1\/(channel\/ads|skin\/config)\? data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
+^http:\/\/mobileso\.bz\.mgtv\.com\/spotlight\/search\/v1\? data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
+^https:\/\/damang\.api\.mgtv\.com\/station\/album\/red\/dot\? data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
+# 升级弹窗
+^https:\/\/mobile\.api\.mgtv\.com\/v2\/mobile\/checkUpdate\? data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 
 # ========== 腾讯视频 ==========
-^http:\/\/apd-vlive\.apdcdn\.tc\.qq\.com\/vmind\.qqvideo\.tc\.qq\.com\/\w+ data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
-^http:\/\/[0-9\.:]*\/?(defaultts|vmind\.qqvideo)\.tc\.qq\.com\/\w+ data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
-^https?:\/\/btrace.qq.com data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-200.txt"
-^https?:\/\/vv\.video\.qq\.com\/getvmind\? data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-200.txt"
-^https?:\/\/[\s\S]*\/.+?\.tc\.qq\.com/.*?p201.1\.mp4 data="https://raw.githubusercontent.com/axcsz/Collect/master/Surge/mocks/reject-img.gif"
-^https?:\/\/(?:(?:25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(?:25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/.+?\.tc\.qq\.com\/.+?p201\.1\.mp4\? data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-200.txt"
-^http:\/\/apd-\w+\.v\.smtcdns\.com\/(defaultts|omts|varietyts|vmind\.qqvideo)\.tc\.qq\.com\/\w+ data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 
 # ========== 优酷视频 ==========
+# 播放页,主演陪你看
+^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.pisp\.scripts\.get data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
+# 青少年模式弹窗
+^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.huluwa\.(dispatcher\.youthmode\.config2|user\.youthmode\.servermsg) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 
 
 [Script]
 # ========== 爱奇艺 ==========
 # 开屏广告,播放广告
-爱奇艺 = type=http-response,pattern=^http:\/\/(kjp|t7z)\.cupid\.iqiyi\.com\/mixer\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
-# 首页,信息流广告,我的页面,左上角天气,底部菜单,顶部菜单,青少年弹窗
+爱奇艺 = type=http-response,pattern=^https?:\/\/(kjp|t7z)\.cupid\.iqiyi\.com\/mixer\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
+# 首页,信息流广告,我的页面,二楼,左上角天气,底部菜单,顶部菜单,青少年弹窗
 爱奇艺 = type=http-response,pattern=^http:\/\/[0-9\.]+\/3f1\/cards\.iqiyi\.com\/(views_home\/3\.0\/qy_home|waterfall\/3\.0\/feed)\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
 爱奇艺 = type=http-response,pattern=^http:\/\/access\.if\.iqiyi\.com\/3f1\/cards\.iqiyi\.com\/(views_category\/3\.0\/category_home|views_home\/3\.0\/qy_home|waterfall\/3\.0\/feed)\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
 爱奇艺 = type=http-response,pattern=^https:\/\/cards\.iqiyi\.com\/(views_category\/3\.0\/category_home|views_home\/3\.0\/qy_home|waterfall\/3\.0\/feed)\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
 爱奇艺 = type=http-response,pattern=^https:\/\/iface2\.iqiyi\.com\/aggregate\/3\.0\/getMyMenus\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
 爱奇艺 = type=http-response,pattern=^https:\/\/iface2\.iqiyi\.com\/control\/3\.0\/init_proxy\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
+爱奇艺 = type=http-response,pattern=^https:\/\/iface2\.iqiyi\.com\/fusion\/3\.0\/common_switch\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
 爱奇艺 = type=http-response,pattern=^https:\/\/iface2\.iqiyi\.com\/views\/3\.0\/(bottom_theme|home_top_menu)\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
 # 播放页,开通会员提示
 爱奇艺 = type=http-response,pattern=^https:\/\/cards\.iqiyi\.com\/views_plt\/3\.0\/player_tabs_v2\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
@@ -118,16 +62,22 @@ https?:\/\/.+\.iqiyipic\.com\/image\/20*_100000 - reject
 # 评论区
 爱奇艺 = type=http-response,pattern=^https:\/\/comment-card\.iqiyi\.com\/views_comment\/3\.0\/long_video_comments\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
 
-# ========== 芒果TV ==========
-芒果tv = type=http-response,pattern=^http://dc.bz.mgtv.com/dynamic/v1/channel/index/.+,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
+# ========== 芒果视频 ==========
+# 首页,左上角推广,信息流,底部菜单红点,顶部菜单,搜索框
+芒果视频 = type=http-response,pattern=^http:\/\/mob-st\.bz\.mgtv\.com\/odin\/c1\/channel\/index\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
+芒果视频 = type=http-response,pattern=^https?:\/\/dc2?\.bz\.mgtv\.com\/dynamic\/v1\/channel\/(index|vrsList)\/\w,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
+芒果视频 = type=http-response,pattern=^https?:\/\/mobileso\.bz\.mgtv\.com\/mobile\/recommend\/v2\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
+# 我的页面
+芒果视频 = type=http-response,pattern=^https:\/\/me\.bz\.mgtv\.com\/v3\/module\/list\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
+# 播放详情页
+芒果视频 = type=http-response,pattern=^https:\/\/mobile\.api\.mgtv\.com\/v10\/video\/info\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
+
+# ========== 腾讯视频 ==========
 
 # ========== 优酷视频 ==========
-# 首页信息流,首页菜单,我的页面,底部菜单
-优酷视频 = type=http-response,pattern=^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.relationrecommend\.wirelessrecommend\.recommend,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
-优酷视频 = type=http-response,pattern=^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.columbus\.(home|uc)\.query,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
+# 首页信息流,播放详情页,首页菜单,我的页面,底部菜单
+优酷视频 = type=http-response,pattern=^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.columbus\.(gateway\.new\.execute|home\.query|uc\.query),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
 优酷视频 = type=http-response,pattern=^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.haidai\.lantern\.appconfig\.get,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
-# 青少年模式弹窗
-优酷视频 = type=http-response,pattern=^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.huluwa\.dispatcher\.youthmode\.config2,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
 # 热剧弹窗
 优酷视频 = type=http-response,pattern=^https:\/\/push\.m\.youku\.com\/collect-api\/get_push_interval_config_wx\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
 # 开屏广告
