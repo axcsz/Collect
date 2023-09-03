@@ -1,7 +1,7 @@
 #!name = Unbreak分流
 #!desc = Unbreak相关服务进行分流
 #!author = DivineEngine RuCu6 fm200
-# update = 2023.07.20
+#!update = 2023.09.03
 
 
 # Unbreak
@@ -20,7 +20,7 @@ DOMAIN,update.googleapis.com
 DOMAIN,dl.google.com
 DOMAIN,dl.l.google.com
 DOMAIN,update.googleapis.com
-# >> Firebase Cloud Messaging
+# > Firebase Cloud Messaging
 DOMAIN,mtalk.google.com
 DOMAIN,alt1-mtalk.google.com
 DOMAIN,alt2-mtalk.google.com
@@ -71,7 +71,27 @@ DOMAIN-KEYWORD,ess.apple.com
 DOMAIN-KEYWORD,ctc.qzs.qzone.qq.com
 # > 路由器后台
 IP-CIDR,192.168.0.1/16
-# > 其他分流修正
+# > anti-ad
 DOMAIN-KEYWORD,anti-ad.net
+# > 12306
 DOMAIN,ad.12306.cn
+# > 大师兄影视
+DOMAIN,sdk.alibaba.com.ailbaba.me
+DOMAIN,img.ffzypic.com
+DOMAIN,img.liangzipic.com
+DOMAIN,img.bfzypic.com
+DOMAIN,img.kuaikanzy.net
+DOMAIN,vip.imgffzy.com
+DOMAIN,vip.ffzyread.com
+DOMAIN,cdn.jsdelivr.net
+DOMAIN,image.maimn.com
+DOMAIN-KEYWORD,bfzycdn.com
+DOMAIN-KEYWORD,vip.kuaikan-cdn
+DOMAIN-KEYWORD,vip.ffzy-play
+DOMAIN-KEYWORD,vip.ffzy-online
+# > 携程
+DOMAIN-KEYWORD,aw-s.tripcdn.com
+DOMAIN-KEYWORD,trip.com
+# > 
 DOMAIN,ca.iadsdk.apple.com
+DOMAIN,amdc.m.taobao.com
