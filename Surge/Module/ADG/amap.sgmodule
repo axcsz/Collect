@@ -1,7 +1,7 @@
 #!name = 净化 & 高德地图
 #!desc = 高德地图APP去广告 导航详情页 路线规划 地点详情页 搜索详情页 需要重新安装高德地图app！！！
 #!author = RuCu6 kokoryh
-#!update = 2023-08-27 21:00
+#!update = 2023-09-05 14:10
 
 
 [URL Rewrite]
@@ -13,18 +13,16 @@
 [Map Local]
 # 其他
 ^https:\/\/m5\.amap\.com\/ws\/shield\/scene\/recommend\? data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
-^https:\/\/m5\.amap\.com\/ws\/shield\/dsp\/app\/startup\/init\? data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
-^https?:\/\/m\d\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\/ data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-200.txt"
 # 导航详情页,路线规划,地点详情页,搜索详情页,导航结束页
 ^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/card-service-(car-end|route-plan)\? data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
 ^https:\/\/m5\.amap\.com\/ws\/shield\/search\/new_hotword\? data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
 ^https:\/\/m5\.amap\.com\/ws\/shield\/search_poi\/tips_adv\? data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
 ^https:\/\/oss\.amap\.com\/ws\/banner\/lists\/\? data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
 # 首页,推广卡片,红点角标,右上角动图,搜索框热词,左下角天气,消息横幅
-^https:\/\/m5\.amap\.com\/ws\/valueadded\/weather\/v2\? data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
-^https:\/\/sns\.amap\.com\/ws\/msgbox\/pull_mp\? data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
 ^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/main-page-(assets|location)\? data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
 ^https:\/\/m5\.amap\.com\/ws\/(mapapi\/hint_text\/offline_data|message\/notice\/list|shield\/search\/new_hotword)\? data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
+^https:\/\/m5\.amap\.com\/ws\/valueadded\/weather\/v2\? data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
+^https:\/\/sns\.amap\.com\/ws\/msgbox\/pull_mp\? data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
 # 打车页,红点角标,弹窗,天气图标,推广卡片
 ^https:\/\/m5-zb\.amap\.com\/ws\/boss\/(car\/order\/content_info|order\/car\/king_toolbox_car_bubble)\? data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
 ^https:\/\/m5-zb\.amap\.com\/ws\/boss\/(order_web\/friendly_information|tips\/onscene_visual_optimization)\? data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
@@ -38,7 +36,7 @@
 高德地图 = type=http-response,pattern=^https:\/\/m5\.amap\.com\/ws\/shield\/search\/(common\/coupon\/info|poi\/detail)\?,requires-body=1,script-update-interval=1,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/amap.js
 高德地图 = type=http-response,pattern=^https:\/\/m5\.amap\.com\/ws\/shield\/search_poi\/(homepage|mps|search\/sp|sug|tips_operation_location)\?,requires-body=1,script-update-interval=1,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/amap.js
 # 首页,推广卡片,红点角标,右上角动图,搜索框热词,左下角天气,消息横幅
-高德地图 = type=http-response,pattern=^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/main-page\?,requires-body=1,script-update-interval=1,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/amap.js
+高德地图 = type=http-response,pattern=^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/(card-service-plan-home|main-page)\?,requires-body=1,script-update-interval=1,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/amap.js
 高德地图 = type=http-response,pattern=^https:\/\/m5\.amap\.com\/ws\/shield\/frogserver\/aocs\/updatable\/1\?,requires-body=1,script-update-interval=1,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/amap.js
 # 我的页面,推广卡片
 高德地图 = type=http-response,pattern=^https:\/\/m5\.amap\.com\/ws\/shield\/dsp\/profile\/index\/nodefaasv3\?,requires-body=1,script-update-interval=1,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/amap.js
@@ -52,4 +50,4 @@
 
 
 [MITM]
-hostname = %APPEND% m5.amap.com, m5-zb.amap.com, oss.amap.com, sns.amap.com, optimus-ads.amap.com, m*.amap.com
+hostname = %APPEND% m5.amap.com, m5-zb.amap.com, oss.amap.com, sns.amap.com
