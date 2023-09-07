@@ -1,7 +1,7 @@
 #!name = 净化 & 视频软件广告
 #!desc = 删除视频软件开屏广告
 #!author = RuCu6
-#!update = 2023-09-02 13:45
+#!update = 2023-09-06 16:35
 
 
 [URL Rewrite]
@@ -36,8 +36,8 @@
 # ========== 腾讯视频 ==========
 
 # ========== 优酷视频 ==========
-# 播放页,主演陪你看
-^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.pisp\.scripts\.get data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
+# 播放页,主演陪你看,弹窗动图
+^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.(pisp\.scripts\.get|xspace\.poplayer\.position\.query) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 # 青少年模式弹窗
 ^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.huluwa\.(dispatcher\.youthmode\.config2|user\.youthmode\.servermsg) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 
@@ -76,8 +76,11 @@
 
 # ========== 优酷视频 ==========
 # 首页信息流,播放详情页,首页菜单,我的页面,底部菜单
-优酷视频 = type=http-response,pattern=^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.columbus\.(gateway\.new\.execute|home\.query|uc\.query),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
+优酷视频 = type=http-response,pattern=^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.columbus\.(gateway\.new\.execute|home\.feed|home\.query|uc\.query),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
+优酷视频 = type=http-response,pattern=^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.columbus\.ycp\.query,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
 优酷视频 = type=http-response,pattern=^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.haidai\.lantern\.appconfig\.get,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
+# 搜索页
+优酷视频 = type=http-response,pattern=^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.soku\.yksearch,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
 # 热剧弹窗
 优酷视频 = type=http-response,pattern=^https:\/\/push\.m\.youku\.com\/collect-api\/get_push_interval_config_wx\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
 # 开屏广告
