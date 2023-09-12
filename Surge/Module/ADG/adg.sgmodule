@@ -1,7 +1,7 @@
 #!name = 净化 & APP和微信小程序去广告合集
 #!desc = 去广告合集，包含app广告和微信小程序广告，以下app请使用单独配置文件：高德地图,哔哩哔哩,菜鸟,微博,YouTube,知乎,小红书,IT之家等
 #!author = Keywos kokoryh RuCu6 fm200
-#!update = 2023-09-03
+#!update = 2023-09-10 22:50
 
 
 [General]
@@ -204,6 +204,7 @@ force-http-engine-hosts = %APPEND% sdk.alibaba.com.ailbaba.me, *.cp31.ott.cibntv
 
 # X
 # 小米商城搜索框,热词,卡片 商品推荐信息流 api.m.mi.com, api-mifit.huami.com, api.jr.mi.com, home.mi.com
+^https:\/\/shop-api\.retail\.mi\.com\/mtop\/navi\/skywheel\/mishop\/splash data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 ^https:\/\/api\.m\.mi\.com\/v1\/app\/popup_info$ data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 ^https:\/\/api\.m\.mi\.com\/v1\/misearch\/search_input$ data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 ^https:\/\/api\.m\.mi\.com\/v2\/search\/search_default$ data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
@@ -267,4 +268,4 @@ Reddit = type=http-response,pattern=^https:\/\/gql\.reddit\.com\/$,requires-body
 
 [MITM]
 h2 = true
-hostname = %APPEND% gab.122.gov.cn, list-app-m.i4.cn, search-app-m.i4.cn, gw.aihuishou.com, heic.alicdn.com, api.chelaile.net.cn, web.chelaile.net.cn, app-gw.csdn.net, ccmsupport-sz.tenpay.com, api.douban.com, elemecdn.com, fuss10.elemecdn.com, www1.elecfans.com, api-access.pangolin-sdk-toutiao.com, *.pglstatp-toutiao.com, *.byteimg.com, *.snssdk.com, zj.haier.net, api.m.jd.com, image1.ccb.com, imageadv.ccb.com, *.pstatp.com, api.pinduoduo.com, api.yangkeduo.com, rescdn.qqmail.com, y.gtimg.cn, us.l.qq.com, analytics.163.com, appconf.mail.163.com, ehome.esgcc.com.cn, gw.alicdn.com, api.jr.mi.com, wallet.95516.com, clientaccess.10086.cn, wap.js.10086.cn, pan.baidu.com, wrapper.cyapi.cn, sdk.alibaba.com.ailbaba.me, acs.m.taobao.com, api.coolapk.com, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, wxproj.seeyouyima.com, api.mcd.cn, mxsa.mxbc.net, ad.maoyan.com, wx.maoyan.com, vod-movie.maoyan.com, api.maoyan.com, htwkop.xiaojukeji.com, sctel10000.cn, mp.weixin.qq.com, api.m.mi.com, api-mifit.huami.com, api.jr.mi.com, home.mi.com, home.mi.com, client.app.coc.10086.cn, ad.12306.cn, api.alipan.com, member.alipan.com, links.jianshu.com, www.jianshu.com, gql.reddit.com
+hostname = %APPEND% shop-api.retail.mi.com, gab.122.gov.cn, list-app-m.i4.cn, search-app-m.i4.cn, gw.aihuishou.com, heic.alicdn.com, api.chelaile.net.cn, web.chelaile.net.cn, app-gw.csdn.net, ccmsupport-sz.tenpay.com, api.douban.com, elemecdn.com, fuss10.elemecdn.com, www1.elecfans.com, api-access.pangolin-sdk-toutiao.com, *.pglstatp-toutiao.com, *.byteimg.com, *.snssdk.com, zj.haier.net, api.m.jd.com, image1.ccb.com, imageadv.ccb.com, *.pstatp.com, api.pinduoduo.com, api.yangkeduo.com, rescdn.qqmail.com, y.gtimg.cn, us.l.qq.com, analytics.163.com, appconf.mail.163.com, ehome.esgcc.com.cn, gw.alicdn.com, api.jr.mi.com, wallet.95516.com, clientaccess.10086.cn, wap.js.10086.cn, pan.baidu.com, wrapper.cyapi.cn, sdk.alibaba.com.ailbaba.me, acs.m.taobao.com, api.coolapk.com, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, wxproj.seeyouyima.com, api.mcd.cn, mxsa.mxbc.net, ad.maoyan.com, wx.maoyan.com, vod-movie.maoyan.com, api.maoyan.com, htwkop.xiaojukeji.com, sctel10000.cn, mp.weixin.qq.com, api.m.mi.com, api-mifit.huami.com, api.jr.mi.com, home.mi.com, home.mi.com, client.app.coc.10086.cn, ad.12306.cn, api.alipan.com, member.alipan.com, links.jianshu.com, www.jianshu.com, gql.reddit.com
