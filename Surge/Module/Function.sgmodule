@@ -12,6 +12,10 @@ skip-proxy = %APPEND% iosapps.itunes.apple.com
 # 百度 纯净搜索
 ^https?:\/\/(www|m)\.baidu\.com\/?($|\?(from=\w{8,9}|tn=&from=)) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/baidu.html" header="Content-Type: text/html; charset=utf-8"
 
+# 彩云天气 //biz.cyapi.cn, wrapper.cyapi.cn
+^https:\/\/api\.caiyunapp\.com\/v1\/activity\? data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
+^https:\/\/wrapper\.cyapi\.cn\/v1\/activity\? data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
+
 
 [Script]
 # 百度文库解锁VIP文档阅读权限 //appwk.baidu.com
@@ -20,11 +24,20 @@ skip-proxy = %APPEND% iosapps.itunes.apple.com
 # 百度网盘画质倍速 //pan.baidu.com
 百度网盘 = type=http-request,pattern=^https:\/\/pan\.baidu\.com\/rest\/2\.0\/membership\/user,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/baiduCloud.js
 
+# 彩云天气 //biz.cyapi.cn, wrapper.cyapi.cn
+彩云天气 = type=http-response,pattern=^https:\/\/biz\.cyapi\.cn\/(p\/v1\/vip_info|v2\/user),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/caiyun.js
+
+# Emby播放权限 mb3admin.com
+Emby = type=http-response,pattern=^https:\/\/mb3admin\.com\/admin\/service(\/registration\/validateDevice|\/appstore\/register|\/registration\/validate|\/registration\/getStatus|\/supporter\/retrievekey),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/emby/unlock2.js
+
+# Enpass Password Manager解锁订阅 //license.enpass.io
+Enpass = type=http-response,pattern=^https:\/\/license\.enpass\.io\/api\/v1\/subscription\/me,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/enpass.js
+
 # 京东比价
 京东比价 = type=http-response,requires-body=1,pattern=^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig),script-path=https://raw.githubusercontent.com/Keywos/Rule/main/JS/Jdbj.js
 
 # 简讯订阅 //api.tipsoon.com
-简讯订阅 = type=http-request,pattern=^https:\/\/api\.tipsoon\.com\/api\/v1\/user\/info$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/jianxun.js
+简讯订阅 = type=http-response,pattern=^https:\/\/api\.tipsoon\.com\/api\/v1\/user\/info$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/jianxun.js
 
 # TF区域限制解除
 TF下载修正 = type=http-request,pattern=^https?:\/\/testflight\.apple\.com\/v\d\/accounts\/.+?\/install$,requires-body=1,script-update-interval=-1,max-size=0,script-path=https://gist.githubusercontent.com/NobyDa/9be418b93afc5e9c8a8f4d28ae403cf2/raw/TF_Download.js
@@ -43,4 +56,4 @@ YouTube-Dualsub-Setting = type=http-request,pattern=https:\/\/setting.youtube.co
 
 
 [MITM]
-hostname = %APPEND% testflight.apple.com, ios-*.prod.ftl.netflix.com, ios.prod.ftl.netflix.com, api.m.jd.com, weixin110.qq.com, security.wechat.com, *.youtube.com， m.baidu.com,www.baidu.com, appwk.baidu.com, pan.baidu.com, api.tipsoon.com
+hostname = %APPEND% testflight.apple.com, ios-*.prod.ftl.netflix.com, ios.prod.ftl.netflix.com, api.m.jd.com, weixin110.qq.com, security.wechat.com, *.youtube.com， m.baidu.com,www.baidu.com, appwk.baidu.com, pan.baidu.com, api.tipsoon.com, biz.cyapi.cn, wrapper.cyapi.cn, mb3admin.com, license.enpass.io
