@@ -16,6 +16,7 @@ skip-proxy = %APPEND% iosapps.itunes.apple.com
 [Script]
 # 百度文库解锁VIP文档阅读权限 //appwk.baidu.com
 百度文库 = type=http-request,pattern=^https:\/\/appwk\.baidu\.com\/naapi\/user\/getinfo,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/baiduLib.js
+
 # 百度网盘画质倍速 //pan.baidu.com
 百度网盘 = type=http-request,pattern=^https:\/\/pan\.baidu\.com\/rest\/2\.0\/membership\/user,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/baiduCloud.js
 
