@@ -1,10 +1,7 @@
-#!name=Spotify分流
-#!desc=Spotify相关服务进行分流
-#!author= Axcsz5（整理）
-#!homepage=https://github.com/axcsz/Collect/edit/master/Surge
-#!icon=
-# updatetime=2023.07.13
-
+#!name = Spotify分流
+#!desc = Spotify相关服务进行分流
+#!author = Axcsz5（整理）
+# update = 2023.07.13
 
 
 DOMAIN,audio4-ak-spotify-com.akamaized.net
