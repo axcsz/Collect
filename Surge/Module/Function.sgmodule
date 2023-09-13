@@ -1,10 +1,7 @@
-#!name= 功能 & 模块
-#!desc= 本模块包含，京东比价、奈飞评分、TF区域限制解除等
-#!author= Axcsz5（搬运整理）
-#!homepage= https://github.com/axcsz/Collect/edit/master/Surge
-#!icon=
-#!update= 2023.07.23
-
+#!name = 功能 & 模块
+#!desc = 本模块包含，京东比价、奈飞评分、TF区域限制解除等
+#!author = Axcsz5（搬运整理）
+#!update = 2023.07.23
 
 
 [General]
