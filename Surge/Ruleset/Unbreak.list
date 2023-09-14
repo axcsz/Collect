@@ -1,95 +1,21 @@
 #!name = Unbreak分流
 #!desc = Unbreak相关服务进行分流
 #!author = DivineEngine RuCu6 fm200
-#!update = 2023.09.03
+#!update = 2023.09.14
 
 
-# Unbreak
-# > General
-DOMAIN,app.adjust.com
-DOMAIN,app.appsflyer.com
-DOMAIN,bdtj.tagtic.cn
-# > Alibaba
+# ======= 0 ======= #
+# 12306
+DOMAIN,ad.12306.cn
+
+# ======= A ======= #
+# Alibaba
 DOMAIN,log.mmstat.com
 DOMAIN,sycm.mmstat.com
-# > Google
-DOMAIN-SUFFIX,blog.google 
-DOMAIN-SUFFIX,googletraveladservices.com 
-DOMAIN,clientservices.googleapis.com
-DOMAIN,update.googleapis.com
-DOMAIN,dl.google.com
-DOMAIN,dl.l.google.com
-DOMAIN,update.googleapis.com
-# > Firebase Cloud Messaging
-DOMAIN,mtalk.google.com
-DOMAIN,alt1-mtalk.google.com
-DOMAIN,alt2-mtalk.google.com
-DOMAIN,alt3-mtalk.google.com
-DOMAIN,alt4-mtalk.google.com
-DOMAIN,alt5-mtalk.google.com
-DOMAIN,alt6-mtalk.google.com
-DOMAIN,alt7-mtalk.google.com
-DOMAIN,alt8-mtalk.google.com
-# > Tencent
-DOMAIN,fairplay.l.qq.com
-DOMAIN,livew.l.qq.com
-DOMAIN,vd.l.qq.com
-DOMAIN,vi.l.qq.com
-# > Strava
-DOMAIN,analytics.strava.com
-# > Umeng
-DOMAIN,msg.umeng.com
-DOMAIN,msg.umengcloud.com
-# > 苹果推送服务
-DOMAIN-KEYWORD,push.apple.com
-# > 苹果时间同步
-DOMAIN,time.apple.com
-# > 苹果天气服务
-DOMAIN-KEYWORD,weather-edge.apple.com
-DOMAIN-KEYWORD,weather-adge.apple.com
-DOMAIN-KEYWORD,weather-data.apple.com
-DOMAIN-KEYWORD,weather-map.apple.com
-DOMAIN-KEYWORD,weather-analytics-events.apple.com
-# > 苹果内购服务
-DOMAIN-KEYWORD,buy.itunes.apple.com
-# > 苹果icloud
-DOMAIN-KEYWORD,icloud.com
-# > 苹果输入法相关服务
-DOMAIN-KEYWORD,api.smoot.apple.com
-DOMAIN-KEYWORD,api.smoot.apple.cn
-# > 苹果iMessage服务
-DOMAIN,init.ess.apple.com
-# > 苹果其他服务
-DOMAIN-KEYWORD,ssl.apple.com
-DOMAIN-KEYWORD,humb.apple.com
-DOMAIN,smp-device-content.apple.com
-DOMAIN-KEYWORD,api-adservices.apple.com
-DOMAIN-KEYWORD,ls.apple.com
-DOMAIN-KEYWORD,gsa.apple.com
-DOMAIN-KEYWORD,ess.apple.com
-# > QQ空间
-DOMAIN-KEYWORD,ctc.qzs.qzone.qq.com
-# > 路由器后台
-IP-CIDR,192.168.0.1/16
-# > anti-ad
+DOMAIN,amdc.m.taobao.com
+# anti-ad
 DOMAIN-KEYWORD,anti-ad.net
-# > 12306
-DOMAIN,ad.12306.cn
-# > 大师兄影视
-DOMAIN,sdk.alibaba.com.ailbaba.me
-DOMAIN,img.ffzypic.com
-DOMAIN,img.liangzipic.com
-DOMAIN,img.bfzypic.com
-DOMAIN,img.kuaikanzy.net
-DOMAIN,vip.imgffzy.com
-DOMAIN,vip.ffzyread.com
-DOMAIN,cdn.jsdelivr.net
-DOMAIN,image.maimn.com
-DOMAIN-KEYWORD,bfzycdn.com
-DOMAIN-KEYWORD,vip.kuaikan-cdn
-DOMAIN-KEYWORD,vip.ffzy-play
-DOMAIN-KEYWORD,vip.ffzy-online
-# > 爱影视
+# 爱影视
 DOMAIN,static.jssp.tv
 DOMAIN,lain.bgm.tv
 DOMAIN,tiao.cjkypo.com
@@ -103,9 +29,120 @@ DOMAIN-KEYWORD,vip.lz-cdn
 DOMAIN-KEYWORD,ax1x.com
 DOMAIN-KEYWORD,o.lencr.org
 DOMAIN-KEYWORD,ttcdn-tos.kkimg.cc
-# > 携程
+
+# ======= D ======= #
+# 大师兄影视
+DOMAIN,sdk.alibaba.com.ailbaba.me
+DOMAIN,img.ffzypic.com
+DOMAIN,img.liangzipic.com
+DOMAIN,img.bfzypic.com
+DOMAIN,img.kuaikanzy.net
+DOMAIN,vip.imgffzy.com
+DOMAIN,vip.ffzyread.com
+DOMAIN,cdn.jsdelivr.net
+DOMAIN,image.maimn.com
+DOMAIN-KEYWORD,bfzycdn.com
+DOMAIN-KEYWORD,vip.kuaikan-cdn
+DOMAIN-KEYWORD,vip.ffzy-play
+DOMAIN-KEYWORD,vip.ffzy-online
+
+# ======= F ======= #
+# Firebase Cloud Messaging
+DOMAIN,mtalk.google.com
+DOMAIN,alt1-mtalk.google.com
+DOMAIN,alt2-mtalk.google.com
+DOMAIN,alt3-mtalk.google.com
+DOMAIN,alt4-mtalk.google.com
+DOMAIN,alt5-mtalk.google.com
+DOMAIN,alt6-mtalk.google.com
+DOMAIN,alt7-mtalk.google.com
+DOMAIN,alt8-mtalk.google.com
+
+# ======= G ======= #
+# General
+DOMAIN,app.adjust.com
+DOMAIN,app.appsflyer.com
+DOMAIN,bdtj.tagtic.cn
+# Google
+DOMAIN-SUFFIX,blog.google 
+DOMAIN-SUFFIX,googletraveladservices.com 
+DOMAIN,clientservices.googleapis.com
+DOMAIN,update.googleapis.com
+DOMAIN,dl.google.com
+DOMAIN,dl.l.google.com
+DOMAIN,update.googleapis.com
+
+# ======= P ======= #
+# 苹果推送服务
+DOMAIN-KEYWORD,push.apple.com
+# 苹果时间同步
+DOMAIN,time.apple.com
+# 苹果天气服务
+DOMAIN-KEYWORD,weather-edge.apple.com
+DOMAIN-KEYWORD,weather-adge.apple.com
+DOMAIN-KEYWORD,weather-data.apple.com
+DOMAIN-KEYWORD,weather-map.apple.com
+DOMAIN-KEYWORD,weather-analytics-events.apple.com
+# 苹果内购服务
+DOMAIN-KEYWORD,buy.itunes.apple.com
+# 苹果icloud
+DOMAIN-KEYWORD,icloud.com
+# 苹果输入法相关服务
+DOMAIN-KEYWORD,api.smoot.apple.com
+DOMAIN-KEYWORD,api.smoot.apple.cn
+# 苹果iMessage服务
+DOMAIN,init.ess.apple.com
+# 苹果其他服务
+DOMAIN,ca.iadsdk.apple.com
+DOMAIN,smp-device-content.apple.com
+DOMAIN-KEYWORD,ssl.apple.com
+DOMAIN-KEYWORD,humb.apple.com
+DOMAIN-KEYWORD,api-adservices.apple.com
+DOMAIN-KEYWORD,ls.apple.com
+DOMAIN-KEYWORD,gsa.apple.com
+DOMAIN-KEYWORD,ess.apple.com
+
+# ======= Q ======= #
+# QQ空间
+DOMAIN-KEYWORD,ctc.qzs.qzone.qq.com
+
+# ======= S ======= #
+# Strava
+DOMAIN,analytics.strava.com
+
+# ======= T ======= #
+# Tencent
+DOMAIN,fairplay.l.qq.com
+DOMAIN,livew.l.qq.com
+DOMAIN,vd.l.qq.com
+DOMAIN,vi.l.qq.com
+# 天翼网关 & 路由器后台
+IP-CIDR,192.168.0.1/16
+# LAN
+IP-CIDR,0.0.0.0/8
+IP-CIDR,10.0.0.0/8
+IP-CIDR,100.64.0.0/10
+IP-CIDR,127.0.0.0/8
+IP-CIDR,169.254.0.0/16
+IP-CIDR,172.16.0.0/12
+IP-CIDR,192.0.0.0/24
+IP-CIDR,192.0.2.0/24
+IP-CIDR,192.168.0.0/16
+IP-CIDR,192.88.99.0/24
+IP-CIDR,198.18.0.0/15
+IP-CIDR,198.51.100.0/24
+IP-CIDR,203.0.113.0/24
+IP-CIDR,224.0.0.0/3
+IP-CIDR6,::1/128
+IP-CIDR6,fc00::/7
+IP-CIDR6,fe80::/10
+
+# ======= U ======= #
+# Umeng
+DOMAIN,msg.umeng.com
+DOMAIN,msg.umengcloud.com
+
+# ======= X ======= #
+# 携程
 DOMAIN-KEYWORD,aw-s.tripcdn.com
 DOMAIN-KEYWORD,trip.com
-# > 
-DOMAIN,ca.iadsdk.apple.com
-DOMAIN,amdc.m.taobao.com
