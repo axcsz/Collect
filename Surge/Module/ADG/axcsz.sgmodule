@@ -1,21 +1,15 @@
 #!name = 净化 & 视频软件广告
-#!desc = 删除视频软件开屏广告
+#!desc = 删除视频软件开屏广告，包含腾讯、优酷、芒果、爱奇艺
 #!author = RuCu6
-#!update = 2023-09-09 08:30
+#!update = 2023-09-11 09:05
 
 
 [URL Rewrite]
-# ========== 爱奇艺 ==========
-
-# ========== 芒果视频 ==========
-
 # ========== 腾讯视频 ==========
 # 腾讯视频
 ^http:\/\/[0-9\.:]*\/?(defaultts|vmind\.qqvideo)\.tc\.qq\.com\/\w+ - reject
 ^http:\/\/apd-vlive\.apdcdn\.tc\.qq\.com\/vmind\.qqvideo\.tc\.qq\.com\/\w+ - reject
 ^http:\/\/apd-\w+\.v\.smtcdns\.com\/(defaultts|omts|varietyts|vmind\.qqvideo)\.tc\.qq\.com\/\w+ - reject
-
-# ========== 优酷视频 ==========
 
 
 [Map Local]
@@ -33,11 +27,9 @@
 # 升级弹窗
 ^https:\/\/mobile\.api\.mgtv\.com\/v2\/mobile\/checkUpdate\? data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 
-# ========== 腾讯视频 ==========
-
 # ========== 优酷视频 ==========
 # 播放页,主演陪你看,弹窗动图
-^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.(pisp\.scripts\.get|xspace\.poplayer\.position\.query) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
+^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.(pisp\.scripts\.get|xspace\.play\.position\.preload\.query|xspace\.poplayer\.position\.query) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 
 
 [Script]
@@ -71,8 +63,6 @@
 # 播放详情页
 芒果视频 = type=http-response,pattern=^https:\/\/mobile\.api\.mgtv\.com\/v10\/video\/info\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
 
-# ========== 腾讯视频 ==========
-
 # ========== 优酷视频 ==========
 # 首页信息流,播放详情页,首页菜单,我的页面,评论区,底部菜单
 优酷视频 = type=http-response,pattern=^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.columbus\.(gateway\.new\.execute|home\.feed|home\.query|uc\.query),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
@@ -81,7 +71,7 @@
 # 搜索页
 优酷视频 = type=http-response,pattern=^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.soku\.yksearch,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
 # 青少年模式弹窗
-优酷视频 = type=http-response,pattern=^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.huluwa\.(dispatcher\.youthmode\.config2|user\.youthmode\.servermsg),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
+优酷视频 = type=http-response,pattern=^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.huluwa\.dispatcher\.youthmode\.config2,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
 # 热剧弹窗
 优酷视频 = type=http-response,pattern=^https:\/\/push\.m\.youku\.com\/collect-api\/get_push_interval_config_wx\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
 # 开屏广告
