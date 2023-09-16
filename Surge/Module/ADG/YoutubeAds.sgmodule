@@ -4,21 +4,15 @@
 #!update = 2023-07-05 21:50
 
 
-[Rule]
-# > AND规则:当所含规则全部匹配时，会被触发
-AND,((PROTOCOL,UDP),(DEST-PORT,443)),REJECT-NO-DROP
-
-
 [Map Local]
-# > 播放页广告
+# 播放页广告
 ^https:\/\/[\w-]+\.googlevideo\.com\/initplayback\?.+&oad data="https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/dist/blank.txt" header="Content-Type: application/vnd.yt-ump"
 
 
 [Script]
-# > 请求体
+# 请求体
 youtube.request = type=http-request,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|reel\/reel_watch_sequence)\?,requires-body=1,max-size=-1,binary-body-mode=1,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/youtube-request.js
-
-# > 响应体
+# 响应体
 youtube.response = type=http-response,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting)\?,requires-body=1,max-size=-1,binary-body-mode=1,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/youtube-response.js
 
 
