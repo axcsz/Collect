@@ -1,4 +1,4 @@
-#!name = 修正分流
+#!name = 修正规则
 #!desc = 主要用于修正后续规则中 REJECT 及 PROXY 策略的一些不正确情况，如常见的暴力去广告造成的某些推送服务无法使用、使用 Google 的一些可直连服务。
 #!author = DivineEngine RuCu6 fm200
 #!update = 2023.09.16
