@@ -1,9 +1,7 @@
-#!name= China分流
-#!desc= China相关服务进行分流
-#!author= DivineEngine Axcsz5（搬运整理）
-#!homepage= https://github.com/axcsz/Collect/edit/master/Surge
-#!icon=
-# updatetime= 2023.07.11
+#!name = 国内规则
+#!desc = 国内网络分流
+#!author = DivineEngine Axcsz5（搬运整理）
+#!update = 2023.07.11
 
 
 
