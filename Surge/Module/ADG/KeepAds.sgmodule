@@ -1,10 +1,7 @@
-#!name= 净化 & keep
-#!desc= 移除广告, 悬浮图标, 搜索页
-#!author= Maasea
-#!homepage= https://github.com/axcsz/Collect/edit/master/Surge
-#!icon=
-#!update= 2023-07-27 
-
+#!name = 净化 & keep
+#!desc = 移除广告, 悬浮图标, 搜索页
+#!author = Maasea
+#!update = 2023-07-27 
 
 
 [URL Rewrite]
@@ -15,9 +12,6 @@
 ^https:\/\/api\.gotokeep\.com\/op-engine-webapp\/tool\/v1\/jump\/popup$ - reject
 # 动态相册
 ^https:\/\/api\.gotokeep\.com\/athena\/v1\/people\/my\/entry _ reject
-
-
-[Map Local]
 
 
 [Script]
