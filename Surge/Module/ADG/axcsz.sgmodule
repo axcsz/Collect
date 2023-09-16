@@ -1,7 +1,7 @@
 #!name = 净化 & 视频软件广告
 #!desc = 删除视频软件开屏广告，包含腾讯、优酷、芒果、爱奇艺
 #!author = RuCu6
-#!update = 2023-09-11 09:05
+#!update = 2023-09-15 18:35
 
 
 [URL Rewrite]
@@ -60,6 +60,8 @@
 芒果视频 = type=http-response,pattern=^https?:\/\/mobileso\.bz\.mgtv\.com\/mobile\/recommend\/v2\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
 # 我的页面
 芒果视频 = type=http-response,pattern=^https:\/\/me\.bz\.mgtv\.com\/v3\/module\/list\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
+# 底部菜单
+芒果视频 = type=http-response,pattern=^https:\/\/mobile\.api\.mgtv\.com\/mobile\/config\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
 # 播放详情页
 芒果视频 = type=http-response,pattern=^https:\/\/mobile\.api\.mgtv\.com\/v10\/video\/info\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
 
