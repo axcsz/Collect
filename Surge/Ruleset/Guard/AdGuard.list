@@ -1,7 +1,7 @@
 #!name = 分流 & 广告拦截合集
 #!desc = 分流广告拦截合集
 #!author = RuCu6 fmz200
-#!update = 2023-09-17
+#!update = 2023-09-28 07:10
 
 
 # ======= 0 ======= #
@@ -60,6 +60,7 @@ DOMAIN,httpdns.baidubce.com
 DOMAIN,lc.map.baidu.com
 # 百度网盘
 DOMAIN,mobads.baidu.com
+DOMAIN,sf3-fe-tos.pglstatp-toutiao.com
 # 百度贴吧
 IP-CIDR,180.76.76.200/32,no-resolve
 # 哔哩哔哩
@@ -69,8 +70,6 @@ DOMAIN,passport.bilibili.com
 # ======= C ======= #
 # 彩云天气
 DOMAIN,ad.cyapi.cn
-# 昌原云充
-DOMAIN,m.adyounger.com
 # ChatGPT
 DOMAIN,o33249.ingest.sentry.io
 # Clue 智库
@@ -174,26 +173,20 @@ DOMAIN,tmeadcomm.y.qq.com
 DOMAIN,statics.woozooo.com
 
 # ======= M ======= #
-# Microsoft
-DOMAIN-SUFFIX,ads.msn.com
-DOMAIN-SUFFIX,ads1.msn.com
-DOMAIN-SUFFIX,ads2.msn.com
-DOMAIN-SUFFIX,bingads.microsoft.com
-DOMAIN-SUFFIX,rads.msn.com
-DOMAIN,mobileads.msn.com
 # 芒果TV
+DOMAIN,credits.bz.mgtv.com
+DOMAIN,credits2.bz.mgtv.com
+DOMAIN,credits3.bz.mgtv.com
 DOMAIN,dflow.bz.mgtv.com
 DOMAIN,encounter.bz.mgtv.com
 DOMAIN,floor.bz.mgtv.com
-DOMAIN,img.da.mgtv.com
 DOMAIN,layer.bz.mgtv.com
 DOMAIN,mob.bz.mgtv.com
-DOMAIN,mobile.da.mgtv.com
 DOMAIN,rc-topic-api.bz.mgtv.com
-DOMAIN,v2.da.mgtv.com
-DOMAIN,video.da.mgtv.com
+DOMAIN,rprain.bz.mgtv.com
+DOMAIN,rprain.log.mgtv.com
 DOMAIN,vip.bz.mgtv.com
-DOMAIN,ys.da.mgtv.com
+DOMAIN-SUFFIX,da.mgtv.com
 # 美团
 DOMAIN,al-log.d.meituan.net
 DOMAIN,babel-statistics-android.d.meituan.net
@@ -203,6 +196,13 @@ DOMAIN,route-stats.d.meituan.net
 # 美颜相机
 DOMAIN,aaid.uyunad.com
 DOMAIN,adui.tg.meitu.com
+# Microsoft
+DOMAIN-SUFFIX,ads.msn.com
+DOMAIN-SUFFIX,ads1.msn.com
+DOMAIN-SUFFIX,ads2.msn.com
+DOMAIN-SUFFIX,bingads.microsoft.com
+DOMAIN-SUFFIX,rads.msn.com
+DOMAIN,mobileads.msn.com
 
 # ======= O ======= #
 # Outlook
@@ -216,7 +216,6 @@ DOMAIN,adstats.tencentmusic.com
 DOMAIN,adcdn.tencentmusic.com
 DOMAIN,adexpo.tencentmusic.com
 DOMAIN,adclick.tencentmusic.com
-DOMAIN,otheve.beacon.qq.com
 DOMAIN,monitor.music.qq.com
 DOMAIN,stat.y.qq.com
 DOMAIN,oth.str.mdt.qq.com
@@ -249,9 +248,7 @@ DOMAIN,api.zuihuimai.com
 DOMAIN-SUFFIX,shuzilm.cn
 
 # ======= T ======= #
-# 腾讯 无法使用的推送服务
-DOMAIN,tpns.qq.com
-# 腾讯视频
+# 腾讯
 DOMAIN,adsmind.gdtimg.com
 DOMAIN,btrace.qq.com
 DOMAIN,btrace.video.qq.com
@@ -259,9 +256,13 @@ DOMAIN,info4.video.qq.com
 DOMAIN,info6.video.qq.com
 DOMAIN,ios.video.mpush.qq.com
 DOMAIN,mtrace.qq.com
+DOMAIN,otheve.beacon.qq.com
 DOMAIN,p.l.qq.com
 DOMAIN,pgdt.gtimg.cn
 DOMAIN,rpt.gdt.qq.com
+DOMAIN,tpns.qq.com
+DOMAIN,tytx.m.cn.miaozhen.com
+DOMAIN,vv6.video.qq.com
 DOMAIN-SUFFIX,trace.qq.com
 
 # ======= W ======= #
@@ -269,8 +270,10 @@ DOMAIN-SUFFIX,trace.qq.com
 DOMAIN,h5-api.feiersmart.com
 # 网易云音乐
 DOMAIN,gdt.qq.com
+DOMAIN,httpdns.music.163.com
 DOMAIN,httpdns.n.netease.com
 DOMAIN,iadmat.nosdn.127.net
+DOMAIN,iadmatapk.nosdn.127.net
 DOMAIN,iadmusicmat.music.126.net
 DOMAIN,iadmusicmatvideo.music.126.net
 DOMAIN-SUFFIX,163jiasu.com
