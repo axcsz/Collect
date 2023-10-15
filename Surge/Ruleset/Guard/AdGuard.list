@@ -1,7 +1,7 @@
 #!name = 分流 & 广告拦截合集
 #!desc = 分流广告拦截合集
-#!author = RuCu6 fmz200
-#!update = 2023-09-28 07:10
+#!author = RuCu6 fmz200 Keywos
+#!update = 2023-10-15 17:00
 
 
 # ======= 0 ======= #
@@ -70,6 +70,8 @@ DOMAIN,passport.bilibili.com
 # ======= C ======= #
 # 彩云天气
 DOMAIN,ad.cyapi.cn
+# 昌原云充
+DOMAIN,m.adyounger.com
 # ChatGPT
 DOMAIN,o33249.ingest.sentry.io
 # Clue 智库
@@ -130,6 +132,7 @@ DOMAIN,amap-aos-info-nogw.amap.com
 DOMAIN,awaken.amap.com
 DOMAIN,free-aos-cdn-image.amap.com
 # 工商银行 开屏广告
+DOMAIN,oisc.icbc.com.cn
 DOMAIN,pageviewp.icbc.com.cn
 # 广告联盟
 DOMAIN,is.snssdk.com
@@ -145,6 +148,9 @@ DOMAIN-SUFFIX,pangolin.snssdk.com
 DOMAIN-SUFFIX,ehaier.com
 
 # ======= J ======= #
+# 建设银行
+DOMAIN,adv.ccb.com
+DOMAIN,imageadv.ccb.com
 # 京东
 DOMAIN-SUFFIX,ads.union.jd.com
 DOMAIN-SUFFIX,c-nfa.jd.com
