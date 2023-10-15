@@ -252,7 +252,8 @@ DOMAIN-SUFFIX,s.qd.qingtingfm.com
 DOMAIN,api.zuihuimai.com
 # 数字联盟
 DOMAIN-SUFFIX,shuzilm.cn
-
+# 搜狗输入法
+DOMAIN-KEYWORD,business-cdn.shouji.sogou.com
 # ======= T ======= #
 # 腾讯
 DOMAIN,adsmind.gdtimg.com
