@@ -1,17 +1,12 @@
 #!name = 净化 & 菜鸟
 #!desc = 去除首页 推广模块 支付宝 菜鸟小程序 发现页 数字角标 裹裹券
 #!author = Keywos RuCu6 
-#!update = 2023-08-27 21:00
+#!update = 2023-10-10 13:15
 
 
 [Rule]
 # Surge 必须屏蔽
 AND,((OR,((USER-AGENT,Cainiao*), (USER-AGENT,AMap*))), (URL-REGEX,^http:\/\/(amdc|\d).+\/amdc\/mobileDispatch$)),REJECT-DROP
-
-
-[URL Rewrite]
-# 菜鸟
-^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.(show|mshow)\.cn\/ - reject
 
 
 [Map Local]
@@ -21,7 +16,7 @@ AND,((OR,((USER-AGENT,Cainiao*), (USER-AGENT,AMap*))), (URL-REGEX,^http:\/\/(amd
 ^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.(batch\.show\.v2|index)\.cn data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
 ^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.nbopen\.miniapp\.recommend\.cpc\.cn data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
 ^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.nbmensa\.research\.researchservice\.(acquire|event|close)\.cn data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
-^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.nbpresentation\.homepage\.merge\.get\.cn data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
+^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.nbpresentation\.(homepage\.merge|tabbar\.marketing)\.get\.cn data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
 # 发现页 数字角标 裹裹券
 ^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.com\.cainiao\.cnactivitycenter data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
 ^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.com\.cainiao\.cncreditmarket\.hit\.getactivityhit\.cn data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
