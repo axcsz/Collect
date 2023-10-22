@@ -1,4 +1,4 @@
-// 2023-06-11 12:38
+// 2023-10-21 07:25
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -11,7 +11,7 @@ if (url.includes("/x/resource/show/skin")) {
   }
 } else if (url.includes("/x/resource/show/tab/v2")) {
   // 标签页
-  if (obj.data.tab) {
+  if (obj.data?.tab) {
     obj.data.tab = obj.data.tab.filter(
       (item) =>
         item.name === "推荐" ||
@@ -21,7 +21,7 @@ if (url.includes("/x/resource/show/skin")) {
     );
     fixPos(obj.data.tab);
   }
-  if (obj.data.top) {
+  if (obj.data?.top) {
     obj.data.top = [
       {
         id: 176,
@@ -33,14 +33,12 @@ if (url.includes("/x/resource/show/skin")) {
       }
     ];
   }
-  if (obj.data.bottom) {
+  if (obj.data?.bottom) {
     obj.data.bottom = obj.data.bottom.filter(
       (item) =>
-        !(
-          item.name === "发布" ||
-          item.name === "会员购" ||
-          item.name === "節目"
-        )
+        item.name === "首页" ||
+        item.name === "动态" ||
+        item.name === "我的"
     );
     fixPos(obj.data.bottom);
   }
@@ -82,22 +80,27 @@ if (url.includes("/x/resource/show/skin")) {
         obj.data.sections_v2[index].title = "";
         obj.data.sections_v2[index].type = "";
       }
-
       obj.data.sections_v2[index].items = items;
       obj.data.vip_section_v2 = "";
       obj.data.vip_section = "";
-      obj.data.live_tip = "";
-      obj.data.answer = "";
+      if (obj.data?.live_tip) {
+        obj.data.live_tip = "";
+      }
+      if (obj.data?.answer) {
+        obj.data.answer = "";
+      }
       // 开启本地会员标识
-      if (obj.data.vip.status === 1) {
-        return false;
-      } else {
-        obj.data.vip_type = 2;
-        obj.data.vip.type = 2;
-        obj.data.vip.status = 1;
-        obj.data.vip.vip_pay_type = 1;
-        obj.data.vip.due_date = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
-        obj.data.vip.role = 3;
+      if (obj.data?.vip) {
+        if (obj.data.vip.status === 1) {
+          return false;
+        } else {
+          obj.data.vip_type = 2;
+          obj.data.vip.type = 2;
+          obj.data.vip.status = 1;
+          obj.data.vip.vip_pay_type = 1;
+          obj.data.vip.due_date = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
+          obj.data.vip.role = 3;
+        }
       }
     });
   }
@@ -122,14 +125,16 @@ if (url.includes("/x/resource/show/skin")) {
   }
 } else if (url.includes("/x/v2/account/myinfo")) {
   // 会员清晰度
-  if (obj.data.vip.status === 1) {
-    $done({});
-  } else {
-    obj.data.vip.type = 2;
-    obj.data.vip.status = 1;
-    obj.data.vip.vip_pay_type = 1;
-    obj.data.vip.due_date = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
-    obj.data.vip.role = 3;
+  if (obj.data?.vip) {
+    if (obj.data.vip.status === 1) {
+      $done({});
+    } else {
+      obj.data.vip.type = 2;
+      obj.data.vip.status = 1;
+      obj.data.vip.vip_pay_type = 1;
+      obj.data.vip.due_date = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
+      obj.data.vip.role = 3;
+    }
   }
 } else if (url.includes("/x/v2/feed/index?")) {
   // 推荐广告
@@ -169,6 +174,12 @@ if (url.includes("/x/resource/show/skin")) {
         } else if (cardType === "cm_double_v9" && cardGoto === "ad_inline_av") {
           // 创作推广 大视频广告
           return false;
+        } else if (cardType === "ogv_small_cover" && cardGoto === "bangumi") {
+          // 纪录片
+          return false;
+        } else if (cardType === "small_cover_v2" && cardGoto === "pgc") {
+          // 纪录片
+          return false;
         }
       }
       return true;
@@ -182,6 +193,7 @@ if (url.includes("/x/resource/show/skin")) {
       (i) =>
         !(
           i.hasOwnProperty("ad_info") ||
+          i.hasOwnProperty("story_cart_icon") ||
           ["ad", "vertical_live", "vertical_pgc"].includes(i.card_goto)
         )
     );
@@ -202,16 +214,16 @@ if (url.includes("/x/resource/show/skin")) {
     item.forEach((i) => {
       delete obj.data[i];
     });
-    if (obj.data.max_time) {
+    if (obj.data?.max_time) {
       obj.data.max_time = 0;
     }
-    if (obj.data.min_interval) {
+    if (obj.data?.min_interval) {
       obj.data.min_interval = 31536000;
     }
-    if (obj.data.pull_interval) {
+    if (obj.data?.pull_interval) {
       obj.data.pull_interval = 31536000;
     }
-    if (obj.data.list) {
+    if (obj.data?.list) {
       for (let i of obj.data.list) {
         i.duration = 0;
         i.enable_pre_download = false;
