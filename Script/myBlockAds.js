@@ -1,4 +1,4 @@
-// 2023-06-01 21:45
+// 2023-09-19 11:00
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -45,14 +45,42 @@ if (body) {
       }
       break;
     // JavDB
-    case /^https:\/\/(jdforrepam|api\.huikaiju)\.com\/api\/v1\/startup\?/.test(
+    case /^https:\/\/(api\.yijingluowangluo\.xyz|jdforrepam\.com)\/api\/v\d\/\w+/.test(
       url
     ):
       try {
         let obj = JSON.parse(body);
-        if (obj.data.splash_ad) {
-          obj.data.splash_ad.enabled = false;
-          obj.data.splash_ad.overtime = 0;
+        if (url.includes("/api/v1/ads")) {
+          if (obj?.data?.enabled) {
+            obj.data.enabled = false;
+          }
+          if (obj?.data?.ads) {
+            obj.data.ads = {};
+          }
+        } else if (url.includes("/api/v1/startup")) {
+          if (obj?.data?.splash_ad) {
+            obj.data.splash_ad.enabled = false;
+            obj.data.splash_ad.overtime = 0;
+          }
+          if (obj?.data?.feedback) {
+            obj.data.feedback = {};
+          }
+          if (obj?.data?.settings?.NOTICE) {
+            delete obj.data.settings.NOTICE;
+          }
+          if (obj?.data?.user) {
+            obj.data.user.vip_expired_at = "2101-06-08T17:35:01.000+08:00";
+            obj.data.user.is_vip = true;
+          }
+        } else if (url.includes("/api/v1/users")) {
+          if (obj?.data?.user) {
+            obj.data.user.vip_expired_at = "2101-06-08T17:35:01.000+08:00";
+            obj.data.user.is_vip = true;
+          }
+        } else if (url.includes("/api/v4/movies/")) {
+          if (obj?.data?.show_vip_banner) {
+            obj.data.show_vip_banner = false;
+          }
         }
         body = JSON.stringify(obj);
       } catch (error) {
@@ -115,17 +143,30 @@ if (body) {
       }
       break;
     // 小米商城-开屏广告
-    case /^https:\/\/api\.m\.mi\.com\/v1\/app\/start$/.test(url):
+    case /^https:\/\/api\.m\.mi\.com\/v1\/app\/start/.test(url):
       try {
         let obj = JSON.parse(body);
-        obj.code = 0;
-        obj.data.skip_splash = true;
-        delete obj.data.splash;
-        obj.info = "ok";
-        obj.desc = "成功";
+        if (obj?.data?.skip_splash) {
+          obj.data.skip_splash = true;
+        }
+        if (obj?.data?.splash) {
+          delete obj.data.splash;
+        }
         body = JSON.stringify(obj);
       } catch (error) {
         console.log(`小米商城-开屏广告, 出现异常: ` + error);
+      }
+      break;
+    // 小米商城-物流页推广
+    case /^https:\/\/api\.m\.mi\.com\/v1\/order\/expressView/.test(url):
+      try {
+        let obj = JSON.parse(body);
+        if (obj?.data?.bottom?.ad_info) {
+          delete obj.data.bottom.ad_info;
+        }
+        body = JSON.stringify(obj);
+      } catch (error) {
+        console.log(`小米商城-物流页推广, 出现异常: ` + error);
       }
       break;
     default:
