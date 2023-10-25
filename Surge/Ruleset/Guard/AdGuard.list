@@ -257,6 +257,8 @@ DOMAIN-SUFFIX,shuzilm.cn
 DOMAIN-KEYWORD,business-cdn.shouji.sogou.com
 
 # ======= T ======= #
+# 淘宝
+DOMAIN,poplayer.template.alibaba.com
 # 腾讯
 DOMAIN,adsmind.gdtimg.com
 DOMAIN,btrace.qq.com
