@@ -4,6 +4,11 @@
 #!update = 2023-09-08 22:05
 
 
+[Rule]
+# Surge 必须屏蔽
+AND,((OR,((USER-AGENT,Cainiao*), (USER-AGENT,AMap*))), (URL-REGEX,^http:\/\/(amdc|\d).+\/amdc\/mobileDispatch$)),REJECT-DROP
+
+
 [URL Rewrite]
 # 高德地图
 ^https?:\/\/m5\.amap\.com\/ws\/valueadded\/ - reject
