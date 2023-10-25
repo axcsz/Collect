@@ -1,7 +1,7 @@
 #!name = 分流 & 广告拦截合集
 #!desc = 分流广告拦截合集
 #!author = RuCu6 fmz200 Keywos
-#!update = 2023-10-15 17:00
+#!update = 2023-10-25 10:00
 
 
 # ======= 0 ======= #
@@ -254,6 +254,7 @@ DOMAIN,api.zuihuimai.com
 DOMAIN-SUFFIX,shuzilm.cn
 # 搜狗输入法
 DOMAIN-KEYWORD,business-cdn.shouji.sogou.com
+
 # ======= T ======= #
 # 腾讯
 DOMAIN,adsmind.gdtimg.com
@@ -271,10 +272,9 @@ DOMAIN,tpns.qq.com
 DOMAIN,tytx.m.cn.miaozhen.com
 DOMAIN,vv6.video.qq.com
 DOMAIN-SUFFIX,trace.qq.com
+IP-CIDR,47.110.187.87/32,no-resolve
 
 # ======= W ======= #
-# 网上国网
-DOMAIN,h5-api.feiersmart.com
 # 网易云音乐
 DOMAIN,gdt.qq.com
 DOMAIN,httpdns.music.163.com
@@ -309,29 +309,56 @@ DOMAIN,ads-img-qc.xhscdn.com
 DOMAIN,ads-video-al.xhscdn.com
 DOMAIN,ads-video-qc.xhscdn.com
 DOMAIN,t-ads.xiaohongshu.com
+# 喜马拉雅
+DOMAIN,adbehavior.ximalaya.com
+DOMAIN,adwbs.ximalaya.com
+DOMAIN-SUFFIX,ad.test.ximalaya.com
+DOMAIN-SUFFIX,adse.test.ximalaya.com
+DOMAIN-SUFFIX,adweb.test.ximalaya.com
+DOMAIN-SUFFIX,adweb.ximalaya.com
+DOMAIN-SUFFIX,linkeye.ximalaya.com
+DOMAIN-SUFFIX,location.ximalaya.com
+DOMAIN-SUFFIX,xdcs-collector.ximalaya.com
+DOMAIN-SUFFIX,ad.ximalaya.com
+DOMAIN-SUFFIX,adse.ximalaya.com
+DOMAIN-SUFFIX,adse.wsa.ximalaya.com
+DOMAIN-SUFFIX,adbehavior.wsa.ximalaya.com
+DOMAIN-SUFFIX,adsebs.ximalaya.com
+DOMAIN-SUFFIX,adbs.ximalaya.com
+DOMAIN,ad.ximalaya.com
+DOMAIN,adbs.ximalaya.com
+DOMAIN,adse.ximalaya.com
+DOMAIN,adse.wsa.ximalaya.com
+DOMAIN,adbehavior.wsa.ximalaya.com
+DOMAIN,adsebs.ximalaya.com
 
 # ======= Y ======= #
 # 优酷 & 菜鸟
+DOMAIN,acs4baichuan.m.taobao.com
 DOMAIN,adsmind.ugdtimg.com
 DOMAIN,amdc.m.youku.com
+DOMAIN,api.sm.cn
 DOMAIN,apiv4-iyes.youku.com
+DOMAIN,baichuan-sdk.alicdn.com
 DOMAIN,httpdns.alicdn.com
 DOMAIN,huichuan-mc.sm.cn
 DOMAIN,huichuan.sm.cn
 DOMAIN,iyes.youku.com
 DOMAIN,m-vali.cp31.ott.cibntv.net
 DOMAIN,mc.atm.youku.com
+DOMAIN,nbsdk-baichuan.alicdn.com
+DOMAIN,pre-acs.youku.com
 DOMAIN,vali-g1.cp31.ott.cibntv.net
 DOMAIN,vali-ugc.cp31.ott.cibntv.net
 DOMAIN,yk-ssp.ad.youku.com
 DOMAIN,ykad-data.youku.com
+DOMAIN,youku-acs.m.taobao.com
 # 云闪付 开屏广告
 DOMAIN,ads.95516.com
-DOMAIN,cm-10-138.getui.com
-DOMAIN,sdk-conf.getui.com
-DOMAIN,sdk.open.talk.getui.net
 DOMAIN,switch.cup.com.cn
 DOMAIN,tysdk.95516.com
+# Yandex
+DOMAIN,yandexmetrica.com
 
 # ======= Z ======= #
 # 知乎
