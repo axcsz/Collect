@@ -131,6 +131,7 @@ IP-CIDR,180.96.2.114/32,no-resolve
 DOMAIN,amap-aos-info-nogw.amap.com
 DOMAIN,awaken.amap.com
 DOMAIN,free-aos-cdn-image.amap.com
+AND,((OR,((USER-AGENT,Cainiao*), (USER-AGENT,AMap*))), (DOMAIN,amdc.m.taobao.com,extended-matching)),REJECT-DROP
 # 工商银行 开屏广告
 DOMAIN,oisc.icbc.com.cn
 DOMAIN,pageviewp.icbc.com.cn
