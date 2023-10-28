@@ -1,9 +1,11 @@
-#!name= LOON配置增强版
-#!desc= General，DNS，Host
-#!open= https://github.com/axcsz/Collect/tree/master/Loon/Plugin
-#!author = axcsz
+#!name = 功能 & 插件
+#!desc = General配置补充
+#!openUrl = 
+#!author = Axcsz 
 #!homepage = 
 #!icon = 
+#!date = 2023-08-08 08:45:42
+
 
 
 [General]
