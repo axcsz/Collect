@@ -15,7 +15,7 @@ if (url.includes("/x/resource/show/skin")) {
     obj.data.tab = obj.data.tab.filter(
       (item) =>
         item.name === "推荐" ||
-        item.name === "热门" ||
+        item.name === "直播" ||
         item.name === "动画" ||
         item.name === "影视"
     );
