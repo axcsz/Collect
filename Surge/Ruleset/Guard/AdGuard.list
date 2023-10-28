@@ -1,7 +1,7 @@
 #!name = 分流 & 广告拦截合集
 #!desc = 分流广告拦截合集
+#!date = 2023-10-28 20:30
 #!author = RuCu6 Keywos
-#!update = 2023-10-28 19:30
 
 
 # ======= A ======= #
@@ -111,6 +111,7 @@ DOMAIN,adv.ccb.com
 DOMAIN,imageadv.ccb.com
 # 京东
 DOMAIN,blackhole.m.jd.com
+DOMAIN,policy.jd.com
 
 # ======= K ======= #
 # 酷我音乐
