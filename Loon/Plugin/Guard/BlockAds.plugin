@@ -75,8 +75,6 @@
 # ======= J ====== #
 # 建设银行
 ^http:\/\/image1\.ccb\.com\/newsinfo\/eBranch\/check\/(nf\/newfin\/activity|po\/poortheme\/activity)\/\w+\.png reject
-# 京东 //api.m.jd.com
-^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(start|uniformRecommend) reject
 # 京东极速版 //api.m.jd.com
 ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_advertising reject
 # 交管12123 //gab.122.gov.cn
@@ -191,7 +189,14 @@ http-response ^https:\/\/ump\.ems\.com\.cn\/new-generation-extend\/redis\/pageIn
 http-response ^https:\/\/links\.jianshu\.com\/go\?to= script-echo-response https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/noRedirect.js, requires-body = true, tag = 简书
 http-response ^https:\/\/www\.jianshu\.com\/go-wild\?ac=\d&url= script-echo-response https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/noRedirect.js, requires-body = true, tag = 简书
 # 京东 //api.m.jd.com
-http-response ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=personinfoBusiness script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/JD/JD_remove_ads.js, requires-body = true, tag = 移除京东广告
+http-response ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/JD/JD_remove_ads.js, requires-body = true, tag = 移除开屏广告
+http-response ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=myOrderInfo script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/JD/JD_remove_ads.js, requires-body = true, tag = 移除订单页面广告
+http-response ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=orderTrackBusiness script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/JD/JD_remove_ads.js, requires-body = true, tag = 移除物流页面广告
+http-response ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=welcomeHome script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/JD/JD_remove_HomePage_ads.js, requires-body = true, tag = 移除首页推广
+http-response ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=uniformRecommend script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/JD/JD_remove_Recommend_ads.js, requires-body = true, tag = 移除推荐
+http-response ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=getRecommendNewFeedsList script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/JD/JD_remove_RecommendNewFeedsList_ads copy.js, requires-body = true, tag = 移除推荐信息流
+http-response ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=discFollowEnterMainPage script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/JD/JD_remove_FollowPage_ads.js, requires-body = true, tag = 移除发现页面
+http-response ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=personinfoBusiness script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/JD/JD_remove_PersonPage_ads.js, requires-body = true, tag = 移除个人页面推广
 
 # ======= K ======= #
 # 酷安 //api.coolapk.com
