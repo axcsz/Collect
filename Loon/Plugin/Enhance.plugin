@@ -1,5 +1,5 @@
-#!name=LOON配置增强版
-#!desc=General，DNS，Host
+#!name= LOON配置增强版
+#!desc= General，DNS，Host
 #!open= https://github.com/axcsz/Collect/tree/master/Loon/Plugin
 #!author = axcsz
 #!homepage = 
@@ -7,45 +7,15 @@
 
 
 [General]
-# > 解决一些ip请求无法匹配域名类规则的问题。real-ip指定的域名将不返回fake ip响应，直接将dns请求发往目标dns服务器
-real-ip = msftconnecttest.com, msftncsi.com, *.msftconnecttest.com, *.msftncsi.com, *.srv.nintendo.net, *.stun.playstation.net, xbox.*.microsoft.com, *.xboxlive.com, *.battlenet.com.cn, *.battlenet.com, *.blzstatic.cn, *.battle.net
-# > 跳过某个域名或者IP段
-skip-proxy = 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, localhost, *.local, captive.apple.com, e.crashlynatics.com
-bypass-tun = 10.0.0.0/8, 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, 172.16.0.0/12, 192.0.0.0/24, 192.0.2.0/24, 192.88.99.0/24, 192.168.0.0/16, 198.51.100.0/24, 203.0.113.0/24, 224.0.0.0/4, 239.255.255.250/32, 255.255.255.255/32
-
+disable-stun = false
+# 策略切换关闭连接
+disconnect-on-policy-change = false
 switch-node-after-failure-times = 3
-
-
-[Host]
-# > 腾讯
-*.tencent.com = server:119.29.29.29
-*.weixin.com = server:119.29.29.29
-*.qq.com = server:119.29.29.29
-# > 京东
-*.jd.com = server:119.29.29.29
-*.360buyimg.com = server:119.29.29.29
-# > Apple
-apple.com = server:119.29.29.29
-*icloud.com = server:119.29.29.29
-*icloud.com.cn = server:119.29.29.29
-*testflight.apple.com = server:8.8.4.4
-# > 淘宝
-*.taobao.com = server:223.5.5.5
-*.tmall.com = server:223.5.5.5
-*.alicdn.com = server:223.5.5.5
-*.aliyun.com = server:223.5.5.5
-# > 网易
-*.163.com = server:119.29.29.29
-*.126.com = server:119.29.29.29
-*.126.net = server:119.29.29.29
-*.127.net = server:119.29.29.29
-*.netease.com = server:119.29.29.29
-# > 小米
-*.mi.com = server:119.29.29.29
-*.xiaomi.com = server:119.29.29.29
-# > 哔哩哔哩
-*.bilibili.com = server:119.29.29.29
-# > 谷歌
-mtalk.google.com = 108.177.125.188
-dl.google.com = server:119.29.29.29
-dl.l.google.com = server:119.29.29.29
+# geoip 数据库
+geoip-url = https://gitlab.com/Masaiki/GeoIP2-CN/-/raw/release/Country.mmdb
+# 处理DNS时返回真实IP
+real-ip = msftconnecttest.com, msftncsi.com, *.msftconnecttest.com, *.msftncsi.com, *.srv.nintendo.net, *.stun.playstation.net, xbox.*.microsoft.com, *.xboxlive.com, *.battlenet.com.cn, *.battlenet.com, *.blzstatic.cn, *.battle.net
+# 绕过代理
+skip-proxy = 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, localhost, *.local, captive.apple.com, e.crashlynatics.com
+# 绕过路由
+bypass-tun = 10.0.0.0/8, 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, 172.16.0.0/12, 192.0.0.0/24, 192.0.2.0/24, 192.88.99.0/24, 192.168.0.0/16, 198.51.100.0/24, 203.0.113.0/24, 224.0.0.0/4, 239.255.255.250/32, 255.255.255.255/32
