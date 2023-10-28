@@ -1,1 +1,102 @@
+#!name = 净化 & 软件和微信小程序去广告合集
+#!desc = 去广告合集，包含软件开屏广告和微信小程序广告，以下app请使用单独配置文件：高德地图,哔哩哔哩,菜鸟,微博,YouTube,知乎,小红书,IT之家等
+#!open= 
+#!author = RuCu6 Keywos fm200
+#!homepage = 
+#!icon = 
+#!date = 2023-10-28 18:00
 
+
+[Rule]
+
+[Rewrite]
+# ======= 0 ======= #
+# 58同城 //*.58cdn.com.cn, app.58.com, pic?.ajkimg.com
+^https:\/\/app\.58\.com\/api\/home\/(advertising|appadv) reject
+^https:\/\/app\.58\.com\/api\/home\/invite\/popupAdv reject
+^https:\/\/app\.58\.com\/api\/log\/ reject
+^https:\/\/pic\d\.ajkimg\.com\/mat\/\w+\?imageMogr\d\/format\/jpg\/thumbnail\/\d{3}x\d{4}$ reject
+^https:\/\/.+\.58cdn\.com\.cn\/brandads reject
+
+# ======= A ======= #
+# 爱回收 //gw.aihuishou.com
+^https:\/\/gw.aihuishou.com\/app-portal\/home\/getadvertisement reject
+# 爱思助手 //list-app-m.i4.cn
+^https:\/\/list-app-m\.i4\.cn\/(adclickcb|getHotSearchList|getopfstadinfo)\.xhtml reject
+# 阿里云盘 //api.alipan.com, member.alipan.com
+^https:\/\/api\.alipan\.com\/adrive\/v1\/file\/getTopFolders reject-dict
+# 阿里巴巴 //acs.m.taobao.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com
+^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alibaba\.advertisementservice\.getadv reject-dict
+^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alimama\.etao\.config\.query\/.+?etao_advertise reject-dict
+^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alimusic\.common\.mobileservice\.startinit reject-dict
+^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.etao\.noah\.query\/.+tao_splash reject-dict
+^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.film\.mtopadvertiseapi\.queryadvertise reject-dict
+^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.o2o\.ad\.gateway\.get reject-dict
+^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.taobao\.idle\.home\.welcome reject-dict
+^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.trip\.activity\.querytmsresources reject-dict
+^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.adx\.flyad\.getad reject-dict
+^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(volvo\.secondfloor\.getconfig|wireless\.home\.newface\.awesome\.get) reject-dict
+
+# ======= B ======= #
+# 百度云 //pan.baidu.com, update.pan.baidu.com
+^https:\/\/pan\.baidu\.com\/(act\/api\/activityentry|act\/v2\/welfare\/list|rest\/2\.0\/pcs\/adx)\? reject-dict
+^https:\/\/update\.pan\.baidu\.com\/statistics\? reject-dict
+
+# ======= C ======= #
+# 车来了 //api.chelaile.net.cn, web.chelaile.net.cn
+^https:\/\/api\.chelaile\.net\.cn\/adpub reject
+^https:\/\/api\.chelaile\.net\.cn\/goocity\/advert reject
+^https:\/\/web\.chelaile\.net\.cn\/api\/adpub reject
+# CSDN //app-gw.csdn.net
+^https:\/\/app-gw\.csdn\.net\/cms-app\/v\d\/home_page\/open_advertisement reject
+
+# ======= D ======= #
+# 豆瓣 //api.douban.com
+^https:\/\/api\.douban\.com\/v2\/app_ads\/splash reject
+^https:\/\/api\.douban\.com\b.*\/common_ads\? reject
+
+# ======= E ======= #
+# 饿了么 //elemecdn.com, fuss10.elemecdn.com, www1.elecfans.com
+^https:\/\/elemecdn.com\/.+\/sitemap reject
+^https:\/\/fuss10.elemecdn.com\/.+\/w\/640\/h\/\d{3,4} reject
+^https:\/\/fuss10.elemecdn.com\/.+\/w\/750\/h\/\d{3,4} reject
+^https:\/\/fuss10.elemecdn.com\/.+\.mp4 reject
+^https:\/\/www1.elecfans.com\/www\/delivery reject
+
+# ======= F ======= #
+# 飞猪 //acs.m.taobao.com
+^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.fliggy\.crm\.screen\.(allresource|predict) reject-dict
+
+# ======= H ====== #
+# 海尔智家 //zj.haier.net
+^https:\/\/zj\.haier\.net\/api-gw\/shpmResource\/waterfall\/recommend\/list\? reject
+^https:\/\/zj\.haier\.net\/omsappapi\/ad\/v1\/rotation reject
+
+# ======= J ====== #
+# 建设银行
+^http:\/\/image1\.ccb\.com\/newsinfo\/eBranch\/check\/(nf\/newfin\/activity|po\/poortheme\/activity)\/\w+\.png reject
+# 京东 //api.m.jd.com
+^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(start|uniformRecommend) reject
+# 京东极速版 //api.m.jd.com
+^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_advertising reject
+# 交管12123 //gab.122.gov.cn
+^https:\/\/gab\.122\.gov\.cn\/eapp\/m\/sysquery\/adver$ reject
+
+
+[Script]
+# ======= 0 ======= #
+# 12306 开屏广告 //ad.12306.cn
+http-response ^https:\/\/ad\.12306\.cn\/ad\/ser\/getAdList script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/12306.js, requires-body = true, tag = 12306
+# ======= A ======= #
+# amdc
+http-response ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/header.js, requires-body = true, tag = amdc
+# 阿里云盘 //api.alipan.com, member.alipan.com
+http-response ^https:\/\/api\.alipan\.com\/apps\/v2\/users\/home\/(news|widgets) script-path https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/adrive.js, requires-body = true, tag = 阿里云盘
+http-response ^https:\/\/member\.alipan\.com\/v1\/users\/onboard_list script-path https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/adrive.js, requires-body = true, tag = 阿里云盘
+# 阿里巴巴 //acs.m.taobao.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com
+http-response ^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.mshow script-path https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cainiao.js, requires-body = true, tag = 阿里巴巴
+http-response ^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(cloudvideo\.video\.query|wireless\.home\.splash\.awesome\.get) script-path https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js, requires-body = true, tag = 阿里巴巴
+
+
+[Mitm]
+hostname = %APPEND% ad.12306.cn, *.58cdn.com.cn, app.58.com, pic?.ajkimg.com, gw.aihuishou.com, list-app-m.i4.cn, api.alipan.com, member.alipan.com, acs.m.taobao.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com, pan.baidu.com, update.pan.baidu.com, www.washpayer.com, api.chelaile.net.cn, web.chelaile.net.cn, app-gw.csdn.net, api.douban.com, elemecdn.com, fuss10.elemecdn.com, www1.elecfans.com, zj.haier.net, api.yijingluowangluo.xyz, jdforrepam.com, links.jianshu.com, www.jianshu.com, api.m.jd.com, gab.122.gov.cn, res.kfc.com.cn, api.coolapk.com, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, api.pinduoduo.com, api.yangkeduo.com, tiebac.baidu.com, mp.weixin.qq.com, weixin110.qq.com, security.wechat.com, api.m.mi.com, api.jr.mi.com, home.mi.com, shop-api.retail.mi.com, wallet.95516.com, clientaccess.10086.cn, wap.js.10086.cn
