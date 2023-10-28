@@ -2,7 +2,7 @@
 #!desc = General配置补充
 #!openUrl = 
 #!author = Axcsz 
-#!homepage = https://github.com/axcsz/Collect/blob/master/Loon/Plugin/Enhance.plugin
+#!homepage = https://raw.githubusercontent.com/axcsz/Collect/master/Loon/Plugin/Enhance.plugin
 #!icon = https://raw.githubusercontent.com/axcsz/Collect/master/Icon/512x512bb.png
 #!date = 2023-10-28 20:20
 
@@ -46,10 +46,3 @@ bypass-tun = 10.0.0.0/8, 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, 172.16.0.0/
 *.xiaomi.com = server:119.29.29.29
 # 哔哩哔哩
 *.bilibili.com = server:119.29.29.29
-# Google
-mtalk.google.com = 108.177.125.188
-dl.google.com = server:119.29.29.29
-dl.l.google.com = server:119.29.29.29
-update.googleapis.com = server:119.29.29.29
-# PlayStation
-*.dl.playstation.net = server:119.29.29.29
