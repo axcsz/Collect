@@ -4,14 +4,10 @@
 #!author = Axcsz 
 #!homepage = 
 #!icon = 
-#!date = 2023-10-28 20:10
+#!date = 2023-10-28 20:20
 
 
 [General]
-disable-stun = false
-# 策略切换关闭连接
-disconnect-on-policy-change = false
-switch-node-after-failure-times = 3
 # 处理DNS时返回真实IP
 real-ip = msftconnecttest.com, msftncsi.com, *.msftconnecttest.com, *.msftncsi.com, *.srv.nintendo.net, *.stun.playstation.net, xbox.*.microsoft.com, *.xboxlive.com, *.battlenet.com.cn, *.battlenet.com, *.blzstatic.cn, *.battle.net
 # 绕过代理
