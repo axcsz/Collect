@@ -1,6 +1,6 @@
 #!name = 分流 & 广告拦截合集
 #!desc = 分流广告拦截合集
-#!date = 2023-10-28 20:30
+#!date = 2023-10-29 10:00
 #!author = RuCu6 Keywos
 
 
@@ -83,6 +83,37 @@ DOMAIN,pagead2.googlesyndication.com
 DOMAIN,pubads.g.doubleclick.net
 DOMAIN,www.googleadservices.com
 DOMAIN-KEYWORD,adservice.google.com.
+# 番茄小说
+DOMAIN,p6-ad-sign.byteimg.com
+DOMAIN,p9-ad-sign.byteimg.com
+DOMAIN,i.snssdk.com
+DOMAIN,i-lq.snssdk.com
+DOMAIN,dig.bdurl.net
+DOMAIN-KEYWORD,zijieapi
+DOMAIN,activity-ag.awemeughun.com
+DOMAIN,mcs.snssdk.com
+DOMAIN,tnc3-alisc1.snssdk.com
+DOMAIN,security-lq.snssdk.com
+DOMAIN,tnc3-aliec2.snssdk.com
+DOMAIN,is.snssdk.com
+DOMAIN,i.snssdk.com
+DOMAIN,v6-novelapp.ixigua.com
+DOMAIN,*novelapp.ixigua.com
+DOMAIN,*default.ixigua.com
+DOMAIN,msync-im1-vip6-std.easemob.com
+DOMAIN,apd-pcdnwxlogin.teg.tencent-cloud.net
+DOMAIN,api.iegadp.qq.com
+DOMAIN,sf3-ttcdn-tos.pstatp.com
+DOMAIN-SUFFIX,pglstatp-toutiao.com
+DOMAIN-SUFFIX,byteorge.com
+DOMAIN-SUFFIX,bytegoofy.com
+DOMAIN-SUFFIX,bytedance.com
+IP-CIDR,49.71.37.101/32,no-resolve
+IP-CIDR,117.71.105.23/32,no-resolve
+IP-CIDR,218.94.207.205/32,no-resolve
+IP-CIDR,117.92.229.188/32,no-resolve
+IP-CIDR,101.36.166.16/32,no-resolve
+IP-CIDR,180.96.2.114/32,no-resolve
 
 # ======= G ======= #
 # 高德地图
@@ -112,6 +143,9 @@ DOMAIN,imageadv.ccb.com
 # 京东
 DOMAIN,blackhole.m.jd.com
 DOMAIN,policy.jd.com
+DOMAIN,dns.jd.com
+IP-CIDR,101.124.19.122/32,no-resolve
+IP-CIDR6,2402:db40:5100:1011::5/128,no-resolve
 
 # ======= K ======= #
 # 酷我音乐
@@ -158,6 +192,7 @@ DOMAIN,mediation.adnxs.com
 DOMAIN,sin3-ib.adnxs.com
 
 # ======= Q ======= #
+# qq音乐
 DOMAIN,adstats.tencentmusic.com
 DOMAIN,ad.tencentmusic.com
 DOMAIN,adcdn.tencentmusic.com
@@ -184,6 +219,15 @@ DOMAIN-SUFFIX,dload.qd.qingting.fm
 DOMAIN-SUFFIX,logger.qingting.fm
 DOMAIN-SUFFIX,s.qd.qingting.fm
 DOMAIN-SUFFIX,s.qd.qingtingfm.com
+# 七猫小说
+DOMAIN,cdn-new-ad.wtzw.com
+DOMAIN,a-remad.qm989.com
+DOMAIN,mobads.baidu.com
+DOMAIN-SUFFIX,pglstatp-toutiao.com
+DOMAIN-SUFFIX,gdt.qq.com
+DOMAIN,qzs.gdtimg.com
+DOMAIN,mobads-pre-config.cdn.bcebos.com
+DOMAIN,pgdt.ugdtimg.com
 
 # ======= S ======= #
 # 什么值得买
@@ -209,6 +253,15 @@ DOMAIN,tytx.m.cn.miaozhen.com
 DOMAIN,vv6.video.qq.com
 DOMAIN-SUFFIX,trace.qq.com
 IP-CIDR,47.110.187.87/32,no-resolve
+# TubeMax
+DOMAIN-SUFFIX,adjust.com
+DOMAIN-SUFFIX,applvn.com
+DOMAIN-SUFFIX,app-measurement.com
+DOMAIN-SUFFIX,pangle.io
+DOMAIN-SUFFIX,applovin.com
+DOMAIN-SUFFIX,appier.net
+DOMAIN-SUFFIX,adsmoloco.com
+DOMAIN-SUFFIX,adcanvas.com
 
 # ======= W ======= #
 # 网易云音乐
@@ -226,6 +279,10 @@ DOMAIN,kadmimage.biz.weibo.com
 DOMAIN,sdkaction.biz.weibo.com
 DOMAIN,sdkclick.biz.weibo.com
 DOMAIN,sdkmonitor.biz.weibo.com
+# 微信小程序
+DOMAIN,wxsnsdy.wxs.qq.com
+DOMAIN,wxsmsdy.video.qq.com
+DOMAIN,wxsnsdythumb.wxs.qq.com
 
 # ======= X ======= #
 # 小米
