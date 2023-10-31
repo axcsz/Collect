@@ -121,7 +121,6 @@ DOMAIN,amap-aos-info-nogw.amap.com
 DOMAIN,awaken.amap.com
 DOMAIN,free-aos-cdn-image.amap.com
 # 工商银行 开屏广告
-DOMAIN,oisc.icbc.com.cn
 DOMAIN,pageviewp.icbc.com.cn
 # 广告联盟
 DOMAIN,is.snssdk.com
@@ -141,8 +140,6 @@ DOMAIN-SUFFIX,ehaier.com
 DOMAIN,adv.ccb.com
 DOMAIN,imageadv.ccb.com
 # 京东
-DOMAIN,blackhole.m.jd.com
-DOMAIN,policy.jd.com
 DOMAIN,dns.jd.com
 IP-CIDR,101.124.19.122/32,no-resolve
 IP-CIDR6,2402:db40:5100:1011::5/128,no-resolve
