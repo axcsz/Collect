@@ -326,4 +326,5 @@ IP-CIDR,118.89.204.198/32,no-resolve
 IP-CIDR6,2402:4e00:1200:ed00:0:9089:6dac:96b6/128,no-resolve
 # 字节跳动
 DOMAIN,ad.zijieapi.com
+DOMAIN-KEYWORD,asiad.byteactivity
 DOMAIN-KEYWORD,-ad-sign.byteimg.com
