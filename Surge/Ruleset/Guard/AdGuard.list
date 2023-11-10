@@ -1,10 +1,16 @@
 #!name = 分流 & 广告拦截合集
 #!desc = 分流广告拦截合集
-#!date = 2023-10-31 20:00
+#!date = 2023-11-10 12:55
 #!author = RuCu6 Keywos
 
 
 # ======= A ======= #
+# ======= A ======= #
+# 阿里巴巴
+DOMAIN,ossgw.alicdn.com
+DOMAIN,ems.youku.com
+DOMAIN,hudong.alicdn.com
+DOMAIN-SUFFIX,ut.taobao.com
 # 阿里云盘
 IP-CIDR,203.107.1.1/24,no-resolve
 # 爱奇艺
@@ -20,35 +26,24 @@ DOMAIN,iadctest.qwapi.com
 DOMAIN,iadmoo.apple.com
 DOMAIN,iadworkbench.apple.com
 DOMAIN,launch.apple.com
-DOMAIN,metrics.apple.com
 DOMAIN,qwapi.apple.com
-DOMAIN,securemetrics.apple.com
-DOMAIN,webproxy-advp.iad-apple.com
-DOMAIN,webproxy-advp.iad-apple.com.akadns.net
 DOMAIN-SUFFIX,advp.apple.com
 DOMAIN-SUFFIX,iadsdk.apple.com
+DOMAIN-KEYWORD,.iad-apple.com
 # 安全浏览限制解除
 DOMAIN,lookup.api.bsb.baidu.com
-DOMAIN,proxy.safebrowsing.apple
-DOMAIN,safebrowsing.g.applimg.com
-DOMAIN,safebrowsing.googleapis.com
-DOMAIN,safebrowsing.urlsec.qq.com
-DOMAIN,token.safebrowsing.apple
-DOMAIN,vs6.bj2ct.u3.ucweb.com
-DOMAIN-SUFFIX,safebrowsing.apple
 DOMAIN-SUFFIX,u3.ucweb.com
+DOMAIN-KEYWORD,safebrowsing.
 
 # ======= B ======= #
 # 百度
+DOMAIN,mobads.baidu.com
 DOMAIN-SUFFIX,pos.baidu.com
 # 百度地图
 DOMAIN,afd.baidu.com
 DOMAIN,afdconf.baidu.com
 DOMAIN,httpdns.baidubce.com
 DOMAIN,lc.map.baidu.com
-# 百度网盘
-DOMAIN,mobads.baidu.com
-DOMAIN,sf3-fe-tos.pglstatp-toutiao.com
 # 百度贴吧
 IP-CIDR,180.76.76.200/32,no-resolve
 # 哔哩哔哩
@@ -76,13 +71,11 @@ AND,((USER-AGENT,Frodo*),(DOMAIN,119.29.29.29))
 
 # ======= F ======= #
 # Foreca & Google
-DOMAIN,adservice.google.com
-DOMAIN,googleads.g.doubleclick-cn.net
-DOMAIN,googleads.g.doubleclick.net
 DOMAIN,pagead2.googlesyndication.com
 DOMAIN,pubads.g.doubleclick.net
 DOMAIN,www.googleadservices.com
-DOMAIN-KEYWORD,adservice.google.com.
+DOMAIN-SUFFIX,adservice.google.com
+DOMAIN-KEYWORD,googleads.g.doubleclick
 # 番茄小说
 DOMAIN,p6-ad-sign.byteimg.com
 DOMAIN,p9-ad-sign.byteimg.com
@@ -123,13 +116,11 @@ DOMAIN,free-aos-cdn-image.amap.com
 # 工商银行 开屏广告
 DOMAIN,pageviewp.icbc.com.cn
 # 广告联盟
-DOMAIN,is.snssdk.com
 DOMAIN,mi.gdt.qq.com
 DOMAIN,open.e.kuaishou.com
-DOMAIN-SUFFIX,pangolin-sdk-toutiao-b.com
-DOMAIN-SUFFIX,pangolin-sdk-toutiao.com
-DOMAIN-SUFFIX,pangolin-sdk-toutiao1.com
-DOMAIN-SUFFIX,pangolin.snssdk.com
+DOMAIN-SUFFIX,snssdk.com
+DOMAIN-KEYWORD,pangolin-sdk-toutiao
+DOMAIN-KEYWORD,pglstatp-toutiao
 
 # ======= H ======= #
 # 海尔智家
@@ -142,7 +133,6 @@ DOMAIN,imageadv.ccb.com
 # 京东
 DOMAIN,dns.jd.com
 IP-CIDR,101.124.19.122/32,no-resolve
-IP-CIDR6,2402:db40:5100:1011::5/128,no-resolve
 
 # ======= K ======= #
 # 酷我音乐
@@ -250,15 +240,8 @@ DOMAIN,tytx.m.cn.miaozhen.com
 DOMAIN,vv6.video.qq.com
 DOMAIN-SUFFIX,trace.qq.com
 IP-CIDR,47.110.187.87/32,no-resolve
-# TubeMax
-DOMAIN-SUFFIX,adjust.com
-DOMAIN-SUFFIX,applvn.com
-DOMAIN-SUFFIX,app-measurement.com
-DOMAIN-SUFFIX,pangle.io
-DOMAIN-SUFFIX,applovin.com
-DOMAIN-SUFFIX,appier.net
-DOMAIN-SUFFIX,adsmoloco.com
-DOMAIN-SUFFIX,adcanvas.com
+# 腾讯QQ
+DOMAIN,ipv4.gdt.qq.com
 
 # ======= W ======= #
 # 网易云音乐
@@ -284,6 +267,8 @@ DOMAIN,wxsnsdythumb.wxs.qq.com
 # ======= X ======= #
 # 小米
 DOMAIN,sdkconfig.ad.xiaomi.com
+# XVideos
+DOMAIN-SUFFIX,orbsrv.com
 
 # ======= Y ======= #
 # 优酷 & 菜鸟
