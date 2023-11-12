@@ -1,17 +1,17 @@
 #!name = 分流 & 广告拦截合集
 #!desc = 分流广告拦截合集
-#!date = 2023-11-12 09:15
+#!date = 2023-11-12 17:00
 #!author = RuCu6 Keywos
 
 
 # ======= A ======= #
-# 阿里云盘
-IP-CIDR,203.107.1.1/24,no-resolve
 # 阿里巴巴
 DOMAIN,ossgw.alicdn.com
 DOMAIN,ems.youku.com
 DOMAIN,hudong.alicdn.com
 DOMAIN-SUFFIX,ut.taobao.com
+# 阿里云盘
+IP-CIDR,203.107.1.1/24,no-resolve
 # 爱奇艺
 DOMAIN,api.iqiyi.com
 # Apple
@@ -35,8 +35,6 @@ DOMAIN-SUFFIX,u3.ucweb.com
 DOMAIN-KEYWORD,safebrowsing.
 
 # ======= B ======= #
-# 百度贴吧
-IP-CIDR,180.76.76.200/32,no-resolve
 # 百度
 DOMAIN,mobads.baidu.com
 DOMAIN-SUFFIX,pos.baidu.com
@@ -46,7 +44,7 @@ DOMAIN,afdconf.baidu.com
 DOMAIN,httpdns.baidubce.com
 DOMAIN,lc.map.baidu.com
 # 百度贴吧
-IP-CIDR,180.76.76.200/32
+IP-CIDR,180.76.76.200/32,no-resolve
 # 哔哩哔哩
 DOMAIN,mall.bilibili.com
 DOMAIN,passport.bilibili.com
@@ -66,10 +64,6 @@ DOMAIN,images.ctfassets.net
 DOMAIN,mapi.apptimize.com
 DOMAIN,md-i-s.apptimize.com
 
-# ======= D ======= #
-# 豆瓣
-AND,((USER-AGENT,Frodo*),(DOMAIN,119.29.29.29))
-
 # ======= F ======= #
 # Foreca & Google
 DOMAIN,pagead2.googlesyndication.com
@@ -77,37 +71,6 @@ DOMAIN,pubads.g.doubleclick.net
 DOMAIN,www.googleadservices.com
 DOMAIN-SUFFIX,adservice.google.com
 DOMAIN-KEYWORD,googleads.g.doubleclick
-# 番茄小说
-DOMAIN,p6-ad-sign.byteimg.com
-DOMAIN,p9-ad-sign.byteimg.com
-DOMAIN,i.snssdk.com
-DOMAIN,i-lq.snssdk.com
-DOMAIN,dig.bdurl.net
-DOMAIN-KEYWORD,zijieapi
-DOMAIN,activity-ag.awemeughun.com
-DOMAIN,mcs.snssdk.com
-DOMAIN,tnc3-alisc1.snssdk.com
-DOMAIN,security-lq.snssdk.com
-DOMAIN,tnc3-aliec2.snssdk.com
-DOMAIN,is.snssdk.com
-DOMAIN,i.snssdk.com
-DOMAIN,v6-novelapp.ixigua.com
-DOMAIN,*novelapp.ixigua.com
-DOMAIN,*default.ixigua.com
-DOMAIN,msync-im1-vip6-std.easemob.com
-DOMAIN,apd-pcdnwxlogin.teg.tencent-cloud.net
-DOMAIN,api.iegadp.qq.com
-DOMAIN,sf3-ttcdn-tos.pstatp.com
-DOMAIN-SUFFIX,pglstatp-toutiao.com
-DOMAIN-SUFFIX,byteorge.com
-DOMAIN-SUFFIX,bytegoofy.com
-DOMAIN-SUFFIX,bytedance.com
-IP-CIDR,49.71.37.101/32,no-resolve
-IP-CIDR,117.71.105.23/32,no-resolve
-IP-CIDR,218.94.207.205/32,no-resolve
-IP-CIDR,117.92.229.188/32,no-resolve
-IP-CIDR,101.36.166.16/32,no-resolve
-IP-CIDR,180.96.2.114/32,no-resolve
 
 # ======= G ======= #
 # 高德地图
@@ -184,44 +147,6 @@ DOMAIN,acdn.adnxs.com
 DOMAIN,mediation.adnxs.com
 DOMAIN,sin3-ib.adnxs.com
 
-# ======= Q ======= #
-# qq音乐
-DOMAIN,adstats.tencentmusic.com
-DOMAIN,ad.tencentmusic.com
-DOMAIN,adcdn.tencentmusic.com
-DOMAIN,adexpo.tencentmusic.com
-DOMAIN,adclick.tencentmusic.com
-DOMAIN,otheve.beacon.qq.com
-DOMAIN,monitor.music.qq.com
-DOMAIN,stat.y.qq.com
-DOMAIN,tmead.y.qq.com
-DOMAIN,oth.str.mdt.qq.com
-DOMAIN,h.trace.qq.com
-DOMAIN,tmead.y.qq.com
-DOMAIN,sdk.e.qq.com
-DOMAIN,p.l.qq.com
-DOMAIN,us.l.qq.com
-DOMAIN,tangram.e.qq.com
-DOMAIN-SUFFIX,imtmp.net
-# 蜻蜓FM
-DOMAIN,ad.qingting.fm
-DOMAIN,adlaunch.qingting.fm
-DOMAIN,ad-cdn.qingting.fm
-DOMAIN-SUFFIX,admgr.qingting.fm
-DOMAIN-SUFFIX,dload.qd.qingting.fm
-DOMAIN-SUFFIX,logger.qingting.fm
-DOMAIN-SUFFIX,s.qd.qingting.fm
-DOMAIN-SUFFIX,s.qd.qingtingfm.com
-# 七猫小说
-DOMAIN,cdn-new-ad.wtzw.com
-DOMAIN,a-remad.qm989.com
-DOMAIN,mobads.baidu.com
-DOMAIN-SUFFIX,pglstatp-toutiao.com
-DOMAIN-SUFFIX,gdt.qq.com
-DOMAIN,qzs.gdtimg.com
-DOMAIN,mobads-pre-config.cdn.bcebos.com
-DOMAIN,pgdt.ugdtimg.com
-
 # ======= S ======= #
 # 什么值得买
 DOMAIN,api.zuihuimai.com
@@ -265,10 +190,6 @@ DOMAIN,kadmimage.biz.weibo.com
 DOMAIN,sdkaction.biz.weibo.com
 DOMAIN,sdkclick.biz.weibo.com
 DOMAIN,sdkmonitor.biz.weibo.com
-# 微信小程序
-DOMAIN,wxsnsdy.wxs.qq.com
-DOMAIN,wxsmsdy.video.qq.com
-DOMAIN,wxsnsdythumb.wxs.qq.com
 
 # ======= X ======= #
 # 小米
@@ -319,3 +240,84 @@ IP-CIDR6,2402:4e00:1200:ed00:0:9089:6dac:96b6/128,no-resolve
 DOMAIN,ad.zijieapi.com
 DOMAIN-KEYWORD,asiad.byteactivity
 DOMAIN-KEYWORD,-ad-sign.byteimg.com
+
+
+# ======= 补充 ======= #
+# 豆瓣
+AND,((USER-AGENT,Frodo*),(DOMAIN,119.29.29.29))
+
+# 番茄小说
+DOMAIN,p6-ad-sign.byteimg.com
+DOMAIN,p9-ad-sign.byteimg.com
+DOMAIN,i.snssdk.com
+DOMAIN,i-lq.snssdk.com
+DOMAIN,dig.bdurl.net
+DOMAIN-KEYWORD,zijieapi
+DOMAIN,activity-ag.awemeughun.com
+DOMAIN,mcs.snssdk.com
+DOMAIN,tnc3-alisc1.snssdk.com
+DOMAIN,security-lq.snssdk.com
+DOMAIN,tnc3-aliec2.snssdk.com
+DOMAIN,is.snssdk.com
+DOMAIN,i.snssdk.com
+DOMAIN,v6-novelapp.ixigua.com
+DOMAIN,*novelapp.ixigua.com
+DOMAIN,*default.ixigua.com
+DOMAIN,msync-im1-vip6-std.easemob.com
+DOMAIN,apd-pcdnwxlogin.teg.tencent-cloud.net
+DOMAIN,api.iegadp.qq.com
+DOMAIN,sf3-ttcdn-tos.pstatp.com
+DOMAIN-SUFFIX,pglstatp-toutiao.com
+DOMAIN-SUFFIX,byteorge.com
+DOMAIN-SUFFIX,bytegoofy.com
+DOMAIN-SUFFIX,bytedance.com
+IP-CIDR,49.71.37.101/32,no-resolve
+IP-CIDR,117.71.105.23/32,no-resolve
+IP-CIDR,218.94.207.205/32,no-resolve
+IP-CIDR,117.92.229.188/32,no-resolve
+IP-CIDR,101.36.166.16/32,no-resolve
+IP-CIDR,180.96.2.114/32,no-resolve
+
+# qq音乐
+DOMAIN,adstats.tencentmusic.com
+DOMAIN,ad.tencentmusic.com
+DOMAIN,adcdn.tencentmusic.com
+DOMAIN,adexpo.tencentmusic.com
+DOMAIN,adclick.tencentmusic.com
+DOMAIN,otheve.beacon.qq.com
+DOMAIN,monitor.music.qq.com
+DOMAIN,stat.y.qq.com
+DOMAIN,tmead.y.qq.com
+DOMAIN,oth.str.mdt.qq.com
+DOMAIN,h.trace.qq.com
+DOMAIN,tmead.y.qq.com
+DOMAIN,sdk.e.qq.com
+DOMAIN,p.l.qq.com
+DOMAIN,us.l.qq.com
+DOMAIN,tangram.e.qq.com
+DOMAIN-SUFFIX,imtmp.net
+
+# 蜻蜓FM
+DOMAIN,ad.qingting.fm
+DOMAIN,adlaunch.qingting.fm
+DOMAIN,ad-cdn.qingting.fm
+DOMAIN-SUFFIX,admgr.qingting.fm
+DOMAIN-SUFFIX,dload.qd.qingting.fm
+DOMAIN-SUFFIX,logger.qingting.fm
+DOMAIN-SUFFIX,s.qd.qingting.fm
+DOMAIN-SUFFIX,s.qd.qingtingfm.com
+
+# 七猫小说
+DOMAIN,cdn-new-ad.wtzw.com
+DOMAIN,a-remad.qm989.com
+DOMAIN,mobads.baidu.com
+DOMAIN-SUFFIX,pglstatp-toutiao.com
+DOMAIN-SUFFIX,gdt.qq.com
+DOMAIN,qzs.gdtimg.com
+DOMAIN,mobads-pre-config.cdn.bcebos.com
+DOMAIN,pgdt.ugdtimg.com
+
+# 微信小程序通用
+DOMAIN,wxsnsdy.wxs.qq.com
+DOMAIN,wxsmsdy.video.qq.com
+DOMAIN,wxsnsdythumb.wxs.qq.com
