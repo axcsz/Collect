@@ -1,17 +1,17 @@
 #!name = 分流 & 广告拦截合集
 #!desc = 分流广告拦截合集
-#!date = 2023-11-10 12:55
+#!date = 2023-11-12 09:15
 #!author = RuCu6 Keywos
 
 
 # ======= A ======= #
+# 阿里云盘
+IP-CIDR,203.107.1.1/24,no-resolve
 # 阿里巴巴
 DOMAIN,ossgw.alicdn.com
 DOMAIN,ems.youku.com
 DOMAIN,hudong.alicdn.com
 DOMAIN-SUFFIX,ut.taobao.com
-# 阿里云盘
-IP-CIDR,203.107.1.1/24,no-resolve
 # 爱奇艺
 DOMAIN,api.iqiyi.com
 # Apple
@@ -35,6 +35,8 @@ DOMAIN-SUFFIX,u3.ucweb.com
 DOMAIN-KEYWORD,safebrowsing.
 
 # ======= B ======= #
+# 百度贴吧
+IP-CIDR,180.76.76.200/32,no-resolve
 # 百度
 DOMAIN,mobads.baidu.com
 DOMAIN-SUFFIX,pos.baidu.com
@@ -44,7 +46,7 @@ DOMAIN,afdconf.baidu.com
 DOMAIN,httpdns.baidubce.com
 DOMAIN,lc.map.baidu.com
 # 百度贴吧
-IP-CIDR,180.76.76.200/32,no-resolve
+IP-CIDR,180.76.76.200/32
 # 哔哩哔哩
 DOMAIN,mall.bilibili.com
 DOMAIN,passport.bilibili.com
@@ -115,11 +117,15 @@ DOMAIN,free-aos-cdn-image.amap.com
 # 工商银行 开屏广告
 DOMAIN,pageviewp.icbc.com.cn
 # 广告联盟
+DOMAIN,i.snssdk.com
+DOMAIN,is.snssdk.com
 DOMAIN,mi.gdt.qq.com
 DOMAIN,open.e.kuaishou.com
-DOMAIN-SUFFIX,snssdk.com
+DOMAIN-SUFFIX,miaozhen.com
 DOMAIN-KEYWORD,pangolin-sdk-toutiao
+DOMAIN-KEYWORD,pangolin.snssdk.com
 DOMAIN-KEYWORD,pglstatp-toutiao
+DOMAIN-KEYWORD,video-cn.snssdk.com
 
 # ======= H ======= #
 # 海尔智家
@@ -132,6 +138,7 @@ DOMAIN,imageadv.ccb.com
 # 京东
 DOMAIN,dns.jd.com
 IP-CIDR,101.124.19.122/32,no-resolve
+IP6-CIDR,2402:db40:5100:1011::5/128,no-resolve
 
 # ======= K ======= #
 # 酷我音乐
