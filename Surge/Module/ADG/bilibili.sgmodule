@@ -7,6 +7,10 @@
 #!date = 2023-10-28 21:25
 
 
+[URL Rewrite]
+^https?:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.interface\.v1\.Search\/DefaultWords - reject
+^https?:\/\/app\.bilibili\.com\/x\/resource\/ip - reject
+
 [Map Local]
 # 可能的一些推广
 ^https?:\/\/api\.bili(bili\.com|api\.net)\/pgc\/season\/app\/related\/recommend\? data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
