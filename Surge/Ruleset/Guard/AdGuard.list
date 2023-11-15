@@ -169,7 +169,7 @@ DOMAIN,tpns.qq.com
 DOMAIN,tytx.m.cn.miaozhen.com
 DOMAIN,vv6.video.qq.com
 DOMAIN-SUFFIX,trace.qq.com
-IP-CIDR,47.110.187.87/32
+IP-CIDR,47.110.187.87/32,no-resolve
 # 腾讯QQ
 DOMAIN,ipv4.gdt.qq.com
 
