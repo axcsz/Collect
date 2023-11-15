@@ -27,8 +27,8 @@ DOMAIN,iadworkbench.apple.com
 DOMAIN,launch.apple.com
 DOMAIN,qwapi.apple.com
 DOMAIN-SUFFIX,advp.apple.com
+DOMAIN-SUFFIX,iad-apple.com
 DOMAIN-SUFFIX,iadsdk.apple.com
-DOMAIN-KEYWORD,.iad-apple.com
 # 安全浏览限制解除
 DOMAIN,lookup.api.bsb.baidu.com
 DOMAIN-SUFFIX,u3.ucweb.com
@@ -67,10 +67,9 @@ DOMAIN,md-i-s.apptimize.com
 # ======= F ======= #
 # Foreca & Google
 DOMAIN,pagead2.googlesyndication.com
-DOMAIN,pubads.g.doubleclick.net
 DOMAIN,www.googleadservices.com
 DOMAIN-SUFFIX,adservice.google.com
-DOMAIN-KEYWORD,googleads.g.doubleclick
+DOMAIN-KEYWORD,ads.g.doubleclick
 
 # ======= G ======= #
 # 高德地图
@@ -170,7 +169,7 @@ DOMAIN,tpns.qq.com
 DOMAIN,tytx.m.cn.miaozhen.com
 DOMAIN,vv6.video.qq.com
 DOMAIN-SUFFIX,trace.qq.com
-IP-CIDR,47.110.187.87/32,no-resolve
+IP-CIDR,47.110.187.87/32
 # 腾讯QQ
 DOMAIN,ipv4.gdt.qq.com
 
@@ -185,17 +184,11 @@ DOMAIN,iadmusicmat.music.126.net
 DOMAIN,iadmusicmatvideo.music.126.net
 DOMAIN-SUFFIX,163jiasu.com
 # 微博 开屏广告
-DOMAIN,adstrategy.biz.weibo.com
-DOMAIN,kadmimage.biz.weibo.com
-DOMAIN,sdkaction.biz.weibo.com
-DOMAIN,sdkclick.biz.weibo.com
-DOMAIN,sdkmonitor.biz.weibo.com
+DOMAIN-SUFFIX,biz.weibo.com
 
 # ======= X ======= #
 # 小米
 DOMAIN,sdkconfig.ad.xiaomi.com
-# XVideos
-DOMAIN-SUFFIX,orbsrv.com
 
 # ======= Y ======= #
 # 优酷 & 菜鸟
