@@ -14,6 +14,9 @@
 ^http:\/\/[\d\.:]*\/?(defaultts\.tc|vmind\.qqvideo\.tc|finderpdd\.video)\.qq\.com\/\w+ - reject
 ^http:\/\/apd-vlive\.apdcdn\.tc\.qq\.com\/vmind\.qqvideo\.tc\.qq\.com\/\w+ - reject
 ^http:\/\/apd-\w+\.v\.smtcdns\.com\/(defaultts|omts|vmind\.qqvideo)\.tc\.qq\.com\/\w+ - reject
+^https?:\/\/vv\.video\.qq\.com\/(diff|get)vmind - reject
+^https?:\/\/vv\.video\.qq\.com\/getvinfo - reject
+
 
 [Map Local]
 # ========== 爱奇艺 ==========
@@ -38,10 +41,6 @@
 # 搜索框填充词
 ^http:\/\/mobileso\.bz\.mgtv\.com\/spotlight\/search\/v1\? data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 
-# ========== 腾讯视频 ==========
-# 腾讯视频 //vv.video.qq.com
-^https?:\/\/vv\.video\.qq\.com\/(diff|get)vmind data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
-^https?:\/\/vv\.video\.qq\.com\/getvinfo data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 
 # ========== 优酷视频 ==========
 # 播放页弹窗动图
