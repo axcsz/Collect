@@ -1,6 +1,6 @@
 #!name = 净化 & 小红书
 #!desc = 移除信息流推广 开屏广告 去除水印
-#!author = RuCu6 chouchoui
+#!author = RuCu6
 #!update = 2023-09-05 13:35
 
 
@@ -11,12 +11,10 @@
 # 信息流
 ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v3\/note\/guide\? data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
 ^https:\/\/www\.xiaohongshu\.com\/api\/sns\/v1\/ads\/resource\? data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
-# 信息流
-^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v[23]\/note\/(feed|redtube|videofeed)\? data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
 
 
 [Script]
-# 详情页 小部件
+# 详情页,小部件
 小红书 = type=http-response,pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v2\/note\/widgets,requires-body=1,script-update-interval=1,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/xiaohongshu.js
 # 搜索页
 小红书 = type=http-response,pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/search\/(banner|hot)_list,requires-body=1,script-update-interval=1,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/xiaohongshu.js
@@ -28,7 +26,8 @@
 # 图片水印,视频水印
 小红书 = type=http-response,pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/(v2\/note\/feed|v3\/note\/videofeed)\?,requires-body=1,script-update-interval=1,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/xiaohongshu.js
 # 信息流
-小红书 = type=http-response,pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/(followfeed|homefeed|note\/(feed|videofeed))\?,requires-body=1,script-update-interval=1,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/xiaohongshu.js
+小红书 = type=http-response,pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v4\/followfeed\?,requires-body=1,script-update-interval=1,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/xiaohongshu.js
+小红书 = type=http-response,pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v6\/homefeed\?,requires-body=1,script-update-interval=1,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/xiaohongshu.js
 
 
 [MITM]
