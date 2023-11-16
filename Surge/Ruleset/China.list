@@ -4,4 +4,4 @@
 #!update = 2023-10-28 18:00
 
 
-GEOIP,CN
+GEOIP,CN,no-resolve
