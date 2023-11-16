@@ -1,7 +1,7 @@
 #!name = 净化 & 软件和微信小程序去广告合集
 #!desc = 去广告合集，包含软件开屏广告和微信小程序广告，以下app请使用单独配置文件：高德地图,哔哩哔哩,菜鸟,微博,YouTube,知乎,小红书,IT之家等
 #!author = RuCu6 Keywos fm200
-#!date = 2023-10-28 22:15
+#!date = 2023-11-13 18:40
 
 
 [General]
@@ -44,22 +44,6 @@ force-http-engine-hosts = %APPEND% sdk.alibaba.com.ailbaba.me, *.cp31.ott.cibntv
 ^https:\/\/fuss10.elemecdn.com\/.+\.mp4 - reject
 ^https:\/\/www1.elecfans.com\/www\/delivery - reject
 
-# ======= F ======= #
-# 番茄小说去章末广告 //*.pangolin-sdk-toutiao, *.pangolin-sdk-toutiao.*, *.pstatp.com, *.pstatp.com.*, *.pglstatp-toutiao.com.*, *.pglstatp-toutiao.com, gurd.snssdk.com, gurd.snssdk.com.*, *default.ixigua.com
-^https?:\/\/.+\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk\/(get_ads|stats|settings)\/ - reject
-^https?:\/\/.+\.pglstatp-toutiao\.com\/.+\/toutiao\.mp4 - reject
-^https?:\/\/.+\.(pglstatp-toutiao|pstatp)\.com\/(obj|img)\/(ad-app-package|ad)\/.+ - reject
-^https?:\/\/.+\.(pglstatp-toutiao|pstatp)\.com\/(obj|img)\/web\.business\.image\/.+ - reject
-^https?:\/\/.+\.(pglstatp-toutiao|pstatp)\.com\/obj\/ad-pattern\/renderer - reject
-^https?:\/\/gurd\.snssdk\.com\/src\/server\/v3\/package - reject
-^https?:\/\/.+\.byteimg.com/tos-cn-i-1yzifmftcy\/(.+)-jpeg\.jpeg - reject
-^https?:\/\/.+\.pstatp\.com\/obj\/mosaic-legacy\/.+\?from\=ad - reject
-^https?:\/\/.+\.pstatp\.com\/bytecom\/resource\/track_log\/src\/.+ - reject
-^https?:\/\/.+\.snssdk\.com\/video\/play\/1\/toutiao\/.+\/mp4 - reject
-^https?:\/\/.+\.snssdk.com\/api\/ad\/.+ - reject
-^http:\/\/.+\.byteimg\.com\/ad-app-package - reject
-^http:\/\/.+\.byteimg\.com\/web\.business\.image - reject
-
 # ======= H ====== #
 # 海尔智家 //zj.haier.net
 ^https:\/\/zj\.haier\.net\/api-gw\/shpmResource\/waterfall\/recommend\/list\? - reject
@@ -68,8 +52,6 @@ force-http-engine-hosts = %APPEND% sdk.alibaba.com.ailbaba.me, *.cp31.ott.cibntv
 # ======= J ====== #
 # 建设银行
 ^http:\/\/image1\.ccb\.com\/newsinfo\/eBranch\/check\/(nf\/newfin\/activity|po\/poortheme\/activity)\/\w+\.png - reject
-# 京东 //api.m.jd.com
-^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(start|uniformRecommend) - reject
 # 交管12123 //gab.122.gov.cn
 ^https:\/\/gab\.122\.gov\.cn\/eapp\/m\/sysquery\/adver$ - reject
 
@@ -81,19 +63,13 @@ force-http-engine-hosts = %APPEND% sdk.alibaba.com.ailbaba.me, *.cp31.ott.cibntv
 # 拼多多 //api.pinduoduo.com, api.yangkeduo.com
 ^https:\/\/api\.(pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash - reject
 
-# ======= Q ====== #
-# qq邮箱开屏 //rescdn.qqmail.com
-^https:\/\/rescdn\.qqmail\.com\/qqmail\/images\/.+\.(png|jpg)$ - reject
-# 腾讯手机管理开屏 us.l.qq.com
-^https:\/\/us\.l\.qq\.com\/exapp - reject
-
 # ======= X ====== #
 # 闲鱼 //gw.alicdn.com, acs.m.taobao.com
 ^https:\/\/gw\.alicdn\.com\/mt\/ - reject
 ^https:\/\/gw\.alicdn\.com\/tfs\/.+\d{3,4}-\d{4} - reject
 ^https:\/\/gw\.alicdn\.com\/tps\/.+\d{3,4}-\d{4} - reject
 ^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.taobao\.idle\.home\.welcome - reject
-## 小米金融 //api.jr.mi.com
+# 小米金融 //api.jr.mi.com
 ^https:\/\/api\.jr\.mi\.com\/jr\/api\/playScreen - reject
 ^https:\/\/api\.jr\.mi\.com\/v\d\/adv - reject
 
@@ -101,17 +77,12 @@ force-http-engine-hosts = %APPEND% sdk.alibaba.com.ailbaba.me, *.cp31.ott.cibntv
 # 云闪付 //wallet.95516.com
 ^https:\/\/wallet\.95516\.com(:10533)?\/s\/wl\/icon\/large\/1 - reject
 
-# ======= Z ====== #
-# 中国移动 //clientaccess.10086.cn, wap.js.10086.cn
-^https:\/\/clientaccess\.10086\.cn\/biz-orange\/DN\/init\/startInit - reject
-^https:\/\/wap\.js\.10086\.cn\/jsmccClient\/cd\/market_content\/api\/v\d\/market_content\.page\.query - reject
-
 
 [Map Local]
 # ======= A ======= #
 # 阿里云盘 //api.alipan.com, member.alipan.com
 ^https:\/\/api\.alipan\.com\/adrive\/v1\/file\/getTopFolders data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
-# 阿里巴巴 //acs.m.taobao.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com
+# 阿里巴巴 //acs.m.taobao.com, heic.alicdn.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com
 ^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alibaba\.advertisementservice\.getadv data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 ^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alimama\.etao\.config\.query\/.+?etao_advertise data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 ^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alimusic\.common\.mobileservice\.startinit data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
@@ -120,6 +91,7 @@ force-http-engine-hosts = %APPEND% sdk.alibaba.com.ailbaba.me, *.cp31.ott.cibntv
 ^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.o2o\.ad\.gateway\.get data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 ^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.taobao\.idle\.home\.welcome data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 ^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.trip\.activity\.querytmsresources data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
+^https:\/\/heic\.alicdn\.com\/imgextra\/i\d\/\d*\/?[\w!]+-\d-(octopus|tps-1125-1602|tps-1080-1920)\.(jp|pn)g_(1\d{3}|9\d{2})x(1\d{3}|9\d{2})q[59]0 data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 ^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.adx\.flyad\.getad data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 ^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(volvo\.secondfloor\.getconfig|wireless\.home\.newface\.awesome\.get) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 
@@ -132,6 +104,12 @@ force-http-engine-hosts = %APPEND% sdk.alibaba.com.ailbaba.me, *.cp31.ott.cibntv
 # 飞猪 //acs.m.taobao.com
 ^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.fliggy\.crm\.screen\.(allresource|predict) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 
+# ======= J ======= #
+# 京东 //api.m.jd.com
+^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(searchBoxWord|stationPullService|uniformRecommend) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
+# 京东极速版 //api.m.jd.com
+^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_advertising data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
+
 # ======= K ======= #
 # 酷安 //api.coolapk.com
 ^https:\/\/api\.coolapk\.com\/v6\/search\?.*type=hotSearch data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
@@ -142,42 +120,14 @@ force-http-engine-hosts = %APPEND% sdk.alibaba.com.ailbaba.me, *.cp31.ott.cibntv
 ^https:\/\/flowplus\.meituan\.net\/v1\/mss_\w+\/linglong\/\d+\.jpg data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 ^https:\/\/img\.meituan\.net\/bizad\/bizad_brandCpt_\d+\.jpg data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 ^https:\/\/s3plus\.meituan\.net\/v1\/mss_\w+\/(brandcpt-vedio|waimai-alita)\/\w+\.zip$ data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
-# 美柚 微信小程序 //wxproj.seeyouyima.com
-^https:\/\/wxproj\.seeyouyima\.com\/data\/today_tips data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
-# 蜜雪冰城 微信小程序 //mxsa.mxbc.net
-^https:\/\/mxsa\.mxbc\.net\/api\/v1\/adinfo\/adplace\/query data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
-# 猫眼电影 微信小程序 //ad.maoyan.com, wx.maoyan.com, vod-movie.maoyan.com, api.maoyan.com
-^https:\/\/ad\.maoyan\.com\/api\/position\/detail data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
-^https:\/\/wx\.maoyan\.com\/maoyansh\/api\/mobile\/(hotMatchList|eSportsIps) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
-^https:\/\/vod-movie\.maoyan\.com\/vod\/video\/onlineMovies\.json data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
-^https:\/\/wx\.maoyan\.com\/maoyansh\/myshow\/ajax\/movie\/wonderShow data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
-^https:\/\/wx\.maoyan\.com\/maoyansh\/myshow\/ajax\/performances\/calendar\/0 data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
-^https:\/\/wx\.maoyan\.com\/maoyansh\/myshow\/ajax\/performances\/rob\/main data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
-^https:\/\/wx\.maoyan\.com\/maoyansh\/myshow\/ajax\/celebrityBasicList\/query data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
-^https:\/\/wx\.maoyan\.com\/maoyansh\/myshow\/ajax\/recommend\/performances data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
-^https:\/\/api\.maoyan\.com\/sns\/common\/feed\/channel\/v2\/list\.json data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
-^https:\/\/wx\.maoyan\.com\/maoyansh\/myshow\/ajax\/ad\/detail data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
-
-# ======= S ====== #
-# 四川电信 微信小程序净化 //sctel10000.cn
-^https:\/\/sctel10000\.cn\/config\/ads\/adsInfo data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
-^https:\/\/sctel10000\.cn\/config\/myZoneConfig\/getMyHomeMenus data="https://raw.githubusercontent.com/axcsz/Collect/master/Script/sichuandianxinshouye.json"
 
 # ======= W ====== #
-# 微信公众号底部 //mp.weixin.qq.com
-^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad data="https://raw.githubusercontent.com/Keywos/rule/main/mocks//WeChat.json"
-# 移除微信公众号中的推广内容 //mp.weixin.qq.com
+# 微信 //mp.weixin.qq.com, weixin110.qq.com, security.wechat.com
+## 移除公众号中的推广内容 //mp.weixin.qq.com
 ^https:\/\/mp\.weixin\.qq\.com\/mp\/(cps_product_info|getappmsgad|masonryfeed|relatedarticle)\? data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
-# 网易邮箱大师开屏 appconf.mail.163.com
-^https?:\/\/appconf\.mail\.163\.com\/mmad\/ data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-200.txt"
-^https?:\/\/mail\.163\.com\/smflow\/(config|get)\.do data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
-^https?:\/\/mobads\.baidu\.com\/cpro\/ui\/mads\.php\? data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
-^https?:\/\/dsp-x\.jd\.com\/adx\/sdk data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 
 # ======= X ====== #
-# 小米 //api.m.mi.com, api-mifit.huami.com, api.jr.mi.com, home.mi.com, shop-api.retail.mi.com
-## 小米商城 //api.m.mi.com
-## 开屏广告
+# 小米商城 //api.m.mi.com
 ^https:\/\/shop-api\.retail\.mi\.com\/mtop\/navi\/skywheel\/mishop\/splash data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 ## 搜索框,热词,卡片
 ^https:\/\/api\.m\.mi\.com\/v1\/app\/popup_info$ data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
@@ -185,78 +135,70 @@ force-http-engine-hosts = %APPEND% sdk.alibaba.com.ailbaba.me, *.cp31.ott.cibntv
 ^https:\/\/api\.m\.mi\.com\/v2\/search\/search_default$ data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 ## 商品推荐信息流
 ^https:\/\/api\.m\.mi\.com\/v1\/home\/page_feed(_v5)?$ data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
-## 米家 //home.mi.com
+# 米家 //home.mi.com
 ^https:\/\/home\.mi\.com\/cgi-op\/api\/v1\/recommendation\/(banner|carousel\/banners|myTab|openingBanner) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 
 # ======= Z ====== #
-# 中国移动开屏 //client.app.coc.10086.cn
-^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/(explorePage\/getAdverList|init\/startInit) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks//reject-200.txt"
-# 中通快递 微信小程序净化 hdgateway.zto.com
-^https:\/\/hdgateway\.zto\.com\/getApolloConfig data="https://raw.githubusercontent.com/Keywos/rule/main/mocks//reject-200.txt"
-^https:\/\/hdgateway\.zto\.com\/track data="https://raw.githubusercontent.com/Keywos/rule/main/mocks//reject-200.txt"
-^https:\/\/hdgateway\.zto\.com\/getAdInfo data="https://raw.githubusercontent.com/Keywos/rule/main/mocks//reject-200.txt"
-^https:\/\/hdgateway\.zto\.com\/listJumperShow data="https://raw.githubusercontent.com/Keywos/rule/main/mocks//reject-200.txt"
+# 中国移动 //client.app.coc.10086.cn
+^https:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/(explorePage\/getAdverList|init\/startInit) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
+
 
 [Script]
 # ======= 0 ======= #
 # 12306 开屏广告 //ad.12306.cn
-^https:\/\/ad\.12306\.cn\/ad\/ser\/getAdList,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/12306.js
+12306 = type=http-response,pattern=^https:\/\/ad\.12306\.cn\/ad\/ser\/getAdList,requires-body=1,script-update-interval=1,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/12306.js
 
 # ======= A ======= #
 # amdc
-^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/header.js
+amdc = type=http-response,pattern=^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch$,requires-body=1,script-update-interval=1,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/header.js
 # 阿里云盘 //api.alipan.com, member.alipan.com
-^https:\/\/api\.alipan\.com\/apps\/v2\/users\/home\/(news|widgets),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/adrive.js
-^https:\/\/member\.alipan\.com\/v1\/users\/onboard_list,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/adrive.js
-# 阿里巴巴 //acs.m.taobao.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com
-^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.mshow,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cainiao.js
-^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(cloudvideo\.video\.query|wireless\.home\.splash\.awesome\.get),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js
-^https:\/\/poplayer\.template\.alibaba\.com\/\w+\.json,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js
-# 爱思推广全部干掉只保留搜索 list-app-m.i4.cn, search-app-m.i4.cn
-爱思 = type=http-response,pattern=^https?:\/\/(search|list)-app-m\.i4\.cn\/(getHotSearchList|getAppList)\.xhtml,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Keywos/rule/main/JS/aisi.js
+阿里云盘 = type=http-response,pattern=^https:\/\/api\.alipan\.com\/apps\/v2\/users\/home\/(news|widgets),requires-body=1,script-update-interval=1,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/adrive.js
+阿里云盘 = type=http-response,pattern=^https:\/\/member\.alipan\.com\/v1\/users\/onboard_list,requires-body=1,script-update-interval=1,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/adrive.js
+# 阿里巴巴 //acs.m.taobao.com, heic.alicdn.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com
+阿里巴巴 = type=http-response,pattern=^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.mshow,requires-body=1,script-update-interval=1,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cainiao.js
+阿里巴巴 = type=http-response,pattern=^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(cloudvideo\.video\.query|wireless\.home\.splash\.awesome\.get),requires-body=1,script-update-interval=1,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js
+阿里巴巴 = type=http-response,pattern=^https:\/\/poplayer\.template\.alibaba\.com\/\w+\.json,requires-body=1,script-update-interval=1,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js
 
 # ======= B ====== #
 # 百度云 //pan.baidu.com, update.pan.baidu.com
-^https:\/\/pan\.baidu\.com\/api\/getsyscfg\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/baiduCloud.js
-^https:\/\/pan\.baidu\.com\/rest\/2\.0\/membership\/user,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/baiduCloud.js
-
-# ======= E ====== #
-# EMS 微信小程序 //ump.ems.com.cn
-EMS = type=http-response,pattern=^https:\/\/ump\.ems\.com\.cn\/new-generation-extend\/redis\/pageInfoByChannel,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/ems.js
+百度云 = type=http-response,pattern=^https:\/\/pan\.baidu\.com\/api\/getsyscfg\?,requires-body=1,script-update-interval=1,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/baiduCloud.js
+百度云 = type=http-response,pattern=^https:\/\/pan\.baidu\.com\/rest\/2\.0\/membership\/user,requires-body=1,script-update-interval=1,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/baiduCloud.js
 
 # ======= J ====== #
-# 简书跳过重定向页面以直接访问 //links.jianshu.com, www.jianshu.com
-^https:\/\/links\.jianshu\.com\/go\?to=,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/noRedirect.js
-^https:\/\/www\.jianshu\.com\/go-wild\?ac=\d&url=,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/noRedirect.js
+# JavDB //api.hechuangxinxi.xyz, jdforrepam.com
+JavDB = type=http-response,pattern=^https:\/\/(api\.hechuangxinxi\.xyz|jdforrepam\.com)\/api\/(v1\/(ads|startup|users)|v4\/movies\/\w+),requires-body=1,script-update-interval=1,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js
+JavDB = type=http-response,pattern=^https:\/\/(api\.hechuangxinxi\.xyz|jdforrepam\.com)\/api\/v1\/movies\/\w+\/play\?,requires-body=1,script-update-interval=1,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/javdb.js
+# 简书 跳过重定向页面以直接访问 //links.jianshu.com, www.jianshu.com
+简书 = type=http-response,pattern=^https:\/\/links\.jianshu\.com\/go\?to= - script-echo-response https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/noRedirect.js
+简书 = type=http-response,pattern=^https:\/\/www\.jianshu\.com\/go-wild\?ac=\d&-= - script-echo-response https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/noRedirect.js
 # 京东 //api.m.jd.com
-^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=personinfoBusiness,requires-body=1,max-size=0,script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/JD/JD_remove_ads.js
+京东 = type=http-response,pattern=^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(personinfoBusiness|start|welcomeHome),requires-body=1,script-update-interval=1,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js
 
 # ======= K ======= #
 # 酷安 //api.coolapk.com
-^https:\/\/api\.coolapk\.com\/v6\/feed\/(detail|replyList)\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/coolapk.js
-^https:\/\/api\.coolapk\.com\/v6\/main\/(dataList|indexV8|init),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/coolapk.js
-^https:\/\/api\.coolapk\.com\/v6\/page\/dataList\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/coolapk.js
+酷安 = type=http-response,pattern=^https:\/\/api\.coolapk\.com\/v6\/feed\/(detail|replyList)\?,requires-body=1,script-update-interval=1,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/coolapk.js
+酷安 = type=http-response,pattern=^https:\/\/api\.coolapk\.com\/v6\/main\/(dataList|indexV8|init),requires-body=1,script-update-interval=1,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/coolapk.js
+酷安 = type=http-response,pattern=^https:\/\/api\.coolapk\.com\/v6\/page\/dataList\?,requires-body=1,script-update-interval=1,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/coolapk.js
 
 # ======= T ====== #
-# 贴吧全面去广告 //tiebac.baidu.com
-^http:\/\/c\.tieba\.baidu\.com\/c\/f\/(excellent\/personalized|frs\/(generalTabList|page|threadlist)|pb\/(pic)?page)$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/tiebaJson.js
-^http:\/\/c\.tieba\.baidu\.com\/c\/f\/(excellent\/personalized|frs\/(generalTabList|page|threadlist)|pb\/(pic)?page)\?cmd,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/tiebaProto.js
-^http:\/\/c\.tieba\.baidu\.com\/c\/s\/sync$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/tiebaJson.js
-^https:\/\/tiebac\.baidu\.com\/tiebaads\/commonbatch\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/tiebaJson.js
+# 贴吧 全面去广告 //tiebac.baidu.com
+贴吧 = type=http-response,pattern=^http:\/\/c\.tieba\.baidu\.com\/c\/f\/(excellent\/personalized|frs\/(generalTabList|page|threadlist)|pb\/(pic)?page)$,requires-body=1,script-update-interval=1,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/tiebaJson.js
+贴吧 = type=http-response,pattern=^http:\/\/c\.tieba\.baidu\.com\/c\/f\/(excellent\/personalized|frs\/(generalTabList|page|threadlist)|pb\/(pic)?page)\?cmd,requires-body=1,script-update-interval=1,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/tiebaProto.js
+贴吧 = type=http-response,pattern=^http:\/\/c\.tieba\.baidu\.com\/c\/s\/sync$,requires-body=1,script-update-interval=1,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/tiebaJson.js
+贴吧 = type=http-response,pattern=^https:\/\/tiebac\.baidu\.com\/tiebaads\/commonbatch\?,requires-body=1,script-update-interval=1,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/tiebaJson.js
 
 # ======= W ====== #
+# 微信 //mp.weixin.qq.com, weixin110.qq.com, security.wechat.com
 ## 跳过微信中转页面,解除被封禁链接 //weixin110.qq.com, security.wechat.com
-^https\:\/\/(weixin110\.qq|security\.wechat)\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/wechat/wechat110.js
-# 移除公众号中的推广内容 //mp.weixin.qq.com
-^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad,requires-body=1,max-size=0,script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weixin/Weixin_Official_Accounts_remove_ads.js
+微信 = type=http-response,pattern=^https\:\/\/(weixin110\.qq|security\.wechat)\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\?,requires-body=1,script-update-interval=1,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/wechat/wechat110.js
 
 # ======= X ====== #
+# 小米 //api.m.mi.com, api-mifit.huami.com, api.jr.mi.com, home.mi.com, shop-api.retail.mi.com
 ## 小米商城 //api.m.mi.com
-## 开屏广告
-^https:\/\/api\.m\.mi\.com\/v1\/(app\/start|order\/expressView),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js
+小米 = type=http-response,pattern=^https:\/\/api\.m\.mi\.com\/v1\/(app\/start|order\/expressView),requires-body=1,script-update-interval=1,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js
 
 
 [MITM]
 h2 = true
 tcp-connection = true
-hostname = %APPEND% ad.12306.cn, *.58cdn.com.cn, app.58.com, pic?.ajkimg.com, gw.aihuishou.com, list-app-m.i4.cn, api.alipan.com, member.alipan.com, acs.m.taobao.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com, pan.baidu.com, update.pan.baidu.com, www.washpayer.com, api.chelaile.net.cn, web.chelaile.net.cn, app-gw.csdn.net, api.douban.com, elemecdn.com, fuss10.elemecdn.com, www1.elecfans.com, zj.haier.net, api.yijingluowangluo.xyz, jdforrepam.com, links.jianshu.com, www.jianshu.com, api.m.jd.com, gab.122.gov.cn, res.kfc.com.cn, api.coolapk.com, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, api.pinduoduo.com, api.yangkeduo.com, tiebac.baidu.com, mp.weixin.qq.com, weixin110.qq.com, security.wechat.com, api.m.mi.com, api.jr.mi.com, home.mi.com, shop-api.retail.mi.com, wallet.95516.com, clientaccess.10086.cn, wap.js.10086.cn, *.pangolin-sdk-toutiao, *.pangolin-sdk-toutiao.*, *.pstatp.com, *.pstatp.com.*, *.pglstatp-toutiao.com.*, *.pglstatp-toutiao.com, gurd.snssdk.com, gurd.snssdk.com.*, *default.ixigua.com, rescdn.qqmail.com, us.l.qq.com, wxproj.seeyouyima.com, mxsa.mxbc.net, ad.maoyan.com, wx.maoyan.com, vod-movie.maoyan.com, api.maoyan.com, sctel10000.cn, appconf.mail.163.com, client.app.coc.10086.cn, search-app-m.i4.cn, ump.ems.com.cn, hdgateway.zto.com
+hostname = %APPEND% ad.12306.cn, *.58cdn.com.cn, app.58.com, pic?.ajkimg.com, gw.aihuishou.com, list-app-m.i4.cn, api.alipan.com, member.alipan.com, acs.m.taobao.com, heic.alicdn.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com, pan.baidu.com, update.pan.baidu.com, www.washpayer.com, api.chelaile.net.cn, web.chelaile.net.cn, app-gw.csdn.net, api.douban.com, elemecdn.com, fuss10.elemecdn.com, www1.elecfans.com, zj.haier.net, api.hechuangxinxi.xyz, jdforrepam.com, links.jianshu.com, www.jianshu.com, api.m.jd.com, gab.122.gov.cn, res.kfc.com.cn, api.coolapk.com, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, api.pinduoduo.com, api.yangkeduo.com, tiebac.baidu.com, mp.weixin.qq.com, weixin110.qq.com, security.wechat.com, api.m.mi.com, api.jr.mi.com, home.mi.com, shop-api.retail.mi.com, wallet.95516.com, client.app.coc.10086.cn
