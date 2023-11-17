@@ -1,7 +1,7 @@
-#!name = OpenAI分流
-#!desc = OpenAI相关服务进行分流
+#!name = OpenAI 规则
+#!desc = OpenAI 相关服务进行分流
 #!author = Axcsz5（整理）
-# update = 2023.07.13
+#!date = 2023.07.13 10:30
 
 
 DOMAIN,cdn.auth0.com
