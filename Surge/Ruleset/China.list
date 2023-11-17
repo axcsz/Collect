@@ -1,7 +1,7 @@
-#!name = China 规则
-#!desc = China 分流， 用于国内的网站和app
-#!author =  Axcsz5
-#!date = 2023-11-17 10:30
+#!name = China 分流规则
+#!desc = 用于国内软件和网站，一般选择直连（direct）
+#!author =  Axcsz5（收集整理）
+#!date = 2023-11-17 11:00
 
 
 GEOIP,CN,no-resolve
