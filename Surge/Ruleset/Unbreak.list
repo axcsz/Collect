@@ -1,7 +1,7 @@
-#!name = Unbreak 规则
-#!desc = 主要用于修正后续规则中 REJECT 及 PROXY 策略的一些不正确情况，如常见的暴力去广告造成的某些推送服务无法使用、使用 Google 的一些可直连服务。
-#!author = DivineEngine RuCu6 fm200
-#!date = 2023.09.16 10:30
+#!name = Unbreak 分流规则
+#!desc = 用于修正后续规则中 REJECT 及 PROXY 策略的一些不正确情况，如常见的暴力去广告造成的某些推送服务无法使用、使用 Google 的一些可直连服务。
+#!author = DivineEngine RuCu6 fm200 Axcsz5（收集整理）
+#!date = 2023-11-17 11:00
 
 
 # General
