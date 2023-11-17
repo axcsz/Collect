@@ -1,7 +1,7 @@
-#!name = Telegram分流
-#!desc = Telegram相关服务进行分流
-#!author = DivineEngine
-# update =2023.07.13
+#!name = Telegram 规则
+#!desc = Telegram 相关服务进行分流
+#!author = Axcsz5（整理）
+#!date = 2023.07.13 10:30
 
 
 DOMAIN-SUFFIX,t.me
