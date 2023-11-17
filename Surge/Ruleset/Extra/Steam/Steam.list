@@ -1,7 +1,7 @@
-#!name = Steam分流
-#!desc = Steam相关服务进行分流
+#!name = Steam 分流
+#!desc = Steam 相关服务进行分流
 #!author = Axcsz5（整理）
-# updatetime = 2023.09.03
+# update = 2023.07.13
 
 
 DOMAIN-SUFFIX,steam-chat.com
