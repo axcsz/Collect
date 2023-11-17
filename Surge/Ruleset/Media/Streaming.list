@@ -1,9 +1,7 @@
-#!name=Streaming分流
-#!desc=Streaming相关服务进行分流
-#!author=  DivineEngine Axcsz5（搬运整理）
-#!homepage=https://github.com/axcsz/Collect/edit/master/Surge
-#!icon=
-# updatetime=2023.07.11
+#!name = Streaming 规则
+#!desc = Streaming 相关服务进行分流
+#!author = Axcsz5（整理）
+#!date = 2023.07.13 10:30
 
 
 
