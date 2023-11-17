@@ -1,7 +1,7 @@
-#!name = douyin 规则
-#!desc = douyin 相关服务进行分流
-#!author = Axcsz5（整理）
-#!upda = 2023.11.17 10:00
+#!name = DouYin 分流规则
+#!desc = 用于字节旗下软件
+#!author = Axcsz5（收集整理）
+#!date = 2023-11-17 11:00
 
 
 DOMAIN,sso.douyin.com
