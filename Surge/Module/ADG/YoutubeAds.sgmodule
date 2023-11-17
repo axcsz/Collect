@@ -1,7 +1,7 @@
 #!name = 净化 & YouTube
 #!desc = 删除底部上传按钮、瀑布流、视频、搜索中出现的广告、Shorts内的视频广告，开启画中画(PIP), 后台播放 (Beta)，自动翻译
 #!author = Maasea RuCu6
-#!update = 2023-07-05 21:50
+#!date = 2023-07-05 21:50
 
 
 [Map Local]
