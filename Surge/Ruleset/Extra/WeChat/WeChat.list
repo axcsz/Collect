@@ -1,7 +1,7 @@
-#!name = WeChat 规则
-#!desc = WeChat 相关服务进行分流
-#!author = Axcsz5（整理）
-# update = 2023.11.16 10:30
+#!name = WeChat 分流规则
+#!desc = 用于微信软件
+#!author = DivineEngine Axcsz5（收集整理）
+#!date = 2023-11-17 11:00
 
 
 DOMAIN,dl.wechat.com
