@@ -1,9 +1,7 @@
-#!name = TikTok分流
-#!desc = TikTok相关服务进行分流
-#!icon =
+#!name = TikTok 规则
+#!desc = TikTok 相关服务进行分流
 #!author = Axcsz5（整理）
-#!homepage = https://github.com/axcsz/Collect/blob/master/Surge/Ruleset/Media/Video/TikTok.list
-#!updatetime = 2023.08.05
+#!date = 2023.08.05 10:30
 
 
 
