@@ -1,7 +1,7 @@
-#!name = Spotify 规则
-#!desc = Spotify 相关服务进行分流
-#!author = Axcsz5（整理）
-# date = 2023.07.13 10:30
+#!name = Spotify 分流规则
+#!desc = 用于Spotify软件
+#!author = DivineEngine Axcsz5（收集整理）
+#!date = 2023-11-17 11:00
 
 
 DOMAIN,audio4-ak-spotify-com.akamaized.net
