@@ -314,3 +314,11 @@ DOMAIN,pgdt.ugdtimg.com
 DOMAIN,wxsnsdy.wxs.qq.com
 DOMAIN,wxsmsdy.video.qq.com
 DOMAIN,wxsnsdythumb.wxs.qq.com
+
+# https://www.x1hub.com/
+DOMAIN-SUFFIX,jads.co
+DOMAIN-SUFFIX,juicyads.com
+
+# https://www.xvideos.com/
+DOMAIN,a.orbsrv.com
+DOMAIN,s.orbsrv.com
