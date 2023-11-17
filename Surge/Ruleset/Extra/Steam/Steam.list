@@ -1,7 +1,7 @@
-#!name = Steam 分流
+#!name = Steam 规则
 #!desc = Steam 相关服务进行分流
 #!author = Axcsz5（整理）
-# update = 2023.07.13
+#!date = 2023.07.13 10:30
 
 
 DOMAIN-SUFFIX,steam-chat.com
