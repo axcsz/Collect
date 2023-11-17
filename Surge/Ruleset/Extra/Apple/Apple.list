@@ -1,7 +1,7 @@
-#!name = Apple分流
-#!desc = Apple相关服务进行分流
+#!name = Apple 分流
+#!desc = Apple 相关服务进行分流
 #!author = Axcsz5（整理）
-# update = 2023.07.13
+#update = 2023.11.17 10：20
 
 
 DOMAIN-SUFFIX,aaplimg.com
@@ -20,11 +20,18 @@ DOMAIN-SUFFIX,icloud.com.cn
 DOMAIN-SUFFIX,icloud-content.com
 DOMAIN-SUFFIX,me.com
 DOMAIN-SUFFIX,mzstatic.com
+DOMAIN-SUFFIX,apple-support.akadns.net
+DOMAIN-SUFFIX,apple.com.akadns.net
+DOMAIN-SUFFIX,apple.com.edgekey.net
+DOMAIN-SUFFIX,icloud.com.akadns.net
+DOMAIN-SUFFIX,itunes.com
+DOMAIN-SUFFIX,smoot.apple.cn
 DOMAIN-KEYWORD,apple.com.akadns.net
 DOMAIN-KEYWORD,apple.com.edgekey.net
 DOMAIN-KEYWORD,apple-support.akadns.net
 DOMAIN-KEYWORD,icloud.com.akadns.net
 # App Store
+DOMAIN,iosapps.itunes.apple.com
 DOMAIN-SUFFIX,apps.apple.com
 DOMAIN-SUFFIX,itunes.apple.com
 DOMAIN-SUFFIX,itunes-apple.com.akadns.net
