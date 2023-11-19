@@ -27,6 +27,8 @@ DOMAIN,live-trace.bilibili.com
 DOMAIN,message.bilibili.com
 DOMAIN,cm.bilibili.com
 DOMAIN,api.bilibili.tv
+DOMAIN-SUFFIX,bilivideo.com
+DOMAIN-SUFFIX,hdslb.com
 DOMAIN-SUFFIX,biliapi.com
 DOMAIN-SUFFIX,biliapi.net
 DOMAIN-SUFFIX,bilibili.com
