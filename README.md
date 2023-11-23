@@ -11,4 +11,4 @@
 
 # PS
 
-基本来自：RuCu6````
+基本来自：[RuCu6](https://github.com/RuCu6/QuanX)https://github.com/RuCu6/QuanX)
