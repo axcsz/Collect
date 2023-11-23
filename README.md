@@ -5,16 +5,16 @@
 ###  QuantumultX 、 Loon 、 Surge
 
 
-## ✅ 特别说明：
+## → 特别说明：
 
-▶️ 本库中内容均收集于互联网开源项目，在此对原作者表示衷心的感谢。同时，我们谴责将他人内容标注为自己原创的行为。
+▶ 本库中内容均收集于互联网开源项目，在此对原作者表示衷心的感谢。同时，我们谴责将他人内容标注为自己原创的行为。
 
-▶️ 使用本项目中的内容所造成的一切后果，均由使用者承担。
+▶ 使用本项目中的内容所造成的一切后果，均由使用者承担。
 
-▶️ 本项目中的内容请不要在中国大陆的任何平台传播。
+▶ 本项目中的内容请不要在中国大陆的任何平台传播。
 
 
-## 🧚‍♂️ 特别鸣谢
+##  特别鸣谢
 
 - [@28413761](https://github.com/28413761)(张军本人)
 - [@app2smile](https://github.com/app2smile)
@@ -33,10 +33,10 @@
 - [@Tartarus2014](https://github.com/Tartarus2014)
 - [@zmqcherish](https://github.com/zmqcherish)
 
-## 🧚‍♀️ 欢迎星标 🌟
+##  欢迎星标 
 
 ![Star](https://api.star-history.com/svg?repos=axcsz/Collect&type=Date)
 
-### 🧚‍♀️ 访问量统计
+###  访问量统计
 
 ![Visitor Count](https://profile-counter.glitch.me/axcsz/count.svg)
