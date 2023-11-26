@@ -1,3 +1,9 @@
+#!name = Apple 分流规则
+#!desc = 用于苹果软件和网站
+#!author = DivineEngine Axcsz5（收集整理）
+#!date = 2023-11-17 11:00
+
+
 payload:
   # Apple
   - DOMAIN-SUFFIX,aaplimg.com
@@ -16,7 +22,20 @@ payload:
   - DOMAIN-SUFFIX,icloud-content.com
   - DOMAIN-SUFFIX,me.com
   - DOMAIN-SUFFIX,mzstatic.com
+  - DOMAIN-SUFFIX,apple-support.akadns.net
+  - DOMAIN-SUFFIX,apple.com.akadns.net
+  - DOMAIN-SUFFIX,apple.com.edgekey.net
+  - DOMAIN-SUFFIX,icloud.com.akadns.net
+  - DOMAIN-SUFFIX,itunes.com
+  - DOMAIN-SUFFIX,smoot.apple.cn
   - DOMAIN-KEYWORD,apple.com.akadns.net
   - DOMAIN-KEYWORD,apple.com.edgekey.net
   - DOMAIN-KEYWORD,apple-support.akadns.net
   - DOMAIN-KEYWORD,icloud.com.akadns.net
+  # App Store
+  - DOMAIN,iosapps.itunes.apple.com
+  - DOMAIN-SUFFIX,apps.apple.com
+  - DOMAIN-SUFFIX,itunes.apple.com
+  - DOMAIN-SUFFIX,itunes-apple.com.akadns.net
+  - DOMAIN-SUFFIX,mzstatic.com
+  - DOMAIN,ppq.apple.com // Enterprise App validation
