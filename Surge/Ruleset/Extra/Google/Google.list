@@ -1,7 +1,7 @@
 #!name = Google 分流规则
 #!desc = 用于Google软件和网站
 #!author = Axcsz5（收集整理）
-#!date = 2023-11-17 11:00
+#!date = 2023-11-26 10:00
 
 
 DOMAIN-SUFFIX,abc.xyz
@@ -49,3 +49,15 @@ DOMAIN-SUFFIX,zynamics.com
 DOMAIN-KEYWORD,google
 DOMAIN-KEYWORD,.blogspot.
 DOMAIN-SUFFIX,goog
+DOMAIN-KEYWORD,pa.google
+PROCESS-NAME,Backup and Sync
+USER-AGENT,%E4%BA%91%E7%AB%AF%E7%A1%AC%E7%9B%98*
+USER-AGENT,Google.Drive*
+USER-AGENT,*com.google.Drive*
+DOMAIN-SUFFIX,docs.google.com
+DOMAIN-SUFFIX,drive.google.com
+DOMAIN-SUFFIX,googledrive.com
+DOMAIN-SUFFIX,googleusercontent.com
+DOMAIN,www.googleapis.com
+DOMAIN-KEYWORD,www.google.
+DOMAIN,lens.l.google.com
