@@ -1,11 +1,15 @@
-#!name = StreamingSE 分流规则
-#!desc = 用于港台视频软件和网站
+#!name = bilibili 分流规则
+#!desc = 用于 bilibili 视频软件和网站
 #!author = DivineEngine Axcsz5（收集整理）
 #!date = 2023-11-17 11:00
 
 
 payload:
  # bilibili
+ - USER-AGENT,*bili*
+ - USER-AGENT,Bilibili*
+ - USER-AGENT,bili*
+ - USER-AGENT,bili-inter*
  - DOMAIN,api.biliapi.com
  - DOMAIN,api.biliapi.net
  - DOMAIN,api.bilibili.com
