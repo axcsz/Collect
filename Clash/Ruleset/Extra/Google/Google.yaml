@@ -1,5 +1,11 @@
+#!name = Google 分流规则
+#!desc = 用于 Google 旗下软件和网站
+#!author = DivineEngine Axcsz5（收集整理）
+#!date = 2023-11-26 10:00
+
+
 payload:
-  # > Alphabet
+  # Alphabet
   - DOMAIN-SUFFIX,abc.xyz
   - DOMAIN-SUFFIX,admob.com
   - DOMAIN-SUFFIX,adsense.com
@@ -45,9 +51,9 @@ payload:
   - DOMAIN-KEYWORD,google
   - DOMAIN-KEYWORD,.blogspot.
   - DOMAIN-SUFFIX,goog
-  # > Chromecast with Google TV
+  # Chromecast with Google TV
   - DOMAIN-KEYWORD,pa.google
-  # > Google Drive
+  # Google Drive
   - PROCESS-NAME,Backup and Sync
   - PROCESS-NAME,com.google.android.apps.docs
   - DOMAIN-SUFFIX,docs.google.com
@@ -55,7 +61,7 @@ payload:
   - DOMAIN-SUFFIX,googledrive.com
   - DOMAIN-SUFFIX,googleusercontent.com
   - DOMAIN,www.googleapis.com
-  # > Google Search
+  # Google Search
   - DOMAIN-KEYWORD,www.google.
-  # > Google Voice
+  # Google Voice
   - DOMAIN,lens.l.google.com
