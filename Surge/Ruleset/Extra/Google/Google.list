@@ -61,4 +61,4 @@ DOMAIN-SUFFIX,googleusercontent.com
 DOMAIN,www.googleapis.com
 DOMAIN-KEYWORD,www.google.
 DOMAIN,lens.l.google.com
-GEOIP,GOOGLE
+GEOIP,GOOGLE,no-resolve
