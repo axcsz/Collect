@@ -97,7 +97,7 @@ i:       &a7 {type: http,     behavior: ipcidr,    interval: 86400}
 proxy-providers:
   Subscribe:
     <<: *a1
-    url: 
+    url: 机场订阅
     # URL后面填写格式1[单一订阅]: 直接填写你的机场Clash订阅[推荐此种方式，避免订阅泄露]
     # URL后面填写格式2[多个订阅]：https://api.nexconvert.com/sub?target=clash&url=请手动填入你的订阅(多机场订阅用|分割即可)&emoji=true&list=true&new_name=true&udp=false
     path: ./proxy_providers/tmp.yaml
@@ -139,13 +139,15 @@ rule-providers:
   Netflix:      {<<: *a6, url: https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Clash/Ruleset/Media/Video/Netflix.yaml,        path: ./ruleset/Netflix.yaml     }
   # 国际媒体
   Streaming:    {<<: *a6, url: https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Clash/Ruleset/Media/Streaming.yaml,            path: ./ruleset/Streaming.yaml   }
+  # GitHub
+  GitHub:      {<<: *a6, url: https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Clash/Ruleset/Extra/GitHub/GitHub.yaml,         path: ./ruleset/GitHub.yaml     }  
   # 推特服务
   Twitter:      {<<: *a6, url: https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Clash/Ruleset/Extra/Twitter/Twitter.yaml,      path: ./ruleset/Twitter.yaml     }
   # 电报信息
   Telegram:     {<<: *a6, url: https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Clash/Ruleset/Extra/Telegram/Telegram.yaml,    path: ./ruleset/Telegram.yaml    }
   # 游戏加速
   Steam:        {<<: *a6, url: https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Clash/Ruleset/Extra/Game/Steam.yaml,           path: ./ruleset/Steam.yaml       }
-  # ChatGPT
+  # Chat GPT
   OpenAI:       {<<: *a6, url: https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Clash/Ruleset/Extra/OpenAI/OpenAI.yaml,        path: ./ruleset/OpenAI.yaml      }
   # 谷歌服务
   Google:       {<<: *a6, url: https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Clash/Ruleset/Extra/Google/Google.yaml,        path: ./ruleset/Google.yaml      }
@@ -168,6 +170,7 @@ rules:
   - RULE-SET,YouTube, 油管视频
   - RULE-SET,Netflix, 奈飞影视
   - RULE-SET,Streaming, 国际媒体
+  - RULE-SET,GitHub, 全球加速  
   - RULE-SET,Twitter, 全球加速
   - RULE-SET,Telegram, 电报信息
   - RULE-SET,Steam, 游戏加速
@@ -178,6 +181,7 @@ rules:
   - RULE-SET,WeChat, 国内直连
   - RULE-SET,StreamingCN, 国内直连
   - RULE-SET,China, 国内直连
+  - GEOIP,GOOGLE, 谷歌服务
   - GEOIP,CN, 国内直连
   - MATCH, 全球加速
 
