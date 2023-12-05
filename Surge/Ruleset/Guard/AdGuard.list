@@ -306,10 +306,18 @@ DOMAIN,wxsnsdy.wxs.qq.com
 DOMAIN,wxsmsdy.video.qq.com
 DOMAIN,wxsnsdythumb.wxs.qq.com
 
-# https://www.x1hub.com/
-DOMAIN-SUFFIX,jads.co
-DOMAIN-SUFFIX,juicyads.com
+# General
+DOMAIN, ads.exoclick.com
+DOMAIN, pv.vipads.cc
+DOMAIN, www.vipads.live
+DOMAIN-SUFFIX, adxadserv.com
+DOMAIN-SUFFIX, jads.co
+DOMAIN-SUFFIX, juicyads.com
+
+# https://www.eporner.com/
+DOMAIN, a.magsrv.com
+DOMAIN, s.magsrv.com
 
 # https://www.xvideos.com/
-DOMAIN,a.orbsrv.com
-DOMAIN,s.orbsrv.com
+DOMAIN, a.orbsrv.com
+DOMAIN, s.orbsrv.com
