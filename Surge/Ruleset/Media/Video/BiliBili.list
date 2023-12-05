@@ -1,4 +1,9 @@
-# bilibili
+#!name = Bilibili 分流规则
+#!desc = 用于看B站番剧
+#!author = ConnersHua Axcsz5（收集整理）
+#!date = 2023-11-17 11:00
+
+
 USER-AGENT,*bili*
 USER-AGENT,Bilibili*
 USER-AGENT,bili*
