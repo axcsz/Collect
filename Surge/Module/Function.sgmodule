@@ -1,52 +1,101 @@
 #!name = 功能 & 模块
-#!desc = 本模块包含，京东比价、奈飞评分、TF区域限制解除等
-#!author = RuCu6 kokoryh DualSubs
-#!date = 2023.10.28 22:20
+#!desc = 本模块包含，京东比价、奈飞评分、TF区域限制解除、YouTube字母翻译等
+#!author = RuCu6 kokoryh Keywos DualSubs yichahucha
+#!date = 2023.12.10 10:00
+
 
 [General]
 skip-proxy = %APPEND% iosapps.itunes.apple.com
+force-http-engine-hosts = %APPEND% sdk.alibaba.com.ailbaba.me, -<ip-address>, *
+# 当遇到 REJECT 策略时返回错误页
+show-error-page-for-reject = true
+# Always Real IP Hosts
+always-real-ip = *.msftconnecttest.com, *.msftncsi.com, *.srv.nintendo.net, *.stun.playstation.net, xbox.*.microsoft.com, *.xboxlive.com, *.logon.battlenet.com.cn, *.logon.battle.net, stun.l.google.com
+# VIF Excluded Routes
+tun-excluded-routes = 239.255.255.250/32
+# 如果没有代理服务器支持 UDP 转发，可修改为「 direct 」或注释下条，但需注意同一目标主机名 TCP 请求与 UDP 请求的源地址不同所造成的隐私及安全风险。
+udp-policy-not-supported-behaviour = reject
 
 
 [Rule]
 URL-REGEX,^https?:\/\/([\w-]+)\.googlevideo\.com\/initplayback(\?.*oad=.+)$,REJECT-TINYGIF
 
 
+[URL Rewrite]
+# 爱思开屏
+^https?:\/\/list-app-m\.i4\.cn\/getopfstadinfo\.xhtml - reject
+
+# qq邮箱开屏 //rescdn.qqmail.com
+^https:\/\/rescdn\.qqmail\.com\/qqmail\/images\/.+\.(png|jpg)$ - reject
+
+# 腾讯手机管理开屏 //us.l.qq.com
+^https:\/\/us\.l\.qq\.com\/exapp - reject
+
+# it之家 //api.zuihuimai.com, dat.ruanmei.com
+^https?:\/\/api\.zuihuimai\.com\/static\/.*\/hongbao - reject
+^https?:\/\/dat\.ruanmei\.com\/ithome\/money\/acd\.json$ - reject
+
+
 [Map Local]
-# 百度 纯净搜索
+# 百度 纯净搜索 //m.baidu.com,www.baidu.com
 ^https?:\/\/(www|m)\.baidu\.com\/?($|\?(from=\w{8,9}|tn=&from=)) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/baidu.html" header="Content-Type: text/html; charset=utf-8"
 
-# 彩云天气 //biz.cyapi.cn, wrapper.cyapi.cn
+# 彩云天气 //
 ^https:\/\/api\.caiyunapp\.com\/v1\/activity\? data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
-^https:\/\/wrapper\.cyapi\.cn\/v1\/activity\? data="https://raw.githubusercontent.com/axcsz/Collect/master/Script/sichuandianxinshouye.json"
+^https:\/\/wrapper\.cyapi\.cn\/v1\/activity\? data="https://raw.githubusercontent.com/RuCu6/QuanX/main/Mocks/caiyun.json"
+
+# 大师兄 //sdk.alibaba.com.ailbaba.me
+^https?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/(dsx|xgapp)\.php\/v\d\/(top_notice\?|app_config|search_hot|version|advert\?position=[^2]+) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
+
+# 四川电信 微信小程序 //sctel10000.cn
+^https:\/\/sctel10000\.cn\/config\/ads\/adsInfo data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
+^https:\/\/sctel10000\.cn\/config\/myZoneConfig\/getMyHomeMenus data="https://raw.githubusercontent.com/axcsz/Collect/master/Script/sichuandianxinshouye.json"
+
+# 微信公众号底部 //mp.weixin.qq.com
+^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad data="https://raw.githubusercontent.com/Keywos/rule/main/mocks//WeChat.json"
 
 [Script]
+# 爱思推广全部干掉只保留搜索 //list-app-m.i4.cn, search-app-m.i4.cn
+爱思 = type=http-response,pattern=^https?:\/\/(search|list)-app-m\.i4\.cn\/(getHotSearchList|getAppList)\.xhtml,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Keywos/rule/main/JS/aisi.js
+
+# 彩云天气 //api.caiyunapp.com, biz.cyapi.cn, wrapper.cyapi.cn
+彩云天气 = type=http-response,pattern=^https:\/\/biz\.cyapi\.cn\/(p\/v1\/vip_info|v2\/user),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/caiyun.js
+
+# it之家 //napi.ithome.com
+it之家 = type=http-response,pattern=^https:\/\/napi\.ithome\.com\/api\/(news\/index|topmenu\/getfeeds\?),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Keywos/rule/main/JS/surgeithome.js
+
+# 阿里云盘 净化/解锁SVIP //*.aliyundrive.com, *.alipan.com
+阿里云盘 = type=http-request,pattern=^https?:\/\/(api|member)\.(aliyundrive|alipan)\.com\/(.+\/(users|activity|user\/get)|((business|apps)\/.+\/users|adrive\/.+\/user)),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/axcsz/Collect/master/Script/alidrive.js
+
 # 百度文库解锁VIP文档阅读权限 //appwk.baidu.com
 百度文库 = type=http-request,pattern=^https:\/\/appwk\.baidu\.com\/naapi\/user\/getinfo,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/baiduLib.js
 
 # 百度网盘画质倍速 //pan.baidu.com
 百度网盘 = type=http-request,pattern=^https:\/\/pan\.baidu\.com\/rest\/2\.0\/membership\/user,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/baiduCloud.js
 
-# 彩云天气 //biz.cyapi.cn, wrapper.cyapi.cn
-彩云天气 = type=http-response,pattern=^https:\/\/biz\.cyapi\.cn\/(p\/v1\/vip_info|v2\/user),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/caiyun.js
-
-# Emby播放权限 mb3admin.com
+# Emby播放权限 //mb3admin.com
 Emby = type=http-response,pattern=^https:\/\/mb3admin\.com\/admin\/service(\/registration\/validateDevice|\/appstore\/register|\/registration\/validate|\/registration\/getStatus|\/supporter\/retrievekey),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/emby/unlock2.js
 
 # Enpass Password Manager解锁订阅 //license.enpass.io
-Enpass = type=http-response,pattern=^https:\/\/license\.enpass\.io\/api\/v1\/subscription\/me,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/enpass.js
+Emby = type=http-response,pattern=^https:\/\/license\.enpass\.io\/api\/v1\/subscription\/me,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/enpass.js
 
-# 京东比价
+# EMS 微信小程序净化 //ump.ems.com.cn
+EMS = type=http-response,pattern=^https:\/\/ump\.ems\.com\.cn\/new-generation-extend\/redis\/pageInfoByChannel,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/ems.js
+
+# 京东App 历史价格 //api.m.jd.com
 京东比价 = type=http-response,requires-body=1,pattern=^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig),script-path=https://raw.githubusercontent.com/Keywos/Rule/main/JS/Jdbj.js
 
-# TF区域限制解除
-TF下载修正 = type=http-request,pattern=^https?:\/\/testflight\.apple\.com\/v\d\/accounts\/.+?\/install$,requires-body=1,script-update-interval=-1,max-size=0,script-path=https://gist.githubusercontent.com/NobyDa/9be418b93afc5e9c8a8f4d28ae403cf2/raw/TF_Download.js
+# TestFlight账户管理脚本 //iosapps.itunes.apple.com
 TestFlight账户管理 = type=http-request,pattern=^https:\/\/testflight\.apple\.com\/v\d\/(app|account|invite)s\/,requires-body=1,script-path=https://raw.githubusercontent.com/Keywos/rule/main/JS/TestFlightAccount.js,argument=false
 
-# 奈飞评分
+# 奈飞评分 //ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com
 奈飞评分 = type=http-request,pattern=^https?:\/\/ios(-.*)?\.prod\.ftl\.netflix\.com\/iosui\/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js
 奈飞评分 = type=http-response,requires-body=1,pattern=^https?:\/\/ios(-.*)?\.prod\.ftl\.netflix\.com\/iosui\/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js
 
-# Youtube 字幕增强及双语模块
+# Netflix 字幕增强及双语模块 //*.oca.nflxvideo.net
+DualSubs.Netflix.Subtitles.Translate.response = type=http-response, pattern=^https?:\/\/(.+)\.oca\.nflxvideo\.net\/\?o=\d+&v=\d+&e=\d+&t=.+, requires-body=1, script-path=https://raw.githubusercontent.com/DualSubs/Universal/main/js/DualSubs.Subtitles.Translate.response.js
+
+# Youtube 字幕增强及双语模块 //www.youtube.com, m.youtube.com, tv.youtube.com, youtubei.googleapis.com, -redirector*.googlevideo.com, *.googlevideo.com
 DualSubs.YouTube.Player.response.json = type=http-response, pattern=^https?:\/\/(www|m|tv)\.youtube\.com\/youtubei\/v1\/player, requires-body=1, script-path=https://raw.githubusercontent.com/DualSubs/YouTube/main/js/DualSubs.YouTube.Player.response.js, argument=
 DualSubs.YouTube.Player.response.proto = type=http-response, pattern=^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/player, requires-body=1, binary-body-mode=1, script-path=https://raw.githubusercontent.com/DualSubs/YouTube/main/js/DualSubs.YouTube.Player.response.js, argument=
 DualSubs.YouTube.TimedText.request = type=http-request, pattern=^https?:\/\/(www|m)\.youtube\.com\/api\/timedtext, requires-body=0, script-path=https://raw.githubusercontent.com/DualSubs/YouTube/main/js/DualSubs.YouTube.TimedText.request.js, argument=
@@ -55,4 +104,9 @@ DualSubs.Subtitles.Translate.response = type=http-response, pattern=^https?:\/\/
 
 
 [MITM]
-hostname = %APPEND% testflight.apple.com, ios-*.prod.ftl.netflix.com, ios.prod.ftl.netflix.com, api.m.jd.com, www.youtube.com, m.youtube.com, tv.youtube.com, youtubei.googleapis.com, -redirector*.googlevideo.com, *.googlevideo.com, m.baidu.com,www.baidu.com, appwk.baidu.com, pan.baidu.com, api.tipsoon.com, biz.cyapi.cn, wrapper.cyapi.cn, mb3admin.com, license.enpass.io
+# 开启HTTP2
+h2 = true
+# 开启TCP连接
+tcp-connection = true
+# 域名
+hostname = %APPEND% rescdn.qqmail.com, us.l.qq.com, api.zuihuimai.com, dat.ruanmei.com, m.baidu.com,www.baidu.com, api.caiyunapp.com, biz.cyapi.cn, wrapper.cyapi.cn, sdk.alibaba.com.ailbaba.me, sctel10000.cn, mp.weixin.qq.com, list-app-m.i4.cn, search-app-m.i4.cn, napi.ithome.com, *.aliyundrive.com, *.alipan.com, appwk.baidu.com, pan.baidu.com, mb3admin.com, license.enpass.io, ump.ems.com.cn, api.m.jd.com, iosapps.itunes.apple.com, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, *.oca.nflxvideo.net, www.youtube.com, m.youtube.com, tv.youtube.com, youtubei.googleapis.com, -redirector*.googlevideo.com, *.googlevideo.com
