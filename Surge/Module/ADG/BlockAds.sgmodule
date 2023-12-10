@@ -1,0 +1,72 @@
+#!name = 净化 & App.小程序广告
+#!desc = 去一些App.小程序的广告！以下app请使用单独配置文件：高德地图,哔哩哔哩,菜鸟,微博,YouTube,知乎,小红书等
+#!author = RuCu6 Keywos fm200 chxm1023
+#!date = 2023-12-10 10:00
+
+
+[General]
+force-http-engine-hosts = %APPEND% sdk.alibaba.com.ailbaba.me
+
+
+[URL Rewrite]
+# ======= A ======= #
+# 爱思开屏
+^https?:\/\/list-app-m\.i4\.cn\/getopfstadinfo\.xhtml - reject
+
+# ======= I ======= #
+# it之家 //api.zuihuimai.com, dat.ruanmei.com
+^https?:\/\/api\.zuihuimai\.com\/static\/.*\/hongbao - reject
+^https?:\/\/dat\.ruanmei\.com\/ithome\/money\/acd\.json$ - reject
+
+# ======= Q ======= #
+# qq邮箱开屏 //rescdn.qqmail.com
+^https:\/\/rescdn\.qqmail\.com\/qqmail\/images\/.+\.(png|jpg)$ - reject
+
+# ======= T ======= #
+# 腾讯手机管理开屏 //us.l.qq.com
+^https:\/\/us\.l\.qq\.com\/exapp - reject
+
+
+[Map Local]
+# ======= D ======= #
+# 大师兄 //sdk.alibaba.com.ailbaba.me
+^https?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/(dsx|xgapp)\.php\/v\d\/(top_notice\?|app_config|search_hot|version|advert\?position=[^2]+) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
+
+# ======= J ======= #
+# 京东金融 去除开屏广告
+# hostname = ms.jr.jd.com
+^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/aladdin\/newna\/m\/getLoadingPicture data="https://raw.githubusercontent.com/Keywos/rule/main/mocks//reject-200.txt"
+# 京东极速版 去开屏-App内广告
+# hostname = *.360buyimg.com, api.m.jd.com
+^https:\/\/img11.360buyimg.com\/dl\/jfs\/t1\/195304\/29\/12317\/268480\/60e6fd21E02a8fb2a\/ data="https://raw.githubusercontent.com/Keywos/rule/main/mocks//reject-200.txt"
+https://api.m.jd.com/client.action\?functionId=lite_advertising data="https://raw.githubusercontent.com/Keywos/rule/main/mocks//reject-200.txt"
+
+# ======= S ======= #
+# 四川电信 微信小程序 //sctel10000.cn
+^https:\/\/sctel10000\.cn\/config\/ads\/adsInfo data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
+^https:\/\/sctel10000\.cn\/config\/myZoneConfig\/getMyHomeMenus data="https://raw.githubusercontent.com/axcsz/Collect/master/Script/sichuandianxinshouye.json"
+
+# ======= W ======= #
+# 微信公众号底部 //mp.weixin.qq.com
+^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad data="https://raw.githubusercontent.com/Keywos/rule/main/mocks//WeChat.json"
+
+
+[Script]
+# ======= A ======= #
+# 爱思推广全部干掉只保留搜索 //list-app-m.i4.cn, search-app-m.i4.cn
+爱思 = type=http-response,pattern=^https?:\/\/(search|list)-app-m\.i4\.cn\/(getHotSearchList|getAppList)\.xhtml,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Keywos/rule/main/JS/aisi.js
+
+# ======= I ======= #
+# it之家 //napi.ithome.com
+it之家 = type=http-response,pattern=^https:\/\/napi\.ithome\.com\/api\/(news\/index|topmenu\/getfeeds\?),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Keywos/rule/main/JS/surgeithome.js
+
+# ======= J ======= #
+# 京喜/京喜特价/京东小家 去除开屏广告
+# hostname = api.*.jd.com
+京东系列-净化 = type=http-response,script-path= https://raw.githubusercontent.com/chxm1023/Advertising/main/jhad.js,pattern= ^https?:\/\/api\..*\.jd\.com\/(client\.action\?functionId=lite_advertising|.+\/service\/getLoadingLinks),max-size=0,requires-body=true,timeout=10,script-update-interval=0,enable=true
+
+
+[MITM]
+h2 = true
+tcp-connection = true
+hostname = %APPEND% api.zuihuimai.com, dat.ruanmei.com, rescdn.qqmail.com, us.l.qq.com, sdk.alibaba.com.ailbaba.me, ms.jr.jd.com, *.360buyimg.com, api.m.jd.com, sctel10000.cn, mp.weixin.qq.com, list-app-m.i4.cn, search-app-m.i4.cn, napi.ithome.com, api.*.jd.com
