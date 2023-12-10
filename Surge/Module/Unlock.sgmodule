@@ -24,6 +24,9 @@
 彩云天气-SVIP会员 = type=http-response,pattern=^https?:\/\/(biz|wrapper|starplucker)\.(cyapi|caiyunapp)\.(cn|com)\/(.+\/(user\?app_name|activity\?app_name|visitors|operation\/banners)|p\/v\d\/(vip_info|user_info)),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/caiyuntianqi.js
 彩云天气-SVIP地图 = type=http-request,pattern=^https?:\/\/(api|wrapper)\.(cyapi|caiyunapp)\.(cn|com)\/v\d\/(satellite|nafp\/origin_images),requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/caiyuntianqi.js
 
+# Baidu 首页纯净搜索 //m.baidu.com,www.baidu.com
+^https?:\/\/(www|m)\.baidu\.com\/?($|\?(from=\w{8,9}|tn=&from=)) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/baidu.html" header="Content-Type: text/html; charset=utf-8"
+
 # 百度文库解锁VIP文档阅读权限 //appwk.baidu.com
 百度文库 = type=http-request,pattern=^https:\/\/appwk\.baidu\.com\/naapi\/user\/getinfo,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/baiduLib.js
 
@@ -67,4 +70,4 @@ DualSubs.Subtitles.Translate.response = type=http-response, pattern=^https?:\/\/
 
 
 [MITM]
-hostname = %APPEND% *.aliyundrive.com, *.alipan.com, *.cyapi.cn, *.caiyunapp.com, adx.sogaha.cn, appwk.baidu.com, pan.baidu.com, mb3admin.com, api.m.jd.com, iosapps.itunes.apple.com, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, *.oca.nflxvideo.net, www.youtube.com, m.youtube.com, tv.youtube.com, youtubei.googleapis.com, -redirector*.googlevideo.com, *.googlevideo.com, *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com, *.meiyan.com
+hostname = %APPEND% m.baidu.com,www.baidu.com, *.aliyundrive.com, *.alipan.com, *.cyapi.cn, *.caiyunapp.com, adx.sogaha.cn, appwk.baidu.com, pan.baidu.com, mb3admin.com, api.m.jd.com, iosapps.itunes.apple.com, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, *.oca.nflxvideo.net, www.youtube.com, m.youtube.com, tv.youtube.com, youtubei.googleapis.com, -redirector*.googlevideo.com, *.googlevideo.com, *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com, *.meiyan.com
