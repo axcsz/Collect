@@ -56,6 +56,10 @@ https://api.m.jd.com/client.action\?functionId=lite_advertising data="https://ra
 # 爱思推广全部干掉只保留搜索 //list-app-m.i4.cn, search-app-m.i4.cn
 爱思 = type=http-response,pattern=^https?:\/\/(search|list)-app-m\.i4\.cn\/(getHotSearchList|getAppList)\.xhtml,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Keywos/rule/main/JS/aisi.js
 
+# ======= E ======= #
+# EMS 微信小程序净化 //ump.ems.com.cn
+EMS = type=http-response,pattern=^https:\/\/ump\.ems\.com\.cn\/new-generation-extend\/redis\/pageInfoByChannel,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/ems.js
+
 # ======= I ======= #
 # it之家 //napi.ithome.com
 it之家 = type=http-response,pattern=^https:\/\/napi\.ithome\.com\/api\/(news\/index|topmenu\/getfeeds\?),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Keywos/rule/main/JS/surgeithome.js
@@ -69,4 +73,4 @@ it之家 = type=http-response,pattern=^https:\/\/napi\.ithome\.com\/api\/(news\/
 [MITM]
 h2 = true
 tcp-connection = true
-hostname = %APPEND% api.zuihuimai.com, dat.ruanmei.com, rescdn.qqmail.com, us.l.qq.com, sdk.alibaba.com.ailbaba.me, ms.jr.jd.com, *.360buyimg.com, api.m.jd.com, sctel10000.cn, mp.weixin.qq.com, list-app-m.i4.cn, search-app-m.i4.cn, napi.ithome.com, api.*.jd.com
+hostname = %APPEND% ump.ems.com.cn, api.zuihuimai.com, dat.ruanmei.com, rescdn.qqmail.com, us.l.qq.com, sdk.alibaba.com.ailbaba.me, ms.jr.jd.com, *.360buyimg.com, api.m.jd.com, sctel10000.cn, mp.weixin.qq.com, list-app-m.i4.cn, search-app-m.i4.cn, napi.ithome.com, api.*.jd.com
