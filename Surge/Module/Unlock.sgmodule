@@ -1,10 +1,15 @@
-#!name = 解锁 & App
-#!desc = 部分App解锁
-#!author = RuCu6 Keywos fm200 chxm1023
-#!date = 2023-12-10 10:00
+#!name = 解锁 & 部分App解锁
+#!desc = 本模块包含，彩云天气、京东比价、奈飞评分、TF区域限制解除、YouTube翻译等
+#!author = RuCu6 kokoryh Keywos WeiRen0 app2smile NobyDa
+#!date = 2023-12-10 13:20
 
 
 [URL Rewrite]
+# 桌面端请使用 https://google.com/ncr
+# 谷歌服务重定向 //*.google.cn
+^https?:\/\/www\.google\.cn https://www.google.com 302
+^https?:\/\/translate\.google\.cn https://translate.google.com 302
+
 # 彩云天气去广告
 ^https?:\/\/ad\.(caiyunapp|cyapi)\.(cn|com) - reject
 
@@ -15,6 +20,14 @@
 
 
 [Script]
+# 百度 //boxer.baidu.com, m.baidu.com, www.baidu.com, zhidao.baidu.com
+## 百度防跳转
+baiduNoRedirect = type=http-response, pattern=^https:\/\/boxer\.baidu\.com\/scheme\?scheme, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/baiduNoRedirect.js, timeout=60
+## 百度首页
+baidu-index = type=http-response, pattern="^https:\/\/(www|m)\.baidu\.com(\/$|\/\?(tn=&)?from=\w{8,9})?$", script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/webpage/baidu-index.js, requires-body=true, max-size=-1, timeout=60
+## 百度知道
+baidu-zhidao = type=http-response, pattern=^https:\/\/zhidao\.baidu\.com\/(question|index|\?fr|\?word), script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/webpage/baidu-zhidao.js, requires-body=true, max-size=-1, timeout=60
+
 # 阿里云盘 净化/解锁SVIP
 # hostname = *.aliyundrive.com, *.alipan.com
 阿里云盘 = type=http-response,pattern=^https?:\/\/(api|member)\.(aliyundrive|alipan)\.com\/(.+\/(users|activity|user\/get)|((business|apps)\/.+\/users|adrive\/.+\/user)),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/alidrive.js
@@ -70,4 +83,4 @@ DualSubs.Subtitles.Translate.response = type=http-response, pattern=^https?:\/\/
 
 
 [MITM]
-hostname = %APPEND% m.baidu.com,www.baidu.com, *.aliyundrive.com, *.alipan.com, *.cyapi.cn, *.caiyunapp.com, adx.sogaha.cn, appwk.baidu.com, pan.baidu.com, mb3admin.com, api.m.jd.com, iosapps.itunes.apple.com, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, *.oca.nflxvideo.net, www.youtube.com, m.youtube.com, tv.youtube.com, youtubei.googleapis.com, -redirector*.googlevideo.com, *.googlevideo.com, *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com, *.meiyan.com
+hostname = %APPEND% boxer.baidu.com, m.baidu.com, zhidao.baidu.com, *.google.cn, m.baidu.com,www.baidu.com, *.aliyundrive.com, *.alipan.com, *.cyapi.cn, *.caiyunapp.com, adx.sogaha.cn, appwk.baidu.com, pan.baidu.com, mb3admin.com, api.m.jd.com, iosapps.itunes.apple.com, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, *.oca.nflxvideo.net, www.youtube.com, m.youtube.com, tv.youtube.com, youtubei.googleapis.com, -redirector*.googlevideo.com, *.googlevideo.com, *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com, *.meiyan.com
