@@ -1,3 +1,9 @@
+#!name = YouTube 分流规则
+#!desc = YouTube
+#!author = ConnersHua
+#!date = 2023-12-13 20:00
+
+
 payload:
 # > YouTube
  - DOMAIN-SUFFIX,googlevideo.com
@@ -12,3 +18,4 @@ payload:
  - DOMAIN-SUFFIX,ytimg.com
  - DOMAIN,youtubei.googleapis.com
  - DOMAIN,yt3.ggpht.com
+ - GEOIP,YouTube,no-resolve
