@@ -1,0 +1,8 @@
+#!name = BiliBili 分流规则
+#!desc = BiliBili
+#!author = ConnersHua
+#!date = 2023-12-13 20:00
+
+
+payload:
+  # > BiliBili
