@@ -1,11 +1,11 @@
 #!name = lan 分流规则
-#!desc = 用于 lan 软件和网站
-#!author = DivineEngine Axcsz5（收集整理）
-#!date = 2023-11-27 11:00
+#!desc = 用于本地局域网
+#!author = RuCu6
+#!date = 2023-12-13 20:00
 
 
 payload:
-   # 本地/局域网地址
+# 本地/局域网地址
  - DOMAIN-SUFFIX,ip6-localhost
  - DOMAIN-SUFFIX,ip6-loopback
  - DOMAIN-SUFFIX,lan
@@ -28,7 +28,7 @@ payload:
  - IP-CIDR6, ::1/128,no-resolve
  - IP-CIDR6, fc00::/7,no-resolve
  - IP-CIDR6, fe80::/10,no-resolve
- # Router managed 路由器管理域名
+# Router managed 路由器管理域名
  - DOMAIN,instant.arubanetworks.com
  - DOMAIN,setmeup.arubanetworks.com
  - DOMAIN,router.asus.com
