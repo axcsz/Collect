@@ -1,3 +1,9 @@
+#!name = Netflix 分流规则
+#!desc = Netflix
+#!author = ConnersHua
+#!date = 2023-12-13 20:00
+
+
 payload:
   # > Netflix
   - PROCESS-NAME,com.netflix.mediaclient
