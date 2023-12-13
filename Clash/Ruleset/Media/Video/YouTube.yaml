@@ -18,4 +18,6 @@ payload:
  - DOMAIN-SUFFIX,ytimg.com
  - DOMAIN,youtubei.googleapis.com
  - DOMAIN,yt3.ggpht.com
+ - DOMAIN-KEYWORD,youtube
+ - DOMAIN-SUFFIX,gvt2.com
  - GEOIP,YouTube,no-resolve
