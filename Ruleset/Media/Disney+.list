@@ -1,3 +1,7 @@
+#!name = Disney+
+#!date = 2023-12-15 10:00
+
+
 # Disney+
 USER-AGENT,Disney*
 USER-AGENT,Disney+*
