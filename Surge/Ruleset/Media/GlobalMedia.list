@@ -1,10 +1,8 @@
 #!name = GlobalMedia 分流规则
 #!desc = 用于国外视频软件和网站
 #!author = ConnersHua
-#!date = 2023-12-10 16:00
+#!date = 2023-12-15 08:00
 
-
-# Streaming Media
 
 # (Live)
 # > Twitch
@@ -236,7 +234,6 @@ DOMAIN-SUFFIX,nflxvideo.net
 DOMAIN-KEYWORD,netflixdnstest
 DOMAIN-KEYWORD,apiproxy-device-prod-nlb-
 DOMAIN-KEYWORD,dualstack.apiproxy-
-# GEOIP,NETFLIX,no-resolve
 # > niconico
 DOMAIN-SUFFIX,dmc.nico
 DOMAIN-SUFFIX,nicovideo.jp
