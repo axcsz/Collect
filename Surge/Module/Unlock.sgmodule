@@ -5,11 +5,6 @@
 
 
 [URL Rewrite]
-# 桌面端请使用 https://google.com/ncr
-# 谷歌服务重定向 //*.google.cn
-^https?:\/\/www\.google\.cn https://www.google.com 302
-^https?:\/\/translate\.google\.cn https://translate.google.com 302
-
 # 彩云天气去广告
 ^https?:\/\/ad\.(caiyunapp|cyapi)\.(cn|com) - reject
 
