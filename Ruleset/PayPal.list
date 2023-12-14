@@ -1,7 +1,5 @@
-#!name = PayPal 分流规则
-#!desc = 用于 PayPal
-#!author = ConnersHua
-#!date = 2023-12-12 20:00
+#!name = PayPal
+#!date = 2023-12-15 10:00
 
 
 USER-AGENT,PayPal*
