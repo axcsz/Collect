@@ -1,7 +1,7 @@
 #!name = Proxy 分流规则
-#!desc = 用于国外软件和网站，如：Google、telegram、GitHub等
+#!desc = 代理加速
 #!author = ConnersHua
-#!date = 2023-12-12 20:00
+#!date = 2023-12-15 08:00
 
 
 DOMAIN-SUFFIX,9cache.com
@@ -20,7 +20,7 @@ DOMAIN-SUFFIX,ask.com
 DOMAIN-SUFFIX,avg.com
 DOMAIN-SUFFIX,axios.com
 DOMAIN-SUFFIX,bandcamp.com
-DOMAIN-SUFFIX,bandwagonDOMAIN.com
+DOMAIN-SUFFIX,bandwagonhost.com
 DOMAIN-SUFFIX,bbc.com
 DOMAIN-SUFFIX,behance.net
 DOMAIN-SUFFIX,bit.ly
@@ -203,6 +203,7 @@ DOMAIN-SUFFIX,zeronet.io
 DOMAIN-SUFFIX,z-lib.org
 DOMAIN-SUFFIX,zophar.net
 DOMAIN-SUFFIX,zyxel.com
+
 DOMAIN,cdn.jsdelivr.net
 DOMAIN,cdn.statically.io
 DOMAIN,hub.docker.com
@@ -218,7 +219,6 @@ DOMAIN,payments-jp.amazon.com
 DOMAIN,s3-ap-northeast-1.amazonaws.com
 DOMAIN,s3-ap-southeast-2.amazonaws.com
 # > Alphabet
-# DOMAIN-SUFFIX,ampproject.org
 DOMAIN-SUFFIX,apigee.com
 DOMAIN-SUFFIX,appspot.com
 DOMAIN-SUFFIX,blogger.com
@@ -461,7 +461,6 @@ DOMAIN,news-client-search.apple.com
 DOMAIN,news-edge.apple.com
 DOMAIN,news-events.apple.com
 DOMAIN,apple.comscoreresearch.com
-
 # ------
 # > Microsoft
 DOMAIN-SUFFIX,bing.com
@@ -469,18 +468,3 @@ DOMAIN-SUFFIX,linkedin.com
 DOMAIN-SUFFIX,licdn.com
 DOMAIN-SUFFIX,msn.com
 DOMAIN-SUFFIX,skype.com
-
-# > Quantumult X
-DOMAIN-SUFFIX, quantumult.app
-# > Surge
-DOMAIN, surge.mitsea.com
-DOMAIN-SUFFIX, nssurge.com
-DOMAIN-SUFFIX, surge-activation.com
-# > Stash
-DOMAIN-SUFFIX, stash.ws
-DOMAIN-SUFFIX, stash.wiki
-DOMAIN-SUFFIX, stash-activation.com
-
-# 机场
-# 白月光
-DOMAIN-SUFFIX, ss.cn88.net
