@@ -2,6 +2,7 @@
 #!date = 2023-12-15 10:00
 
 
+# PayPal
 USER-AGENT,PayPal*
 DOMAIN-SUFFIX,paypal.com
 DOMAIN-SUFFIX,paypal.me
