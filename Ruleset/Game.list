@@ -18,7 +18,7 @@ DOMAIN,steamusercontent-a.akamaihd.net
 DOMAIN,steamusercontent-a.akamaihd.net
 DOMAIN,steamuserimages-a.akamaihd.net
 
-# 内容：Epic
+# Epic
 DOMAIN-SUFFIX,epicgames.com
 DOMAIN-SUFFIX,epicgames.dev
 DOMAIN-SUFFIX,helpshift.com
