@@ -1,9 +1,8 @@
-#!name = Steam 分流规则
-#!desc = 用于Steam游戏软件和网站
-#!author = DivineEngine Axcsz5（收集整理）
-#!date = 2023-11-17 11:00
+#!name = Game
+#!date = 2023-12-15 10:00
 
 
+# Steam
 DOMAIN-SUFFIX,steam-chat.com
 DOMAIN-SUFFIX,steamcontent.com
 DOMAIN-SUFFIX,steamgames.com
@@ -18,8 +17,8 @@ DOMAIN,steamstore-a.akamaihd.net
 DOMAIN,steamusercontent-a.akamaihd.net
 DOMAIN,steamusercontent-a.akamaihd.net
 DOMAIN,steamuserimages-a.akamaihd.net
+
 # 内容：Epic
-# 数量：5条
 DOMAIN-SUFFIX,epicgames.com
 DOMAIN-SUFFIX,epicgames.dev
 DOMAIN-SUFFIX,helpshift.com
