@@ -1,3 +1,9 @@
+#!name = GitHub 分流规则
+#!desc = 包含 GitHub
+#!author = ConnersHua
+#!date = 2023-12-12 20:00
+
+
 DOMAIN-SUFFIX,atom.io
 DOMAIN-SUFFIX,dependabot.com
 DOMAIN-SUFFIX,ghcr.io
