@@ -1,7 +1,5 @@
-#!name = Microsoft 分流规则
-#!desc = Microsoft
-#!author = ACL4SSR
-#!date = 2023-12-13 20:00
+#!name = Microsoft
+#!date = 2023-12-15 10:00
 
 
 DOMAIN-KEYWORD,1drv
