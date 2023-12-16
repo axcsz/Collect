@@ -1,10 +1,9 @@
-#!name = WeChat 分流规则
-#!desc = 用于 WeChat 软件和网站
-#!author = DivineEngine Axcsz5（收集整理）
-#!date = 2023-11-27 11:00
+#!name = WeChat
+#!date = 2023-12-16 17:00
 
 
 payload:
+# WeChat
  - DOMAIN,dl.wechat.com
  - DOMAIN,sgfindershort.wechat.com
  - DOMAIN,sgilinkshort.wechat.com
