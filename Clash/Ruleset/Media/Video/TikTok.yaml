@@ -1,26 +1,22 @@
-#!name = TikTok 分流规则
-#!desc = 用于TikTok
-#!author = ConnersHua
-#!date = 2023-12-13 20:00
+#!name = TikTok
+#!date = 2023-12-16 17:00
 
 
 payload:
-# > TikTok
- - DOMAIN,p16-tiktokcdn-com.akamaized.net
- - DOMAIN-SUFFIX,byteoversea.com
- - DOMAIN-SUFFIX,ibytedtos.com
- - DOMAIN-SUFFIX,ibyteimg.com
- - DOMAIN-SUFFIX,ipstatp.com
- - DOMAIN-SUFFIX,muscdn.com
- - DOMAIN-SUFFIX,musical.ly
- - DOMAIN-SUFFIX,sgpstatp.com
- - DOMAIN-SUFFIX,snssdk.com
- - DOMAIN-SUFFIX,tik-tokapi.com
- - DOMAIN-SUFFIX,tiktok.com
- - DOMAIN-SUFFIX,tiktokcdn.com
- - DOMAIN-SUFFIX,tiktokv.com
- - DOMAIN-KEYWORD,-tiktokcdn-com
- - DOMAIN-KEYWORD,musical.ly
- - DOMAIN-KEYWORD,tiktok
- - DOMAIN-KEYWORD,tiktokv
- - GEOIP,TikTok,no-resolve
+# TikTok
+  # USER-AGENT,TikTok*
+  - DOMAIN-KEYWORD,tiktokcdn
+  - DOMAIN-SUFFIX,byteoversea.com
+  - DOMAIN-SUFFIX,ibytedtos.com
+  - DOMAIN-SUFFIX,ipstatp.com
+  - DOMAIN-SUFFIX,muscdn.com
+  - DOMAIN-SUFFIX,musical.ly
+  - DOMAIN-SUFFIX,tik-tokapi.com
+  - DOMAIN-SUFFIX,tiktok.com
+  - DOMAIN-SUFFIX,tiktokcdn.com
+  - DOMAIN-SUFFIX,tiktokv.com
+  - DOMAIN-KEYWORD,tiktokcdn-
+  - DOMAIN-SUFFIX,ibyteimg.com
+  - DOMAIN-SUFFIX,sgpstatp.com
+  - DOMAIN-SUFFIX,snssdk.com
+  - DOMAIN-KEYWORD,-tiktokcdn-com
