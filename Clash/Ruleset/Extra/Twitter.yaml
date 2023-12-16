@@ -1,11 +1,9 @@
-#!name = Twitter 分流规则
-#!desc = 用于 Twitter 软件和网站
-#!author = DivineEngine Axcsz5（收集整理）
-#!date = 2023-11-27 11:00
+#!name = Twitter
+#!date = 2023-12-16 17:00
 
 
 payload:
- # Twitter
+# Twitter
  - DOMAIN-SUFFIX,ads-twitter.com
  - DOMAIN-SUFFIX,cms-twdigitalassets.com
  - DOMAIN-SUFFIX,periscope.tv
