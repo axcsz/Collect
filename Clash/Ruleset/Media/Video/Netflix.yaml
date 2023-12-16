@@ -1,12 +1,10 @@
-#!name = Netflix 分流规则
-#!desc = Netflix
-#!author = ConnersHua
-#!date = 2023-12-13 20:00
+#!name = Netflix
+#!date = 2023-12-16 17:00
 
 
 payload:
-  # > Netflix
-  - PROCESS-NAME,com.netflix.mediaclient
+# Netflix
+  # USER-AGENT,Argo*
   - DOMAIN-KEYWORD,apiproxy-device-prod-nlb-
   - DOMAIN-KEYWORD,dualstack.apiproxy-
   - DOMAIN-KEYWORD,netflixdnstest
@@ -47,4 +45,3 @@ payload:
   - IP-CIDR,203.75.84.0/24,no-resolve
   - IP-CIDR,207.45.72.0/22,no-resolve
   - IP-CIDR,208.75.76.0/22,no-resolve
-  - GEOIP,NETFLIX,no-resolve
