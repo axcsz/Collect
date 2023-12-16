@@ -1,12 +1,9 @@
-#!name = BiliBili 分流规则
-#!desc = BiliBili
-#!author = ConnersHua ACL4SSR
-#!date = 2023-12-13 20:00
+#!name = Bilibili
+#!date = 2023-12-16 17:00
 
 
 payload:
-  # 内容：Bilibili 哔哩哔哩
-  # 数量：21条
+# Bilibili
   - DOMAIN,apiintl.biliapi.net
   - DOMAIN,upos-hz-mirrorakam.akamaized.net
   - DOMAIN-SUFFIX,acg.tv
@@ -26,8 +23,7 @@ payload:
   - DOMAIN-SUFFIX,im9.com
   - DOMAIN-SUFFIX,smtcdns.net
   
-  # 内容：BilibiliHMT 哔哩哔哩 港澳台番剧
-  # 数量：18条
+# Bilibili 港澳台番剧
   - DOMAIN,p-bstarstatic.akamaized.net
   - DOMAIN,p.bstarstatic.com
   - DOMAIN,upos-bstar-mirrorakam.akamaized.net
