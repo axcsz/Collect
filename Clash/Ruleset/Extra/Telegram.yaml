@@ -1,11 +1,9 @@
-#!name = Telegram 分流规则
-#!desc = Telegram
-#!author = ConnersHua ACL4SSR
-#!date = 2023-12-13 20:00
+#!name = Telegram
+#!date = 2023-12-16 17:00
 
 
 payload:
-  # 内容：Telegram
+# Telegram
  - DOMAIN-SUFFIX, comments.app
  - DOMAIN-SUFFIX, contest.com
  - DOMAIN-SUFFIX, graph.org
