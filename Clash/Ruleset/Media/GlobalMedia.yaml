@@ -1,12 +1,8 @@
-#!name = 国外媒体
-#!date = 2023-12-13 20:00
+#!name = GlobalMedia
+#!date = 2023-12-16 17:00
 
 
 payload:
-  # 内容：国外媒体列表
-  # 更新：2023-10-23 21:04:59
-  # 数量：367条
-
   # ABC
   - DOMAIN-SUFFIX,edgedatg.com
   - DOMAIN-SUFFIX,go.com
@@ -350,6 +346,8 @@ payload:
   - DOMAIN-SUFFIX,identrust.com
   - DOMAIN-SUFFIX,intercom.io
   - DOMAIN-SUFFIX,intercomcdn.com
+  - DOMAIN-SUFFIX,oaistatic.com
+  - DOMAIN-SUFFIX,oaiusercontent.com
   - DOMAIN-SUFFIX,openai.com
   - DOMAIN-SUFFIX,openaiapi-site.azureedge.net
   - DOMAIN-SUFFIX,sentry.io
