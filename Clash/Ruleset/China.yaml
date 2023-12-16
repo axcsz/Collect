@@ -1,6 +1,9 @@
+#!name = 直连列表
+#!date = 2023-12-16 17:00
+
+
 payload:
   # 直连列表
-
   # MyList
   - DOMAIN-SUFFIX,13th.tech
   - DOMAIN-SUFFIX,423down.com
