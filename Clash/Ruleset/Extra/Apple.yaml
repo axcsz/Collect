@@ -42,6 +42,6 @@ payload:
  - IP-CIDR,198.183.17.0/24,no-resolve
  - IP-CIDR,205.180.175.0/24,no-resolve
 # AppStore
- - DOMAIN, apps.apple.com
- - DOMAIN, iosapps.itunes.apple.com
- - DOMAIN, itunes.apple.com
+ - DOMAIN,apps.apple.com
+ - DOMAIN,iosapps.itunes.apple.com
+ - DOMAIN,itunes.apple.com
