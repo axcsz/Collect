@@ -75,3 +75,11 @@ DOMAIN-KEYWORD,zjurl
 DOMAIN-KEYWORD,douyin
 DOMAIN-KEYWORD,zjcdn
 
+# 微博
+DOMAIN-SUFFIX,weibo.cn
+DOMAIN-SUFFIX,weibo.com
+DOMAIN-SUFFIX,weibocdn.com
+DOMAIN-KEYWORD,weibo
+
+# 知乎
+DOMAIN-SUFFIX,zhihu.com
