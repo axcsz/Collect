@@ -170,6 +170,9 @@ DOMAIN-SUFFIX,fox.com
 DOMAIN-SUFFIX,foxdcg.com
 DOMAIN-SUFFIX,uplynk.com
 
+# Himalaya
+DOMAIN-SUFFIX,himalaya.com
+
 # Hami Video
 DOMAIN-SUFFIX,ott.hinet.net
 DOMAIN-SUFFIX,hamivideo.hinet.net
@@ -389,6 +392,9 @@ DOMAIN-SUFFIX,nowestatic.com
 # Naver TV
 DOMAIN-SUFFIX,naver.com
 DOMAIN-SUFFIX,smartmediarep.com
+
+# Overcast
+DOMAIN-SUFFIX,overcast.fm
 
 # Olevod
 DOMAIN-KEYWORD,olevod
