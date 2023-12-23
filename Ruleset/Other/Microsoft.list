@@ -80,7 +80,7 @@ DOMAIN-SUFFIX,wunderlist.com
 DOMAIN-SUFFIX,yammer.com
 DOMAIN-SUFFIX,yammerusercontent.com
 
-# 内容：OneDrive
+# OneDrive
 USER-AGENT,OneDrive*
 USER-AGENT,OneDriveiOSApp*
 PROCESS-NAME,OneDrive
