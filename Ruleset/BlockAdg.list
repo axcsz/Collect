@@ -4,7 +4,7 @@
 
 # A
 # 艾狄墨搏 - 广告服务商
-DOMAIN-SUFFIX, admobile.top
+DOMAIN-SUFFIX,admobile.top
 
 # D
 # 豆瓣
@@ -12,66 +12,66 @@ AND,((USER-AGENT,Frodo*),(DOMAIN,119.29.29.29))
 
 # F
 # 番茄小说
-DOMAIN, p6-ad-sign.byteimg.com
-DOMAIN, p9-ad-sign.byteimg.com
-DOMAIN, i-lq.snssdk.com
-DOMAIN, dig.bdurl.net
-DOMAIN, activity-ag.awemeughun.com
-DOMAIN, mcs.snssdk.com
-DOMAIN, tnc3-alisc1.snssdk.com
-DOMAIN, security-lq.snssdk.com
-DOMAIN, tnc3-aliec2.snssdk.com
-DOMAIN, is.snssdk.com
-DOMAIN, i.snssdk.com
-DOMAIN, *novelapp.ixigua.com
-DOMAIN, *default.ixigua.com
-DOMAIN, msync-im1-vip6-std.easemob.com
-DOMAIN, apd-pcdnwxlogin.teg.tencent-cloud.net
-DOMAIN, api.iegadp.qq.com
-DOMAIN, sf3-ttcdn-tos.pstatp.com
-DOMAIN-KEYWORD, zijieapi
-DOMAIN-SUFFIX, pglstatp-toutiao.com
-DOMAIN-SUFFIX, byteorge.com
-DOMAIN-SUFFIX, bytegoofy.com
-DOMAIN-SUFFIX, bytedance.com
-IP-CIDR, 49.71.37.101/32, no-resolve
-IP-CIDR, 117.71.105.23/32, no-resolve
-IP-CIDR, 218.94.207.205/32, no-resolve
-IP-CIDR, 117.92.229.188/32, no-resolve
-IP-CIDR, 101.36.166.16/32, no-resolve
-IP-CIDR, 180.96.2.114/32, no-resolve
+DOMAIN,p6-ad-sign.byteimg.com
+DOMAIN,p9-ad-sign.byteimg.com
+DOMAIN,i-lq.snssdk.com
+DOMAIN,dig.bdurl.net
+DOMAIN,activity-ag.awemeughun.com
+DOMAIN,mcs.snssdk.com
+DOMAIN,tnc3-alisc1.snssdk.com
+DOMAIN,security-lq.snssdk.com
+DOMAIN,tnc3-aliec2.snssdk.com
+DOMAIN,is.snssdk.com
+DOMAIN,i.snssdk.com
+DOMAIN,*novelapp.ixigua.com
+DOMAIN,*default.ixigua.com
+DOMAIN,msync-im1-vip6-std.easemob.com
+DOMAIN,apd-pcdnwxlogin.teg.tencent-cloud.net
+DOMAIN,api.iegadp.qq.com
+DOMAIN,sf3-ttcdn-tos.pstatp.com
+DOMAIN-KEYWORD,zijieapi
+DOMAIN-SUFFIX,pglstatp-toutiao.com
+DOMAIN-SUFFIX,byteorge.com
+DOMAIN-SUFFIX,bytegoofy.com
+DOMAIN-SUFFIX,bytedance.com
+IP-CIDR,49.71.37.101/32,no-resolve
+IP-CIDR,117.71.105.23/32,no-resolve
+IP-CIDR,218.94.207.205/32,no-resolve
+IP-CIDR,117.92.229.188/32,no-resolve
+IP-CIDR,101.36.166.16/32,no-resolve
+IP-CIDR,180.96.2.114/32,no-resolve
 
 # J
 # 极光 - 广告服务商
-DOMAIN-SUFFIX, jiguang.cn
+DOMAIN-SUFFIX,jiguang.cn
 # 今日头条
-DOMAIN, dm.toutiao.com
-DOMAIN-KEYWORD, ad.toutiao.com
-DOMAIN-KEYWORD, clk.gentags.net
-DOMAIN-KEYWORD, dm.toutiao.com
-DOMAIN-KEYWORD, dm.pstatp.com
-DOMAIN-KEYWORD, dm.bytedance.com
-DOMAIN-KEYWORD, uop.umeng.com
-DOMAIN-KEYWORD, m.suning.com
-DOMAIN-KEYWORD, adshare.toutiao.com
-DOMAIN-KEYWORD, tunion-api.m.taobao.com
-DOMAIN-KEYWORD, s1.pstatp.com
-DOMAIN-KEYWORD, s2.pstatp.com
-DOMAIN-KEYWORD, s3.pstatp.com
-DOMAIN-KEYWORD, a3.pstatp.com
-DOMAIN-KEYWORD, a3.bytecdn.cn
-DOMAIN, ad.toutiao.com
-DOMAIN, dsp.toutiao.com
+DOMAIN,dm.toutiao.com
+DOMAIN-KEYWORD,ad.toutiao.com
+DOMAIN-KEYWORD,clk.gentags.net
+DOMAIN-KEYWORD,dm.toutiao.com
+DOMAIN-KEYWORD,dm.pstatp.com
+DOMAIN-KEYWORD,dm.bytedance.com
+DOMAIN-KEYWORD,uop.umeng.com
+DOMAIN-KEYWORD,m.suning.com
+DOMAIN-KEYWORD,adshare.toutiao.com
+DOMAIN-KEYWORD,tunion-api.m.taobao.com
+DOMAIN-KEYWORD,s1.pstatp.com
+DOMAIN-KEYWORD,s2.pstatp.com
+DOMAIN-KEYWORD,s3.pstatp.com
+DOMAIN-KEYWORD,a3.pstatp.com
+DOMAIN-KEYWORD,a3.bytecdn.cn
+DOMAIN,ad.toutiao.com
+DOMAIN,dsp.toutiao.com
 
 # M
 # 咪咕视频
-DOMAIN-SUFFIX, ad.cmvideo.cn
-DOMAIN, ggc.cmvideo.cn
-DOMAIN, ggic03.miguvideo.com
-DOMAIN, ggmk.miguvideo.com
-DOMAIN, ggv.cmvideo.cn
-DOMAIN, ggx.cmvideo.cn
-DOMAIN, ggx03.miguvideo.com
+DOMAIN-SUFFIX,ad.cmvideo.cn
+DOMAIN,ggc.cmvideo.cn
+DOMAIN,ggic03.miguvideo.com
+DOMAIN,ggmk.miguvideo.com
+DOMAIN,ggv.cmvideo.cn
+DOMAIN,ggx.cmvideo.cn
+DOMAIN,ggx03.miguvideo.com
 
 # Q
 # qq音乐
@@ -92,89 +92,89 @@ DOMAIN,us.l.qq.com
 DOMAIN,tangram.e.qq.com
 DOMAIN-SUFFIX,imtmp.net
 # 蜻蜓FM
-DOMAIN, ad.qingting.fm
-DOMAIN, adlaunch.qingting.fm
+DOMAIN,ad.qingting.fm
+DOMAIN,adlaunch.qingting.fm
 DOMAIN,ad-cdn. qingting.fm
-DOMAIN-SUFFIX, admgr.qingting.fm
-DOMAIN-SUFFIX, dload.qd.qingting.fm
-DOMAIN-SUFFIX, logger.qingting.fm
-DOMAIN-SUFFIX, s.qd.qingting.fm
-DOMAIN-SUFFIX, s.qd.qingtingfm.com
+DOMAIN-SUFFIX,admgr.qingting.fm
+DOMAIN-SUFFIX,dload.qd.qingting.fm
+DOMAIN-SUFFIX,logger.qingting.fm
+DOMAIN-SUFFIX,s.qd.qingting.fm
+DOMAIN-SUFFIX,s.qd.qingtingfm.com
 # 七猫小说
-DOMAIN, cdn-new-ad.wtzw.com
-DOMAIN, a-remad.qm989.com
-DOMAIN, mobads.baidu.com
-DOMAIN, qzs.gdtimg.com
-DOMAIN, mobads-pre-config.cdn.bcebos.com
-DOMAIN, pgdt.ugdtimg.com
-DOMAIN-SUFFIX, gdt.qq.com
+DOMAIN,cdn-new-ad.wtzw.com
+DOMAIN,a-remad.qm989.com
+DOMAIN,mobads.baidu.com
+DOMAIN,qzs.gdtimg.com
+DOMAIN,mobads-pre-config.cdn.bcebos.com
+DOMAIN,pgdt.ugdtimg.com
+DOMAIN-SUFFIX,gdt.qq.com
 
 # S
 # 收钱吧 - 买单小程序去广告
-DOMAIN, ads-shopping.shouqianba.com
+DOMAIN,ads-shopping.shouqianba.com
 
 # T
 # 淘宝去广告
-DOMAIN, adashx.m.taobao.com
-DOMAIN, ossgw.alicdn.com
-DOMAIN, ems.youku.com
-DOMAIN, hudong.alicdn.com
-DOMAIN, h-adashx.ut.taobao.com
-DOMAIN, ut.taobao.com
+DOMAIN,adashx.m.taobao.com
+DOMAIN,ossgw.alicdn.com
+DOMAIN,ems.youku.com
+DOMAIN,hudong.alicdn.com
+DOMAIN,h-adashx.ut.taobao.com
+DOMAIN,ut.taobao.com
 
 # W
 # 微信小程序通用
-DOMAIN, wxsnsdy.wxs.qq.com
-DOMAIN, wxsmsdy.video.qq.com
-DOMAIN, wxsnsdythumb.wxs.qq.com
+DOMAIN,wxsnsdy.wxs.qq.com
+DOMAIN,wxsmsdy.video.qq.com
+DOMAIN,wxsnsdythumb.wxs.qq.com
 
 # X
 # 小象超市
-IP-CIDR, 101.50.8.64/32, no-resolve
-IP-CIDR, 101.50.8.75/32, no-resolve
-IP-CIDR, 103.37.152.161/32, no-resolve
-IP-CIDR, 103.37.152.162/32, no-resolve
-IP-CIDR, 103.63.160.64/32, no-resolve
-IP-CIDR, 119.29.48.215/32, no-resolve
-IP-CIDR, 202.90.110.8/32, no-resolve
-IP-CIDR, 203.76.217.241/32, no-resolve
-IP-CIDR, 203.76.217.243/32, no-resolve
-IP-CIDR, 203.76.217.37/32, no-resolve
-IP-CIDR6, 2405:1480:3000:303f::303f/128, no-resolve
+IP-CIDR,101.50.8.64/32,no-resolve
+IP-CIDR,101.50.8.75/32,no-resolve
+IP-CIDR,103.37.152.161/32,no-resolve
+IP-CIDR,103.37.152.162/32,no-resolve
+IP-CIDR,103.63.160.64/32,no-resolve
+IP-CIDR,119.29.48.215/32,no-resolve
+IP-CIDR,202.90.110.8/32,no-resolve
+IP-CIDR,203.76.217.241/32,no-resolve
+IP-CIDR,203.76.217.243/32,no-resolve
+IP-CIDR,203.76.217.37/32,no-resolve
+IP-CIDR6,2405:1480:3000:303f::303f/128,no-resolve
 # > 小米
-DOMAIN, data.mistat.xiaomi.com
-DOMAIN, tracking.intl.miui.com
+DOMAIN,data.mistat.xiaomi.com
+DOMAIN,tracking.intl.miui.com
 
 # Z
 # > 中国移动
-IP-CIDR, 120.240.95.37/32, no-resolve
+IP-CIDR,120.240.95.37/32,no-resolve
 # > 中国联通
-DOMAIN-SUFFIX, m1.ad.10010.com
+DOMAIN-SUFFIX,m1.ad.10010.com
 # > 中国电信
-DOMAIN, ad.21cn.com
-DOMAIN, ad.k.21cn.com
-DOMAIN, admarket.21cn.com
-DOMAIN, adshows.21cn.com
-IP-CIDR, 122.229.8.47/32, no-resolve
-IP-CIDR, 122.229.29.89/32, no-resolve
+DOMAIN,ad.21cn.com
+DOMAIN,ad.k.21cn.com
+DOMAIN,admarket.21cn.com
+DOMAIN,adshows.21cn.com
+IP-CIDR,122.229.8.47/32,no-resolve
+IP-CIDR,122.229.29.89/32,no-resolve
 
 
 # 其他
 # General
-DOMAIN, ads.exoclick.com
-DOMAIN, pv.vipads.cc
-DOMAIN, www.vipads.live
-DOMAIN-SUFFIX, adxadserv.com
-DOMAIN-SUFFIX, jads.co
-DOMAIN-SUFFIX, juicyads.com
+DOMAIN,ads.exoclick.com
+DOMAIN,pv.vipads.cc
+DOMAIN,www.vipads.live
+DOMAIN-SUFFIX,adxadserv.com
+DOMAIN-SUFFIX,jads.co
+DOMAIN-SUFFIX,juicyads.com
 
 # https://www.eporner.com/
-DOMAIN, a.magsrv.com
-DOMAIN, s.magsrv.com
+DOMAIN,a.magsrv.com
+DOMAIN,s.magsrv.com
 
 # https://www.xvideos.com/
-DOMAIN, a.orbsrv.com
-DOMAIN, s.orbsrv.com
+DOMAIN,a.orbsrv.com
+DOMAIN,s.orbsrv.com
 
 # Privacy
 DOMAIN-SUFFIX,adjust.com
@@ -1206,7 +1206,7 @@ DOMAIN,exp.360in.com
 
 # (D)
 # > Douban
-AND,((USER-AGENT,Frodo*), (DOMAIN,119.29.29.29))
+AND,((USER-AGENT,Frodo*),(DOMAIN,119.29.29.29))
 
 # (G)
 # > Google
@@ -1379,8 +1379,6 @@ DOMAIN,pgdt.gtimg.com
 DOMAIN,pgdt.ugdtimg.com
 DOMAIN,splashqqlive.gtimg.com
 DOMAIN,wa.gtimg.com
-# DOMAIN,wxsnsdy.wxs.qq.com
-# DOMAIN,wxsnsdythumb.wxs.qq.com
 # > Tencent Music (TME)
 DOMAIN,adserviceretry.kugou.com
 DOMAIN,ads.service.kugou.com
