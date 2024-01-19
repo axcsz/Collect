@@ -9,7 +9,7 @@ DOMAIN,ems.youku.com
 DOMAIN,hudong.alicdn.com
 DOMAIN-SUFFIX,ut.taobao.com
 # 阿里云盘
-IP-CIDR,203.107.1.1/24
+IP-CIDR,203.107.1.1/24,no-resolve
 # 爱奇艺
 DOMAIN,api.iqiyi.com
 # Apple
@@ -100,8 +100,8 @@ DOMAIN-KEYWORD,httpdns-
 DOMAIN-KEYWORD,adv.ccb.com
 # 京东
 DOMAIN,dns.jd.com
-IP-CIDR,101.124.19.122/32
-IP-CIDR6,2402:db40:5100:1011::5/128
+IP-CIDR,101.124.19.122/32,no-resolve
+IP-CIDR6,2402:db40:5100:1011::5/128,no-resolve
 # JavDB
 DOMAIN,api.liquidlink.cn
 
@@ -172,7 +172,7 @@ DOMAIN-SUFFIX,gdt.qq.com
 DOMAIN-SUFFIX,l.qq.com
 DOMAIN-KEYWORD,trace.qq.com
 DOMAIN-KEYWORD,trace.video.qq.com
-IP-CIDR,47.110.187.87/32
+IP-CIDR,47.110.187.87/32,no-resolve
 
 # ======= W ======= #
 # 网易云音乐
@@ -226,6 +226,6 @@ DOMAIN,crash2.zhihu.com
 DOMAIN,mqtt.zhihu.com
 DOMAIN,sugar.zhihu.com
 DOMAIN,zxid-m.mobileservice.cn
-IP-CIDR,103.41.167.237/32
-IP-CIDR,118.89.204.198/32
-IP-CIDR6,2402:4e00:1200:ed00:0:9089:6dac:96b6/128
+IP-CIDR,103.41.167.237/32,no-resolve
+IP-CIDR,118.89.204.198/32,no-resolve
+IP-CIDR6,2402:4e00:1200:ed00:0:9089:6dac:96b6/128,no-resolve
