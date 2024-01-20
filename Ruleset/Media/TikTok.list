@@ -1,10 +1,14 @@
 #!name = TikTok
-#!date = 2023-12-15 10:00
+#!date = 2024-01-20 10:00
 
 
 # TikTok
 USER-AGENT,TikTok*
+DOMAIN,lf16-effectcdn.byteeffecttos-g.com
+DOMAIN,lf16-pkgcdn.pitaya-clientai.com
 DOMAIN,p16-tiktokcdn-com.akamaized.net
+DOMAIN-SUFFIX,capcut.com
+DOMAIN-SUFFIX,tiktokmusic.app
 DOMAIN-SUFFIX,musical.ly
 DOMAIN-SUFFIX,tiktok.com
 DOMAIN-SUFFIX,snssdk.com
