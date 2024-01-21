@@ -1,5 +1,5 @@
-#!name = Facebook
-#!date = 2024-01-18 19:00
+#!name = Facebook & Instagram
+#!date = 2024-01-21 10:00
 
 
 # Facebook
@@ -24,3 +24,9 @@ IP-CIDR,173.252.64.0/18,no-resolve
 IP-CIDR,179.60.192.0/22,no-resolve
 IP-CIDR,185.60.216.0/22,no-resolve
 IP-CIDR,204.15.20.0/22,no-resolve
+
+# Instagram
+DOMAIN-KEYWORD,instagram
+DOMAIN-SUFFIX,cdninstagram.com
+DOMAIN-SUFFIX,instagr.am
+DOMAIN-SUFFIX,instagram.com
