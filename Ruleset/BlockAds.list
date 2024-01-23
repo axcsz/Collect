@@ -1,5 +1,5 @@
 #!name = 拦截广告
-#!date = 2024-01-16 21:05
+#!date = 2024-01-23 21:05
 
 
 # ======= A ======= #
@@ -41,7 +41,7 @@ DOMAIN,afd.baidu.com
 DOMAIN,afdconf.baidu.com
 DOMAIN,lc.map.baidu.com
 # 百度贴吧
-IP-CIDR,180.76.76.200/32
+IP-CIDR,180.76.76.200/32,no-resolve
 
 # ======= C ======= #
 # 彩云天气
