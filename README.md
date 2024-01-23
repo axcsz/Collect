@@ -35,3 +35,4 @@
 - [@RuCu6](https://github.com/RuCu6)
 - [@Tartarus2014](https://github.com/Tartarus2014)
 - [@zmqcherish](https://github.com/zmqcherish)
+- [@kissyouhunter](https://github.com/kissyouhunter)
