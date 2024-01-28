@@ -1,5 +1,5 @@
 #!name = Apple
-#!date = 2024-01-18 19:00
+#!date = 2024-01-28 12:00
 
 
 # Apple
@@ -45,8 +45,13 @@ IP-CIDR,192.35.50.0/24,no-resolve
 IP-CIDR,198.183.17.0/24,no-resolve
 IP-CIDR,205.180.175.0/24,no-resolve
 
-
 # App Store
+DOMAIN,ppq.apple.com
 DOMAIN,apps.apple.com
-DOMAIN,iosapps.itunes.apple.com
 DOMAIN,itunes.apple.com
+DOMAIN,iosapps.itunes.apple.com
+DOMAIN,osxapps.itunes.apple.com
+DOMAIN-SUFFIX,mzstatic.com
+DOMAIN-SUFFIX,apps.apple.com
+DOMAIN-SUFFIX,itunes.apple.com
+DOMAIN-SUFFIX,itunes-apple.com.akadns.net
