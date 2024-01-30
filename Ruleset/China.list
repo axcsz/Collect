@@ -697,4 +697,4 @@ DOMAIN-SUFFIX,zhongsou.com
 DOMAIN-SUFFIX,zhuihd.com
 
 # 
-GEOIP,CN,DIRECT,no-resolve
+GEOIP,CN,no-resolve
