@@ -1,5 +1,5 @@
 #!name = 拦截广告&补充
-#!date = 2024-01-26 13:05
+#!date = 2024-02-01 20:00
 
 
 # A
@@ -9,9 +9,6 @@ DOMAIN,sdk.ssp.admobile.top
 DOMAIN-SUFFIX,admobile.top
 
 # B
-# 百度
-DOMAIN,mobads.baidu.com
-DOMAIN-SUFFIX,pos.baidu.com
 # 百度联盟 - 广告服务商
 DOMAIN-SUFFIX,union.baidu.cn
 DOMAIN-SUFFIX,union.baidu.com
@@ -33,8 +30,6 @@ DOMAIN,mcs.snssdk.com
 DOMAIN,tnc3-alisc1.snssdk.com
 DOMAIN,security-lq.snssdk.com
 DOMAIN,tnc3-aliec2.snssdk.com
-DOMAIN,is.snssdk.com
-DOMAIN,i.snssdk.com
 DOMAIN,*novelapp.ixigua.com
 DOMAIN,*default.ixigua.com
 DOMAIN,msync-im1-vip6-std.easemob.com
@@ -74,9 +69,6 @@ DOMAIN-KEYWORD,a3.pstatp.com
 DOMAIN-KEYWORD,a3.bytecdn.cn
 DOMAIN,ad.toutiao.com
 DOMAIN,dsp.toutiao.com
-# 京东
-# 弃用地址
-DOMAIN,waapdg.jd.com
 
 # H
 # 虎牙直播
@@ -85,11 +77,8 @@ URL-REGEX,^http:\/\/cdn\.wup\.huya\.com\/launch\/queryHttpDns$
 
 # K
 # 快手联盟 - 广告服务商
-DOMAIN,open.e.kuaishou.com
 DOMAIN,splashimgbssdl.yun.kugou.com
 DOMAIN,report.tencentmusic.com
-DOMAIN,ad.tencentmusic.com
-DOMAIN,adstats.tencentmusic.com
 URL-REGEX,^http:\/\/wapi\.kuwo\.cn\/openapi\/v1\/album\/adBar
 URL-REGEX,^http:\/\/wapi\.kuwo\.cn\/openapi\/v1\/app\/pasterAdvert
 URL-REGEX,^http:\/\/mobilead\.kuwo\.cn\/MobileAdServer
@@ -106,41 +95,18 @@ DOMAIN,ggmk.miguvideo.com
 DOMAIN,ggv.cmvideo.cn
 DOMAIN,ggx.cmvideo.cn
 DOMAIN,ggx03.miguvideo.com
-# 美团
-DOMAIN,al-log.d.meituan.net
-DOMAIN,babel-statistics-android.d.meituan.net
-DOMAIN,maplocatesdksnapshot.d.meituan.net
-DOMAIN,metrics-picture.d.meituan.net
-DOMAIN,route-stats.d.meituan.net
-# 秒针系统 - 广告服务商
-DOMAIN-SUFFIX,miaozhen.com
-
-# O
-# Outlook
-DOMAIN,acdn.adnxs.com
-DOMAIN,mediation.adnxs.com
-DOMAIN,sin3-ib.adnxs.com
 
 # Q
-# 手机QQ
-DOMAIN,adsmind.gdtimg.com
-DOMAIN,pgdt.gtimg.cn
-DOMAIN-SUFFIX,gdt.qq.com
 # qq音乐
 DOMAIN,adstats.tencentmusic.com
-DOMAIN,ad.tencentmusic.com
 DOMAIN,adcdn.tencentmusic.com
 DOMAIN,adexpo.tencentmusic.com
 DOMAIN,adclick.tencentmusic.com
-DOMAIN,otheve.beacon.qq.com
 DOMAIN,monitor.music.qq.com
 DOMAIN,stat.y.qq.com
-DOMAIN,tmead.y.qq.com
 DOMAIN,oth.str.mdt.qq.com
 DOMAIN,h.trace.qq.com
-DOMAIN,sdk.e.qq.com
 DOMAIN,p.l.qq.com
-DOMAIN,us.l.qq.com
 DOMAIN,tangram.e.qq.com
 DOMAIN-SUFFIX,imtmp.net
 # 蜻蜓FM
@@ -155,15 +121,13 @@ DOMAIN-SUFFIX,s.qd.qingtingfm.com
 # 七猫小说
 DOMAIN,cdn-new-ad.wtzw.com
 DOMAIN,a-remad.qm989.com
-DOMAIN,mobads.baidu.com
 DOMAIN,qzs.gdtimg.com
 DOMAIN,mobads-pre-config.cdn.bcebos.com
 DOMAIN,pgdt.ugdtimg.com
-DOMAIN-SUFFIX,gdt.qq.com
+
 # 全民K歌
-DOMAIN,adsmind.gdtimg.com
+
 DOMAIN,ii.gdt.qq.com
-DOMAIN,sdk.e.qq.com
 DOMAIN,us.l.qq.com
 DOMAIN,tmead.y.qq.com-NO-DROP
 DOMAIN,tmeadkg.y.qq.com-NO-DROP
@@ -179,25 +143,9 @@ DOMAIN,sdk.tianmu.mobi
 # 腾讯优量汇 - 广告服务商
 DOMAIN,mazu.m.qq.com
 DOMAIN,sdk.e.qq.com
-# 腾讯
-DOMAIN,adsmind.gdtimg.com
-DOMAIN,info4.video.qq.com
-DOMAIN,info6.video.qq.com
-DOMAIN,ios.video.mpush.qq.com
-DOMAIN,otheve.beacon.qq.com
-DOMAIN,pgdt.gtimg.cn
-DOMAIN,tpns.qq.com
 DOMAIN,up-hl.3g.qq.com-NO-DROP
-DOMAIN-SUFFIX,gdt.qq.com
-DOMAIN-SUFFIX,l.qq.com
-DOMAIN-KEYWORD,trace.qq.com
-DOMAIN-KEYWORD,trace.video.qq.com
-IP-CIDR,47.110.187.87/32,no-resolve
 # 淘宝去广告
 DOMAIN,adashx.m.taobao.com
-DOMAIN,ossgw.alicdn.com
-DOMAIN,ems.youku.com
-DOMAIN,hudong.alicdn.com
 DOMAIN,h-adashx.ut.taobao.com
 DOMAIN,ut.taobao.com
 
@@ -215,7 +163,6 @@ IP-CIDR,103.37.152.161/32,no-resolve
 IP-CIDR,103.37.152.162/32,no-resolve
 IP-CIDR,103.63.160.64/32,no-resolve
 IP-CIDR,119.29.48.215/32,no-resolve
-IP-CIDR,119.29.48.215/32,no-resolve
 IP-CIDR,202.90.110.8/32,no-resolve
 IP-CIDR,203.76.217.241/32,no-resolve
 IP-CIDR,203.76.217.243/32,no-resolve
@@ -225,8 +172,6 @@ IP-CIDR6,2405:1480:3000:303f::303f/128,no-resolve
 DOMAIN,sdkconfig.ad.xiaomi.com-DROP
 DOMAIN,data.mistat.xiaomi.com
 DOMAIN,tracking.intl.miui.com
-# 米家
-DOMAIN,sdkconfig.ad.xiaomi.com
 
 # Z
 # 中国移动
@@ -241,13 +186,4 @@ DOMAIN,adshows.21cn.com
 IP-CIDR,122.229.8.47/32,no-resolve
 IP-CIDR,122.229.29.89/32,no-resolve
 # 字节跳动 - 广告服务商
-DOMAIN,ad.zijieapi.com
-DOMAIN,i.snssdk.com
-DOMAIN,is.snssdk.com
-DOMAIN-KEYWORD,-ad-sign.byteimg.com
 DOMAIN-KEYWORD,-tos.pstatp.com-DROP
-DOMAIN-KEYWORD,asiad.byteactivity
-DOMAIN-KEYWORD,pangolin.snssdk.com
-DOMAIN-KEYWORD,pangolin-sdk-toutiao
-DOMAIN-KEYWORD,pglstatp-toutiao
-DOMAIN-KEYWORD,video-cn.snssdk.com
