@@ -8,6 +8,7 @@
 ||ems.youku.com
 ||hudong.alicdn.com
 ||ut.taobao.com
+
 # 爱奇艺
 ||api.iqiyi.com
 # Apple
@@ -28,7 +29,7 @@
 # 安全浏览限制解除
 ||lookup.api.bsb.baidu.com
 ||u3.ucweb.com
-||*.safebrowsing.
+||safebrowsing.
 
 # ======= B ======= #
 # 百度
@@ -230,3 +231,1344 @@
 ||mqtt.zhihu.com
 ||sugar.zhihu.com
 ||zxid-m.mobileservice.cn
+
+
+# 拦截广告&补充
+# A
+# 艾狄墨搏 - 广告服务商
+||monitor.ssp.admobile.top
+||sdk.ssp.admobile.top
+||admobile.top
+
+# B
+# 百度联盟 - 广告服务商
+||union.baidu.cn
+||union.baidu.com
+
+# D
+# 达佳互联 - 广告服务商
+||adukwai.com
+
+# F
+# 番茄小说
+||p6-ad-sign.byteimg.com
+||p9-ad-sign.byteimg.com
+||i-lq.snssdk.com
+||dig.bdurl.net
+||activity-ag.awemeughun.com
+||mcs.snssdk.com
+||tnc3-alisc1.snssdk.com
+||security-lq.snssdk.com
+||tnc3-aliec2.snssdk.com
+||*novelapp.ixigua.com
+||*default.ixigua.com
+||msync-im1-vip6-std.easemob.com
+||apd-pcdnwxlogin.teg.tencent-cloud.net
+||api.iegadp.qq.com
+||sf3-ttcdn-tos.pstatp.com
+||zijieapi
+||pglstatp-toutiao.com
+||byteorge.com
+||bytegoofy.com
+||bytedance.com
+
+# J
+# 极光 - 广告服务商
+||jiguang.cn
+# 今日头条
+||dm.toutiao.com
+||ad.toutiao.com
+||clk.gentags.net
+||dm.toutiao.com
+||dm.pstatp.com
+||dm.bytedance.com
+||uop.umeng.com
+||m.suning.com
+||adshare.toutiao.com
+||tunion-api.m.taobao.com
+||s1.pstatp.com
+||s2.pstatp.com
+||s3.pstatp.com
+||a3.pstatp.com
+||a3.bytecdn.cn
+||ad.toutiao.com
+||dsp.toutiao.com
+
+# H
+# 虎牙直播
+||v1d.szbdyd.com
+
+# K
+# 快手联盟 - 广告服务商
+||splashimgbssdl.yun.kugou.com
+||report.tencentmusic.com
+
+# M
+# 咪咕视频
+||ad.cmvideo.cn
+||ggc.cmvideo.cn
+||ggic03.miguvideo.com
+||ggmk.miguvideo.com
+||ggv.cmvideo.cn
+||ggx.cmvideo.cn
+||ggx03.miguvideo.com
+
+# Q
+# qq音乐
+||adstats.tencentmusic.com
+||adcdn.tencentmusic.com
+||adexpo.tencentmusic.com
+||adclick.tencentmusic.com
+||monitor.music.qq.com
+||stat.y.qq.com
+||oth.str.mdt.qq.com
+||h.trace.qq.com
+||p.l.qq.com
+||tangram.e.qq.com
+||imtmp.net
+# 蜻蜓FM
+||ad.qingting.fm
+||adlaunch.qingting.fm
+||ad-cdn. qingting.fm
+||admgr.qingting.fm
+||dload.qd.qingting.fm
+||logger.qingting.fm
+||s.qd.qingting.fm
+||s.qd.qingtingfm.com
+# 七猫小说
+||cdn-new-ad.wtzw.com
+||a-remad.qm989.com
+||qzs.gdtimg.com
+||mobads-pre-config.cdn.bcebos.com
+||pgdt.ugdtimg.com
+# 全民K歌
+||ii.gdt.qq.com
+||us.l.qq.com
+||tmead.y.qq.com-NO-DROP
+||tmeadkg.y.qq.com-NO-DROP
+
+# S
+# 收钱吧 - 买单小程序去广告
+||ads-shopping.shouqianba.com
+
+# T
+# 天目 - 广告服务商
+||sdk.tianmu.mobi
+# 腾讯优量汇 - 广告服务商
+||mazu.m.qq.com
+||sdk.e.qq.com
+||up-hl.3g.qq.com-NO-DROP
+# 淘宝去广告
+||adashx.m.taobao.com
+||h-adashx.ut.taobao.com
+||ut.taobao.com
+
+# W
+# 微信小程序通用
+||wxsnsdy.wxs.qq.com
+||wxsmsdy.video.qq.com
+||wxsnsdythumb.wxs.qq.com
+
+# X
+# 小米
+||sdkconfig.ad.xiaomi.com-DROP
+||data.mistat.xiaomi.com
+||tracking.intl.miui.com
+
+# Z
+# 中国电信
+||ad.21cn.com
+||ad.k.21cn.com
+||admarket.21cn.com
+||adshows.21cn.com
+# 字节跳动 - 广告服务商
+||-tos.pstatp.com-DROP
+
+
+# 其他
+# Advertising
+# > General
+||adservice
+||1phads.com
+||1rtb.com
+||1xl.co.uk
+||206ads.com
+||3cinteractive.com
+||4mads.com
+||5rocks.io
+||a.ki
+||a8.net
+||a9.com
+||a-ads.com
+||aarki.com
+||aarki.net
+||abtasty.com
+||acento.com
+||actionads.ru
+||actionpay.ru
+||ad.gt
+||ad1.ru
+||ad120m.com
+||ad127m.com
+||ad131m.com
+||ad132m.com
+||ad1data.com
+||ad2games.com
+||ad2iction.com
+||ad4.com.cn
+||ad4game.com
+||ad6media.co.uk
+||ad6media.com
+||ad6media.es
+||ad6media.fr
+||adacado.com
+||adadapted.com
+||adap.tv
+||adasiaholdings.com
+||adatrix.com
+||ad-balancer.at
+||adbecrsl.com
+||adblade.com
+||adblox.net
+||adbooth.com
+||ad-brix.com
+||adcamp.ru
+||adcdnx.com
+||adcel.co
+||ad-center.com
+||adcenter.io
+||adchina.com
+||adcloud.jp
+||ad-cloud.jp
+||adcloud.net
+||adcocktail.com
+||adcolony.com
+||adcomplete.ru
+||adcrowd.com
+||addapptr.com
+||addealing.com
+||addealsnetwork.com
+||ad-delivery.net
+||addict-mobile.net
+||addragon.com
+||adecorp.co.kr
+||adecosystems.net
+||adecosystems.tech
+||adelement.com
+||adelva.com
+||adentifi.com
+||adexchangemachine.com
+||adexprt.com
+||adextent.com
+||adfactor.nl
+||adfalcon.com
+||adflow.ru
+||adform.net
+||adinall.com
+||adkernel.com
+||ad-locus.com
+||adlooxtracking.com
+||admarvel.com
+||admaster.com.cn
+||ad-maven.com
+||admicro.vn
+||admob.com
+||ad-move.jp
+||adnetwork.vn
+||adnxs.com
+||adnyg.com
+||ad-plus.cn
+||adpushup.com
+||adroll.com
+||adrta.com
+||adsafeprotected.com
+||adsage.cn
+||adsage.com
+||ad-score.com
+||adsensor.org
+||adserve.work
+||adsmediabox.com
+||ads-pixiv.net
+||ad-srv.co
+||adsrvr.org
+||ad-stir.com
+||ads-twitter.com
+||adswizz.com
+||adsymptotic.com
+||ad-sys.com
+||adtarget.io
+||adtarget.me
+||adtdp.com
+||adthor.com
+||adtongji.xyz
+||adtrace.org
+||advertising.com
+||adwhirl.com
+||adwo.com
+||adxadserv.com
+||adzerk.net
+||aiclk.com
+||airpush.com
+||algovid.com
+||amazon-adsystem.com
+||amoad.com
+||amobee.com
+||app-adforce.jp
+||appads.com
+||appcpi.net
+||appier.net
+||appliedq.com
+||applift.com
+||applovin.com
+||applvn.com
+||appsflyer.com
+||apsalar.com
+||apxadtracking.net
+||aralego.com
+||atomhike.com
+||axonix.com
+||b2pk.com
+||bayimob.com
+||bizible.com
+||bjvvqu.cn
+||brightcom.com
+||bulldogcpi.com
+||bxsnews.com
+||carbonads.net
+||cdj99d.cn
+||clotfun.mobi
+||clotfun.online
+||cloudmobi.net
+||comscore.com
+||cpmstar.com
+||cpx.to
+||crispadvertising.com
+||criteo.com
+||criteo.net
+||crwdcntrl.net
+||ctrmi.com
+||digitalpimpnetwork.com
+||domob.cn
+||dotomi.com
+||doubleverify.com
+||dtscout.com
+||eroadvertising.com
+||ero-advertising.com
+||exdynsrv.com
+||exoclick.com
+||exosrv.com
+||eyeviewads.com
+||fintechpi.com
+||fjctlnn.top
+||fyber.com
+||go2cloud.org
+||growingio.com
+||haloapps.com
+||hubcloud.com.cn
+||hypers.com
+||idealads.net
+||inmobi.cn
+||inmobi.com
+||inmobi.net
+||inmobicdn.cn
+||inmobicdn.net
+||inner-active.mobi
+||innovid.com
+||inpagepush.com
+||insurads.com
+||ironsrc.com
+||irs01.com
+||iskyworker.com
+||iyoowi.com
+||jads.co
+||juicyads.com
+||leadboltmobile.net
+||lenzmx.com
+||liveadvert.com
+||lnk0.com
+||lnk8.cn
+||localytics.com
+||mdfull.com
+||measurementapi.com
+||medialytics.com
+||meetrics.com
+||meetrics.net
+||microad.jp
+||moatads.com
+||mobclix.com
+||mookie1.com
+||mopub.com
+||mplxtms.com
+||mpnrs.com
+||msads.net
+||mxmcdn.net
+||mxtads.com
+||mydas.mobi
+||naiadsystems.com
+||nanigans.com
+||narrativ.com
+||native123.com
+||nativeads.com
+||nbcuni.com
+||ncaudienceexchange.com
+||nend.net
+||netizen.co
+||netseer.com
+||networkad.net
+||newscgp.com
+||nex8.net
+||nexage.com
+||nextclick.pl
+||nongjingly.com
+||ntv.io
+||o333o.com
+||ogury.io
+||ojooo.com
+||okanjo.com
+||okjhb.xyz
+||omgpl.com
+||omguk.com
+||omnilocal.ai
+||onaudience.com
+||open-adx.com
+||openx.com
+||openx.net
+||optaim.com
+||optimix.asia
+||outbrain.com
+||outbrain.org
+||outbrainimg.com
+||owneriq.net
+||ownlocal.com
+||pagefair.com
+||pagefair.net
+||pdbarea.com
+||perfectaudience.com
+||performancehorizon.com
+||permutive.app
+||permutive.com
+||persona.ly
+||phluant.com
+||pictela.net
+||pixfuture.com
+||pixfuture.net
+||placeiq.com
+||placelocal.com
+||polarmobile.com
+||polyad.net
+||popads.media
+||popads.net
+||popin.cc
+||postrelease.com
+||powerad.ai
+||prebid.org
+||premiumads.com.br
+||presage.io
+||programattik.com
+||pro-market.net
+||promotionengine.com
+||propellerads.com
+||proper.io
+||proxistore.com
+||pub2srv.com
+||publicidees.com
+||pubmatic.com
+||pubmine.com
+||pubnative.info
+||pubnative.net
+||pushsar.com
+||pxlad.io
+||qchannel01.cn
+||quantserve.com
+||quantumgraph.com
+||r-ad.ne.jp
+||rayjump.com
+||reachmax.cn
+||realsrv.com
+||rebel.ai
+||redirectpopads.com
+||reklamstore.com
+||rekmob.com
+||relap.io
+||restartad.com
+||retargeter.com
+||revcontent.com
+||revjet.com
+||revmob.com
+||revrtb.com
+||rfihub.com
+||rlcdn.com
+||rotaban.ru
+||rqmob.com
+||rtbsrv.com
+||rtk.io
+||rtmark.net
+||rubiconproject.com
+||runative-syndicate.com
+||rutarget.ru
+||salmonads.com
+||samba.tv
+||samsungads.com
+||saymedia.com
+||sdkclick.com
+||sekindo.com
+||servebom.com
+||servedby-buysellads.com
+||servedbyopenx.com
+||serving-sys.cn
+||serving-sys.com
+||sgdmobile.com
+||shareaholic.com
+||sharethrough.com
+||shoofle.tv
+||sift.co
+||silvermob.com
+||simplereach.com
+||simpli.fi
+||singular.net
+||sitemaji.com
+||sitescout.com
+||skimresources.com
+||slicktext.com
+||smaato.com
+||smaato.net
+||smac-ad.com
+||smadex.com
+||smartadserver.com
+||smart-c.jp
+||smartclip.net
+||smartnews-ads.com
+||snapads.com
+||socdm.com
+||sojern.com
+||sonobi.com
+||speedshiftmedia.com
+||splicky.com
+||sponsorpay.com
+||spotscenered.info
+||spotxcdn.com
+||spotxchange.com
+||springserve.com
+||sprout-ad.com
+||stackadapt.com
+||startappservice.com
+||steelhouse.com
+||steelhousemedia.com
+||steepto.com
+||stickyadstv.com
+||streamrail.com
+||streamrail.net
+||strikead.com
+||sumome.com
+||sunnyworks.co.kr
+||superad2.com.sg
+||superadbox.com
+||superads.cn
+||supersonic.com
+||supersonicads.com
+||synergy-e.com
+||tabmo.io
+||taboola.com
+||taboolasyndication.com
+||tacoda.net
+||tactilews.com
+||tagtic.cn
+||tamedia.com.tw
+||tanv.com
+||tanx.com
+||tapdaq.com
+||tapjoy.com
+||tapjoyads.com
+||tappx.com
+||tapresearch.com
+||taptapnetworks.com
+||taptica.com
+||targetspot.com
+||teads.tv
+||terraclicks.com
+||theadex.com
+||themoneytizer.com
+||theoremreach.com
+||thetrafficstat.net
+||tidaltv.com
+||tnkfactory.com
+||tns-counter.ru
+||traffichunt.com
+||trafficjunky.net
+||trafmag.com
+||traktum.com
+||tremorhub.com
+||tremormedia.com
+||tremorvideo.com
+||tresensa.com
+||trfmxt.com
+||trvdp.com
+||tubemogul.com
+||tuifish.com
+||tuitiger.com
+||turn.com
+||tutoads.tv
+||tynt.com
+||u-ad.info
+||uberads.com
+||uimserv.net
+||ultraadserver.com
+||undertone.com
+||unimhk.com
+||unrulymedia.com
+||upltv.com
+||uprivaladserver.net
+||upsight-api.com
+||upsnap.com
+||uri6.com
+||usekahuna.com
+||utarget.ru
+||vads.net.vn
+||vads.vn
+||vamaker.com
+||vdopia.com
+||veinteractive.com
+||vendimob.pl
+||vertamedia.com
+||verticalscope.com
+||vervemobile.com
+||vidazoo.com
+||videoadex.com
+||videohub.tv
+||videozhishi.com
+||vidoomy.com
+||viewdeos.com
+||vi-serve.com
+||vm5apis.com
+||voiceads.cn
+||voodoo-ads.io
+||vrtcal.com
+||vrtzads.com
+||vrvm.com
+||vserv.mobi
+||vungle.com
+||w55c.net
+||wapstart.ru
+||watchingthat.net
+||webads.eu
+||wedolook.com
+||widespace.com
+||wigetmedia.com
+||wordstream.com
+||wrinkads.com
+||wsod.com
+||wudejia.com
+||xapads.com
+||xdrig.com
+||xmlwizard.com
+||xpanama.net
+||xy7elite.com
+||yandexadexchange.net
+||ybrantdigital.com
+||ydmob.com
+||yeahmobi.com
+||yhdichan.com
+||yicha.jp
+||yieldlove-ad-serving.net
+||yieldmo.com
+||yieldoptimizer.com
+||yllix.com
+||ymtracking.com
+||yoc.com
+||yoc-performance.com
+||yomedia.vn
+||yottos.com
+||youappi.com
+||youmi.net
+||yumimobi.com
+||yunqingugm.com
+||zapr.in
+||zemanta.com
+||zestads.com
+||zeustechnology.com
+||zhiziyun.com
+||zu08e.cn
+||zucks.net
+||zumobi.com
+||zwaar.org
+||zxrtb.com
+||mediav.com
+||8le8le.com
+||jomwihn.cn
+||wuyicom.top
+||anythinktech.com
+||520click.com
+||xlviirdr.com
+||ce33m7.com
+||pangle.io
+||ad.daum.net
+||ad.g.daum.net
+||ads.roku.com
+||abema-adx.ameba.jp
+||ad.12306.cn
+||ad.caiyunapp.com
+||ad.flurry.com
+||ad.huajiao.com
+||ad.hzyoka.com
+||ad.jiemian.com
+||ad.period-calendar.com
+||ad.wappalyzer.com
+||ad.xy2013.cn
+||adapi.izuiyou.com
+||ad-cn.jovcloud.com
+||ad-mediation.tuanguwen.com
+||ads.chinadaily.com.cn
+||ads.daydaycook.com.cn
+||ads.flurry.com
+||ads.pinger.com
+||ads.pinterest.com
+||ads.play.cbsi.video
+||ads.reembed.com
+||ads.storm8.com
+||ads.superawesome.tv
+||ads.weilitoutiao.net
+||adsapi.manhuaren.com
+||ads-cloud.rovio.com
+||adsdk.dmzj.com
+||adserver.pandora.com
+||adservice.tohsoft.com
+||adshow.58.com
+||adv.bandi.so
+||adv.ettoday.net
+||advert.mafengwo.cn
+||adx.sogaha.cn
+||api.ad.xiaomi.com
+||api.adnet.mob.com
+||api-ad.kajicam.com
+||appnext.hs.llnwd.net
+||appnext-a.akamaihd.net
+||business-cdn.shouji.sogou.com
+||cf-ads.pinger.com
+||dsp.fcbox.com
+||g.ousns.net
+||ggs.myzaker.com
+||itad.linetv.tw
+||kad.gotokeep.com
+||ma-adx.ctrip.com
+||mads.suning.com
+||mopnativeadv.037201.com
+||nativeadv.dftoutiao.com
+||saad.ms.zhangyue.net
+||toots-a.akamaihd.net
+||videoads-cloud.rovio.com
+||video-ads-module.ad-tech.nbcuni.com
+
+# (0~9)
+# > 51wnl
+||ad.51wnl-cq.com
+||adextra.51wnl-cq.com
+||log.51wnl-cq.com
+||r.51wnl-cq.com
+
+# (A)
+# > Apple
+||iadsdk.apple.comX
+||ads.internal.unity3d.com
+||ads.prd.ie.internal.unity3d.com
+||unityads.unity3d.com
+# --- (Alibaba) ---
+||tunion-api.m.taobao.com
+# > YOUKU
+||ad.youku.com,REJECT
+||atm.youku.com
+||ad.mobile.youku.com
+||adx.op.cp18.ott.cibntv.net
+
+||pl.cp31.ott.cibntv.net
+||ykad-data.youku.com,REJECT
+# > AMap
+||optimus-ads.amap.com
+||optimus-ads.amap.com.w.alikunlun.com
+# ------
+# > Autohome
+||adproxy.autohome.com.cn
+||rd.autohome.com.cn
+||al.autohome.com.cn
+||applogapi.autohome.com.cn
+||adm0.autoimg.cn
+||adm1.autoimg.cn
+||adm2.autoimg.cn
+||adm3.autoimg.cn
+
+# (B)
+# --- (Baidu) ---
+||duapps.com
+||cpro.baidu.com
+||als.baidu.com
+||duclick.baidu.com
+||mobads-logs.baidu.com
+||nadvideo2.baidu.com
+||nsclick.baidu.com
+# > iQIYI
+||t7z.cupid.iqiyi.com
+||t7z.cupid.ptqy.gitv.tv
+# ------
+# > ByteDance
+||pangolin-sdk-toutiao.com
+||pangolin-sdk-toutiao-b.com
+||pangolin.snssdk.com
+# > baicizhan
+||advertise.baicizhan.com
+||advertise.baicizhan.org
+# > BitAuto
+||adx.yiche.com
+||log.ycapp.yiche.com
+# > Braze
+||iad.appboy.com
+||iad-03.appboy.com
+||iad-01.braze.com
+||iad-02.braze.com
+||iad-03.braze.com
+||iad-04.braze.com
+||iad-05.braze.com
+||iad-06.braze.com
+||iad-08.braze.com
+
+# (C)
+# > CCTVVideo
+||adstore-index-1252524079.file.myqcloud.com
+# > CNTV
+||galaxy.bjcathay.com
+||mdrecv.app.cntvwb.cn
+||sdapprecv.app.cntvwb.cn
+||vdapprecv.app.cntvwb.cn
+# > Chelaile
+||atrace.chelaile.net.cn
+||logs.chelaile.net.cn
+# > Camera360
+||dispatcher.360in.com
+||ad.360in.com
+||exp.360in.com
+
+# (G)
+# > Google
+||doubleclick.net
+||googleadservices.com
+||googleadsserving.cn
+||googlesyndication.com
+||googletagservices.com
+||ads.youtube.com
+
+# (H)
+# > HunanTV
+||da.hunantv.com
+||log.hunantv.com
+||v2.hunantv.com
+# > Hupu
+||adx.hupu.com
+||adx-api.hupu.com
+||goblin.hupu.com
+# > happycast
+||ad.hpplay.cn
+||adc.hpplay.cn
+||adcdn.hpplay.cn
+||adeng.hpplay.cn
+||pin.hpplay.cn
+||rp.hpplay.cn
+||rpt.hpplay.cn
+
+# (J)
+# > jxedt
+||richmanapi.jxedt.com
+||richmanapi.ksedt.com
+||richmanmain.jxedt.com
+||richmanrank.ksedt.com
+||richmanrules.jxedt.com
+||richmanrules.ksedt.com
+
+# (K)
+# > Kingsoft
+||ad-stat.ksosoft.com
+||img.auction-ads.wpscdn.cn
+||counter.kingsoft.com
+||counter.ksosoft.com
+||minfo.wps.cn
+||mobad.ijinshan.com
+||ups.ksmobile.net
+||ws.ksmobile.net
+# > Kuaishou
+||e.kuaishou.com
+||js-ad.a.yximgs.com
+
+# (L)
+# > LinkWiFi
+||a.wkanx.com
+||cwx.lianwangtech.com
+||c1wx.lianwangtech.com
+
+# (M)
+# > Microsoft
+||ads.msn.com
+||ads1.msn.com
+||ads2.msn.com
+||bingads.microsoft.com
+||rads.msn.com
+||mobileads.msn.com
+# > MojiWeather
+||ad.api.moji.com
+||adlaunch.moji.com
+||ads.mojicdn.com
+||v1.log.moji.com
+
+# (N)
+# > NetEase
+||dsp.youdao.com
+||union.youdao.com
+||ad.bn.netease.com
+||ad.yixin.im
+||admusicpic.music.126.net
+||g1.163.com
+||gorgon.youdao.com
+||iad.g.163.com
+||impservice.dictapp.youdao.com
+||impservice.youdao.com
+||n.3g.163.com
+||nex.163.com
+||yt-adp.nosdn.127.net
+||yt-adp.ws.126.net
+
+# (P)
+# > PPTV
+||ads.aplus.pptv.com
+||ads.aplusapi.pptv.com
+||asimgs.pplive.cn
+||de.as.pptv.com
+# > Photoable
+||regist.fotoable.com
+||cdn.adapi.fotoable.com
+# > PeanutWiFi
+||adnew.wifi8.com
+||adfile.wifi8.com
+# > PConline
+||ad-analysis.pconline.com.cn
+||iad0ssl.pcauto.com.cn
+||iad0ssl.pconline.com.cn
+||imgad0.pcauto.com.cn
+||imgad0.pconline.com.cn
+||ivy.pchouse.com.cn
+# > Phoenix New Media
+||deliver.ifeng.com
+||api.newad.ifeng.com
+||ifengad.3g.ifeng.com
+
+# (Q)
+# > QingTing
+||ad-cdn.qingting.fm
+# > OPPO
+||ads.oppomobile.com
+||adsfs.oppomobile.com
+
+# (S)
+# > Sina
+||alitui.weibo.com
+||beacon.sina.com.cn
+||adimg.uve.weibo.com
+||adimg.vue.weibo.com
+||u1.img.mobile.sina.cn
+||sax.sina.com.cn
+||saxs.sina.com.cn
+||saxn.sina.com.cn
+# > SOHU
+||ad.sohu.com
+||ads.sohu.com
+||aty.sohu.com
+||hui.sohu.com
+||pv.sohu.com
+# > Snapchat
+||ads.snapchat.com
+||adsapi.snapchat.com
+# > Skyworth
+||hoisin.coocaa.com
+||hoisin.coocaatv.com
+||data-hoisin.coocaa.com
+
+# (T)
+# --- (Tencent) ---
+||e.qq.com
+||adsmind.apdcdn.tc.qq.com
+||adsmind.tc.qq.com
+||livep.l.t002.ottcn.com
+||pgdt.gtimg.com
+||splashqqlive.gtimg.com
+||wa.gtimg.com
+
+# > Tencent Music (TME)
+||adserviceretry.kugou.com
+||ads.service.kugou.com
+||adsfile.bssdlbig.kugou.com
+||kgmobilestat.kugou.com
+||kgmobilestatbak.kugou.com
+||mobilelog.kugou.com
+||adsfilebssdlbig.tx.kugou.com
+# ------
+# > TongHuaShun
+||adm.10jqka.com.cn
+||stat.10jqka.com.cn
+# > The Paper
+||admonitor.thepaper.cn
+||adpai.thepaper.cn
+||imgadpai.thepaper.cn
+# > Thunder
+||adsp.xunlei.com
+||etl.xlmc.sandai.net
+
+# (V)
+# > VariFlight
+||adv-adlog.variflight.com
+||adv-ads.variflight.com
+||app-ad.variflight.com
+# > vivo
+||adlog.vivo.com.cn
+||adreq.vivo.com.cn
+||ads-marketing-vivofs.vivo.com.cn
+||adsdk.vivo.com.cn
+||adsstatic.vivo.com.cn
+||adxlog.vivo.com.cn
+||vcardsdkservice.vivo.com.cn
+||stsdk.vivo.com.cn
+||stsdk.vivoglobal.com
+# > Viber
+||ads.viber.com
+||ads-d.viber.com
+||ads.aws.viber.com
+
+# (X)
+# > Ximalaya
+||ad.ximalaya.com
+||adbs.ximalaya.com
+||adse.ximalaya.com
+||adse.wsa.ximalaya.com
+||adbehavior.wsa.ximalaya.com
+||adbehavior.ximalaya.com
+||adsebs.ximalaya.com
+||adwbs.ximalaya.com
+# > Xiaohongshu
+||ads-img-qc.xhscdn.com
+||ads-video-al.xhscdn.com
+||ads-video-qc.xhscdn.com
+||t-ads.xiaohongshu.com
+
+# (Y)
+# > Yahoo
+||adserver.yahoo.com
+||adspecs.yahoo.com
+||advertising.yahoo.com
+||gemini.yahoo.com
+||admarketing.yahoo.net
+||ads.auctions.yahoo.com
+||ads.finance.yahoo.com
+||ads.yahoo.com
+||ads.yahoo.de
+
+# (Z)
+# > ZOL
+||apppv.zol.com.cn
+||pvnapp.zol.com.cn
+
+
+# Hijacking
+# Internet Service Providers Hijacking
+||17gouwuba.com
+||186078.com
+||189key.com
+||189zj.cn
+||285680.com
+||3721zh.com
+||4336wang.cn
+||51chumoping.com
+||51mld.cn
+||51mypc.cn
+||58mingri.cn
+||58mingtian.cn
+||5vl58stm.com
+||6d63d3.com
+||7gg.cc
+||91veg.com
+||9s6q.cn
+||adsame.com
+||akuai.top
+||atplay.cn
+||baiwanchuangyi.com
+||beerto.cn
+||beilamusi.com
+||benshiw.net
+||bianxianmao.com
+||bkyhq.cn
+||bryonypie.com
+||cishantao.com
+||cszlks.com
+||cudaojia.com
+||dafapromo.com
+||daitdai.com
+||dsaeerf.com
+||dugesheying.com
+||dv8c1t.cn
+||echatu.com
+||erdoscs.com
+||fan-yong.com
+||feih.com.cn
+||fjlqqc.com
+||fkku194.com
+||freedrive.cn
+||gclick.cn
+||goufanli100.com
+||goupaoerdai.com
+||gouwubang.com
+||gscxs.cn
+||gzxnlk.com
+||haoshengtoys.com
+||hbssjd.cn
+||hyunke.com
+||ichaosheng.com
+||ishop789.com
+||jdkic.com
+||jiubuhua.com
+||jsncke.com
+||junkucm.com
+||jwg365.cn
+||kawo77.com
+||kualianyingxiao.cn
+||kumihua.com
+||ltheanine.cn
+||lvehaisen.com
+||maipinshangmao.com
+||minisplat.cn
+||mkitgfs.com
+||mlnbike.com
+||mobjump.com
+||nbkbgd.cn
+||newapi.com
+||pinzhitmall.com
+||poppyta.com
+||qianchuanghr.com
+||qichexin.com
+||qinchugudao.com
+||quanliyouxi.cn
+||qutaobi.com
+||ry51w.cn
+||sg536.cn
+||sifubo.cn
+||sifuce.cn
+||sifuda.cn
+||sifufu.cn
+||sifuge.cn
+||sifugu.cn
+||sifuhe.cn
+||sifuhu.cn
+||sifuji.cn
+||sifuka.cn
+||smgru.net
+||taoggou.com
+||tcxshop.com
+||tjqonline.cn
+||topitme.com
+||tt114.net
+||tt3sm4.cn
+||tuia.cn
+||tuipenguin.com
+||urlaw.cn
+||urlet.cn
+||websd8.com
+||wsgblw.com
+||wx16999.com
+||xchmai.com
+||xiaohuau.xyz
+||ygyzx.cn
+||yinmong.com
+||yitaopt.com
+||yjqiqi.com
+||yukhj.com
+||zhaozecheng.cn
+||zhenxinet.com
+||zlne800.com
+||zmlled.cn
+||zunmi.cn
+||zzd6.com
+
+# Malware
+# > KuaiZip
+# https://zhuanlan.zhihu.com/p/39534279
+||kuaizip.com
+# > MacKeeper
+# https://www.lizhi.io/blog/40002904
+||mackeeper.com
+||zryydi.com
+# > Adobe Flash China Special Edition
+# https://www.zhihu.com/question/281163698/answer/441388130
+||flash.cn
+||geo2.adobe.com
+# > C&J Marketing
+# https://www.zhihu.com/question/46746200
+||4009997658.com
+||abbyychina.com
+||alienskins.cn
+||anydeskchina.cn
+||bartender.cc
+||betterzip.net
+||betterzipcn.com
+||beyondcompare.cc
+||bingdianhuanyuan.cn
+||chemdraw.com.cn
+||cjmakeding.com
+||cjmkt.com
+||codesoftchina.com
+||coreldrawchina.com
+||crossoverchina.com
+||dongmansoft.com
+||earmasterchina.cn
+||easyrecoverychina.com
+||ediuschina.com
+||flstudiochina.com
+||folxchina.cn
+||formysql.com
+||guitarpro.cc
+||huishenghuiying.com.cn
+||hypeapp.cn
+||hypersnap.net
+||iconworkshop.cn
+||idmchina.net
+||imazingchina.com
+||imindmap.cc
+||jihehuaban.com.cn
+||keyshot.cc
+||kingdeecn.cn
+||logoshejishi.com
+||luping.net.cn
+||mairuan.cn
+||mairuan.com
+||mairuan.com.cn
+||mairuan.net
+||mairuanwang.com
+||makeding.com
+||mathtype.cn
+||mindmanager.cc
+||mindmanager.cn
+||mindmapper.cc
+||mycleanmymac.com
+||nicelabel.cc
+||ntfsformac.cc
+||ntfsformac.cn
+||officesoftcn.com
+||overturechina.com
+||passwordrecovery.cn
+||pdfexpert.cc
+||photozoomchina.com
+||shankejingling.com
+||ultraiso.net
+||vegaschina.cn
+||xitongqingli.com
+||xmindchina.net
+||xshellcn.com
+||yihuifu.cn
+||yuanchengxiezuo.com
+||zbrushcn.com
+||zhzzx.com
+
+# Tracking
+# Privacy
+||adjust.com
+||airpr.com
+||cr-nielsen.com
+||hotjar.com
+||hotjar.io
+||hs-analytics.net
+||kissmetrics.com
+||kochava.com
+||liadm.com
+||marketo.com
+||mobileapptracking.com
+||mparticle.com
+||nexac.com
+||nr-data.net
+||pardot.com
+||parrable.com
+||petametrics.com
+||predic.io
+||quantcount.com
+||rtbasia.com
+||scorecardresearch.com
+||seewhy.com
+||segment.com
+||segment.io
+||segmentify.com
+||sentiance.com
+||serverbid.com
+||sessionm.com
+||smartlook.com
+||socialannex.com
+||socialbakers.com
+||sociaplus.com
+||stathat.com
+||stats-locations.com
+||tagcommander.com
+||tailtarget.com
+||tapad.com
+||tapfiliate.com
+||tapinfluence.com
+||tapstream.com
+||tend.io
+||trackingio.com
+||woopra.com
+||wootric.com
+||wowanalytics.co.uk
+||zoomanalytics.co
+||ads.linkedin.com
+||analytics.slashdotmedia.com
+||zgsdk.zhugeio.com
+
+# > 51.LA
+||js.users.51.la
+||mc.51.la
+||sdk.51.la
+||wc.51.la
+# > 58
+||track.58.com
+||tracklog.58.com
+# > Antiy
+||miav-cse.avlyun.com
+||miui-fxcse.avlyun.com
+# > Apple
+||token.safebrowsing.apple
+# > Baidu
+||hm.baidu.com
+||hmma.baidu.com
+# > Daum
+||track.tiara.daum.net
+||track.tiara.kakao.com
+# > Google
+||googletagmanager.com
+||google-analytics.com
+||safebrowsing.googleapis.com
+||safebrowsing.googleapis-cn.com
+# > GozenData
+# https://www.v2ex.com/t/772523
+||gozendata.com
+||gzads.com
+||gz-data.com
+# > GrowingIO
+||giocdn.com
+# > MI
+||tracking.miui.com
+||flash.sec.miui.com
+||a0.app.xiaomi.com
+||api.installer.xiaomi.com
+# > Microsoft
+||c.bing.com
+||c.clarity.ms
+||o.clarity.ms
+||www.clarity.ms
+# > TalkingData
+||cpatrk.net
+||talkingdata.com
+||talkingdata.net
+||udrig.com
+# > Tencent
+||safebrowsing.urlsec.qq.com
+# > Tenjin
+||track.tenjin.com
+||track.tenjin.io
