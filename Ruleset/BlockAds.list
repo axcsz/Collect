@@ -1,5 +1,5 @@
 #!name = 拦截广告
-#!date = 2024-01-31 12:22
+#!date = 2024-02-15 10:45
 
 
 # ======= A ======= #
@@ -64,6 +64,7 @@ DOMAIN,adttrackingprd.hwwt8.com
 # Foreca & Google
 DOMAIN,pagead2.googlesyndication.com
 DOMAIN,www.googleadservices.com
+DOMAIN-SUFFIX,adservice.google.com
 DOMAIN-KEYWORD,adservice.google.com
 DOMAIN-KEYWORD,ads.g.doubleclick
 
@@ -72,8 +73,10 @@ DOMAIN-KEYWORD,ads.g.doubleclick
 DOMAIN,amap-aos-info-nogw.amap.com
 DOMAIN,awaken.amap.com
 DOMAIN,free-aos-cdn-image.amap.com
-# 工商银行 开屏广告
+# 工商银行
+DOMAIN,image.mybank.icbc.com.cn
 DOMAIN,pageviewp.icbc.com.cn
+DOMAIN-SUFFIX,mall.icbc.com.cn
 # 广告联盟
 DOMAIN,ad.zijieapi.com
 DOMAIN,i.snssdk.com
@@ -184,7 +187,7 @@ DOMAIN-SUFFIX,gdt.qq.com
 DOMAIN-SUFFIX,l.qq.com
 DOMAIN-KEYWORD,trace.qq.com
 DOMAIN-KEYWORD,trace.video.qq.com
-IP-CIDR,47.110.187.87/32,no-resolve
+IP-CIDR,47.110.187.87/32
 
 # ======= W ======= #
 # 网易云音乐
