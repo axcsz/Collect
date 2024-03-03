@@ -21,7 +21,8 @@ global-client-fingerprint: chrome   #全局 TLS 指纹，优先低于 proxy 内�
 profile:
   store-selected: true # 存储 select 选择记录
   store-fake-ip: true  # 持久化 fake-ip
-  
+
+
 sniffer:               # 嗅探域名 可选配置
   enable: true
   parse-pure-ip: true  # 是否使用嗅探结果作为实际访问，默认 true
@@ -33,18 +34,20 @@ sniffer:               # 嗅探域名 可选配置
       override-destination: true
     QUIC:
       ports: [443, 8443]
-      
+
+
 tun:                   # Tun 配置
   enable: true
   stack: system        # 可选： system/gvisor/mixed；tun 模式堆栈,如无使用问题,建议使用 system 栈;MacOS 用户推荐 gvisor栈
                        # system 使用系统协议栈,可以提供更稳定/全面的 tun 体验,且占用相对其他堆栈更低。 
                        # gvisor 通过在用户空间中实现网络协议栈,可以提供更高的安全性和隔离性,同时可以避免操作系统内核和用户空间之间的切换,从而在特定情况下具有更好的网络处理性能
                        # mixed 混合堆栈,tcp使用 system栈,udp使用 gvisor栈,使用体验可能相对更好
-  dns-hijack: [any:53]            # dns劫持,一般设置为 any:53 即可, 即劫持所有53端口的udp流量
+  dns-hijack: [any:53] # dns劫持,一般设置为 any:53 即可, 即劫持所有53端口的udp流量
 # strict_route: true   # 将所有连接路由到tun来防止泄漏，但你的设备将无法其他设备被访问
   auto-route: true     # 自动设置全局路由，可以自动将全局流量路由进入tun网卡。
   auto-detect-interface: true     # 自动识别出口网卡
-        
+
+
 dns:
   enable: true             # 关闭将使用系统 DNS
   ipv6: false              # IPV6解析开关；如果为false，将返回ipv6结果为空
@@ -52,7 +55,7 @@ dns:
   listen: 0.0.0.0:53       # DNS监听地址
   fake-ip-range: 198.18.0.1/16    # Fake-IP解析地址池
   fake-ip-filter: ['*.lan', 'cable.auth.com', '*.msftconnecttest.com', '*.msftncsi.com', 'network-test.debian.org', 'detectportal.firefox.com', 'resolver1.opendns.com', '*.srv.nintendo.net', '*.stun.playstation.net', 'xbox.*.microsoft.com', '*.xboxlive.com', 'stun.*', 'global.turn.twilio.com', 'global.stun.twilio.com', 'localhost.*.qq.com', 'localhost.*.weixin.qq.com', '*.logon.battlenet.com.cn', '*.logon.battle.net', '*.blzstatic.cn', 'music.163.com', '*.music.163.com', '*.126.net', 'musicapi.taihe.com', 'music.taihe.com', 'songsearch.kugou.com', 'trackercdn.kugou.com', '*.kuwo.cn', 'api-jooxtt.sanook.com', 'api.joox.com', 'joox.com', 'y.qq.com', '*.y.qq.com', 'streamoc.music.tc.qq.com', 'mobileoc.music.tc.qq.com', 'isure.stream.qqmusic.qq.com', 'dl.stream.qqmusic.qq.com', 'aqqmusic.tc.qq.com', 'amobile.music.tc.qq.com', '*.xiami.com', '*.music.migu.cn', 'music.migu.cn', 'proxy.golang.org', '*.mcdn.bilivideo.cn', '*.cmpassport.com', 'id6.me', 'open.e.189.cn', 'mdn.open.wo.cn', 'opencloud.wostore.cn', 'auth.wosms.cn', '*.jegotrip.com.cn', '*.icitymobile.mobi', '*.pingan.com.cn', '*.cmbchina.com', 'pool.ntp.org', '*.pool.ntp.org', 'ntp.*.com', 'time.*.com', 'ntp?.*.com', 'time?.*.com', 'time.*.gov', 'time.*.edu.cn', '*.ntp.org.cn', 'PDC._msDCS.*.*', 'DC._msDCS.*.*', 'GC._msDCS.*.*']
-                          # fake ip 白名单列表'以下地址不会下发fakeip映射用于连接
+                           # fake ip 白名单列表'以下地址不会下发fakeip映射用于连接
   nameserver: [https://doh.pub/dns-query, https://dns.alidns.com/dns-query]
 
 
@@ -153,54 +156,54 @@ rule-providers:
  Adrules:         {<<: *c, format: text, path: ./rule-providers/adrules.list,         url: https://adrules.top/adrules.list}
 
  # 谷歌服务
- YouTube:        {<<: *c, format: text, path: ./rule-providers/YouTube.list,      url: https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Media/YouTube.list}
- Google:         {<<: *c, format: text, path: ./rule-providers/Google.list,       url: https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Other/Google.list}
+ YouTube:        {<<: *c, format: text, path: ./rule-providers/YouTube.list,          url: https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Media/YouTube.list}
+ Google:         {<<: *c, format: text, path: ./rule-providers/Google.list,           url: https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Other/Google.list}
 
  # 微软服务
- GitHub:         {<<: *c, format: text, path: ./rule-providers/GitHub.list,       url: https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Other/GitHub.list}
- OneDrive:       {<<: *c, format: text, path: ./rule-providers/OneDrive.list,     url: https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Other/OneDrive.list}
- Microsoft:      {<<: *c, format: text, path: ./rule-providers/Microsoft.list,    url: https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Other/Microsoft.list}
+ GitHub:         {<<: *c, format: text, path: ./rule-providers/GitHub.list,           url: https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Other/GitHub.list}
+ OneDrive:       {<<: *c, format: text, path: ./rule-providers/OneDrive.list,         url: https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Other/OneDrive.list}
+ Microsoft:      {<<: *c, format: text, path: ./rule-providers/Microsoft.list,        url: https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Other/Microsoft.list}
 
  # 奈飞影视
- Netflix:        {<<: *c, format: text, path: ./rule-providers/Netflix.list,      url: https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Media/Netflix.list}
+ Netflix:        {<<: *c, format: text, path: ./rule-providers/Netflix.list,         url: https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Media/Netflix.list}
 
  # 国际抖音 
- TikTok:         {<<: *c, format: text, path: ./rule-providers/TikTok.list,       url: https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Media/TikTok.list}
+ TikTok:         {<<: *c, format: text, path: ./rule-providers/TikTok.list,          url: https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Media/TikTok.list}
 
  # ChatGPT
- OpenAI:         {<<: *c, format: text, path: ./rule-providers/OpenAI.list,       url: https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Other/OpenAI.list}
+ OpenAI:         {<<: *c, format: text, path: ./rule-providers/OpenAI.list,          url: https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Other/OpenAI.list}
 
  # 电报信息
- Telegram:       {<<: *c, format: text, path: ./rule-providers/Telegram.list,     url: https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Other/Telegram.list}
+ Telegram:       {<<: *c, format: text, path: ./rule-providers/Telegram.list,        url: https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Other/Telegram.list}
 
  # 贝宝支付
- PayPal:        {<<: *c, format: text, path: ./rule-providers/PayPal.list,       url: https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Other/PayPal.list}
+ PayPal:        {<<: *c, format: text, path: ./rule-providers/PayPal.list,           url: https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Other/PayPal.list}
 
  # 推特加速
- Twitter:       {<<: *c, format: text, path: ./rule-providers/Twitter.list,      url: https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Other/Twitter.list}
+ Twitter:       {<<: *c, format: text, path: ./rule-providers/Twitter.list,          url: https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Other/Twitter.list}
 
  # 脸书加速
- Facebook:      {<<: *c, format: text, path: ./rule-providers/Facebook.list,     url: https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Other/Facebook.list}
+ Facebook:      {<<: *c, format: text, path: ./rule-providers/Facebook.list,         url: https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Other/Facebook.list}
 
  # 游戏加速
- Game:          {<<: *c, format: text, path: ./rule-providers/Game.list,         url: https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Other/Game.list}
+ Game:          {<<: *c, format: text, path: ./rule-providers/Game.list,             url: https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Other/Game.list}
 
  # 海外媒体
- GlobalMedia:   {<<: *c, format: text, path: ./rule-providers/GlobalMedia.list,  url: https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Media/GlobalMedia.list}
+ GlobalMedia:   {<<: *c, format: text, path: ./rule-providers/GlobalMedia.list,      url: https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Media/GlobalMedia.list}
 
  # 国际代理
- GlobalGFW:     {<<: *c, format: text, path: ./rule-providers/GlobalGFW.list,    url: https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/GlobalGFW.list}
+ GlobalGFW:     {<<: *c, format: text, path: ./rule-providers/GlobalGFW.list,       url: https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/GlobalGFW.list}
 
  # 苹果服务
- Apple:         {<<: *c, format: text, path: ./rule-providers/Apple.list,        url: https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Other/Apple.list}
+ Apple:         {<<: *c, format: text, path: ./rule-providers/Apple.list,           url: https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Other/Apple.list}
 
  # 哔哩哔哩
- Bilibili:      {<<: *c, format: text, path: ./rule-providers/Bilibili.list,     url: https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Media/Bilibili.list}
+ Bilibili:      {<<: *c, format: text, path: ./rule-providers/Bilibili.list,        url: https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Media/Bilibili.list}
 
  # 国内直连
- WeChat:        {<<: *c, format: text, path: ./rule-providers/WeChat.list,       url: https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Other/WeChat.list}
- ChinaMedia:    {<<: *c, format: text, path: ./rule-providers/ChinaMedia.list,   url: https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Media/ChinaMedia.list}
- China:         {<<: *c, format: text, path: ./rule-providers/Direct.list,       url: https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Direct.list}
+ WeChat:        {<<: *c, format: text, path: ./rule-providers/WeChat.list,          url: https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Other/WeChat.list}
+ ChinaMedia:    {<<: *c, format: text, path: ./rule-providers/ChinaMedia.list,      url: https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Media/ChinaMedia.list}
+ China:         {<<: *c, format: text, path: ./rule-providers/Direct.list,          url: https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Direct.list}
 
 
 # 分流策略
