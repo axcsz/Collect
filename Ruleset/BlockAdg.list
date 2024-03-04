@@ -149,6 +149,8 @@ DOMAIN,ii.gdt.qq.com
 DOMAIN,us.l.qq.com
 DOMAIN,tmeadkg.y.qq.com-NO-DROP
 URL-REGEX,^http:\/\/y\.gtimg\.cn\/music\/common\/upload\/t_k_main_page_banner\/
+# 青龙
+DOMAIN-SUFFIX,o1098464.ingest.sentry.io
 
 # ===== S =====
 # 收钱吧 - 买单小程序去广告
