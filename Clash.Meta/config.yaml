@@ -2,7 +2,6 @@
 # 更新时间: 2024-2-13 12:45
 # 来源：https://github.com/Repcz/Tool/blob/X/Clash/Meta/ClashVerge.yaml
 
-
 mixed-port: 7893      # 混合端口 HTTP和SOCKS5用一个端口
 geodata-mode: true    #【Meta专属】使用geoip.dat数据库(默认：false使用mmdb数据库)
 tcp-concurrent: false #【Meta专属】TCP 并发连接所有 IP, 将使用最快握手的 TCP
@@ -17,11 +16,9 @@ external-controller: 0.0.0.0:9093   #外部控制器,可以使用 RESTful API �
 global-client-fingerprint: chrome   #全局 TLS 指纹，优先低于 proxy 内的 client-fingerprint
                                     #可选： "chrome","firefox","safari","ios","random","none" options.
 
-
 profile:
   store-selected: true # 存储 select 选择记录
   store-fake-ip: true  # 持久化 fake-ip
-
 
 sniffer:               # 嗅探域名 可选配置
   enable: true
@@ -35,7 +32,6 @@ sniffer:               # 嗅探域名 可选配置
     QUIC:
       ports: [443, 8443]
 
-
 tun:                   # Tun 配置
   enable: true
   stack: system        # 可选： system/gvisor/mixed；tun 模式堆栈,如无使用问题,建议使用 system 栈;MacOS 用户推荐 gvisor栈
@@ -46,7 +42,6 @@ tun:                   # Tun 配置
 # strict_route: true   # 将所有连接路由到tun来防止泄漏，但你的设备将无法其他设备被访问
   auto-route: true     # 自动设置全局路由，可以自动将全局流量路由进入tun网卡。
   auto-detect-interface: true     # 自动识别出口网卡
-
 
 dns:
   enable: true             # 关闭将使用系统 DNS
