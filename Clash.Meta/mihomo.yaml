@@ -64,19 +64,16 @@ dns:
     - "+.lan"
     - "+.local"
   default-nameserver:
-    - 10.10.10.31
+    - 223.5.5.5
   nameserver:
-    - 10.10.10.31  
-  #  - https://doh.pub/dns-query
-  #  - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
   proxy-server-nameserver:
-    - 10.10.10.31
- #   - https://doh.pub/dns-query
+    - https://doh.pub/dns-query
   nameserver-policy:
-    "rule-set:China,ChinaMedia,WeChat":
-      - 10.10.10.31    
- #     - https://doh.pub/dns-query
- #     - https://dns.alidns.com/dns-query
+    "rule-set:China,ChinaMedia,WeChat":   
+      - https://doh.pub/dns-query
+      - https://dns.alidns.com/dns-query
     "rule-set:GlobalGFW":
       - "https://dns.cloudflare.com/dns-query#dns"
       - "https://dns.google/dns-query#dns"
