@@ -60,7 +60,7 @@ dns:
 
 # 机场订阅链接
 proxy-providers:
-  我的机场:
+  飞机场:
     type: http
     # 机场订阅链接，使用 Clash 链接
     url: "此处机场订阅链接"
@@ -80,7 +80,7 @@ proxies: null
 proxy-groups:
   # 分流分组
   # 手动选择示例
-  #- {name: 手动切换, type: select, use: [Subscribe], proxies: [DIRECT, 香港节点, 台湾节点, 美国节点, 狮城节点, 日本节点, 韩国节点]}
+  #- {name: 手动切换, type: select, use: [飞机场], proxies: [DIRECT, 香港节点, 台湾节点, 美国节点, 狮城节点, 日本节点, 韩国节点]}
   - {name: 海外网站, type: select, proxies: [香港节点, 台湾节点, 美国节点, 狮城节点, 日本节点, 韩国节点]}
   - {name: 海外媒体, type: select, proxies: [香港节点, 台湾节点, 美国节点, 狮城节点, 日本节点, 韩国节点]}
   - {name: 谷歌代理, type: select, proxies: [香港节点, 台湾节点, 美国节点, 狮城节点, 日本节点, 韩国节点]}
@@ -91,12 +91,12 @@ proxy-groups:
   - {name: 苹果服务, type: select, proxies: [DIRECT, 香港节点, 台湾节点, 美国节点, 狮城节点, 日本节点, 韩国节点]}
   - {name: 哔哩哔哩, type: select, proxies: [DIRECT, 香港节点, 台湾节点]}
   # 节点地区分组
-  - {name: 香港节点, type: url-test, tolerance: 100, lazy: true, use: [Subscribe], filter: "(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|深|美)).)*$"            }
-  - {name: 台湾节点, type: url-test, tolerance: 100, lazy: true, use: [Subscribe], filter: "(?=.*(台|TW|(?i)Taiwan))^((?!(港|日|韩|新|美)).)*$"             }
-  - {name: 美国节点, type: url-test, tolerance: 100, lazy: true, use: [Subscribe], filter: "(?=.*(美|US|(?i)States|America))^((?!(港|台|日|韩|新)).)*$"     }
-  - {name: 狮城节点, type: url-test, tolerance: 100, lazy: true, use: [Subscribe], filter: "(?=.*(新|狮|獅|SG|(?i)Singapore))^((?!(港|台|日|韩|美|西)).)*$" }
-  - {name: 日本节点, type: url-test, tolerance: 100, lazy: true, use: [Subscribe], filter: "(?=.*(日|JP|(?i)Japan))^((?!(港|台|韩|新|美)).)*$"              }
-  - {name: 韩国节点, type: url-test, tolerance: 100, lazy: true, use: [Subscribe], filter: "(?=.*(韩|KR|(?i)Korea))^((?!(台|日|港|新|美)).)*$"              }
+  - {name: 香港节点, type: url-test, tolerance: 100, lazy: true, use: [飞机场], filter: "(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|深|美)).)*$"            }
+  - {name: 台湾节点, type: url-test, tolerance: 100, lazy: true, use: [飞机场], filter: "(?=.*(台|TW|(?i)Taiwan))^((?!(港|日|韩|新|美)).)*$"             }
+  - {name: 美国节点, type: url-test, tolerance: 100, lazy: true, use: [飞机场], filter: "(?=.*(美|US|(?i)States|America))^((?!(港|台|日|韩|新)).)*$"     }
+  - {name: 狮城节点, type: url-test, tolerance: 100, lazy: true, use: [飞机场], filter: "(?=.*(新|狮|獅|SG|(?i)Singapore))^((?!(港|台|日|韩|美|西)).)*$" }
+  - {name: 日本节点, type: url-test, tolerance: 100, lazy: true, use: [飞机场], filter: "(?=.*(日|JP|(?i)Japan))^((?!(港|台|韩|新|美)).)*$"              }
+  - {name: 韩国节点, type: url-test, tolerance: 100, lazy: true, use: [飞机场], filter: "(?=.*(韩|KR|(?i)Korea))^((?!(台|日|港|新|美)).)*$"              }
 
 # 分流规则
 rule-providers:
