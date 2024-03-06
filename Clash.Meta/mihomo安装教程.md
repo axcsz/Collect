@@ -19,8 +19,7 @@ apt install -y git
 ## 三、下载、安装和配置
 
 ### 1、使用以下命令，下载 mihomo 内核
-#### PS： mihomo-linux-amd64-compatible-alpha-974332c.gz   可以在此网站查看最新版，也可以安装以后在升级
-点击进入[https://github.com/MetaCubeX/mihomo/releases/tag/Prerelease-Alpha]
+#### PS： mihomo-linux-amd64-compatible-alpha-974332c.gz   可以在此网站查看[最新版](https://github.com/MetaCubeX/mihomo/releases/tag/Prerelease-Alpha)，也可以安装以后在升级
 ~~~
 wget https://github.com/MetaCubeX/mihomo/releases/download/Prerelease-Alpha/mihomo-linux-amd64-compatible-alpha-974332c.gz
 ~~~
