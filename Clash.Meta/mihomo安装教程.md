@@ -135,8 +135,45 @@ lxc.cgroup2.devices.allow: c 10:200 rwm
 lxc.mount.entry: /dev/net/tun dev/net/tun none bind,create=file
 ~~~
 
+# 下面类容根据自己需要
+#### PS：此操作是用SSH工具连接PVE
+## 一、LXC网卡直通
+### 1、使用以下命令打开（下面的 LXCID 修改成你实际的ID号）
+~~~
+nano /etc/pve/lxc/LXCID.conf
+~~~
 
+### 2、拷贝下面内全部类容，并粘贴进去，按Ctrl+x，按y保存。（link是物理网卡设备名称，name是LXC内设备名称）
+~~~
+lxc.net.0.type: phys
+lxc.net.0.link: enp4s0
+lxc.net.0.flags: up
+lxc.net.0.name: eth0
+~~~
 
+## 二、修改IP地址
+### 1、使用以下命令打开（下面的 LXCID 修改成你实际的ID号）
+#### PS：此操作是用SSH工具连接PVE
+~~~
+lxc-attach 1020
+~~~
+### 2、使用以下命令打开（下面的 eth0 修改成你实际的网卡）
+~~~
+nano /etc/systemd/network/eth0.network
+~~~
+### 3、拷贝下面内全部类容，并粘贴进去，按Ctrl+x，按y保存。
+#### PS：{Address是lan口ip地址，Gateway是网关地址）
+~~~
+[Match]
+Name = eth0
+
+[Network]
+Description = Interface eth0 autoconfigured by PVE
+Address = 192.168.1.2/24
+Gateway = 192.168.1.1
+DHCP = no
+IPv6AcceptRA = false
+~~~
 
 
 
