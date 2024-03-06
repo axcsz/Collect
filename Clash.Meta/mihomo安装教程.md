@@ -82,34 +82,35 @@ WantedBy=multi-user.target
 ~~~
 
 ## 四、启动mihomo
+##### 依次运行下面命令
 
-### 1、使用以下命令重新加载 systemd
+### 1、使用以下命令，重新加载 systemd
 ~~~
 systemctl daemon-reload
 ~~~
 
-### 2、启用 mihomo 服务：
+### 2、使用以下命令，启用 mihomo 服务：
 ~~~
 systemctl enable mihomo
 ~~~
 
-### 3、使用以下命令立即启动 mihomo
+### 3、使用以下命令，立即启动 mihomo
 ~~~
 systemctl start mihomo
 ~~~
 
-### 4、使用以下命令检查 mihomo 的运行状况
+### 4、使用以下命令，检查 mihomo 的运行状况
 ~~~
 systemctl status mihomo
 ~~~
 
-### 5、使用以下命令检查 mihomo 的运行日志
+### 5、使用以下命令，检查 mihomo 的运行日志
 ~~~
 journalctl -u mihomo -o cat -e
 ~~~
 
-分割线
-===
+## 五、开启路由转发
+### 1、
 
 
 
