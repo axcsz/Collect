@@ -60,7 +60,7 @@ git clone https://github.com/metacubex/metacubexd.git -b gh-pages /etc/mihomo/ui
 nano /etc/systemd/system/mihomo.service
 ~~~
 
-### 9、拷贝下面内全部类容，并粘贴进去，按Ctrl+x，按y保存。
+### 9、拷贝下面内全部类容，粘贴进去，按Ctrl+x，按y保存。
 #### PS：也可以在[官网](https://wiki.metacubex.one/startup/service/)复制
 ~~~
 [Unit]
@@ -117,7 +117,7 @@ journalctl -u mihomo -o cat -e
 nano /etc/sysctl.conf
 ~~~
 
-### 2、拷贝下面内全部类容，并粘贴进去，按Ctrl+x，按y保存。
+### 2、拷贝下面内全部类容，粘贴进去，按Ctrl+x，按y保存。
 ~~~
 net.ipv4.ip_forward = 1
 ~~~
@@ -143,7 +143,7 @@ lxc.mount.entry: /dev/net/tun dev/net/tun none bind,create=file
 nano /etc/pve/lxc/LXCID.conf
 ~~~
 
-### 2、拷贝下面内全部类容，并粘贴进去，按Ctrl+x，按y保存。（link是物理网卡设备名称，name是LXC内设备名称）
+### 2、拷贝下面内全部类容，粘贴进去并修改，按Ctrl+x，按y保存。（link是物理网卡设备名称，name是LXC内设备名称）
 ~~~
 lxc.net.0.type: phys
 lxc.net.0.link: enp4s0
@@ -161,7 +161,7 @@ lxc-attach 1020
 ~~~
 nano /etc/systemd/network/eth0.network
 ~~~
-### 3、拷贝下面内全部类容，并粘贴进去，按Ctrl+x，按y保存。
+### 3、拷贝下面内全部类容，粘贴进去并修改，按Ctrl+x，按y保存。
 #### PS：{Address是lan口ip地址，Gateway是网关地址）
 ~~~
 [Match]
