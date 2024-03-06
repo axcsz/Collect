@@ -175,7 +175,7 @@ rule-providers:
     url: "https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Other/GitHub.list"
   OneDrive:
     <<: *classical
-    url: "ttps://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Other/OneDrive.list"
+    url: "https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Other/OneDrive.list"
   Microsoft:
     <<: *classical
     url: "https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Other/Microsoft.list"
