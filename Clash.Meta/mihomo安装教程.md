@@ -1,10 +1,10 @@
 # 安装 mihomo 的教程 裸核运行Clahs
 ## PS：PVE下的LXC安装教程
 
-PS：准备 Debian 或者 Ubuntu 系统，并升级更新更换好lxc的源，推荐SSH工具MobaXterm、FinalShell
----
-PS：需要开启路由转发功能和开启TUN，教程在最后面
----
+## PS：准备 Debian 或者 Ubuntu 系统，并升级更新更换好lxc的源，推荐SSH工具[MobaXterm](https://mobaxterm.mobatek.net/download.html)、[FinalShell]
+
+## PS：需要开启路由转发功能和开启TUN，教程在最后面
+
 
 ## 一、使用以下命令，更新
 ~~~
