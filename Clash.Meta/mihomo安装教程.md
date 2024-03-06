@@ -79,7 +79,32 @@ ExecReload=/bin/kill -HUP $MAINPID
 WantedBy=multi-user.target
 ~~~
 
+## 四、启动mihomo
 
+### 1、使用以下命令重新加载 systemd
+~~~
+systemctl daemon-reload
+~~~
+
+### 2、启用 mihomo 服务：
+~~~
+systemctl enable mihomo
+~~~
+
+### 3、使用以下命令立即启动 mihomo
+~~~
+systemctl start mihomo
+~~~
+
+### 4、使用以下命令检查 mihomo 的运行状况
+~~~
+systemctl status mihomo
+~~~
+
+### 5、使用以下命令检查 mihomo 的运行日志
+~~~
+journalctl -u mihomo -o cat -e
+~~~
 
 
 
