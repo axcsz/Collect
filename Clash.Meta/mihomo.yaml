@@ -1,6 +1,6 @@
 ######### 锚点 start #######
 # 策略组相关
-pr: &pr {type: select, proxies: [国内直连, 香港节点, 台湾节点, 美国节点, 狮城节点, 日本节点, 韩国节点]}
+pr: &pr {type: select, proxies: [自动选择, 负载均衡, 香港节点, 台湾节点, 美国节点, 狮城节点, 日本节点, 韩国节点, 国内直连, 全部节点]}
 
 #这里是订阅更新和延迟测试相关的
 p: &p {type: http, interval: 3600, health-check: {enable: true, url: https://www.gstatic.com/generate_204, interval: 300}}
@@ -11,11 +11,11 @@ p: &p {type: http, interval: 3600, health-check: {enable: true, url: https://www
 proxy-providers:
   provider1:
     <<: *p
-    url: "此处填写机场订阅链接"
+    url: "" # ""里面填写机场订阅链接
 
   provider2:
     <<: *p
-    url: ""
+    url: "" # ""里面填写机场订阅链接
 
 ipv6: true
 allow-lan: true
@@ -91,16 +91,19 @@ proxy-groups:
   - {name: 推特代理, <<: *pr}
   - {name: 游戏代理, <<: *pr}
   - {name: 人工智能, <<: *pr}
-  - {name: 苹果服务, <<: *pr}
+  - {name: 苹果服务, type: select, proxies: [国内直连, 全部节点]}
   - {name: 哔哩哔哩, type: select, proxies: [国内直连, 香港节点, 台湾节点]}
 
 #分隔,下面是地区分组
-  - {name: 香港节点, type: url-test , include-all-providers: true, filter: "(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|深|美)).)*$"}
-  - {name: 台湾节点, type: url-test , include-all-providers: true, filter: "(?=.*(台|TW|(?i)Taiwan))^((?!(港|日|韩|新|美)).)*$" }
-  - {name: 美国节点, type: url-test , include-all-providers: true, filter: "(?=.*(美|US|(?i)States|America))^((?!(港|台|日|韩|新)).)*$"}
-  - {name: 狮城节点, type: url-test , include-all-providers: true, filter: "(?=.*(新|狮|獅|SG|(?i)Singapore))^((?!(港|台|日|韩|美|西)).)*$"}
-  - {name: 日本节点, type: url-test , include-all-providers: true, filter: "(?=.*(日|JP|(?i)Japan))^((?!(港|台|韩|新|美)).)*$" }
-  - {name: 韩国节点, type: url-test , include-all-providers: true, filter: "(?=.*(韩|KR|(?i)Korea))^((?!(台|日|港|新|美)).)*$"}
+  - {name: 香港节点, type: url-test, include-all-providers: true, filter: "(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|深|美)).)*$"}
+  - {name: 台湾节点, type: url-test, include-all-providers: true, filter: "(?=.*(台|TW|(?i)Taiwan))^((?!(港|日|韩|新|美)).)*$" }
+  - {name: 美国节点, type: url-test, include-all-providers: true, filter: "(?=.*(美|US|(?i)States|America))^((?!(港|台|日|韩|新)).)*$"}
+  - {name: 狮城节点, type: url-test, include-all-providers: true, filter: "(?=.*(新|狮|獅|SG|(?i)Singapore))^((?!(港|台|日|韩|美|西)).)*$"}
+  - {name: 日本节点, type: url-test, include-all-providers: true, filter: "(?=.*(日|JP|(?i)Japan))^((?!(港|台|韩|新|美)).)*$" }
+  - {name: 韩国节点, type: url-test, include-all-providers: true, filter: "(?=.*(韩|KR|(?i)Korea))^((?!(台|日|港|新|美)).)*$"}
+  - {name: 全部节点, type: select, include-all-providers: true}
+  - {name: 自动选择, type: url-test, include-all-providers: true, tolerance: 10}
+  - {name: 负载均衡, type: load-balance, include-all-providers: true}
 
 # 分流策略
 rules:
