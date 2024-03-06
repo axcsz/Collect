@@ -1,6 +1,8 @@
 # 安装 mihomo 的教程 裸核运行Clahs
 
-准备 Debian 或者 Ubuntu 系统，并升级更新更换好lxc的源，推荐SSH工具FinalShell
+PS：准备 Debian 或者 Ubuntu 系统，并升级更新更换好lxc的源，推荐SSH工具FinalShell
+---
+PS：需要开启路由转发功能和开启TUN，教程在最后面
 ---
 
 ## 一、使用以下命令，更新
