@@ -1,9 +1,9 @@
 # 安装 mihomo 的教程 裸核运行Clahs
 - PS：PVE下的LXC安装教程
 
-## PS：准备 Debian 或者 Ubuntu 系统，并升级更新更换好[LXC的源](https://github.com/axcsz/Collect/blob/master/ProxmoxVE/ProxmoxVE-8.1%E6%BA%90.md)，推荐SSH工具[MobaXterm](https://mobaxterm.mobatek.net/download.html)、[FinalShell](https://www.hostbuf.com/t/988.html)
+- PS：准备 Debian 或者 Ubuntu 系统，并升级更新更换好[LXC的源](https://github.com/axcsz/Collect/blob/master/ProxmoxVE/ProxmoxVE-8.1%E6%BA%90.md)，推荐SSH工具[MobaXterm](https://mobaxterm.mobatek.net/download.html)、[FinalShell](https://www.hostbuf.com/t/988.html)
 
-## PS：需要开启路由转发功能和开启TUN，教程在最后面
+- PS：需要开启路由转发功能和开启TUN，教程在最后面
 
 
 ## 一、使用以下命令，更新
@@ -19,7 +19,7 @@ apt install -y git
 ## 三、下载、安装和配置
 
 ### 1、使用以下命令，下载 mihomo 内核
-#### PS： mihomo-linux-amd64-compatible-alpha-974332c.gz   可以点击查看[最新版](https://github.com/MetaCubeX/mihomo/releases/tag/Prerelease-Alpha)，也可以安装以后在升级
+- PS： mihomo-linux-amd64-compatible-alpha-974332c.gz   可以点击查看[最新版](https://github.com/MetaCubeX/mihomo/releases/tag/Prerelease-Alpha)，也可以安装以后在升级
 ~~~
 wget https://github.com/MetaCubeX/mihomo/releases/download/Prerelease-Alpha/mihomo-linux-amd64-compatible-alpha-974332c.gz
 ~~~
@@ -45,7 +45,7 @@ mkdir /etc/mihomo
 ~~~
 
 ### 6、使用以下命令，上传配置或者使用以下命令打开并粘贴你的配置文件，按Ctrl+x，按y保存。
-#### ps：使用官方推荐配置或者自己按照官方例子填写，也可以使用我提供的名称为[mihomo.yaml](https://github.com/axcsz/Collect/blob/master/Clash.Meta/mihomo.yaml)的文件
+- ps：使用官方推荐配置或者自己按照官方例子填写，也可以使用我提供的名称为[mihomo.yaml](https://github.com/axcsz/Collect/blob/master/Clash.Meta/mihomo.yaml)的文件
 ~~~
 nano /etc/mihomo/config.yaml
 ~~~
@@ -61,7 +61,7 @@ nano /etc/systemd/system/mihomo.service
 ~~~
 
 ### 9、拷贝下面内全部类容，粘贴进去，按Ctrl+x，按y保存。
-#### PS：也可以在[官网](https://wiki.metacubex.one/startup/service/)复制
+- PS：也可以在[官网](https://wiki.metacubex.one/startup/service/)复制
 ~~~
 [Unit]
 Description=mihomo Daemon, Another Clash Kernel.
@@ -111,7 +111,7 @@ journalctl -u mihomo -o cat -e
 ~~~
 
 ## 五、开启路由转发
-#### PS：此操作是用SSH工具连接LXC
+- PS：此操作是用SSH工具连接LXC
 ### 1、使用以下命令，打开
 ~~~
 nano /etc/sysctl.conf
@@ -123,7 +123,7 @@ net.ipv4.ip_forward = 1
 ~~~
 
 ## 六、开启TUN
-#### PS：此操作是用SSH工具连接PVE
+- PS：此操作是用SSH工具连接PVE
 ### 1、使用以下命令打开（下面的 LXCID 修改成你实际的ID号）
 ~~~
 nano /etc/pve/lxc/LXCID.conf
@@ -136,7 +136,7 @@ lxc.mount.entry: /dev/net/tun dev/net/tun none bind,create=file
 ~~~
 
 # 下面类容根据自己需要
-#### PS：此操作是用SSH工具连接PVE
+- PS：此操作是用SSH工具连接PVE
 ## 一、LXC网卡直通
 ### 1、使用以下命令打开（下面的 LXCID 修改成你实际的ID号）
 ~~~
@@ -153,7 +153,7 @@ lxc.net.0.name: eth0
 
 ## 二、修改IP地址
 ### 1、使用以下命令打开（下面的 LXCID 修改成你实际的ID号）
-#### PS：此操作是用SSH工具连接PVE
+- PS：此操作是用SSH工具连接PVE
 ~~~
 lxc-attach 1020
 ~~~
@@ -162,7 +162,7 @@ lxc-attach 1020
 nano /etc/systemd/network/eth0.network
 ~~~
 ### 3、拷贝下面内全部类容，粘贴进去并修改，按Ctrl+x，按y保存。
-#### PS：{Address是lan口ip地址，Gateway是网关地址）
+- PS：{Address是lan口ip地址，Gateway是网关地址）
 ~~~
 [Match]
 Name = eth0
