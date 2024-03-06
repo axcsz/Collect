@@ -9,7 +9,7 @@ sed -i "s#security.debian.org#mirrors.tuna.tsinghua.edu.cn/debian-security#g" /e
 ~~~
 
 ## 1.1.2 中科大源
-# 参考: https://mirrors.ustc.edu.cn/help/proxmox.html
+##### [参考](https://mirrors.ustc.edu.cn/help/proxmox.html)
 ~~~
 sed -i.bak 's|^deb http://ftp.debian.org|deb https://mirrors.ustc.edu.cn|g' /etc/apt/sources.list
 sed -i 's|^deb http://security.debian.org|deb https://mirrors.ustc.edu.cn/debian-security|g' /etc/apt/sources.list
@@ -45,7 +45,7 @@ echo "deb https://mirrors.tuna.tsinghua.edu.cn/proxmox/debian bookworm pve-no-su
 echo "deb https://mirrors.ustc.edu.cn/proxmox/debian/pve bookworm pve-no-subscription" > /etc/apt/sources.list.d/pve-no-subscription.list
 ~~~
 
-# 3 CEPH分布式源
+# 3. CEPH分布式源
 ## 3.1.1 中科大源
 ~~~
 echo "deb https://mirrors.ustc.edu.cn/proxmox/debian/ceph-quincy bookworm no-subscription" > /etc/apt/sources.list.d/ceph.list     #中科大源
