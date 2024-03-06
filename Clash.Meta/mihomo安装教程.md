@@ -45,7 +45,7 @@ mkdir /etc/mihomo
 ~~~
 
 ### 6、使用以下命令，上传配置或者使用以下命令打开并粘贴你的配置文件，按Ctrl+x，按y保存。
-#### ps：使用官方推荐配置或者自己按照官方例子填写，也可以使用我提供的名称为mihomo.yaml的文件
+#### ps：使用官方推荐配置或者自己按照官方例子填写，也可以使用我提供的名称为[mihomo.yaml](https://github.com/axcsz/Collect/blob/master/Clash.Meta/mihomo.yaml)的文件
 ~~~
 nano /etc/mihomo/config.yaml
 ~~~
