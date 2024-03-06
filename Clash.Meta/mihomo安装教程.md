@@ -1,6 +1,7 @@
 # 安装 mihomo 的教程 裸核运行Clahs
+## PS：PVE下的LXC安装教程
 
-PS：准备 Debian 或者 Ubuntu 系统，并升级更新更换好lxc的源，推荐SSH工具FinalShell
+PS：准备 Debian 或者 Ubuntu 系统，并升级更新更换好lxc的源，推荐SSH工具MobaXterm、FinalShell
 ---
 PS：需要开启路由转发功能和开启TUN，教程在最后面
 ---
@@ -18,7 +19,7 @@ apt install -y git
 ## 三、下载、安装和配置
 
 ### 1、使用以下命令，下载 mihomo 内核
-#### ps： mihomo-linux-amd64-compatible-alpha-974332c.gz   可以在此网站查看最新版
+#### PS： mihomo-linux-amd64-compatible-alpha-974332c.gz   可以在此网站查看最新版
 [https://github.com/MetaCubeX/mihomo/releases/tag/Prerelease-Alpha]
 ~~~
 wget https://github.com/MetaCubeX/mihomo/releases/download/Prerelease-Alpha/mihomo-linux-amd64-compatible-alpha-974332c.gz
@@ -60,7 +61,7 @@ git clone https://github.com/metacubex/metacubexd.git -b gh-pages /etc/mihomo/ui
 nano /etc/systemd/system/mihomo.service
 ~~~
 
-### 9、拷贝下面内全部类容并粘贴进去，按Ctrl+x，按y保存。
+### 9、拷贝下面内全部类容，并粘贴进去，按Ctrl+x，按y保存。
 ~~~
 [Unit]
 Description=mihomo Daemon, Another Clash Kernel.
@@ -82,7 +83,7 @@ WantedBy=multi-user.target
 ~~~
 
 ## 四、启动mihomo
-##### 依次运行下面命令
+#### 依次运行下面命令
 
 ### 1、使用以下命令，重新加载 systemd
 ~~~
@@ -110,10 +111,16 @@ journalctl -u mihomo -o cat -e
 ~~~
 
 ## 五、开启路由转发
-### 1、
+#### PS:此操作是
+### 1、使用以下命令，打开
+~~~
+nano /etc/sysctl.conf
+~~~
 
-
-
+### 2、拷贝下面内全部类容，并粘贴进去，按Ctrl+x，按y保存。
+~~~
+net.ipv4.ip_forward = 1
+~~~
 
 
 
