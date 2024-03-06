@@ -19,7 +19,7 @@ apt install -y git
 ## 三、下载、安装和配置
 
 ### 1、使用以下命令，下载 mihomo 内核
-#### PS： mihomo-linux-amd64-compatible-alpha-974332c.gz   可以在此网站查看[最新版](https://github.com/MetaCubeX/mihomo/releases/tag/Prerelease-Alpha)，也可以安装以后在升级
+#### PS： mihomo-linux-amd64-compatible-alpha-974332c.gz   可以点击查看[最新版](https://github.com/MetaCubeX/mihomo/releases/tag/Prerelease-Alpha)，也可以安装以后在升级
 ~~~
 wget https://github.com/MetaCubeX/mihomo/releases/download/Prerelease-Alpha/mihomo-linux-amd64-compatible-alpha-974332c.gz
 ~~~
@@ -61,7 +61,7 @@ nano /etc/systemd/system/mihomo.service
 ~~~
 
 ### 9、拷贝下面内全部类容，并粘贴进去，按Ctrl+x，按y保存。
-#### PS：也可以去官网复制 https://wiki.metacubex.one/startup/service/
+#### PS：也可以在[官网](https://wiki.metacubex.one/startup/service/)复制
 ~~~
 [Unit]
 Description=mihomo Daemon, Another Clash Kernel.
