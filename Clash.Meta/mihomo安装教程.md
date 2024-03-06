@@ -108,6 +108,7 @@ systemctl status mihomo
 journalctl -u mihomo -o cat -e
 ~~~
 
+分割线
 ===
 
 
