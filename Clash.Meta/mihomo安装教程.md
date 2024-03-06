@@ -1,7 +1,7 @@
 # 安装 mihomo 的教程 裸核运行Clahs
 ## PS：PVE下的LXC安装教程
 
-## PS：准备 Debian 或者 Ubuntu 系统，并升级更新更换好[LXC的源](https://github.com/axcsz/Collect/blob/master/Clash.Meta/PVE%E6%BA%90.MD)，推荐SSH工具[MobaXterm](https://mobaxterm.mobatek.net/download.html)、[FinalShell](https://www.hostbuf.com/t/988.html)
+## PS：准备 Debian 或者 Ubuntu 系统，并升级更新更换好[LXC的源]([https://github.com/axcsz/Collect/blob/master/Clash.Meta/PVE%E6%BA%90.MD](https://github.com/axcsz/Collect/blob/master/ProxmoxVE/ProxmoxVE-8.1%E6%BA%90.md))，推荐SSH工具[MobaXterm](https://mobaxterm.mobatek.net/download.html)、[FinalShell](https://www.hostbuf.com/t/988.html)
 
 ## PS：需要开启路由转发功能和开启TUN，教程在最后面
 
