@@ -62,6 +62,7 @@ nano /etc/systemd/system/mihomo.service
 ~~~
 
 ### 9、拷贝下面内全部类容，并粘贴进去，按Ctrl+x，按y保存。
+#### PS：也可以去官网复制 https://wiki.metacubex.one/startup/service/
 ~~~
 [Unit]
 Description=mihomo Daemon, Another Clash Kernel.
