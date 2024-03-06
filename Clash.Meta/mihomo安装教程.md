@@ -111,7 +111,7 @@ journalctl -u mihomo -o cat -e
 ~~~
 
 ## 五、开启路由转发
-#### PS:此操作是
+#### PS：此操作是用SSH工具连接LXC
 ### 1、使用以下命令，打开
 ~~~
 nano /etc/sysctl.conf
@@ -122,14 +122,18 @@ nano /etc/sysctl.conf
 net.ipv4.ip_forward = 1
 ~~~
 
+## 六、开启TUN
+#### PS：此操作是用SSH工具连接PVE
+### 1、使用以下命令打开（下面的 LXCID 修改成你实际的ID号）
+~~~
+nano /etc/pve/lxc/LXCID.conf
+~~~
 
-
-
-
-
-
-
-
+### 2、拷贝下面内全部类容，并粘贴进去，按Ctrl+x，按y保存。
+~~~
+lxc.cgroup2.devices.allow: c 10:200 rwm
+lxc.mount.entry: /dev/net/tun dev/net/tun none bind,create=file
+~~~
 
 
 
