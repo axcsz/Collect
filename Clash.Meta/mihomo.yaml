@@ -55,7 +55,7 @@ tun:
 
 dns:
   enable: true
-  listen: :1053
+  listen: :53
   ipv6: true
   enhanced-mode: fake-ip
   fake-ip-range: 28.0.0.1/8
@@ -68,15 +68,6 @@ dns:
   nameserver:
     - https://doh.pub/dns-query
     - https://dns.alidns.com/dns-query
-  proxy-server-nameserver:
-    - https://doh.pub/dns-query
-  nameserver-policy:
-    "rule-set:China,ChinaMedia,WeChat":   
-      - https://doh.pub/dns-query
-      - https://dns.alidns.com/dns-query
-    "rule-set:GlobalGFW":
-      - "https://dns.cloudflare.com/dns-query#dns"
-      - "https://dns.google/dns-query#dns"
 
 proxies:
 - name: "国内直连"
