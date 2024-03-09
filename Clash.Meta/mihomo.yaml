@@ -255,11 +255,9 @@ rule-providers:
   China:
     <<: *classical
     url: "https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Direct.list"
-
 # 局域网
-  # IP 
   Lan:
-    <<: *ip
+    <<: *classical
     url: "https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Lan.list"
 
 # 屏蔽443
