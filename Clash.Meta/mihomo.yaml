@@ -11,22 +11,38 @@ p: &p {type: http, interval: 3600, health-check: {enable: true, url: https://www
 proxy-providers:
   provider1:
     <<: *p
-    url: "" # ""里面填写机场订阅链接
+    # ""里面填写机场订阅链接
+    url: ""
 
   provider2:
     <<: *p
-    url: "" # ""里面填写机场订阅链接
+    # ""里面填写机场订阅链接
+    url: ""
 
+# 开启 IPv6 总开关，关闭阻断所有 IPv6 链接和屏蔽 DNS 请求 AAAA 记录
 ipv6: true
+# 允许局域网的连接（可用来共享代理）
 allow-lan: true
+# 仅在将allow-lan设置为true时适用
+bind-address: "*"
+# 混合端口 HTTP和SOCKS5用一个端口
 mixed-port: 7890
+# 更换延迟计算方式,去除握手等额外延迟
 unified-delay: false
+# TCP 并发连接所有 IP, 将使用最快握手的 TCP
 tcp-concurrent: true
+# 外部控制器,可以使用 RESTful API 来控制你的 clash 内核
 external-controller: 0.0.0.0:9090
+# 外部用户界面
 external-ui: ui
+# 自定义外部用户界面下载地址
 external-ui-url: "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip"
 
+# 匹配所有进程（always/strict/off）
+## always 开启，强制匹配所有进程， strict 默认，由 Clash 判断是否开启， off 不匹配进程，推荐在路由器上使用此模式
 find-process-mode: strict
+# 全局 TLS 指纹，优先低于 proxy 内的 client-fingerprint
+## 可选： "chrome","firefox","safari","ios","random","none" options.
 global-client-fingerprint: chrome
 
 profile:
@@ -103,8 +119,9 @@ rules:
   - RULE-SET,BlockAdg,REJECT
   - RULE-SET,BanAD,REJECT
   - RULE-SET,BanEasyList,REJECT
-  - RULE-SET,Adrules,REJECT
   - RULE-SET,BanEasyPrivacy,REJECT
+  - RULE-SET,BanProgramAD,REJECT
+  - RULE-SET,Adrules,REJECT
   - RULE-SET,YouTube,谷歌代理
   - RULE-SET,Google,谷歌代理
   - RULE-SET,Copilot,微软代理
@@ -144,6 +161,9 @@ rule-providers:
   BanEasyPrivacy:
     <<: *classical
     url: "https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Block/BanEasyPrivacy.list"
+  BanProgramAD:
+    <<: *classical
+    url: "https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Block/BanProgramAD.list"
   BlockAds:
     <<: *classical
     url: "https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/BlockAds.list"
