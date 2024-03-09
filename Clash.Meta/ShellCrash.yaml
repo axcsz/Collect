@@ -79,7 +79,7 @@ proxy-providers:
     type: http
     # 机场订阅链接，使用 Clash 链接
     url: ""
-    path: ./providers/airport1.yaml
+    path: ./providers/airport.yaml
     interval: 43200
     health-check:
       enable: true
