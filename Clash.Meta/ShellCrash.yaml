@@ -378,7 +378,7 @@ rule-providers:
   # 局域网
   Lan:
     type: http
-    behavior: ipcidr
+    behavior: classical
     format: text
     path: ./rules/Lan.list
     url: "https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Lan.list"
