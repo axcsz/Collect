@@ -1,5 +1,5 @@
 #!name = 拦截广告
-#!date = 2024-02-19 17:25
+#!date = 2024-03-01 09:05
 
 
 # ======= A ======= #
@@ -64,7 +64,6 @@ DOMAIN,adttrackingprd.hwwt8.com
 # ======= G ======= #
 # 高德地图
 DOMAIN,amap-aos-info-nogw.amap.com
-DOMAIN,awaken.amap.com
 DOMAIN,free-aos-cdn-image.amap.com
 # 工商银行
 DOMAIN,pageviewp.icbc.com.cn
