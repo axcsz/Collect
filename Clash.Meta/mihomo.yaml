@@ -114,7 +114,7 @@ proxy-groups:
   - {name: 韩国节点, type: url-test, include-all-providers: true, filter: "(?=.*(韩|KR|(?i)Korea))^((?!(台|日|港|新|美)).)*$"}
   - {name: 全部节点, type: select, include-all-providers: true}
   - {name: 自动选择, type: url-test, include-all-providers: true, tolerance: 10}
-  - {name: 负载均衡, type: load-balance, include-all-providers: true}
+  - {name: 负载均衡, type: load-balance, include-all-providers: true, strategy: consistent-hashing}
 
 # 分流策略
 rules:
