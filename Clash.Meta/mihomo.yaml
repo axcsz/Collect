@@ -1,14 +1,12 @@
-#!name = 直连
-#!date = 2024-03-09 17:00
-
+#!name = Mihomo 配置文件
+#!date = 2024-03-10 10:00
+#!source = https://wiki.metacubex.one/example/conf/#__tabbed_1_3
 
 ######### 锚点 start #######
 # 策略组相关
 pr: &pr {type: select, proxies: [自动选择, 负载均衡, 香港节点, 台湾节点, 美国节点, 狮城节点, 日本节点, 韩国节点, 国内直连, 全部节点]}
-
-#这里是订阅更新和延迟测试相关的
+# 这里是订阅更新和延迟测试相关的
 p: &p {type: http, interval: 3600, health-check: {enable: true, url: https://www.gstatic.com/generate_204, interval: 300}}
-
 ######### 锚点 end #######
 
 # url 里填写自己的订阅,名称不能重复
@@ -23,6 +21,7 @@ proxy-providers:
     # ""里面填写机场订阅链接
     url: ""
 
+# 全局配置
 # 开启 IPv6 总开关，关闭阻断所有 IPv6 链接和屏蔽 DNS 请求 AAAA 记录
 ipv6: true
 # 允许局域网的连接（可用来共享代理）
@@ -49,10 +48,14 @@ find-process-mode: strict
 ## 可选： "chrome","firefox","safari","ios","random","none" options.
 global-client-fingerprint: chrome
 
+# profile 应为扩展配置，但在 Clash.meta, 仅作为缓存项使用
 profile:
+  # 储存 API 对策略组的选择，以供下次启动时使用
   store-selected: true
+  # 储存 fakeip 映射表，域名再次发生连接时，使用原有映射地址
   store-fake-ip: true
 
+# 嗅探域名 可选配置
 sniffer:
   enable: true
   sniff:
@@ -65,6 +68,8 @@ sniffer:
       ports: [443, 8443]
   skip-classical:
     - "Mijia Cloud"
+
+# TUN配置
 tun:
   enable: true
   stack: system
@@ -73,6 +78,7 @@ tun:
   auto-route: true
   auto-detect-interface: true
 
+# DNS配置
 dns:
   enable: true
   listen: :53
@@ -85,15 +91,20 @@ dns:
     - "+.local"
   default-nameserver:
     - 223.5.5.5
+    - 119.29.29.29
   nameserver:
     - https://doh.pub/dns-query
     - https://dns.alidns.com/dns-query
 
+# 单个出站代理节点
 proxies:
 - name: "国内直连"
   type: direct
   udp: true
+
+# 策略组
 proxy-groups:
+  # 策略分流分组
   - {name: 海外网站, <<: *pr}
   - {name: 海外媒体, <<: *pr}
   - {name: 谷歌代理, <<: *pr}
@@ -104,8 +115,7 @@ proxy-groups:
   - {name: 人工智能, <<: *pr}
   - {name: 苹果服务, type: select, proxies: [国内直连, 全部节点]}
   - {name: 哔哩哔哩, type: select, proxies: [国内直连, 香港节点, 台湾节点]}
-
-#分隔,下面是地区分组
+  # 地区分组筛选
   - {name: 香港节点, type: url-test, include-all-providers: true, filter: "(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|深|美)).)*$"}
   - {name: 台湾节点, type: url-test, include-all-providers: true, filter: "(?=.*(台|TW|(?i)Taiwan))^((?!(港|日|韩|新|美)).)*$" }
   - {name: 美国节点, type: url-test, include-all-providers: true, filter: "(?=.*(美|US|(?i)States|America))^((?!(港|台|日|韩|新)).)*$"}
@@ -119,13 +129,13 @@ proxy-groups:
 # 分流策略
 rules:
   - RULE-SET,Lan,国内直连
+  - RULE-SET,Adrules,REJECT
+  - RULE-SET,BanAD,REJECT
   - RULE-SET,BlockAds,REJECT
   - RULE-SET,BlockAdg,REJECT
-  - RULE-SET,BanAD,REJECT
   - RULE-SET,BanEasyList,REJECT
-  - RULE-SET,BanEasyPrivacy,REJECT
   - RULE-SET,BanProgramAD,REJECT
-  - RULE-SET,Adrules,REJECT
+  - RULE-SET,BanEasyPrivacy,REJECT
   - RULE-SET,YouTube,谷歌代理
   - RULE-SET,Google,谷歌代理
   - RULE-SET,Copilot,微软代理
@@ -134,12 +144,12 @@ rules:
   - RULE-SET,Microsoft,微软代理
   - RULE-SET,Telegram,电报代理
   - RULE-SET,OpenAI,人工智能
-  - RULE-SET,Netflix,海外媒体
-  - RULE-SET,TikTok,海外媒体
+  - RULE-SET,Game,游戏代理
   - RULE-SET,PayPal,推特代理
   - RULE-SET,Twitter,推特代理
   - RULE-SET,Facebook,推特代理
-  - RULE-SET,Game,游戏代理
+  - RULE-SET,Netflix,海外媒体
+  - RULE-SET,TikTok,海外媒体
   - RULE-SET,GlobalMedia,海外媒体
   - RULE-SET,GlobalGFW,海外网站
   - RULE-SET,Apple,苹果服务
@@ -150,12 +160,17 @@ rules:
   - GEOIP,CN,国内直连,no-resolve
   - MATCH,海外网站
 
+# 
 rule-anchor:
-  ip: &ip {type: http, interval: 86400, behavior: ipcidr, format: text}
+  # classical 规则相关
   classical: &classical {type: http, interval: 86400, behavior: classical, format: text}
 
+# 规则集
 rule-providers:
 # 广告拦截
+  Adrules:
+    <<: *classical
+    url: "https://adrules.top/adrules.list"
   BanAD:
     <<: *classical
     url: "https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Block/BanAD.list"
@@ -174,9 +189,6 @@ rule-providers:
   BlockAdg:
     <<: *classical
     url: "https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/BlockAdg.list"
-  Adrules:
-    <<: *classical
-    url: "https://adrules.top/adrules.list"
 # 谷歌服务
   YouTube:
     <<: *classical
@@ -201,31 +213,31 @@ rule-providers:
   Telegram:
     <<: *classical
     url: "https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Other/Telegram.list"
-# ChatGPT    
+# ChatGPT
   OpenAI:
     <<: *classical
     url: "https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Other/OpenAI.list"
-# 奈飞影视    
+# 奈飞影视
   Netflix:
     <<: *classical
     url: "https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Media/Netflix.list"
-# 国际抖音    
+# 国际抖音
   TikTok:
     <<: *classical
     url: "https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Media/TikTok.list"
-# 贝宝支付    
+# 贝宝支付
   PayPal:
     <<: *classical
     url: "https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Other/PayPal.list"
-# 推特加速    
+# 推特加速
   Twitter:
     <<: *classical
     url: "https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Other/Twitter.list"
-# 脸书加速    
+# 脸书加速
   Facebook:
     <<: *classical
     url: "https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Other/Facebook.list"
-# 游戏加速    
+# 游戏加速
   Game:
     <<: *classical
     url: "https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Other/Game.list"
