@@ -49,7 +49,7 @@ DOMAIN,v6-default.ixigua.com
 DOMAIN-SUFFIX,byteorge.com
 DOMAIN-SUFFIX,bytegoofy.com
 DOMAIN-SUFFIX,bytedance.com
-DOMAIN-KEYWORD,snssdk
+#DOMAIN-KEYWORD,snssdk
 DOMAIN-KEYWORD,toutiao
 DOMAIN-SUFFIX,bwlcpr.xyz
 DOMAIN-KEYWORD,365yg
