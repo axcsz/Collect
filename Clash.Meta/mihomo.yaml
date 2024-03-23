@@ -4,7 +4,7 @@
 
 ######### 锚点 start #######
 # 策略组相关
-pr: &pr {type: select, proxies: [自动选择, 负载均衡, 香港节点, 台湾节点, 美国节点, 狮城节点, 日本节点, 韩国节点, 国内直连, 全部节点]}
+pr: &pr {type: select, proxies: [自动, 香港, 台湾, 美国, 狮城, 日本, 韩国, 直连, 全部]}
 # 这里是订阅更新和延迟测试相关的
 p: &p {type: http, interval: 3600, health-check: {enable: true, url: https://www.gstatic.com/generate_204, interval: 300}}
 ######### 锚点 end #######
@@ -13,20 +13,18 @@ p: &p {type: http, interval: 3600, health-check: {enable: true, url: https://www
 proxy-providers:
   provider1:
     <<: *p
-    # ""里面填写机场订阅链接
     url: ""
 
   provider2:
     <<: *p
-    # ""里面填写机场订阅链接
     url: ""
 
 # 全局配置
 # 开启 IPv6 总开关，关闭阻断所有 IPv6 链接和屏蔽 DNS 请求 AAAA 记录
 ipv6: true
-# 允许局域网的连接（可用来共享代理）
+# 允许局域网的连接（可用来共享加速）
 allow-lan: true
-# 仅在将allow-lan设置为true时适用
+# 绑定 IP 地址，仅作用于 allow-lan 为 true，'*'表示所有地址
 bind-address: "*"
 # 混合端口 HTTP和SOCKS5用一个端口
 mixed-port: 7890
@@ -58,6 +56,7 @@ profile:
 # 嗅探域名 可选配置
 sniffer:
   enable: true
+# TLS 和 QUIC 默认如果不配置 ports 默认嗅探 443
   sniff:
     HTTP:
       ports: [80, 8080-8880]
@@ -66,39 +65,50 @@ sniffer:
       ports: [443, 8443]
     QUIC:
       ports: [443, 8443]
+# 需要跳过嗅探的域名
   skip-classical:
     - "Mijia Cloud"
 
 # TUN配置
 tun:
   enable: true
-  stack: system
+# 可选： system/gvisor/mixed
+  stack: gvisor
+# 需要劫持的 DNS
   dns-hijack:
     - "any:53"
+# 配置路由表
   auto-route: true
+# 自动识别出口网卡
   auto-detect-interface: true
 
 # DNS配置
 dns:
+# 关闭将使用系统 DNS
   enable: true
+# 开启 DNS 服务器监听
   listen: :53
   ipv6: true
+# 模式：redir-host 或 fake-ip
   enhanced-mode: fake-ip
+# Fake-IP解析地址池
   fake-ip-range: 28.0.0.1/8
   fake-ip-filter:
     - "*"
     - "+.lan"
     - "+.local"
+# 只能使用纯 IP 地址，可使用加密 DNS
   default-nameserver:
     - 223.5.5.5
     - 119.29.29.29
+# 这部分为主要 DNS 配置，影响所有直连，确保使用对大陆解析精准的 DNS
   nameserver:
     - https://doh.pub/dns-query
     - https://dns.alidns.com/dns-query
 
-# 单个出站代理节点
+# 单个出站加速节点
 proxies:
-- name: "国内直连"
+- name: "直连"
   type: direct
   udp: true
 
