@@ -4,7 +4,7 @@
 
 ######### 锚点 start #######
 # 策略组相关
-pr: &pr {type: select, proxies: [自动, 香港, 台湾, 美国, 狮城, 日本, 韩国, 直连, 全部]}
+pr: &pr {type: select, proxies: [自动选择, 负载均衡, 香港节点, 台湾节点, 美国节点, 狮城节点, 日本节点, 韩国节点, 国内直连, 全部节点]}
 # 这里是订阅更新和延迟测试相关的
 p: &p {type: http, interval: 3600, health-check: {enable: true, url: https://www.gstatic.com/generate_204, interval: 300}}
 ######### 锚点 end #######
