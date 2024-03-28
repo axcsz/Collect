@@ -58,16 +58,6 @@ TestFlight账户管理 = type=http-request,pattern=^https:\/\/testflight\.apple\
 奈飞评分 = type=http-request,pattern=^https?:\/\/ios(-.*)?\.prod\.ftl\.netflix\.com\/iosui\/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js
 奈飞评分 = type=http-response,requires-body=1,pattern=^https?:\/\/ios(-.*)?\.prod\.ftl\.netflix\.com\/iosui\/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js
 
-# Netflix 字幕增强及双语模块 //*.oca.nflxvideo.net
-DualSubs.Netflix.Subtitles.Translate.response = type=http-response, pattern=^https?:\/\/(.+)\.oca\.nflxvideo\.net\/\?o=\d+&v=\d+&e=\d+&t=.+, requires-body=1, script-path=https://raw.githubusercontent.com/DualSubs/Universal/main/js/DualSubs.Subtitles.Translate.response.js
-
-# Youtube 字幕增强及双语模块 //www.youtube.com, m.youtube.com, tv.youtube.com, youtubei.googleapis.com, -redirector*.googlevideo.com, *.googlevideo.com
-DualSubs.YouTube.Player.response.json = type=http-response, pattern=^https?:\/\/(www|m|tv)\.youtube\.com\/youtubei\/v1\/player, requires-body=1, script-path=https://raw.githubusercontent.com/DualSubs/YouTube/main/js/DualSubs.YouTube.Player.response.js, argument=
-DualSubs.YouTube.Player.response.proto = type=http-response, pattern=^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/player, requires-body=1, binary-body-mode=1, script-path=https://raw.githubusercontent.com/DualSubs/YouTube/main/js/DualSubs.YouTube.Player.response.js, argument=
-DualSubs.YouTube.TimedText.request = type=http-request, pattern=^https?:\/\/(www|m)\.youtube\.com\/api\/timedtext, requires-body=0, script-path=https://raw.githubusercontent.com/DualSubs/YouTube/main/js/DualSubs.YouTube.TimedText.request.js, argument=
-DualSubs.Subtitles.Composite.response = type=http-response, pattern=^https?:\/\/(www|m)\.youtube\.com\/api\/timedtext\?(.*)subtype=(Official|External), requires-body=1, script-path=https://raw.githubusercontent.com/DualSubs/Universal/main/js/DualSubs.Subtitles.Composite.response.js, argument=
-DualSubs.Subtitles.Translate.response = type=http-response, pattern=^https?:\/\/(www|m)\.youtube\.com\/api\/timedtext\?(.*)subtype=Translate, requires-body=1, script-path=https://raw.githubusercontent.com/DualSubs/Universal/main/js/DualSubs.Subtitles.Translate.response.js, argument=
-
 # 美颜相机
 # hostname = *.meiyan.com
 美颜相机 = type=http-response,pattern=^https?:\/\/(api|community)\.meiyan\.com\/(vip|v\d)\/(user_center|user_info|user\/(.*?)),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/myxj.js
