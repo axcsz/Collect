@@ -51,8 +51,8 @@ Emby = type=http-response,pattern=^https:\/\/mb3admin\.com\/admin\/service(\/reg
 # 京东App 历史价格 //api.m.jd.com
 京东比价 = type=http-response,requires-body=1,pattern=^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig),script-path=https://raw.githubusercontent.com/Keywos/Rule/main/JS/Jdbj.js
 
-# TestFlight账户管理脚本 //iosapps.itunes.apple.com
-TestFlight账户管理 = type=http-request,pattern=^https:\/\/testflight\.apple\.com\/v\d\/(app|account|invite)s\/,requires-body=1,script-path=https://raw.githubusercontent.com/Keywos/rule/main/JS/TestFlightAccount.js,argument=false
+# TestFlight账户管理脚本 //testflight.apple.com
+TestFlight账户管理 = type=http-request,pattern=^https:\/\/testflight\.apple\.com\/v\d\/(app|account|invite)s\/,requires-body=1,timeout=180,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/TestFlight/TestFlightAccount.js,debug={{{调试模式}}},argument="timeout={{{请求超时}}}&enableCache={{{列表缓存}}}&forceIOSlist={{{使用iOS列表}}}&debug={{{调试模式}}}"
 
 # 奈飞评分 //ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com
 奈飞评分 = type=http-request,pattern=^https?:\/\/ios(-.*)?\.prod\.ftl\.netflix\.com\/iosui\/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js
@@ -68,4 +68,4 @@ TestFlight账户管理 = type=http-request,pattern=^https:\/\/testflight\.apple\
 
 
 [MITM]
-hostname = %APPEND% boxer.baidu.com, m.baidu.com, zhidao.baidu.com, *.google.cn, m.baidu.com,www.baidu.com, *.aliyundrive.com, *.alipan.com, *.cyapi.cn, *.caiyunapp.com, adx.sogaha.cn, appwk.baidu.com, pan.baidu.com, mb3admin.com, api.m.jd.com, iosapps.itunes.apple.com, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, *.oca.nflxvideo.net, www.youtube.com, m.youtube.com, tv.youtube.com, youtubei.googleapis.com, -redirector*.googlevideo.com, *.googlevideo.com, *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com, *.meiyan.com
+hostname = %APPEND% boxer.baidu.com, m.baidu.com, zhidao.baidu.com, *.google.cn, m.baidu.com,www.baidu.com, *.aliyundrive.com, *.alipan.com, *.cyapi.cn, *.caiyunapp.com, adx.sogaha.cn, appwk.baidu.com, pan.baidu.com, mb3admin.com, api.m.jd.com, testflight.apple.com, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, *.oca.nflxvideo.net, www.youtube.com, m.youtube.com, tv.youtube.com, youtubei.googleapis.com, -redirector*.googlevideo.com, *.googlevideo.com, *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com, *.meiyan.com
