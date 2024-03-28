@@ -1,15 +1,15 @@
-#!name = Mihomo 配置文件
-#!date = 2024-03-10 10:00
+#!name = mihomo 配置文件
+#!date = 2024-03-28 10:30
 #!source = https://wiki.metacubex.one/example/conf/#__tabbed_1_3
 
 ######### 锚点 start #######
 # 策略组相关
-pr: &pr {type: select, proxies: [自动选择, 负载均衡, 香港节点, 台湾节点, 美国节点, 狮城节点, 日本节点, 韩国节点, 国内直连, 全部节点]}
+pr: &pr {type: select, proxies: [手动选择, 自动选择, 负载均衡, 香港节点, 台湾节点, 美国节点, 狮城节点, 日本节点, 韩国节点, 国内直连]}
 # 这里是订阅更新和延迟测试相关的
 p: &p {type: http, interval: 3600, health-check: {enable: true, url: https://www.gstatic.com/generate_204, interval: 300}}
 ######### 锚点 end #######
 
-# url 里填写自己的订阅,名称不能重复
+# 机场订阅 url 里填写自己的订阅,名称不能重复
 proxy-providers:
   provider1:
     <<: *p
@@ -73,7 +73,7 @@ sniffer:
 tun:
   enable: true
 # 可选： system/gvisor/mixed
-  stack: gvisor
+  stack: system
 # 需要劫持的 DNS
   dns-hijack:
     - "any:53"
@@ -105,26 +105,42 @@ dns:
   nameserver:
     - https://doh.pub/dns-query
     - https://dns.alidns.com/dns-query
+# 配置查询域名使用的 DNS 服务器
+  nameserver-policy:
+    "rule-set:China,ChinaMedia,WeChat,Apple":
+      - https://doh.pub/dns-query
+      - https://dns.alidns.com/dns-query
+    "rule-set:GlobalGFW,GlobalMedia":
+      - "https://dns.cloudflare.com/dns-query#dns"
+      - "https://dns.google/dns-query#dns"
 
-# 单个出站加速节点
+# 单个出站代理节点
 proxies:
-- name: "直连"
+- name: "国内直连"
   type: direct
   udp: true
 
 # 策略组
 proxy-groups:
   # 策略分流分组
-  - {name: 海外网站, <<: *pr}
-  - {name: 海外媒体, <<: *pr}
-  - {name: 谷歌代理, <<: *pr}
-  - {name: 微软代理, <<: *pr}
-  - {name: 电报代理, <<: *pr}
-  - {name: 推特代理, <<: *pr}
-  - {name: 游戏代理, <<: *pr}
-  - {name: 人工智能, <<: *pr}
-  - {name: 苹果服务, type: select, proxies: [国内直连, 全部节点]}
-  - {name: 哔哩哔哩, type: select, proxies: [国内直连, 香港节点, 台湾节点]}
+  - {name: 手动选择, type: select, proxies: [自动选择, 负载均衡, 香港节点, 台湾节点, 美国节点, 狮城节点, 日本节点, 韩国节点]}
+  - {name: YouTube, <<: *pr}
+  - {name: Google, <<: *pr}
+  - {name: Microsoft, <<: *pr}
+  - {name: TikTok, <<: *pr}
+  - {name: Netflix, <<: *pr}
+  - {name: Disney+, <<: *pr}
+  - {name: Spotify, <<: *pr}
+  - {name: Telegram, <<: *pr}
+  - {name: ChatGPT, <<: *pr}
+  - {name: PayPal, <<: *pr}
+  - {name: Twitter, <<: *pr}
+  - {name: Facebook, <<: *pr}
+  - {name: GlobalGFW, <<: *pr}
+  - {name: Apple, type: select, proxies: [国内直连, 手动选择, 自动选择, 负载均衡, 香港节点, 台湾节点, 美国节点, 狮城节点, 日本节点, 韩国节点]}
+  - {name: Bilibili, type: select, proxies: [国内直连, 手动选择, 自动选择, 负载均衡, 香港节点, 台湾节点, 美国节点, 狮城节点, 日本节点, 韩国节点]}
+  - {name: China, type: select, proxies: [国内直连, 手动选择, 自动选择, 负载均衡, 香港节点, 台湾节点, 美国节点, 狮城节点, 日本节点, 韩国节点]}
+  - {name: 兜底规则, <<: *pr}
   # 地区分组筛选
   - {name: 香港节点, type: url-test, include-all-providers: true, filter: "(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|深|美)).)*$"}
   - {name: 台湾节点, type: url-test, include-all-providers: true, filter: "(?=.*(台|TW|(?i)Taiwan))^((?!(港|日|韩|新|美)).)*$" }
@@ -132,43 +148,37 @@ proxy-groups:
   - {name: 狮城节点, type: url-test, include-all-providers: true, filter: "(?=.*(新|狮|獅|SG|(?i)Singapore))^((?!(港|台|日|韩|美|西)).)*$"}
   - {name: 日本节点, type: url-test, include-all-providers: true, filter: "(?=.*(日|JP|(?i)Japan))^((?!(港|台|韩|新|美)).)*$" }
   - {name: 韩国节点, type: url-test, include-all-providers: true, filter: "(?=.*(韩|KR|(?i)Korea))^((?!(台|日|港|新|美)).)*$"}
-  - {name: 全部节点, type: select, include-all-providers: true}
   - {name: 自动选择, type: url-test, include-all-providers: true, tolerance: 10}
   - {name: 负载均衡, type: load-balance, include-all-providers: true, strategy: consistent-hashing}
 
 # 分流策略
 rules:
-  - RULE-SET,Lan,国内直连
+  - RULE-SET,Lan,China
   - RULE-SET,Adrules,REJECT
-  - RULE-SET,BanAD,REJECT
-  - RULE-SET,BlockAds,REJECT
-  - RULE-SET,BlockAdg,REJECT
-  - RULE-SET,BanEasyList,REJECT
-  - RULE-SET,BanProgramAD,REJECT
-  - RULE-SET,BanEasyPrivacy,REJECT
-  - RULE-SET,YouTube,谷歌代理
-  - RULE-SET,Google,谷歌代理
-  - RULE-SET,Copilot,微软代理
-  - RULE-SET,GitHub,微软代理
-  - RULE-SET,OneDrive,微软代理
-  - RULE-SET,Microsoft,微软代理
-  - RULE-SET,Telegram,电报代理
-  - RULE-SET,OpenAI,人工智能
-  - RULE-SET,Game,游戏代理
-  - RULE-SET,PayPal,推特代理
-  - RULE-SET,Twitter,推特代理
-  - RULE-SET,Facebook,推特代理
-  - RULE-SET,Netflix,海外媒体
-  - RULE-SET,TikTok,海外媒体
-  - RULE-SET,GlobalMedia,海外媒体
-  - RULE-SET,GlobalGFW,海外网站
-  - RULE-SET,Apple,苹果服务
-  - RULE-SET,Bilibili,哔哩哔哩
-  - RULE-SET,WeChat,国内直连
-  - RULE-SET,ChinaMedia,国内直连
-  - RULE-SET,China,国内直连
-  - GEOIP,CN,国内直连,no-resolve
-  - MATCH,海外网站
+  - RULE-SET,YouTube,YouTube
+  - RULE-SET,Google,Google
+  - RULE-SET,Copilot,Microsoft
+  - RULE-SET,GitHub,Microsoft
+  - RULE-SET,OneDrive,Microsoft
+  - RULE-SET,Microsoft,Microsoft
+  - RULE-SET,TikTok,TikTok
+  - RULE-SET,Netflix,Netflix
+  - RULE-SET,Disney+,Disney+
+  - RULE-SET,Spotify,Spotify
+  - RULE-SET,Telegram,Telegram
+  - RULE-SET,OpenAI,ChatGPT
+  - RULE-SET,PayPal,PayPal
+  - RULE-SET,Twitter,Twitter
+  - RULE-SET,Facebook,Facebook
+  - RULE-SET,GlobalMedia,GlobalGFW
+  - RULE-SET,GlobalGFW,GlobalGFW
+  - RULE-SET,Apple,Apple
+  - RULE-SET,Bilibili,Bilibili
+  - RULE-SET,WeChat,China
+  - RULE-SET,ChinaMedia,China
+  - RULE-SET,China,China
+  - GEOIP,CN,China,no-resolve
+  - MATCH,兜底规则
 
 # 
 rule-anchor:
@@ -181,24 +191,6 @@ rule-providers:
   Adrules:
     <<: *classical
     url: "https://adrules.top/adrules.list"
-  BanAD:
-    <<: *classical
-    url: "https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Block/BanAD.list"
-  BanEasyList:
-    <<: *classical
-    url: "https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Block/BanEasyList.list"
-  BanEasyPrivacy:
-    <<: *classical
-    url: "https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Block/BanEasyPrivacy.list"
-  BanProgramAD:
-    <<: *classical
-    url: "https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Block/BanProgramAD.list"
-  BlockAds:
-    <<: *classical
-    url: "https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/BlockAds.list"
-  BlockAdg:
-    <<: *classical
-    url: "https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/BlockAdg.list"
 # 谷歌服务
   YouTube:
     <<: *classical
@@ -219,6 +211,22 @@ rule-providers:
   Microsoft:
     <<: *classical
     url: "https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Other/Microsoft.list"
+# 海外抖音
+  TikTok:
+    <<: *classical
+    url: "https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Media/TikTok.list"
+# 奈飞影视
+  Netflix:
+    <<: *classical
+    url: "https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Media/Netflix.list"
+# 迪士尼+
+  Disney+:
+    <<: *classical
+    url: "https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Media/Disney+.list"
+# Spotify音乐
+  Spotify:
+    <<: *classical
+    url: "https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Media/Spotify.list"
 # 电报服务
   Telegram:
     <<: *classical
@@ -227,14 +235,6 @@ rule-providers:
   OpenAI:
     <<: *classical
     url: "https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Other/OpenAI.list"
-# 奈飞影视
-  Netflix:
-    <<: *classical
-    url: "https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Media/Netflix.list"
-# 国际抖音
-  TikTok:
-    <<: *classical
-    url: "https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Media/TikTok.list"
 # 贝宝支付
   PayPal:
     <<: *classical
@@ -247,10 +247,6 @@ rule-providers:
   Facebook:
     <<: *classical
     url: "https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Other/Facebook.list"
-# 游戏加速
-  Game:
-    <<: *classical
-    url: "https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Other/Game.list"
 # 海外媒体
   GlobalMedia:
     <<: *classical
