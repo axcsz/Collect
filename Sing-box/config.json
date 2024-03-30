@@ -119,10 +119,6 @@
       ],
       "rules": [
         {
-          "protocol": "dns",
-          "outbound": "dns-out"
-        },
-        {
           "type": "logical",
           "mode": "or",
           "rules": [
