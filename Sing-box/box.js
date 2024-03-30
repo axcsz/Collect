@@ -16,9 +16,6 @@ let proxies = await produceArtifact({
 config.outbounds.push(...proxies)
 
 config.outbounds.map(i => {
-  if (['全部节点'].includes(i.tag)) {
-    i.outbounds.push(...getTags(proxies))
-  }
   if (['香港节点'].includes(i.tag)) {
     i.outbounds.push(...getTags(proxies, /港|hk|hongkong|kong kong|🇭🇰/i))
   }
