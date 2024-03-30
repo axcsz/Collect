@@ -23,6 +23,11 @@
     ],
     "rules": [
       {
+        "outbound": "any",
+        "server": "alidns",
+        "disable_cache": true
+      },
+      {
         "protocol": "dns",
         "outbound": "dns-out"
       },
