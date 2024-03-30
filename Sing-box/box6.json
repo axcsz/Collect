@@ -198,7 +198,7 @@
       },
       {
         "clash_mode": "Global",
-        "outbound": "GLOBAL"
+        "outbound": "海外加速"
       },
       {
         "type": "logical",
