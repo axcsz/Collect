@@ -155,7 +155,7 @@
             "rule_set": ["youtube", "google"]
           },
         {
-          "outbound": "电报加速",
+          "outbound": "电报信息",
           "rule_set": ["telegram"]
         },
         {
