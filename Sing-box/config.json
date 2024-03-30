@@ -200,6 +200,10 @@
     ],
     "outbounds": [
         {
+            "tag": "国内直连",
+            "type": "direct"
+          },
+        {
             "tag": "香港节点",
             "type": "urltest",
             "outbounds": [],
