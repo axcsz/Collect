@@ -62,7 +62,7 @@
         "outbound": "国内直连"
       },
       {
-        "clash_mode": "Direct",
+        "clash_mode": "direct",
         "outbound": "国内直连"
       },
       {
@@ -340,7 +340,7 @@
         "韩国节点",
         "日本节点"
       ],
-      "default": "国内直连"
+      "default": "自动选择"
     },
     {
       "tag": "国内直连",
