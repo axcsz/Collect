@@ -1,0 +1,313 @@
+{
+    "log": {
+      "level": "info",
+      "disabled": false,
+      "timestamp": true
+    },
+    "dns": {
+      "servers": [
+        {
+          "address": "https://223.5.5.5/dns-query",
+          "detour": "国内直连",
+          "tag": "alidns",
+          "strategy": "prefer_ipv4"
+        },
+        {
+          "address": "https://1.1.1.1/dns-query",
+          "detour": "全球加速",
+          "tag": "cloudflare",
+          "strategy": "prefer_ipv4"
+        }
+      ],
+      "rules": [
+        {
+          "type": "logical",
+          "mode": "or",
+          "rules": [
+            {
+              "outbound": ["any"]
+            },
+            {
+              "clash_mode": "Direct"
+            },
+            {
+              "rule_set": ["cn", "private"]
+            },
+            {
+              "domain_suffix": [".cn"]
+            }
+          ],
+          "server": "alidns"
+        },
+        {
+          "server": "cloudflare",
+          "clash_mode": "Global"
+        }
+      ],
+      "disable_cache": false,
+      "disable_expire": false,
+      "final": "cloudflare",
+      "strategy": "prefer_ipv4"
+    },
+    "route": {
+      "final": "全球加速",
+      "auto_detect_interface": true,
+      "rule_set": [
+        {
+            "tag": "youtube",
+            "type": "remote",
+            "format": "binary",
+            "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo-lite/geosite/youtube.srs",
+            "download_detour": "全球加速"
+        },
+        {
+            "tag": "google",
+            "type": "remote",
+            "format": "binary",
+            "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo-lite/geosite/google.srs",
+            "download_detour": "全球加速"
+        },
+        {
+            "tag": "telegram",
+            "type": "remote",
+            "format": "binary",
+            "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo-lite/geosite/telegram.srs",
+            "download_detour": "全球加速"
+        },
+        {
+            "tag": "microsoft",
+            "type": "remote",
+            "format": "binary",
+            "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/microsoft.srs",
+            "download_detour": "全球加速"
+        },
+        {
+            "tag": "apple",
+            "type": "remote",
+            "format": "binary",
+            "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo-lite/geosite/apple.srs",
+            "download_detour": "全球加速"
+        },
+        {
+            "tag": "cn1",
+            "type": "remote",
+            "format": "binary",
+            "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo/geoip/cn.srs",
+            "download_detour": "全球加速"
+        },
+        {
+            "tag": "cn",
+            "type": "remote",
+            "format": "binary",
+            "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo/geosite/cn.srs",
+            "download_detour": "全球加速"
+        },
+        {
+            "tag": "openai",
+            "type": "remote",
+            "format": "binary",
+            "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo/geosite/openai.srs",
+            "download_detour": "全球加速"
+        },
+        {
+            "tag": "proxy",
+            "type": "remote",
+            "format": "binary",
+            "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo/geosite/proxy.srs",
+            "download_detour": "全球加速"
+        }
+      ],
+      "rules": [
+        {
+          "protocol": "dns",
+          "outbound": "dns-out"
+        },
+        {
+          "type": "logical",
+          "mode": "or",
+          "rules": [
+            {
+              "ip_is_private": true
+            },
+            {
+              "domain_keyword": ["baidu"]
+            },
+            {
+              "domain_suffix": ["qq.com"]
+            },
+            {
+              "clash_mode": "Direct"
+            }
+          ],
+          "outbound": "国内直连"
+        },
+        {
+          "type": "logical",
+          "mode": "or",
+          "rules": [
+            {
+              "domain": ["idev.dev", "www.idev.dev"]
+            },
+            {
+              "clash_mode": "Global"
+            }
+          ],
+          "outbound": "全球加速"
+        },
+        {
+          "outbound": "谷歌加速",
+          "rule_set": ["youtube","google"]
+        },
+        {
+          "outbound": "电报加速",
+          "rule_set": ["telegram"]
+        },
+        {
+          "outbound": "ChatGPT",
+          "rule_set": ["openai"]
+        },
+        {
+          "outbound": "微软加速",
+          "rule_set": ["microsoft"]
+        },
+        {
+          "outbound": "全球加速",
+          "rule_set": ["proxy"]
+        },
+        {
+          "outbound": "苹果服务",
+          "rule_set": ["apple"]
+        },
+        {
+          "domain_suffix": [".cn"],
+          "rule_set": ["cn1", "cn"],
+          "outbound": "国内加速"
+        }
+      ]
+    },
+    "inbounds": [
+      {
+        "strict_route": true,
+        "stack": "system",
+        "domain_strategy": "",
+        "sniff": true,
+        "udp_timeout": 300,
+        "interface_name": "utun",
+        "type": "tun",
+        "mtu": 1420,
+        "auto_route": true,
+        "sniff_timeout": "300ms",
+        "inet4_address": "172.19.0.1/30",
+        "sniff_override_destination": true,
+        "tag": "tun-in"
+      }
+    ],
+    "outbounds": [
+        {
+            "tag": "香港节点",
+            "type": "urltest",
+            "outbounds": [],
+            "url": "https://www.gstatic.com/generate_204",
+            "interval": "1m",
+            "tolerance": 50
+          },
+          {
+            "tag": "台湾节点",
+            "type": "urltest",
+            "outbounds": [],
+            "url": "https://www.gstatic.com/generate_204",
+            "interval": "1m",
+            "tolerance": 50
+          },
+          {
+            "tag": "狮城节点",
+            "type": "urltest",
+            "outbounds": [],
+            "url": "https://www.gstatic.com/generate_204",
+            "interval": "1m",
+            "tolerance": 50
+          },
+          {
+            "tag": "美国节点",
+            "type": "urltest",
+            "outbounds": [],
+            "url": "https://www.gstatic.com/generate_204",
+            "interval": "1m",
+            "tolerance": 50
+          },
+          {
+            "tag": "日本节点",
+            "type": "urltest",
+            "outbounds": [],
+            "url": "https://www.gstatic.com/generate_204",
+            "interval": "1m",
+            "tolerance": 50
+          },
+          {
+            "tag": "韩国节点",
+            "type": "urltest",
+            "outbounds": [],
+            "url": "https://www.gstatic.com/generate_204",
+            "interval": "1m",
+            "tolerance": 50
+          },
+      {
+        "default": "全球加速",
+        "outbounds": ["香港节点", "台湾节点", "美国节点", "狮城节点", "韩国节点", "日本节点"],
+        "tag": "全球加速",
+        "type": "selector"
+      },
+      {
+        "default": "微软加速",
+        "outbounds": ["香港节点", "台湾节点", "美国节点", "狮城节点", "韩国节点", "日本节点"],
+        "tag": "全球加速",
+        "type": "selector"
+      },
+      {
+        "default": "电报信息",
+        "outbounds": ["香港节点", "台湾节点", "美国节点", "狮城节点", "韩国节点", "日本节点"],
+        "tag": "全球加速",
+        "type": "selector"
+      },
+      {
+        "default": "ChatGPT",
+        "outbounds": ["香港节点", "台湾节点", "美国节点", "狮城节点", "韩国节点", "日本节点"],
+        "tag": "全球加速",
+        "type": "selector"
+      },
+      {
+        "default": "苹果服务",
+        "outbounds": ["国内直连", "香港节点", "台湾节点", "美国节点", "狮城节点", "韩国节点", "日本节点"],
+        "tag": "全球加速",
+        "type": "selector"
+      },
+      {
+        "default": "谷歌加速",
+        "outbounds": ["香港节点", "台湾节点", "美国节点", "狮城节点", "韩国节点", "日本节点"],
+        "tag": "全球加速",
+        "type": "selector"
+      },
+      {
+        "default": "国内直连",
+        "outbounds": ["国内直连", "全球加速"],
+        "tag": "国内加速",
+        "type": "selector"
+      }
+    ],
+    "experimental": {
+      "cache_file": {
+        "path": "cache.db",
+        "cache_id": "cache_id",
+        "store_fakeip": true,
+        "enabled": true
+      },
+      "clash_api": {
+        "external_controller": "0.0.0.0:9090",
+        "external_ui_download_url": "",
+        "secret": "",
+        "default_mode": "",
+        "external_ui_download_detour": "",
+        "external_ui": "ui"
+      }
+    }
+  }
