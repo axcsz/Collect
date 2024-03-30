@@ -119,6 +119,10 @@
       ],
       "rules": [
         {
+          "protocol": "dns",
+          "outbound": "dns-out"
+        },
+        {
           "type": "logical",
           "mode": "or",
           "rules": [
@@ -151,9 +155,9 @@
           "outbound": "全球加速"
         },
         {
-          "outbound": "谷歌加速",
-          "rule_set": ["youtube", "google"]
-        },
+            "outbound": "谷歌加速",
+            "rule_set": ["youtube", "google"]
+          },
         {
           "outbound": "电报加速",
           "rule_set": ["telegram"]
@@ -260,37 +264,37 @@
       {
         "default": "微软加速",
         "outbounds": ["香港节点", "台湾节点", "美国节点", "狮城节点", "韩国节点", "日本节点"],
-        "tag": "全球加速",
+        "tag": "微软加速",
         "type": "selector"
       },
       {
         "default": "电报信息",
         "outbounds": ["香港节点", "台湾节点", "美国节点", "狮城节点", "韩国节点", "日本节点"],
-        "tag": "全球加速",
+        "tag": "电报信息",
         "type": "selector"
       },
       {
         "default": "ChatGPT",
         "outbounds": ["香港节点", "台湾节点", "美国节点", "狮城节点", "韩国节点", "日本节点"],
-        "tag": "全球加速",
+        "tag": "ChatGPT",
         "type": "selector"
       },
       {
         "default": "苹果服务",
         "outbounds": ["国内直连", "香港节点", "台湾节点", "美国节点", "狮城节点", "韩国节点", "日本节点"],
-        "tag": "全球加速",
+        "tag": "苹果服务",
         "type": "selector"
       },
       {
         "default": "谷歌加速",
         "outbounds": ["香港节点", "台湾节点", "美国节点", "狮城节点", "韩国节点", "日本节点"],
-        "tag": "全球加速",
+        "tag": "谷歌加速",
         "type": "selector"
       },
       {
         "default": "国内直连",
         "outbounds": ["国内直连", "全球加速"],
-        "tag": "国内加速",
+        "tag": "国内直连",
         "type": "selector"
       }
     ],
