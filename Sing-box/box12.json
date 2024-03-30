@@ -383,7 +383,7 @@
       "auto_route": true,
       "sniff": true,
       "platform": {
-        "http_全球加速": {
+        "http_proxy": {
           "enabled": true,
           "server": "127.0.0.1",
           "server_port": 7890
