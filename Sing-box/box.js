@@ -16,20 +16,26 @@ let proxies = await produceArtifact({
 config.outbounds.push(...proxies)
 
 config.outbounds.map(i => {
+  if (['全部节点'].includes(i.tag)) {
+    i.outbounds.push(...getTags(proxies))
+  }
   if (['香港节点'].includes(i.tag)) {
-    i.outbounds.push(...getTags(proxies, /港|hk|hongkong|kong kong|🇭🇰/i))
+    i.outbounds.push(...getTags(proxies, /(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|美)).)*$))
   }
   if (['台湾节点'].includes(i.tag)) {
-    i.outbounds.push(...getTags(proxies, /台|tw|taiwan|🇹🇼/i))
+    i.outbounds.push(...getTags(proxies, /(?=.*(台|TW|(?i)Taiwan))^((?!(港|日|韩|新|美)).)*$))
   }
   if (['日本节点'].includes(i.tag)) {
-    i.outbounds.push(...getTags(proxies, /日本|jp|japan|🇯🇵/i))
+    i.outbounds.push(...getTags(proxies, /(?=.*(日|JP|(?i)Japan))^((?!(港|台|韩|新|美)).)*$))
   }
   if (['狮城节点'].includes(i.tag)) {
-    i.outbounds.push(...getTags(proxies, /^(?!.*(?:us)).*(新|sg|singapore|🇸🇬)/i))
+    i.outbounds.push(...getTags(proxies, /(?=.*(新|狮|獅|SG|(?i)Singapore))^((?!(港|台|日|韩|兰|美|西)).)*$))
+  }
+  if (['韩国节点'].includes(i.tag)) {
+    i.outbounds.push(...getTags(proxies, /(?=.*(韩|韓|朝|KR|(?i)Korea))^((?!(港|台|日|新|美)).)*$))
   }
   if (['美国节点'].includes(i.tag)) {
-    i.outbounds.push(...getTags(proxies, /美|us|unitedstates|united states|🇺🇸/i))
+    i.outbounds.push(...getTags(proxies, /(?=.*(美|US|(?i)States|American))^((?!(港|台|日|韩|新)).)*$))
   }
 })
 
