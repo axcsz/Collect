@@ -259,20 +259,6 @@
       "default": "国内直连"
     },
     {
-      "tag": "谷歌服务",
-      "type": "selector",
-      "outbounds": [
-        "自动选择",
-        "香港节点",
-        "台湾节点",
-        "美国节点",
-        "狮城节点",
-        "韩国节点",
-        "日本节点"
-      ],
-      "default": "全球加速"
-    },
-    {
       "tag": "ChatGPT",
       "type": "selector",
       "outbounds": [
@@ -304,7 +290,7 @@
       "tolerance": 50
     },
     {
-      "tag": "太节点",
+      "tag": "台湾节点",
       "type": "urltest",
       "outbounds": [],
       "url": "https://www.gstatic.com/generate_204",
