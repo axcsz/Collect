@@ -59,7 +59,7 @@
       },
       {
         "ip_is_private": true,
-        "outbound": "Direct"
+        "outbound": "国内直连"
       },
       {
         "clash_mode": "Direct",
@@ -271,15 +271,6 @@
         "日本节点"
       ],
       "default": "全球加速"
-    },
-    {
-      "tag": "国内直连",
-      "type": "selector",
-      "outbounds": [
-        "国内直连",
-        "自动选择"
-      ],
-      "default": "国内直连"
     },
     {
       "tag": "香港节点",
