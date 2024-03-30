@@ -15,31 +15,36 @@
         "tag": "google",
         "address": "https://8.8.8.8/dns-query",
         "detour": "海外加速"
-      },
+      }
     ],
     "rules": [
       {
-        "type": "logical",
-        "mode": "or",
-        "rules": [
-          {
-            "outbound": ["any"]
-          },
-          {
-            "clash_mode": "Direct"
-          },
-          {
-            "rule_set": ["cnIP", "cn"]
-          },
-          {
-            "domain_suffix": [".cn"]
-          }
-        ],
+        "outbound": "any",
+        "server": "alidns",
+        "disable_cache": true
+      },
+      {
+        "clash_mode": "Direct",
         "server": "alidns"
       },
       {
-        "server": "google",
-        "clash_mode": "Global"
+        "clash_mode": "Global",
+        "server": "fakeip"
+      },
+      {
+        "query_type": [
+          "A",
+          "AAAA"
+        ],
+        "server": "fakeip",
+        "rewrite_ttl": 1
+      },
+      {
+        "rule_set": [
+          "cnIP",
+          "cn"
+        ],
+        "server": "alidns"
       }
     ],
     "final": "google",
