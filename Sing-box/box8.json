@@ -24,7 +24,7 @@
         "disable_cache": true
       },
       {
-        "clash_mode": "Direct",
+        "clash_mode": "国内直连",
         "server": "alidns"
       },
       {
@@ -84,7 +84,7 @@
   "outbounds": [
     {
       "tag": "国内直连",
-      "type": "direct"
+      "type": "国内直连"
     },
     {
       "tag": "dns-out",
@@ -193,7 +193,7 @@
         "outbound": "国内直连"
       },
       {
-        "clash_mode": "Direct",
+        "clash_mode": "国内直连",
         "outbound": "国内直连"
       },
       {
