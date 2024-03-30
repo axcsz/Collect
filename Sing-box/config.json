@@ -152,7 +152,7 @@
         },
         {
           "outbound": "谷歌加速",
-          "rule_set": ["youtube","google"]
+          "rule_set": ["youtube", "google"]
         },
         {
           "outbound": "电报加速",
