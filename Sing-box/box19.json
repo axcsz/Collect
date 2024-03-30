@@ -70,10 +70,6 @@
         "outbound": "全球加速"
       },
       {
-        "rule_set": "bilibili",
-        "outbound": "哔哩哔哩"
-      },
-      {
         "rule_set": "youtube",
         "outbound": "谷歌服务"
       },
@@ -247,16 +243,6 @@
         "日本节点"
       ],
       "default": "美国节点"
-    },
-    {
-      "tag": "哔哩哔哩",
-      "type": "selector",
-      "outbounds": [
-        "国内直连",
-        "香港节点",
-        "台湾节点"
-      ],
-      "default": "国内直连"
     },
     {
       "tag": "ChatGPT",
