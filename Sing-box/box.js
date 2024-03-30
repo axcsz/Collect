@@ -20,22 +20,22 @@ config.outbounds.map(i => {
     i.outbounds.push(...getTags(proxies))
   }
   if (['香港节点'].includes(i.tag)) {
-    i.outbounds.push(...getTags(proxies, /(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|美)).)*$))
+    i.outbounds.push(...getTags(proxies, /(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|美)).)/i))
   }
   if (['台湾节点'].includes(i.tag)) {
-    i.outbounds.push(...getTags(proxies, /(?=.*(台|TW|(?i)Taiwan))^((?!(港|日|韩|新|美)).)*$))
+    i.outbounds.push(...getTags(proxies, /(?=.*(台|TW|(?i)Taiwan))^((?!(港|日|韩|新|美)).)/i))
   }
   if (['日本节点'].includes(i.tag)) {
-    i.outbounds.push(...getTags(proxies, /(?=.*(日|JP|(?i)Japan))^((?!(港|台|韩|新|美)).)*$))
+    i.outbounds.push(...getTags(proxies, /(?=.*(日|JP|(?i)Japan))^((?!(港|台|韩|新|美)).)/i))
   }
   if (['狮城节点'].includes(i.tag)) {
-    i.outbounds.push(...getTags(proxies, /(?=.*(新|狮|獅|SG|(?i)Singapore))^((?!(港|台|日|韩|兰|美|西)).)*$))
+    i.outbounds.push(...getTags(proxies, /(?=.*(新|狮|獅|SG|(?i)Singapore))^((?!(港|台|日|韩|兰|美|西)).)/i))
   }
   if (['韩国节点'].includes(i.tag)) {
-    i.outbounds.push(...getTags(proxies, /(?=.*(韩|韓|朝|KR|(?i)Korea))^((?!(港|台|日|新|美)).)*$))
+    i.outbounds.push(...getTags(proxies, /(?=.*(韩|韓|朝|KR|(?i)Korea))^((?!(港|台|日|新|美)).)/i))
   }
   if (['美国节点'].includes(i.tag)) {
-    i.outbounds.push(...getTags(proxies, /(?=.*(美|US|(?i)States|American))^((?!(港|台|日|韩|新)).)*$))
+    i.outbounds.push(...getTags(proxies, /(?=.*(美|US|(?i)States|American))^((?!(港|台|日|韩|新)).)/i))
   }
 })
 
