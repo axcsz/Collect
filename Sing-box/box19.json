@@ -44,7 +44,7 @@
         "rewrite_ttl": 1
       },
       {
-        "rule_set": "cn",
+        "rule_set": "geosite-cn",
         "server": "ali"
       }
     ],
