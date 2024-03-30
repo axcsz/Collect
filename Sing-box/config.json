@@ -177,7 +177,7 @@
         {
           "domain_suffix": [".cn"],
           "rule_set": ["cn1", "cn"],
-          "outbound": "国内加速"
+          "outbound": "国内直连"
         }
       ]
     },
