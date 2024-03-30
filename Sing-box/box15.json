@@ -59,7 +59,7 @@
       },
       {
         "ip_is_private": true,
-        "outbound": "国内直连"
+        "outbound": "Direct"
       },
       {
         "clash_mode": "Direct",
