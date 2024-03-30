@@ -201,28 +201,6 @@
         "outbound": "海外加速"
       },
       {
-        "type": "logical",
-        "mode": "or",
-        "rules": [
-          {
-            "ip_is_private": true
-          },
-          {
-            "domain_keyword": ["baidu"]
-          },
-          {
-            "domain_suffix": ["qq.com"]
-          },
-          {
-            "rule_set": ["cnIP", "cn"]
-          },
-          {
-            "clash_mode": "Direct"
-          }
-        ],
-        "outbound": "国内直连"
-      },
-      {
         "rule_set": "microsoft",
         "outbound": "微软服务"
       },
