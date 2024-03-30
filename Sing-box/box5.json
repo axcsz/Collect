@@ -87,6 +87,10 @@
       "type": "direct"
     },
     {
+      "tag": "dns-out",
+      "type": "dns"
+    },
+    {
       "tag": "自动选择",
       "type": "urltest",
       "outbounds": [],
