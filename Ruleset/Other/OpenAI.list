@@ -1,6 +1,6 @@
 #!name = OpenAI
-#!date = 2023-12-15 10:00
-
+#!date = 2024-03-30 18:38
+#!
 
 # ChatGPT
 DOMAIN,api.statsig.com
@@ -17,7 +17,7 @@ DOMAIN,production-openaicom-storage.azureedge.net
 DOMAIN,static.cloudflareinsights.com
 DOMAIN-SUFFIX,algolia.net
 DOMAIN-SUFFIX,auth0.com
-DOMAIN-SUFFIX,cdn.cloudflare.net
+DOMAIN-SUFFIX,chatgpt.com
 DOMAIN-SUFFIX,challenges.cloudflare.com
 DOMAIN-SUFFIX,client-api.arkoselabs.com
 DOMAIN-SUFFIX,events.statsigapi.net
@@ -38,7 +38,7 @@ DOMAIN-SUFFIX,sentry.io
 DOMAIN-SUFFIX,stripe.com
 DOMAIN-KEYWORD,openaicom-api
 
-# ChatGPT_Voice
+# ChatGPT Voice
 DOMAIN-SUFFIX,chatgpt.livekit.cloud
 DOMAIN-SUFFIX,host.livekit.cloud
 DOMAIN-SUFFIX,turn.livekit.cloud
