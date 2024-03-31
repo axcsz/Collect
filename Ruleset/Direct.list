@@ -1,6 +1,6 @@
-#!name = 直连
-#!date = 2023-12-15 10:00
-
+#!name = 国内直连
+#!date = 2023-03-31 10:00
+#!
 
 # MyList
 DOMAIN-SUFFIX,13th.tech
@@ -41,7 +41,6 @@ DOMAIN-KEYWORD,duobao
 DOMAIN-KEYWORD,jdpay
 DOMAIN-KEYWORD,moke
 DOMAIN-KEYWORD,qhimg
-DOMAIN-KEYWORD,todesk
 DOMAIN-KEYWORD,vpimg
 DOMAIN-KEYWORD,xiami
 DOMAIN-KEYWORD,xiaomi
@@ -127,6 +126,8 @@ DOMAIN-SUFFIX,bigfunapp.cn
 DOMAIN-SUFFIX,biliapi.com
 DOMAIN-SUFFIX,biliapi.net
 DOMAIN-SUFFIX,bilibili.com
+DOMAIN-SUFFIX,bilibili.co
+DOMAIN-SUFFIX,biliintl.co
 DOMAIN-SUFFIX,biligame.com
 DOMAIN-SUFFIX,biligame.net
 DOMAIN-SUFFIX,bilivideo.com
