@@ -218,6 +218,14 @@
             "tolerance": 50
         },
         {
+            "type": "urltest",
+            "tag": "自动选择",
+            "outbounds": [],
+            "url": "https://www.gstatic.com/generate_204",
+            "interval": "1m",
+            "tolerance": 50
+        },
+        {
             "type": "direct",
             "tag": "国内直连"
         }
