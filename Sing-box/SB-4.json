@@ -15,10 +15,6 @@
                 "tag": "google",
                 "address": "https://8.8.8.8/dns-query",
                 "detour": "海外加速"
-              },
-              {
-                "tag": "FAKEIP",
-                "address": "fakeip"
               }
         ],
         "rules": [
@@ -59,8 +55,7 @@
                     "A", 
                     "AAAA"
                 ],
-                "server": "FAKEIP",
-                "rewrite_ttl":"1"
+                "server": "google"
             }
         ],
         "final": "google",
