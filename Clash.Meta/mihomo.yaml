@@ -1,5 +1,5 @@
 #!name = mihomo 配置文件
-#!date = 2024-03-28 10:30
+#!date = 2024-04-04 17:00
 #!source = https://wiki.metacubex.one/example/conf/#__tabbed_1_3
 
 ######### 锚点 start #######
@@ -105,14 +105,6 @@ dns:
   nameserver:
     - https://doh.pub/dns-query
     - https://dns.alidns.com/dns-query
-# 配置查询域名使用的 DNS 服务器
-  nameserver-policy:
-    "rule-set:China,ChinaMedia,WeChat,Apple":
-      - https://doh.pub/dns-query
-      - https://dns.alidns.com/dns-query
-    "rule-set:GlobalGFW,GlobalMedia":
-      - "https://dns.cloudflare.com/dns-query#dns"
-      - "https://dns.google/dns-query#dns"
 
 # 单个出站代理节点
 proxies:
