@@ -276,7 +276,7 @@ rule-providers:
 # 局域网
   Lan:
     <<: *classical
-    url: "https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Lan.list"
+    url: "https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Local.list"
 
 # 屏蔽443
 script:
