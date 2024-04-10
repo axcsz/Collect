@@ -2,7 +2,7 @@
 #!desc = 缺德地图有治了
 #!author = RuCu6、kokoryh
 #!update = 2024-02-11 20:25
-#!category = Block ads
+#!category = Block Ads
 [Script]
 amap = type=http-response,pattern=^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch$,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/header.js,timeout=60
 amap = type=http-response,pattern=^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/(card-service-plan-home|main-page)\?,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/amap.js,requires-body=true,timeout=60
