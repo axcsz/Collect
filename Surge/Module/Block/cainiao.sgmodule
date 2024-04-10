@@ -2,7 +2,7 @@
 #!desc = 移除推广模块
 #!author = RuCu6、Keywos
 #!update = 2024-02-18 15:50
-#!category = Block ads
+#!category = Block Ads
 
 [Script]
 cainiao = type=http-response,pattern=^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch$,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/header.js,timeout=60
