@@ -2,7 +2,7 @@
 #!desc = 京东 & 京东比价
 #!author = RuCu6、Keywos
 #!update = 2024-04-10 10:50
-#!category = Block ads
+#!category = Block Ads
 
 [Rule]
 DOMAIN,dns.jd.com,REJECT
