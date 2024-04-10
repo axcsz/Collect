@@ -2,7 +2,7 @@
 #!desc = 全面净化
 #!author = RuCu6、Keywos
 #!update = 2024-01-22 17:00
-#!category = Block ads
+#!category = Block Ads
 
 [URL Rewrite]
 ^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/(get-lbs-cell-info\.php|sdkconfig\.php) - reject
