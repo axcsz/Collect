@@ -1,5 +1,5 @@
 #!name = 拦截广告
-#!date = 2024-03-25 12:35
+#!date = 2024-04-13 17:00
 
 
 # ======= A ======= #
@@ -196,6 +196,9 @@ DOMAIN-SUFFIX,163jiasu.com
 # 微博 开屏广告
 DOMAIN,huodong.weibo.cn
 DOMAIN-SUFFIX,biz.weibo.com
+# 微信
+DOMAIN,wxsnsdy.wxs.qq.com
+DOMAIN,wxsnsdythumb.wxs.qq.com
 
 # ======= X ======= #
 # 小米
