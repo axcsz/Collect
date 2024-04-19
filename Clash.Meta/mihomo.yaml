@@ -78,7 +78,7 @@ sniffer:
 tun:
   enable: true
 # 可选： system/gvisor/mixed
-  stack: system
+  stack: mixed
 # 需要劫持的 DNS
   dns-hijack:
     - "any:53"
