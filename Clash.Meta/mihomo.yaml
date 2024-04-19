@@ -102,7 +102,7 @@ dns:
     - "*"
     - "+.lan"
     - "+.local"
-# 解析非IP的dns用的dns服务器,只支持纯IP
+# 解析非 IP 的 DNS 用的 DNS 服务器，只支持纯 IP
   default-nameserver:
     - 223.5.5.5
     - 119.29.29.29
