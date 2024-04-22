@@ -1,8 +1,0 @@
-#!name = 抓包 & MitM（抓包模块）
-#!desc = 抓包的时候才开启此模块，抓完后请及时关闭！！！
-#!author = Axcsz5（搬运整理）
-#!update = 2023.07.15
-
-
-[MITM]
-hostname = -*.icloud.com.cn,-*.icloud.com, -*.mzstatic.com, -*.crashlytics.com, -*.facebook.com, -*.instagram.com, -ap-*.spotify.com,  -<ip-address>,  -*apple.com, -*.apple.com,*
