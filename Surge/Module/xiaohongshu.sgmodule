@@ -5,7 +5,7 @@
 #!date= 2024-04-23 20:00
 
 [Rule]
-PROTOCOL,QUIC,REJECT-NO-DROP
+AND,((PROTOCOL,QUIC), (DOMAIN-SUFFIX,xiaohongshu.com)),REJECT-NO-DROP
 
 [Map Local]
 # 惊喜弹窗
