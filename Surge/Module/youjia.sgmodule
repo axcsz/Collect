@@ -1,9 +1,9 @@
 #!name = Panels | oil price
 #!desc = 名称：实时油价信息 \n作者：Keywos \n说明：定时监控每日油价
 #!author = Keywos
-#!category=Panels
-#!arguments=wake-system:1,timeout:120,diqu:"guangdong/shenzhen"
-#!date= 2024-04-23 20:00
+#!category = Panels
+#!arguments = timeout:120,diqu:"guangdong/shenzhen"
+#!date = 2024-04-23 20:00
 # 持久化适合远程引用不添加本地模块
 # 工具>脚本编辑器>左下角齿轮图标>$persistentStore 添加key 为 yj 里面内容为地区
 
@@ -11,4 +11,4 @@
 YJCRON = script-name=YJCRON,update-interval=43200
 
 [Script]
-YJCRON=type=generic,wake-system={{{wake-system}}},timeout={{{timeout}}},script-path=https://raw.githubusercontent.com/Keywos/rule/main/JS/surgepushYJ.js,argument={{{diqu}}}
+YJCRON=type=generic,timeout={{{timeout}}},script-path=https://raw.githubusercontent.com/Keywos/rule/main/JS/surgepushYJ.js,argument={{{diqu}}}
