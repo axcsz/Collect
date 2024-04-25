@@ -59,7 +59,7 @@ IP-CIDR,117.92.229.188/32,no-resolve
 IP-CIDR,101.36.166.16/32,no-resolve
 IP-CIDR,180.96.2.114/32,no-resolve
 URL-REGEX,*-default.ixigua.com
-URL-REGEX,.+web\.business\.image
+#URL-REGEX,.+web\.business\.image
 URL-REGEX,^http:\/\/.+\.byteimg\.com\/ad-app-package
 URL-REGEX,^http:\/\/.+\.byteimg\.com\/web\.business\.image
 
