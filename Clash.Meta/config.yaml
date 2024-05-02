@@ -1,18 +1,19 @@
 #!name = mihomo 配置文件
-#!date = 2024-04-19 15:00
+#!desc = 说明：理论上适用于 所有的 meta 内核，已测试的有 Clash Verg Rev、Openclash、mihomo 
+#!date = 2024-05-03 10:00
 #!source = https://wiki.metacubex.one/example/conf/#__tabbed_1_3
 
 ######### 锚点 start #######
 
-# 策略组相关
+# 策略组相关锚点
 pr: &pr {type: select, proxies: [手动选择, 自动选择, 负载均衡, 香港节点, 台湾节点, 美国节点, 狮城节点, 日本节点, 韩国节点, 国内直连]}
 
-# 这里是订阅更新和延迟测试相关的
-p: &p {type: http, interval: 3600, health-check: {enable: true, url: https://www.gstatic.com/generate_204, interval: 300}}
+# 这里是机场订阅更新和延迟测试相关锚点
+p: &p {type: http, interval: 3600, health-check: {enable: true, url: https://www.youtube.com/generate_204, interval: 300}}
 
 ######### 锚点 end #######
 
-# 机场订阅 url 里填写自己的订阅,名称不能重复
+# 机场订阅 url 双引号里面填写自己的订阅，名称不能重复
 proxy-providers:
   provider1:
     <<: *p
@@ -27,17 +28,17 @@ proxy-providers:
 ipv6: true
 # 允许局域网的连接（可用来共享加速）
 allow-lan: true
-# 绑定 IP 地址，仅作用于 allow-lan 为 true，'*'表示所有地址
+# 绑定 IP 地址，仅作用于 allow-lan 为 true，'*' 表示所有地址
 bind-address: "*"
-# 混合端口 HTTP和SOCKS5用一个端口
-mixed-port: 7890
+# 混合端口 HTTP 和 SOCKS5 用一个端口
+mixed-port: 7895
 # 更换延迟计算方式,去除握手等额外延迟
 unified-delay: false
 # TCP 并发连接所有 IP, 将使用最快握手的 TCP
 tcp-concurrent: true
 # 外部控制器,可以使用 RESTful API 来控制你的 clash 内核
 external-controller: 0.0.0.0:9090
-# 外部用户界面
+# 外部用户界面 UI
 external-ui: ui
 # 自定义外部用户界面下载地址
 external-ui-url: "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip"
@@ -74,10 +75,10 @@ sniffer:
     - "dlg.io.mi.com"
     - "+.apple.com"     # 苹果域名，建议加
 
-# TUN配置
+# TUN 配置
 tun:
   enable: true
-# 可选： system/gvisor/mixed
+# 可选： system/gvisor/mixed （默认使用 mixed，MacOS & Windows 用户推荐 gvisor 栈）
   stack: mixed
 # 需要劫持的 DNS
   dns-hijack:
@@ -87,14 +88,14 @@ tun:
 # 自动识别出口网卡
   auto-detect-interface: true
 
-# DNS配置
+# DNS 配置
 dns:
 # 关闭将使用系统 DNS
   enable: true
 # 开启 DNS 服务器监听
   listen: :53
   ipv6: true
-# 模式：redir-host 或 fake-ip
+# 模式：redir-host 或 fake-ip （默认使用 fake-ip 模式）
   enhanced-mode: fake-ip
 # Fake-IP解析地址池
   fake-ip-range: 28.0.0.1/8
@@ -192,91 +193,91 @@ rule-providers:
 # 谷歌服务
   YouTube:
     <<: *classical
-    url: "https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Media/YouTube.list"
+    url: "https://raw.githubusercontent.com/axcsz/Collect/master/Ruleset/Media/YouTube.list"
   Google:
     <<: *classical
-    url: "https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Other/Google.list"
+    url: "https://raw.githubusercontent.com/axcsz/Collect/master/Ruleset/Other/Google.list"
 # 微软服务
   Copilot:
     <<: *classical
-    url: "https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Other/Copilot.list"
+    url: "https://raw.githubusercontent.com/axcsz/Collect/master/Ruleset/Other/Copilot.list"
   GitHub:
     <<: *classical
-    url: "https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Other/GitHub.list"
+    url: "https://raw.githubusercontent.com/axcsz/Collect/master/Ruleset/Other/GitHub.list"
   OneDrive:
     <<: *classical
-    url: "https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Other/OneDrive.list"
+    url: "https://raw.githubusercontent.com/axcsz/Collect/master/Ruleset/Other/OneDrive.list"
   Microsoft:
     <<: *classical
-    url: "https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Other/Microsoft.list"
+    url: "https://raw.githubusercontent.com/axcsz/Collect/master/Ruleset/Other/Microsoft.list"
 # 海外抖音
   TikTok:
     <<: *classical
-    url: "https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Media/TikTok.list"
+    url: "https://raw.githubusercontent.com/axcsz/Collect/master/Ruleset/Media/TikTok.list"
 # 奈飞影视
   Netflix:
     <<: *classical
-    url: "https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Media/Netflix.list"
+    url: "https://raw.githubusercontent.com/axcsz/Collect/master/Ruleset/Media/Netflix.list"
 # 迪士尼+
   Disney+:
     <<: *classical
-    url: "https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Media/Disney+.list"
+    url: "https://raw.githubusercontent.com/axcsz/Collect/master/Ruleset/Media/Disney+.list"
 # Spotify音乐
   Spotify:
     <<: *classical
-    url: "https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Media/Spotify.list"
+    url: "https://raw.githubusercontent.com/axcsz/Collect/master/Ruleset/Media/Spotify.list"
 # 电报服务
   Telegram:
     <<: *classical
-    url: "https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Other/Telegram.list"
+    url: "https://raw.githubusercontent.com/axcsz/Collect/master/Ruleset/Other/Telegram.list"
 # ChatGPT
   OpenAI:
     <<: *classical
-    url: "https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Other/OpenAI.list"
+    url: "https://raw.githubusercontent.com/axcsz/Collect/master/Ruleset/Other/OpenAI.list"
 # 贝宝支付
   PayPal:
     <<: *classical
-    url: "https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Other/PayPal.list"
+    url: "https://raw.githubusercontent.com/axcsz/Collect/master/Ruleset/Other/PayPal.list"
 # 推特加速
   Twitter:
     <<: *classical
-    url: "https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Other/Twitter.list"
+    url: "https://raw.githubusercontent.com/axcsz/Collect/master/Ruleset/Other/Twitter.list"
 # 脸书加速
   Facebook:
     <<: *classical
-    url: "https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Other/Facebook.list"
+    url: "https://raw.githubusercontent.com/axcsz/Collect/master/Ruleset/Other/Facebook.list"
 # 海外媒体
   GlobalMedia:
     <<: *classical
-    url: "https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Media/GlobalMedia.list"
+    url: "https://raw.githubusercontent.com/axcsz/Collect/master/Ruleset/Media/GlobalMedia.list"
 # 海外服务
   GlobalGFW:
     <<: *classical
-    url: "https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/GlobalGFW.list"
+    url: "https://raw.githubusercontent.com/axcsz/Collect/master/Ruleset/GlobalGFW.list"
 # 苹果服务
   Apple:
     <<: *classical
-    url: "https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Other/Apple.list"
+    url: "https://raw.githubusercontent.com/axcsz/Collect/master/Ruleset/Other/Apple.list"
 # 哔哩哔哩
   Bilibili:
     <<: *classical
-    url: "https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Media/Bilibili.list"
+    url: "https://raw.githubusercontent.com/axcsz/Collect/master/Ruleset/Media/Bilibili.list"
 # 国内服务
   WeChat:
     <<: *classical
-    url: "https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Other/WeChat.list"
+    url: "https://raw.githubusercontent.com/axcsz/Collect/master/Ruleset/Other/WeChat.list"
   ChinaMedia:
     <<: *classical
-    url: "https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Media/ChinaMedia.list"
+    url: "https://raw.githubusercontent.com/axcsz/Collect/master/Ruleset/Media/ChinaMedia.list"
   China:
     <<: *classical
-    url: "https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Direct.list"
+    url: "https://raw.githubusercontent.com/axcsz/Collect/master/Ruleset/Direct.list"
 # 局域网
   Lan:
     <<: *classical
-    url: "https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Local.list"
+    url: "https://raw.githubusercontent.com/axcsz/Collect/master/Ruleset/Local.list"
 
-# 屏蔽443
+# 屏蔽 443
 script:
   shortcuts:
     quic: network == 'udp' and dst_port == 443
