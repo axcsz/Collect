@@ -17,37 +17,42 @@ p: &p {type: http, interval: 3600, health-check: {enable: true, url: https://www
 proxy-providers:
   provider1:
     <<: *p
-    url: ""
+    url: "此处填写机场订阅地址"
 
   provider2:
     <<: *p
-    url: ""
+    url: "此处填写机场订阅地址"
 
 # 全局配置
-# 开启 IPv6 总开关
+# # 开启 IPv6 总开关，关闭阻断所有 IPv6 链接和屏蔽 DNS 请求 AAAA 记录 true/false
 ipv6: true
-# 允许局域网的连接（可用来共享加速）
+# 允许局域网连接
 allow-lan: true
-# 混合端口 HTTP 和 SOCKS5 用一个端口
-mixed-port: 7890
+# HTTP(S) 和 SOCKS 代理混合端口
+mixed-port: 56789
 # 更换延迟计算方式,去除握手等额外延迟
 unified-delay: false
 # TCP 并发连接所有 IP, 将使用最快握手的 TCP
 tcp-concurrent: true
-# 外部控制器,可以使用 RESTful API 来控制你的 clash 内核
-external-controller: 0.0.0.0:9090
-# 外部用户界面 UI
+
+# 配置 WEB UI
 external-ui: ui
+# 外部控制器，可以使用 RESTful API 来控制你的 Clash 内核
+external-controller: 0.0.0.0:9090
 # 自定义外部用户界面下载地址
 external-ui-url: "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip"
 
-# 匹配所有进程（可选 always or strict or off）
-## always 开启强制匹配所有进程，strict 默认由 Clash 判断是否开启，off 不匹配进程，推荐在路由器上使用此模式
+# 匹配所有进程 always/strict/off
+##  - always, 开启，强制匹配所有进程
+##  - strict, 默认，由 mihomo 判断是否开启
+##  - off, 不匹配进程，推荐在路由器上使用此模式
 find-process-mode: strict
-# 全局 TLS 指纹
+# 全局 TLS 指纹，优先低于 proxy 内的 client-fingerprint
+##  - 可选： "chrome","firefox","safari","ios","random","none" options.
+##  - Utls is currently support TLS transport in TCP/grpc/WS/HTTP for VLESS/Vmess and trojan.
 global-client-fingerprint: chrome
 
-# profile 应为扩展配置，但在 Clash.meta, 仅作为缓存项使用
+# profile 应为扩展配置，但在 mihomo, 仅作为缓存项使用
 profile:
   # 储存 API 对策略组的选择，以供下次启动时使用
   store-selected: true
@@ -75,7 +80,7 @@ sniffer:
 # TUN 配置
 tun:
   enable: true
-# 可选： system or gvisor or mixed
+# 可选： gvisor/mixed
   stack: mixed
 # DNS 劫持，一般设置为 any:53 即可, 即劫持所有53端口的 udp 流量
   dns-hijack:
