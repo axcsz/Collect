@@ -13,7 +13,7 @@ p: &p {type: http, interval: 3600, health-check: {enable: true, url: https://www
 
 ######### 锚点 end #######
 
-# 机场订阅 url 双引号里面填写自己的订阅，名称不能重复
+# 机场订阅，名称不能重复
 proxy-providers:
   provider1:
     <<: *p
