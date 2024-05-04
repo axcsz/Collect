@@ -21,6 +21,11 @@ DOMAIN-SUFFIX,adukwai.com
 
 # ===== F =====
 # 番茄小说
+AND,((DOMAIN-KEYWORD,zijieapi,extended-matching), (DOMAIN-KEYWORD,ads,extended-matching))
+DOMAIN-SUFFIX,netease.com
+DOMAIN-SUFFIX,tsyndicate.com
+DOMAIN-SUFFIX,assistads.net
+DOMAIN,ad.zijieapi.com
 DOMAIN-KEYWORD,-ad-sign.byteimg.com
 DOMAIN-KEYWORD,-aliec
 DOMAIN-KEYWORD,-alisc
@@ -59,7 +64,6 @@ IP-CIDR,117.92.229.188/32,no-resolve
 IP-CIDR,101.36.166.16/32,no-resolve
 IP-CIDR,180.96.2.114/32,no-resolve
 URL-REGEX,*-default.ixigua.com
-#URL-REGEX,.+web\.business\.image
 URL-REGEX,^http:\/\/.+\.byteimg\.com\/ad-app-package
 URL-REGEX,^http:\/\/.+\.byteimg\.com\/web\.business\.image
 
