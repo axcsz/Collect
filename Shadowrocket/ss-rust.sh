@@ -98,7 +98,7 @@ check_status(){
 }
 
 check_new_ver(){
-	new_ver=$(wget -qO- https://mirror.ghproxy.com/https://api.github.com/repos/shadowsocks/shadowsocks-rust/releases| jq -r '[.[] | select(.prerelease == false) | select(.draft == false) | .tag_name] | .[0]')
+	new_ver=$(wget -qO- https://api.github.com/repos/shadowsocks/shadowsocks-rust/releases| jq -r '[.[] | select(.prerelease == false) | select(.draft == false) | .tag_name] | .[0]')
 	[[ -z ${new_ver} ]] && echo -e "${Error} Shadowsocks Rust 最新版本获取失败！" && exit 1
 	echo -e "${Info} 检测到 Shadowsocks Rust 最新版本为 [ ${new_ver} ]"
 }
@@ -122,25 +122,6 @@ check_ver_comparison(){
 		echo -e "${Info} 当前 Shadowsocks Rust 已是最新版本 [ ${new_ver} ] ！" && exit 1
 	fi
 }
-
-# Download(){
-# 	if [[ ! -e "${FOLDER}" ]]; then
-# 		mkdir "${FOLDER}"
-# 	# else
-# 		# [[ -e "${FILE}" ]] && rm -rf "${FILE}"
-# 	fi
-# 	echo -e "${Info} 开始下载 Shadowsocks Rust ……"
-# 	wget --no-check-certificate -N "https://mirror.ghproxy.com/https://github.com/shadowsocks/shadowsocks-rust/releases/download/${new_ver}/shadowsocks-${new_ver}.${arch}-unknown-linux-gnu.tar.xz"
-# 	[[ ! -e "shadowsocks-${new_ver}.${arch}-unknown-linux-gnu.tar.xz" ]] && echo -e "${Error} Shadowsocks Rust 下载失败！" && exit 1
-# 	tar -xvf "shadowsocks-${new_ver}.${arch}-unknown-linux-gnu.tar.xz"
-# 	[[ ! -e "ssserver" ]] && echo -e "${Error} Shadowsocks Rust 压缩包解压失败！" && exit 1
-# 	rm -rf "shadowsocks-${new_ver}.${arch}-unknown-linux-gnu.tar.xz"
-# 	chmod +x ssserver
-# 	mv -f ssserver "${FILE}"
-# 	rm sslocal ssmanager ssservice ssurl
-# 	echo "${new_ver}" > ${Now_ver_File}
-#     echo -e "${Info} Shadowsocks Rust 主程序下载安装完毕！"
-# }
 
 # 官方源
 stable_Download() {
