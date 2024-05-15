@@ -1,5 +1,5 @@
 #!name = 海外媒体
-#!date = 2024-03-31 10:00
+#!date = 2024-05-15 15:00
 #!
 
 # ABC
@@ -81,12 +81,6 @@ DOMAIN,gamer-cds.cdn.hinet.net
 DOMAIN,gamer2-cds.cdn.hinet.net
 DOMAIN-SUFFIX,bahamut.com.tw
 DOMAIN-SUFFIX,gamer.com.tw
-
-# B_Global
-USER-AGENT,app/bstar*
-DOMAIN-SUFFIX,bilibili.tv
-DOMAIN-SUFFIX,bstarstatic.com
-DOMAIN,pic-bstarstatic.akamaized.net
 
 # DAZN
 USER-AGENT,DAZN*
@@ -342,8 +336,10 @@ DOMAIN-SUFFIX,olevodtv.com
 
 # OpenAi
 DOMAIN-KEYWORD,openai
+DOMAIN,gemini.google.com
 DOMAIN-SUFFIX,auth0.com
 DOMAIN-SUFFIX,challenges.cloudflare.com
+DOMAIN-SUFFIX,chatgpt.com
 DOMAIN-SUFFIX,client-api.arkoselabs.com
 DOMAIN-SUFFIX,events.statsigapi.net
 DOMAIN-SUFFIX,featuregates.org
