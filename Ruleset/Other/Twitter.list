@@ -1,5 +1,5 @@
 #!name = Twitter
-#!date = 2023-12-15 10:00
+#!date = 2024-05-15 19:00
 
 
 # Twitter
@@ -14,3 +14,4 @@ DOMAIN-SUFFIX,twitpic.com
 DOMAIN-SUFFIX,twitter.com
 DOMAIN-SUFFIX,twitter.jp
 DOMAIN-SUFFIX,vine.co
+DOMAIN-SUFFIX,x.com
