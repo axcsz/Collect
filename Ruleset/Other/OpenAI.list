@@ -1,8 +1,11 @@
 #!name = OpenAI
 #!date = 2024-05-16 15:30
-#!
+#!author = 可莉🅥
 
 # OpenAI
+AND,((DOMAIN-KEYWORD,chatgpt-async-webps-prod-eastus-),(DOMAIN-KEYWORD,.webpubsub.azure.com))
+DOMAIN,openaiapi-site.azureedge.net
+DOMAIN,openaicom.imgix.net
 DOMAIN,api.statsig.com
 DOMAIN,browser-intake-datadoghq.com
 DOMAIN,cdn.openai.com
