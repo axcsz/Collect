@@ -46,7 +46,7 @@ DOMAIN-SUFFIX,segment.io
 DOMAIN-SUFFIX,sentry.io
 DOMAIN-SUFFIX,stripe.com
 DOMAIN-KEYWORD,openaicom-api
-DOMAIN-KEYWORD,openai
+
 # OpenAI Voice
 DOMAIN-SUFFIX,chatgpt.livekit.cloud
 DOMAIN-SUFFIX,DOMAIN.livekit.cloud
