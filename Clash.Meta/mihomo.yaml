@@ -1,24 +1,24 @@
 #!name = mihomo 配置文件
 #!desc = 说明：理论上适用于 所有的 meta 内核，已测试的有 Clash Verg Rev、Openclash、mihomo 
-#!date = 2024-05-18 19:30
+#!date = 2024-05-18 20:00
 #!source = https://wiki.metacubex.one/example/conf/#__tabbed_1_3
 
 ######### 机场锚点 start #######
 
 # 机场订阅更新 & 延迟测试
-ap: &ap {type: http, interval: 3600, health-check: {enable: true, url: https://www.youtube.com/generate_204, interval: 300}}
+p: &p {type: http, interval: 3600, health-check: {enable: true, url: https://www.youtube.com/generate_204, interval: 300}}
 
 ######### 机场锚点 end #######
 
 # 机场订阅，名称不能重复
 proxy-providers:
   Airport1:
-    <<: *ap
-    url: "此处填写机场订阅链接"
+    <<: *p
+    url: "此处填写机场订阅"
   Airport2:
-    <<: *ap
-    url: "此处填写机场订阅链接"
-    
+    <<: *p
+    url: "此处填写机场订阅"
+   
 # 全局配置
 # # 开启 IPv6 总开关，关闭阻断所有 IPv6 链接和屏蔽 DNS 请求 AAAA 记录 true/false
 ipv6: true
@@ -124,7 +124,7 @@ proxies:
 ######### 策略锚点 start #######
 
 # 策略组
-pg: &pg {type: select, proxies: [手动选择, 自动选择, 负载均衡, 香港节点, 台湾节点, 美国节点, 狮城节点, 日本节点, 韩国节点, 其他节点]}
+pg: &pg {type: select, proxies: [手动选择, 自动选择, 香港节点, 台湾节点, 美国节点, 狮城节点, 日本节点, 韩国节点, 其他节点]}
 
 # 手动选择策略
 se: &se {type: select, include-all-providers: true}
@@ -149,8 +149,8 @@ ALL: &ALL '^(?!.*(日期|邀请|返利|循环|官网|客服))'
 
 # 策略组
 proxy-groups:
-  # 策略分组
-  - {name: 手动选择, type: select, proxies: [自动选择, 负载均衡, 香港节点, 台湾节点, 美国节点, 狮城节点, 日本节点, 韩国节点]}
+  # 软件策略
+  - {name: 手动选择, type: select, proxies: [自动选择, 香港节点, 台湾节点, 美国节点, 狮城节点, 日本节点, 韩国节点]}
   - {name: YouTube, <<: *pg}
   - {name: Google, <<: *pg}
   - {name: Microsoft, <<: *pg}
@@ -164,20 +164,35 @@ proxy-groups:
   - {name: Twitter, <<: *pg}
   - {name: Facebook, <<: *pg}
   - {name: GlobalGFW, <<: *pg}
-  - {name: Apple, type: select, proxies: [国内直连, 手动选择, 自动选择, 负载均衡, 香港节点, 台湾节点, 美国节点, 狮城节点, 日本节点, 韩国节点]}
-  - {name: Bilibili, type: select, proxies: [国内直连, 手动选择, 自动选择, 负载均衡, 香港节点, 台湾节点, 美国节点, 狮城节点, 日本节点, 韩国节点]}
-  - {name: China, type: select, proxies: [国内直连, 手动选择, 自动选择, 负载均衡, 香港节点, 台湾节点, 美国节点, 狮城节点, 日本节点, 韩国节点]}
+  - {name: Apple, type: select, proxies: [国内直连, 手动选择, 自动选择, 香港节点, 台湾节点, 美国节点, 狮城节点, 日本节点, 韩国节点]}
+  - {name: Bilibili, type: select, proxies: [国内直连, 手动选择, 自动选择, 香港节点, 台湾节点, 美国节点, 狮城节点, 日本节点, 韩国节点]}
+  - {name: China, type: select, proxies: [国内直连, 手动选择, 自动选择, 香港节点, 台湾节点, 美国节点, 狮城节点, 日本节点, 韩国节点]}
   - {name: 兜底规则, <<: *pg}
-  # 分组筛选
-  - {name: 香港节点, <<: *ut, filter: *HK}
-  - {name: 台湾节点, <<: *ut, filter: *TW}
-  - {name: 美国节点, <<: *ut, filter: *US}
-  - {name: 狮城节点, <<: *ut, filter: *SG}
-  - {name: 日本节点, <<: *ut, filter: *JP}
-  - {name: 韩国节点, <<: *ut, filter: *KR}
+  # 地区分组
+  - {name: 香港节点, type: select, proxies: [香港优选, 香港负载]}
+  - {name: 台湾节点, type: select, proxies: [台湾优选, 台湾负载]}
+  - {name: 美国节点, type: select, proxies: [美国优选, 美国负载]}
+  - {name: 狮城节点, type: select, proxies: [狮城优选, 狮城负载]}
+  - {name: 日本节点, type: select, proxies: [日本优选, 日本负载]}
+  - {name: 韩国节点, type: select, proxies: [韩国优选, 韩国负载]}
+  # 优选筛选
+  - {name: 香港优选, <<: *ut, filter: *HK}
+  - {name: 台湾优选, <<: *ut, filter: *TW}
+  - {name: 美国优选, <<: *ut, filter: *US}
+  - {name: 狮城优选, <<: *ut, filter: *SG}
+  - {name: 日本优选, <<: *ut, filter: *JP}
+  - {name: 韩国优选, <<: *ut, filter: *KR}
+  # 负载筛选
+  - {name: 香港负载, <<: *lb, filter: *HK}
+  - {name: 台湾负载, <<: *lb, filter: *TW}
+  - {name: 美国负载, <<: *lb, filter: *US}
+  - {name: 狮城负载, <<: *lb, filter: *SG}
+  - {name: 日本负载, <<: *lb, filter: *JP}
+  - {name: 韩国负载, <<: *lb, filter: *KR}
+# 其他
   - {name: 其他节点, <<: *se, filter: *OTH}
   - {name: 自动选择, <<: *ut, filter: *ALL}
-  - {name: 负载均衡, <<: *lb, filter: *ALL}
+
 
 # 分流策略
 rules:
