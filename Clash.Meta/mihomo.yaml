@@ -123,10 +123,10 @@ pr: &pr {type: select, proxies: [手动选择, 自动选择, 香港节点, 台�
 mt: &mt {type: select, include-all: true}
 
 # 自动优选策略
-ac: &ac {type: url-test, include-all: true, url: https://www.gstatic.com/generate_204, tolerance: 10, interval: 300}
+ac: &ac {type: url-test, include-all-providers: true, url: https://www.gstatic.com/generate_204, tolerance: 10, interval: 300}
 
 # 负载均衡策略
-lb: &lb {type: load-balance, include-all: true, url: https://www.gstatic.com/generate_204, tolerance: 10, interval: 300, strategy: consistent-hashing}
+lb: &lb {type: load-balance, include-all-providers: true, url: https://www.gstatic.com/generate_204, tolerance: 10, interval: 300, strategy: consistent-hashing}
 
 # 地区节点筛选策略
 NodeHK: &NodeHK '(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|深|美)).)*$'
