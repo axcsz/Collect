@@ -191,7 +191,7 @@ rule-anchor:
   # classical 规则相关
   classical: &classical {type: http, interval: 43200, behavior: classical, format: text, proxy: GlobalGFW}
 
-# 规则集
+# 订阅规则集
 rule-providers:
 # 广告拦截
   Adrules:
