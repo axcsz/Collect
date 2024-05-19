@@ -120,7 +120,7 @@ dns:
 pr: &pr {type: select, proxies: [手动选择, 自动选择, 香港节点, 台湾节点, 美国节点, 狮城节点, 日本节点, 韩国节点]}
 
 # 手动选择策略
-mt: &mt {type: select, include-all: true}
+mt: &mt {type: select, include-all-providers: true}
 
 # 自动优选策略
 ac: &ac {type: url-test, include-all-providers: true, url: https://www.gstatic.com/generate_204, tolerance: 10, interval: 300}
