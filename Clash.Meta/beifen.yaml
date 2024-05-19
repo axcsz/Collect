@@ -100,7 +100,6 @@ dns:
 ######### 策略锚点 start #######
 # 策略组
 pr: &pr {type: select, proxies: [ss, vless, hysteria2]}
-
 ######### 策略锚点 end #######
 
 # 单个出站代理节点
