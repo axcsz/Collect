@@ -1,24 +1,27 @@
 #!name = mihomo 配置文件
-#!desc = 说明：理论上适用于 所有的 meta 内核，已测试的有 Clash Verg Rev、Openclash、mihomo 
-#!date = 2024-05-18 20:00
+#!desc = 说明：理论上适用于所有的 Meta 内核，已测试的有 Clash Verg Rev、Openclash、mihomo 
+#!date = 2024-05-19 10:00
 #!source = https://wiki.metacubex.one/example/conf/#__tabbed_1_3
 
+
 ######### 机场锚点 start #######
-
-# 机场订阅更新 & 延迟测试
-p: &p {type: http, interval: 3600, health-check: {enable: true, url: https://www.youtube.com/generate_204, interval: 300}}
-
+# 机场订阅更新和延迟测试
+p: &p {type: http, interval: 1800, health-check: {enable: true, url: https://www.gstatic.com/generate_204, interval: 300}, proxy: DIRECT}
 ######### 机场锚点 end #######
 
 # 机场订阅，名称不能重复
 proxy-providers:
-  Airport1:
+  # 机场 01
+  Airport 01:
     <<: *p
-    url: "此处填写机场订阅"
-  Airport2:
+    url: "此处填写机场订阅地址"
+    override:
+      additional-prefix: "[此处填写机场名字]"
+  # 机场 02
+  Airport 02:
     <<: *p
-    url: "此处填写机场订阅"
-   
+    url: "此处填写机场订阅地址"
+
 # 全局配置
 # # 开启 IPv6 总开关，关闭阻断所有 IPv6 链接和屏蔽 DNS 请求 AAAA 记录 true/false
 ipv6: true
@@ -32,6 +35,7 @@ unified-delay: false
 tcp-concurrent: true
 
 # 配置 WEB UI
+# UI 名字
 external-ui: ui
 # 外部控制器，可以使用 RESTful API 来控制你的 Clash 内核
 external-controller: 0.0.0.0:9090
@@ -111,6 +115,30 @@ dns:
     - https://doh.pub/dns-query
     - https://dns.alidns.com/dns-query
 
+######### 策略锚点 start #######
+# 策略组
+pr: &pr {type: select, proxies: [手动选择, 自动选择, 香港节点, 台湾节点, 美国节点, 狮城节点, 日本节点, 韩国节点]}
+
+# 手动选择策略
+mt: &mt {type: select, include-all: true}
+
+# 自动优选策略
+ac: &ac {type: url-test, include-all: true, url: https://www.gstatic.com/generate_204, tolerance: 10, interval: 300}
+
+# 负载均衡策略
+lb: &lb {type: load-balance, include-all: true, url: https://www.gstatic.com/generate_204, tolerance: 10, interval: 300, strategy: consistent-hashing}
+
+# 地区节点筛选策略
+NodeHK: &NodeHK '(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|深|美)).)*$'
+NodeTW: &NodeTW '(?=.*(台|TW|(?i)Taiwan))^((?!(港|日|韩|新|美)).)*$'
+NodeUS: &NodeUS '(?=.*(美|US|(?i)States|America))^((?!(港|台|日|韩|新)).)*$'
+NodeSG: &NodeSG '(?=.*(新|狮|獅|SG|(?i)Singapore))^((?!(港|台|日|韩|美|西)).)*$'
+NodeJP: &NodeJP '(?=.*(日|JP|(?i)Japan))^((?!(港|台|韩|新|美|尼)).)*$'
+NodeKR: &NodeKR '(?=.*(韩|KR|(?i)Korea))^((?!(台|日|港|新|美)).)*$'
+NodeOther: &NodeOther '^(?!.*(港|台|日本|韩|坡|美|HK|US|TW|JP|KR|SG|Hong|Tai|Japan|Korea|Singapore|States|直连))'
+NodeAll: &NodeAll '^(?!.*(日期|邀请|返利|循环|官网|客服))'
+######### 策略锚点 end #######
+
 # 单个出站代理节点
 proxies:
 # 直连节点
@@ -121,53 +149,27 @@ proxies:
   mptcp: true
   ip-version: ipv6-prefer
 
-######### 策略锚点 start #######
-
-# 策略组
-pg: &pg {type: select, proxies: [手动选择, 自动选择, 香港节点, 台湾节点, 美国节点, 狮城节点, 日本节点, 韩国节点, 其他节点]}
-
-# 手动选择策略
-se: &se {type: select, include-all-providers: true}
-
-# 自动优选策略
-ut: &ut {type: url-test, include-all-providers: true}
-
-# 负载均衡策略
-lb: &lb {type: load-balance, include-all-providers: true, strategy: consistent-hashing}
-
-# 地区节点筛选
-HK: &HK '(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|深|美)).)*$'
-TW: &TW '(?=.*(台|TW|(?i)Taiwan))^((?!(港|日|韩|新|美)).)*$'
-US: &US '(?=.*(美|US|(?i)States|America))^((?!(港|台|日|韩|新)).)*$'
-SG: &SG '(?=.*(新|狮|獅|SG|(?i)Singapore))^((?!(港|台|日|韩|美|西)).)*$'
-JP: &JP '(?=.*(日|JP|(?i)Japan))^((?!(港|台|韩|新|美|尼)).)*$'
-KR: &KR '(?=.*(韩|KR|(?i)Korea))^((?!(台|日|港|新|美)).)*$'
-OTH: &OTH '^(?!.*(港|台|日本|韩|坡|美|HK|US|TW|JP|KR|SG|Hong|Tai|Japan|Korea|Singapore|States))'
-ALL: &ALL '^(?!.*(日期|邀请|返利|循环|官网|客服))'
-
-######### 策略锚点 end #######
-
 # 策略组
 proxy-groups:
-  # 软件策略
+  # 策略
   - {name: 手动选择, type: select, proxies: [自动选择, 香港节点, 台湾节点, 美国节点, 狮城节点, 日本节点, 韩国节点]}
-  - {name: YouTube, <<: *pg}
-  - {name: Google, <<: *pg}
-  - {name: Microsoft, <<: *pg}
-  - {name: TikTok, <<: *pg}
-  - {name: Netflix, <<: *pg}
-  - {name: Disney+, <<: *pg}
-  - {name: Spotify, <<: *pg}
-  - {name: Telegram, <<: *pg}
-  - {name: ChatGPT, <<: *pg}
-  - {name: PayPal, <<: *pg}
-  - {name: Twitter, <<: *pg}
-  - {name: Facebook, <<: *pg}
-  - {name: GlobalGFW, <<: *pg}
+  - {name: YouTube, <<: *pr}
+  - {name: Google, <<: *pr}
+  - {name: Microsoft, <<: *pr}
+  - {name: TikTok, <<: *pr}
+  - {name: Netflix, <<: *pr}
+  - {name: Disney+, <<: *pr}
+  - {name: Spotify, <<: *pr}
+  - {name: Telegram, <<: *pr}
+  - {name: ChatGPT, <<: *pr}
+  - {name: PayPal, <<: *pr}
+  - {name: Twitter, <<: *pr}
+  - {name: Facebook, <<: *pr}
+  - {name: GlobalGFW, <<: *pr}
   - {name: Apple, type: select, proxies: [国内直连, 手动选择, 自动选择, 香港节点, 台湾节点, 美国节点, 狮城节点, 日本节点, 韩国节点]}
   - {name: Bilibili, type: select, proxies: [国内直连, 手动选择, 自动选择, 香港节点, 台湾节点, 美国节点, 狮城节点, 日本节点, 韩国节点]}
   - {name: China, type: select, proxies: [国内直连, 手动选择, 自动选择, 香港节点, 台湾节点, 美国节点, 狮城节点, 日本节点, 韩国节点]}
-  - {name: 兜底规则, <<: *pg}
+  - {name: 兜底规则, <<: *pr}
   # 地区分组
   - {name: 香港节点, type: select, proxies: [香港优选, 香港负载]}
   - {name: 台湾节点, type: select, proxies: [台湾优选, 台湾负载]}
@@ -176,31 +178,29 @@ proxy-groups:
   - {name: 日本节点, type: select, proxies: [日本优选, 日本负载]}
   - {name: 韩国节点, type: select, proxies: [韩国优选, 韩国负载]}
   # 优选筛选
-  - {name: 香港优选, <<: *ut, filter: *HK}
-  - {name: 台湾优选, <<: *ut, filter: *TW}
-  - {name: 美国优选, <<: *ut, filter: *US}
-  - {name: 狮城优选, <<: *ut, filter: *SG}
-  - {name: 日本优选, <<: *ut, filter: *JP}
-  - {name: 韩国优选, <<: *ut, filter: *KR}
+  - {name: 香港优选, <<: *ac, filter: *NodeHK}
+  - {name: 台湾优选, <<: *ac, filter: *NodeTW}
+  - {name: 美国优选, <<: *ac, filter: *NodeUS}
+  - {name: 狮城优选, <<: *ac, filter: *NodeSG}
+  - {name: 日本优选, <<: *ac, filter: *NodeJP}
+  - {name: 韩国优选, <<: *ac, filter: *NodeKR}
   # 负载筛选
-  - {name: 香港负载, <<: *lb, filter: *HK}
-  - {name: 台湾负载, <<: *lb, filter: *TW}
-  - {name: 美国负载, <<: *lb, filter: *US}
-  - {name: 狮城负载, <<: *lb, filter: *SG}
-  - {name: 日本负载, <<: *lb, filter: *JP}
-  - {name: 韩国负载, <<: *lb, filter: *KR}
+  - {name: 香港负载, <<: *lb, filter: *NodeHK}
+  - {name: 台湾负载, <<: *lb, filter: *NodeTW}
+  - {name: 美国负载, <<: *lb, filter: *NodeUS}
+  - {name: 狮城负载, <<: *lb, filter: *NodeSG}
+  - {name: 日本负载, <<: *lb, filter: *NodeJP}
+  - {name: 韩国负载, <<: *lb, filter: *NodeKR}
 # 其他
-  - {name: 其他节点, <<: *se, filter: *OTH}
-  - {name: 自动选择, <<: *ut, filter: *ALL}
+  - {name: 其他节点, <<: *mt, filter: *NodeOther}
+  - {name: 自动选择, <<: *ac, filter: *NodeAll}
 
-
-# 分流策略
+# 分流规则
 rules:
   - RULE-SET,Lan,China
   - RULE-SET,Adrules,REJECT
   - RULE-SET,YouTube,YouTube
   - RULE-SET,Google,Google
-  - RULE-SET,Copilot,Microsoft
   - RULE-SET,GitHub,Microsoft
   - RULE-SET,OneDrive,Microsoft
   - RULE-SET,Microsoft,Microsoft
@@ -223,17 +223,14 @@ rules:
   - GEOIP,CN,China,no-resolve
   - MATCH,兜底规则
 
-
 ######### 规则锚点 start #######
-
 # 规则集
 rule-anchor:
   # classical 规则相关
-  classical: &classical {type: http, interval: 86400, behavior: classical, format: text}
-
+  classical: &classical {type: http, interval: 43200, behavior: classical, format: text, proxy: GlobalGFW}
 ######### 规则锚点 end #######
 
-# 订阅规则集
+# 订阅规则
 rule-providers:
 # 广告拦截
   Adrules:
@@ -247,9 +244,6 @@ rule-providers:
     <<: *classical
     url: "https://raw.githubusercontent.com/axcsz/Collect/master/Ruleset/Other/Google.list"
 # 微软服务
-  Copilot:
-    <<: *classical
-    url: "https://raw.githubusercontent.com/axcsz/Collect/master/Ruleset/Other/Copilot.list"
   GitHub:
     <<: *classical
     url: "https://raw.githubusercontent.com/axcsz/Collect/master/Ruleset/Other/GitHub.list"
