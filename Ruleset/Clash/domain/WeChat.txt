@@ -1,0 +1,24 @@
+#!name = WeChat
+#!date = 2023-12-15 10:00
+
+
+# WeChat
+dl.wechat.com
+sgfindershort.wechat.com
+sgilinkshort.wechat.com
+sglong.wechat.com
+sgminorshort.wechat.com
+sgshort.wechat.com
+tencentmap.wechat.com
++.qlogo.cn
++.qpic.cn
++.servicewechat.com
++.tenpay.com
++.wechat.com
++.wechatlegal.net
++.wechatpay.com
++.weixin.com
++.weixin.qq.com
++.weixinbridge.com
++.weixinsxy.com
++.wxapp.tc.qq.com
