@@ -1,3 +1,7 @@
+#!name = YouTube & YouTube Music
+#!date = 2024-05-22 10:00
+#!
+
 +.youtube
 +.youtube.ru
 +.youtube.az
