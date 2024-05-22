@@ -3,25 +3,6 @@
 
 
 # WeChat
-dl.wechat.com
-sgfindershort.wechat.com
-sgilinkshort.wechat.com
-sglong.wechat.com
-sgminorshort.wechat.com
-sgshort.wechat.com
-tencentmap.wechat.com
-+.qlogo.cn
-+.qpic.cn
-+.servicewechat.com
-+.tenpay.com
-+.wechat.com
-+.wechatlegal.net
-+.wechatpay.com
-+.weixin.com
-+.weixin.qq.com
-+.weixinbridge.com
-+.weixinsxy.com
-+.wxapp.tc.qq.com
 101.32.104.4/32,no-resolve
 101.32.104.41/32,no-resolve
 101.32.104.56/32,no-resolve
