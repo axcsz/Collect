@@ -156,7 +156,6 @@ proxy-groups:
   - {name: 媒体, <<: *pg}
   - {name: 海外, <<: *pg}
   - {name: 苹果, type: select, proxies: [直连, 海外]}
-  - {name: 回家, type: select, proxies: [直连, CN1, CN2]}
   # 地区分组筛选
   - {name: 香港, <<: *at, filter: "(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|深|美)).)*$"}
   - {name: 台湾, <<: *at, filter: "(?=.*(台|TW|(?i)Taiwan))^((?!(港|日|韩|新|美)).)*$" }
@@ -170,7 +169,7 @@ proxy-groups:
 rules:
   - RULE-SET,Adrules_domainset,REJECT
   - RULE-SET,AdsBlock,REJECT
-  - RULE-SET,Lan,回家,no-resolve
+  - RULE-SET,Lan,直连
   - RULE-SET,Game,游戏
   - RULE-SET,OpenAI,智能
   - RULE-SET,Twitter,社交
