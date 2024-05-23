@@ -5,7 +5,7 @@
 
 ######### 锚点 start #######
 # 这里是订阅更新和延迟测试相关的
-p: &p {type: http, interval: 1800, health-check: {enable: true, url: https://www.gstatic.com/generate_204, interval: 300}, proxy: DIRECT}
+p: &p {type: http, interval: 1800, health-check: {enable: true, url: https://www.gstatic.com/generate_204, interval: 300}}
 
 
 # url 里填写自己的订阅,名称不能重复
@@ -126,13 +126,13 @@ rules:
 ######### 规则锚点 #######
 rule-anchor:
   # ipcidr 规则相关
-  ip: &ip {type: http, interval: 43200, behavior: ipcidr, format: text, proxy: 微软}
+  ip: &ip {type: http, interval: 43200, behavior: ipcidr, format: text}
 
   # domain 规则相关
-  domain: &domain {type: http, interval: 43200, behavior: domain, format: text, proxy: 微软}
+  domain: &domain {type: http, interval: 43200, behavior: domain, format: text}
 
   # classical 规则相关
-  classical: &classical {type: http, interval: 43200, behavior: classical, format: text, proxy: 微软}
+  classical: &classical {type: http, interval: 43200, behavior: classical, format: text}
 
 
 # 规则集
