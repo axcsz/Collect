@@ -13,8 +13,6 @@ proxy-providers:
   provider1:
     <<: *p
     url: ""
-    override:
-      additional-prefix: "[此处填写机场名字]"
 
 
 # 开启 IPv6 总开关，关闭阻断所有 IPv6 链接和屏蔽 DNS 请求 AAAA 记录 true/false
