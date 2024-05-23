@@ -75,13 +75,13 @@ proxies:
 pg: &pg {type: select, proxies: [香港, 台湾, 美国, 狮城, 日本, 韩国, 其他]}
 
 # 手动选择策略
-mt: &mt {type: select, include-all-providers: true}
+mt: &mt {type: select, include-all: true}
 
 # 自动优选策略
-ac: &ac {type: url-test, include-all-providers: true, url: https://www.gstatic.com/generate_204, tolerance: 10, interval: 300}
+ac: &ac {type: url-test, include-all: true, url: https://www.gstatic.com/generate_204, tolerance: 10, interval: 300}
 
 # 负载均衡策略
-lb: &lb {type: load-balance, include-all-providers: true, url: https://www.gstatic.com/generate_204, tolerance: 10, interval: 300, strategy: consistent-hashing}
+lb: &lb {type: load-balance, include-all: true, url: https://www.gstatic.com/generate_204, tolerance: 10, interval: 300, strategy: consistent-hashing}
 
 # 策略组
 proxy-groups:
