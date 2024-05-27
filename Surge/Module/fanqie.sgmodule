@@ -5,14 +5,14 @@
 #!date= 2024-05-27 11:30
 
 [Rule]
-AND,((DOMAIN-KEYWORD,zijie,extended-matching), (DOMAIN-KEYWORD,ad,extended-matching)),REJECT
+AND,((DOMAIN-KEYWORD,zijie,extended-matching),(DOMAIN-KEYWORD,ad,extended-matching)),REJECT
 AND,((DOMAIN-SUFFIX,zijieapi.com,extended-matching),(DOMAIN-KEYWORD,ad,extended-matching)),REJECT
 AND,((DOMAIN-KEYWORD,-ad-,extended-matching),(DOMAIN-SUFFIX,byteimg.com,extended-matching)),REJECT
 AND,((DOMAIN-KEYWORD,gecko,extended-matching),(DOMAIN-SUFFIX,zijieapi.com,extended-matching)),REJECT
 AND,((DOMAIN-KEYWORD,minigame,extended-matching),(DOMAIN-SUFFIX,zijieapi.com,extended-matching)),REJECT
 AND,((DOMAIN-KEYWORD,ads,extended-matching),(DOMAIN-KEYWORD,normal,extended-matching),(DOMAIN-SUFFIX,zijieapi.com,extended-matching)),REJECT
-DOMAIN, log5-applog.fqnovel.com, REJECT
-DOMAIN, rtlog5-applog.fqnovel.com, REJECT
+DOMAIN,log5-applog.fqnovel.com,REJECT
+DOMAIN,rtlog5-applog.fqnovel.com,REJECT
 DOMAIN-KEYWORD,bdurl,REJECT,extended-matching
 DOMAIN-KEYWORD,zjurl,REJECT,extended-matching
 DOMAIN-KEYWORD,snssdk,REJECT,extended-matching
