@@ -21,12 +21,17 @@ DOMAIN-SUFFIX,adukwai.com
 
 # ===== F =====
 # 番茄小说
-DOMAIN,dig.zjurl.cn
-DOMAIN,dig.bdurl.net
-DOMAIN,is.snssdk.com
-DOMAIN,i-hl.snssdk.com
+DOMAIN-KEYWORD,zjurl.cn
+DOMAIN-KEYWORD,bdurl.net
+DOMAIN-SUFFIX,snssdk.com
 DOMAIN,log5-applog.fqnovel.com
 DOMAIN,rtlog5-applog.fqnovel.com
+AND,((DOMAIN-KEYWORD,zijie),(DOMAIN-KEYWORD,ad))
+AND,((DOMAIN-KEYWORD,-ad-),(DOMAIN-SUFFIX,byteimg.com))
+AND,((DOMAIN-KEYWORD,gecko),(DOMAIN-SUFFIX,zijieapi.com))
+AND,((DOMAIN-KEYWORD,minigame),(DOMAIN-SUFFIX,zijieapi.com))
+AND,((DOMAIN-KEYWORD,ads),(DOMAIN-KEYWORD,normal),(DOMAIN-SUFFIX,zijieapi.com))
+URL-REGEX,^http:\/\/sf3-be-pack\.pglstatp-toutiao\.com\/obj\/ad-app-package\/
 
 # ===== J =====
 # 京东
