@@ -1,27 +1,29 @@
 #!name = Block ads | 番茄小说
-#!desc = 名称： 番茄小说 拦截广告 \n作者： 可莉🅥 app2smile EAlyce \n说明： 开屏广告、移除文章底部和章末广告、移除听书页面广告、移除悬浮部件和底栏多余的福利标签。
-#!author = 可莉🅥 app2smile EAlyce
+#!desc = 名称： 番茄小说 拦截广告 \n作者： 可莉🅥 app2smile \n说明： 开屏广告、移除文章底部和章末广告、移除听书页面广告、移除悬浮部件和底栏多余的福利标签。
+#!author = 可莉🅥 app2smile
 #!category = 🚫 Block ads
-#!date= 2024-05-27 11:30
+#!date= 2024-05-27 15:50
 
 [Rule]
-AND,((DOMAIN-KEYWORD,zijie,extended-matching),(DOMAIN-KEYWORD,ad,extended-matching)),REJECT
-AND,((DOMAIN-SUFFIX,zijieapi.com,extended-matching),(DOMAIN-KEYWORD,ad,extended-matching)),REJECT
-AND,((DOMAIN-KEYWORD,-ad-,extended-matching),(DOMAIN-SUFFIX,byteimg.com,extended-matching)),REJECT
-AND,((DOMAIN-KEYWORD,gecko,extended-matching),(DOMAIN-SUFFIX,zijieapi.com,extended-matching)),REJECT
-AND,((DOMAIN-KEYWORD,minigame,extended-matching),(DOMAIN-SUFFIX,zijieapi.com,extended-matching)),REJECT
-AND,((DOMAIN-KEYWORD,ads,extended-matching),(DOMAIN-KEYWORD,normal,extended-matching),(DOMAIN-SUFFIX,zijieapi.com,extended-matching)),REJECT
+URL-REGEX,^http:\/\/sf3-be-pack\.pglstatp-toutiao\.com\/obj\/ad-app-package\/,REJECT,extended-matching
+DOMAIN-KEYWORD,zjurl.cn,REJECT,extended-matching
+DOMAIN-KEYWORD,bdurl.net,REJECT,extended-matching
+DOMAIN-SUFFIX,snssdk.com,REJECT,extended-matching
 DOMAIN,log5-applog.fqnovel.com,REJECT,extended-matching
 DOMAIN,rtlog5-applog.fqnovel.com,REJECT,extended-matching
-DOMAIN,dig.zjurl.cn,REJECT,extended-matching
-DOMAIN,dig.bdurl.net,REJECT,extended-matching
-DOMAIN,is.snssdk.com,REJECT,extended-matching
-DOMAIN,i-hl.snssdk.com,REJECT,extended-matching
+AND,((DOMAIN-KEYWORD,zijie),(DOMAIN-KEYWORD,ad)),REJECT,extended-matching
+AND,((DOMAIN-KEYWORD,-ad-),(DOMAIN-SUFFIX,byteimg.com)),REJECT,extended-matching
+AND,((DOMAIN-KEYWORD,gecko),(DOMAIN-SUFFIX,zijieapi.com)),REJECT,extended-matching
+AND,((DOMAIN-KEYWORD,minigame),(DOMAIN-SUFFIX,zijieapi.com)),REJECT,extended-matching
+AND,((DOMAIN-KEYWORD,ads),(DOMAIN-KEYWORD,normal),(DOMAIN-SUFFIX,zijieapi.com)),REJECT,extended-matching
+URL-REGEX,^http:\/\/sf3-be-pack\.pglstatp-toutiao\.com\/obj\/ad-app-package\/,REJECT,extended-matching
+AND,((DOMAIN-KEYWORD,tnc),(AND,((OR,((DOMAIN-KEYWORD,-bjlgy),(DOMAIN-KEYWORD,-alisc),(DOMAIN-KEYWORD,-aliec))),(OR,((DOMAIN-SUFFIX,snssdk.com),(DOMAIN-SUFFIX,toutiaoapi.com),(DOMAIN-SUFFIX,bytedance.com),(DOMAIN-SUFFIX,zijieapi.com)))))),REJECT,extended-matching
 
 [URL Rewrite]
-^http:\/\/sf3-be-pack\.pglstatp-toutiao\.com\/obj\/ad-app-package\/ - reject
 ^https:\/\/sf3-fe-tos\.pglstatp-toutiao\.com\/obj\/ad-pattern\/ - reject
 ^https:\/\/lf-cdn-tos\.bytescm\.com\/obj\/static\/ad\/ - reject
+# 域名解析
+^https:\/\/tnc3-alisc1\.zijieapi\.com\/get_domains\/ - reject
 
-[Mitm]
-hostname = sf3-fe-tos.pglstatp-toutiao.com, tnc3-alisc1.zijieapi.com, api-access.pangolin-sdk-toutiao*.com, lf-cdn-tos.bytescm.com, is.snssdk.com
+[MITM]
+hostname = %APPEND% sf3-fe-tos.pglstatp-toutiao.com, tnc3-alisc1.zijieapi.com, api-access.pangolin-sdk-toutiao*.com, lf-cdn-tos.bytescm.com, is.snssdk.com
