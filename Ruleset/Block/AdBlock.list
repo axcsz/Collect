@@ -21,6 +21,12 @@ DOMAIN-SUFFIX,adukwai.com
 
 # ===== F =====
 # 番茄小说
+DOMAIN,dig.zjurl.cn
+DOMAIN,dig.bdurl.net
+DOMAIN,is.snssdk.com
+DOMAIN,i-hl.snssdk.com
+DOMAIN,log5-applog.fqnovel.com
+DOMAIN,rtlog5-applog.fqnovel.com
 
 # ===== J =====
 # 京东
