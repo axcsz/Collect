@@ -16,6 +16,7 @@ DOMAIN,rtlog5-applog.fqnovel.com,REJECT,extended-matching
 DOMAIN,dig.zjurl.cn,REJECT,extended-matching
 DOMAIN,dig.bdurl.net,REJECT,extended-matching
 DOMAIN,is.snssdk.com,REJECT,extended-matching
+DOMAIN,i-hl.snssdk.com,REJECT,extended-matching
 
 [URL Rewrite]
 ^http:\/\/sf3-be-pack\.pglstatp-toutiao\.com\/obj\/ad-app-package\/ - reject
