@@ -1,6 +1,6 @@
-#!name = 拦截广告&补充
-#!date = 2024-05-29 10:00
-
+#!name = 广告拦截 & 补充版
+#!date = 2024-05-29 10:30
+#!author = 可莉🅥
 
 # ===== A =====
 # 艾狄墨搏 - 广告服务商
@@ -38,8 +38,7 @@ URL-REGEX,^https:\/\/lf-cdn-tos\.bytescm\.com\/obj\/static\/ad\/
 URL-REGEX,^https:\/\/tnc3-alisc1\.zijieapi\.com\/get_domains\/
 
 # ===== J =====
-# 京东
-# 弃用地址
+# 京东 - 弃用地址
 DOMAIN,waapdg.jd.com
 # 极光 - 广告服务商
 DOMAIN-SUFFIX,jiguang.cn
@@ -69,9 +68,9 @@ DOMAIN-SUFFIX,v1d.szbdyd.com
 URL-REGEX,^http:\/\/cdn\.wup\.huya\.com\/launch\/queryHttpDns$
 
 # ===== K =====
-# 酷我&酷狗音乐去广告
+# 酷我音乐去广告
 DOMAIN,splashimgbssdl.yun.kugou.com
-DOMAIN,report.tencentmusic.com
+DOMAIN,report.tencentmusic.co
 URL-REGEX,^http:\/\/wapi\.kuwo\.cn\/openapi\/v1\/album\/adBar
 URL-REGEX,^http:\/\/wapi\.kuwo\.cn\/openapi\/v1\/app\/pasterAdvert
 URL-REGEX,^http:\/\/mobilead\.kuwo\.cn\/MobileAdServer
@@ -132,15 +131,12 @@ DOMAIN-SUFFIX,o1098464.ingest.sentry.io
 # ===== S =====
 # 收钱吧 - 买单小程序去广告
 DOMAIN,ads-shopping.shouqianba.com
-
 # ===== T =====
 # 天目 - 广告服务商
 DOMAIN,sdk.tianmu.mobi
 # 腾讯优量汇 - 广告服务商
 DOMAIN,mazu.m.qq.com
 DOMAIN,sdk.e.qq.com
-# 腾讯
-DOMAIN,tmead.y.qq.com-NO-DROP
 # 淘宝去广告
 DOMAIN,adashx.m.taobao.com
 DOMAIN,h-adashx.ut.taobao.com
@@ -151,9 +147,7 @@ DOMAIN-SUFFIX,doubleclick.net
 
 # ===== W =====
 # 微信小程序通用
-DOMAIN,wxsnsdy.wxs.qq.com
 DOMAIN,wxsmsdy.video.qq.com
-DOMAIN,wxsnsdythumb.wxs.qq.com
 
 # ===== X =====
 # 小象买菜 - 兜底TCP请求下发广告
@@ -169,7 +163,7 @@ IP-CIDR,203.76.217.243/32,no-resolve
 IP-CIDR,203.76.217.37/32,no-resolve
 IP-CIDR6,2405:1480:3000:303f::303f/128,no-resolve
 # 小米
-DOMAIN,sdkconfig.ad.xiaomi.com
+DOMAIN,sdkconfig.ad.xiaomi.com-DROP
 DOMAIN,data.mistat.xiaomi.com
 DOMAIN,tracking.intl.miui.com
 
@@ -187,10 +181,14 @@ IP-CIDR,122.229.8.47/32,no-resolve
 IP-CIDR,122.229.29.89/32,no-resolve
 # 字节跳动 - 广告服务商
 DOMAIN-KEYWORD,-tos.pstatp.com
+DOMAIN,toblog.ctobsnssdk.com
+DOMAIN,mssdk-bu.bytedance.com
+DOMAIN-KEYWORD,-be-pack-sign.pglstatp-toutiao.com
 
+# ===== other =====
+IP-CIDR,5.5.5.5/32,no-resolve
 
 # ===== PornAds =====
-IP-CIDR,5.5.5.5/32,no-resolve
 DOMAIN,4lke.online
 DOMAIN,a.adtng.com
 DOMAIN,a.labadena.com
