@@ -186,6 +186,7 @@ DOMAIN-KEYWORD,-tos.pstatp.com
 
 
 # ===== PornAds =====
+IP-CIDR,5.5.5.5/32,no-resolve
 DOMAIN,4lke.online
 DOMAIN,a.adtng.com
 DOMAIN,a.labadena.com
