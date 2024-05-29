@@ -1,6 +1,6 @@
 #!name = 拦截广告
-#!date = 2024-05-18 11:00
-
+#!date = 2024-05-18 12:40
+#!author = RuCu6
 
 # ======= A ======= #
 # 阿里巴巴
@@ -70,17 +70,24 @@ DOMAIN,pageviewp.icbc.com.cn
 DOMAIN-SUFFIX,mall.icbc.com.cn
 # 广告联盟
 DOMAIN,ad.zijieapi.com
-DOMAIN,i.snssdk.com
+DOMAIN,init.supersonicads.com
 DOMAIN,is.snssdk.com
 DOMAIN,open.e.kuaishou.com
 DOMAIN,open.kuaishou.com
 DOMAIN,pagead2.googlesyndication-cn.com
 DOMAIN,pagead2.googlesyndication.com
+DOMAIN,ws.tapjoyads.com
 DOMAIN,www.googleadservices.com
 DOMAIN-SUFFIX,ads.linkedin.com
+DOMAIN-SUFFIX,ads.vungle.com
 DOMAIN-SUFFIX,adservice.google.com
+DOMAIN-SUFFIX,applovin.com
+DOMAIN-SUFFIX,applvn.com
+DOMAIN-SUFFIX,appsflyer.com
+DOMAIN-SUFFIX,appsflyersdk.com
 DOMAIN-SUFFIX,kuaishouzt.com
 DOMAIN-SUFFIX,miaozhen.com
+DOMAIN-SUFFIX,unityads.unity3d.com
 DOMAIN-KEYWORD,-ad-sign.byteimg.com
 DOMAIN-KEYWORD,ads.g.doubleclick
 DOMAIN-KEYWORD,asiad.byteactivity
@@ -168,6 +175,8 @@ DOMAIN,id.hadron.ad.gt
 DOMAIN-KEYWORD,-adsystem.com
 
 # ======= T ======= #
+# 太平洋保险
+DOMAIN,a.cpic.com.cn
 # 腾讯
 DOMAIN,adsmind.gdtimg.com
 DOMAIN,info4.video.qq.com
@@ -243,6 +252,3 @@ DOMAIN,zxid-m.mobileservice.cn
 IP-CIDR,103.41.167.237/32,no-resolve
 IP-CIDR,118.89.204.198/32,no-resolve
 IP-CIDR6,2402:4e00:1200:ed00:0:9089:6dac:96b6/128,no-resolve
-
-# ======= other ======= #
-IP-CIDR,5.5.5.5/32,no-resolve
