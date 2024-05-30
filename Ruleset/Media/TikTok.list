@@ -1,8 +1,10 @@
 #!name = TikTok
-#!date = 2024-05-15 19:00
-
+#!date = 2024-05-30 19:00
+#!author = 可莉 ACL4SSR
 
 # TikTok
+USER-AGENT,TikTok*
+DOMAIN-KEYWORD,tiktokcdn
 DOMAIN,api.snapkit.com
 DOMAIN,cocacola.co.jp
 DOMAIN,courses.snapsolve.com
@@ -38,7 +40,6 @@ DOMAIN,pull-rtmp-l1-hs.pstatp.com
 DOMAIN,pull-rtmp-l1-mus.pstatp.com
 DOMAIN,pull-rtmp-l6-hs.pstatp.com
 DOMAIN,roovza-launches.appsflyersdk.com
-DOMAIN,sessions.bugsnag.com
 DOMAIN-SUFFIX,bytedance.com
 DOMAIN-SUFFIX,bytedance.net
 DOMAIN-SUFFIX,bytedapm.com
