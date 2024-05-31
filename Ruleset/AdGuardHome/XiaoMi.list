@@ -125,6 +125,7 @@
 ||userapi.hpplay.cn
 ||vipauth.hpplay.cn
 ||devicemgr.hpplay.cn
+||o1098464.ingest.sentry.io
 ||cbjs.baidu.com
 ||list.video.baidu.com
 ||play.baidu.com
@@ -148,7 +149,6 @@
 ||fun.tv
 ||hitvs.cn
 ||hljtv.com
-||iqiyi.com
 ||qiyi.com
 ||agn.aty.sohu.com
 ||itc.cn
@@ -161,17 +161,12 @@
 ||pps.tv
 ||ppsimg.com
 ||PPTV.com
-||v.qq.com
 ||l.qq.com
 ||video.sina.com.cn
 ||tudou.com
 ||wasu.cn
 ||analytics-union.xunlei.com
 ||kankan.xunlei.com
-||youku.com
 ||hunantv.com
 ||zimuzu.tv
 ||apiad.xiaomi.com
-
-# other
-||o1098464.ingest.sentry.io
