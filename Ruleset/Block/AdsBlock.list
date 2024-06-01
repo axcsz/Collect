@@ -1,5 +1,5 @@
 #!name = 拦截广告
-#!date = 2024-05-18 12:40
+#!date = 2024-06-01 07:00
 #!author = RuCu6
 
 # ======= A ======= #
@@ -214,7 +214,13 @@ DOMAIN,wxsnsdythumb.wxs.qq.com
 # 小米
 DOMAIN,sdkconfig.ad.xiaomi.com
 
+
 # ======= Y ======= #
+# 移花宫
+DOMAIN,tong.8888888888.bid
+DOMAIN-KEYWORD,kc.saigmpl.com
+DOMAIN-KEYWORD,kcc.fwxhvvd.com
+DOMAIN-KEYWORD,kg.oiocklg.com
 # 优酷 & 菜鸟
 DOMAIN,acs4baichuan.m.taobao.com
 DOMAIN,adsmind.ugdtimg.com
