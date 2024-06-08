@@ -1,8 +1,12 @@
 #!name = WeChat
-#!date = 2023-12-15 10:00
+#!desc = 分流规则
+#!date = 2024-06-08 10:30
+#!author = RuCu6 ACL4SSR
 
 
 # WeChat
+USER-AGENT,WeChat*
+USER-AGENT,MicroMessenger*
 DOMAIN,dl.wechat.com
 DOMAIN,sgfindershort.wechat.com
 DOMAIN,sgilinkshort.wechat.com
