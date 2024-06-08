@@ -1,6 +1,8 @@
 #!name = Game Download CN
-#!date = 2024-05-15 19:00
-#!
+#!desc = 分流规则
+#!date = 2024-06-08 10:30
+#!author = 
+
 
 # EPIC 游戏下载、更新[中国]
 DOMAIN,epicgames-download1-1251447533.file.myqcloud.com
