@@ -1,6 +1,8 @@
 #!name = 国内直连
-#!date = 2024-03-31 10:00
-#!
+#!desc = 分流规则
+#!date = 2024-06-08 10:30
+#!author = ACL4SSR
+
 
 # MyList
 DOMAIN-SUFFIX,13th.tech
