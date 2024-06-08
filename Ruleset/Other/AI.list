@@ -1,6 +1,8 @@
 #!name = AI
-#!date = 2024-05-15 18:38
-#!
+#!desc = 分流规则
+#!date = 2024-06-08 10:30
+#!author = 可莉🅥
+
 
 # ChatGPT
 AND,((DOMAIN-KEYWORD, chatgpt-async-webps-prod-eastus-), (DOMAIN-KEYWORD, .webpubsub.azure.com))
