@@ -1,7 +1,10 @@
 #!name = Telegram
-#!date = 2024-04-21 16:00
+#!desc = 分流规则
+#!date = 2024-06-08 10:30
+#!author = ACL4SSR
 
 
+# Telegram
 DOMAIN-SUFFIX,comments.app
 DOMAIN-SUFFIX,contest.com
 DOMAIN-SUFFIX,graph.org
@@ -27,6 +30,7 @@ DOMAIN-SUFFIX,usercontent.dev
 DOMAIN-KEYWORD,telegram
 DOMAIN,events-gateway.ncdev.site
 DOMAIN-SUFFIX,walletbot.me
+IP-CIDR,109.239.140.0/24,no-resolve
 
 # Nicegram
 DOMAIN-KEYWORD,nicegram
