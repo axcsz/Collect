@@ -1,23 +1,25 @@
 #!name = mihomo 配置文件
-#!date = 2024-05-20 20:00
+#!date = 2024-06-08 17:00
 #!source = https://wiki.metacubex.one/example/conf/#__tabbed_1_3
+#!author = axcsz
+
 
 ######### 机场锚点 start #######
 # 机场订阅更新 & 延迟测试
-pr: &pr {type: http, interval: 3600, health-check: {enable: true, url: https://www.gstatic.com/generate_204, interval: 300}, proxy: DIRECT}
+pr: &pr {type: http, interval: 3600, health-check: {enable: true, url: https://www.gstatic.com/generate_204, interval: 300}, proxy: 直连}
 
 ######### 机场锚点 end #######
 
 # 机场订阅，名称不能重复
 proxy-providers:
   # 机场1
-  Airport 01:
+  Airport_01:
     <<: *pr
     url: "此处填写机场订阅连接"
     override:
       additional-prefix: "【机场名称】"
   # 机场2
-  Airport 02:
+  Airport_02:
     <<: *pr
     url: "此处填写机场订阅连接"
     override:
@@ -26,20 +28,18 @@ proxy-providers:
 # 全局配置
 # 开启 IPv6 总开关，关闭阻断所有 IPv6 链接和屏蔽 DNS 请求 AAAA 记录
 ipv6: true
-# 运行模式（rule/global/direct）
+# 运行模式：rule/global/direct
 ## rule 规则匹配、global 全局代理、direct 全局直连
 mode: rule
 # UDP 开关
 udp: true
-# 日志输出（silent/error/warning/info/debug）
+# 日志输出：silent/error/warning/info/debug
 ## silent 不输出、error 仅输出发生错误、warning 输出发生错误但不影响运行的日志、info 输出一般运行的内容、debug 全部内容
 log-level: info
-# 允许局域网的连接（可用来共享加速）
+# 允许局域网的连接，可用来共享加速
 allow-lan: true
-# 绑定 IP 地址，仅作用于 allow-lan 为 true，'*'表示所有地址
-bind-address: "*"
 # 混合端口 HTTP和SOCKS5用一个端口
-mixed-port: 56789
+mixed-port: 7891
 # 更换延迟计算方式,去除握手等额外延迟
 unified-delay: false
 # TCP 并发连接所有 IP, 将使用最快握手的 TCP
@@ -124,16 +124,18 @@ dns:
     - https://223.5.5.5/dns-query#h3=true
     - https://223.6.6.6/dns-query#h3=true
 
-
 # 单个出站节点
 proxies:
-# 直连节点
-- name: "直连"
-  type: direct
-  udp: true
-  tfo: true
-  mptcp: true
-  ip-version: ipv6-prefer
+  # 直连
+  - name: "直连"
+    type: direct
+    ip-version: ipv6-prefer
+    udp: true
+    tfo: true
+    mptcp: true
+  # 拦截
+  - name: "拦截"
+    type: reject
 
 ######### 策略锚点 start #######
 # 策略组相关
@@ -150,14 +152,17 @@ at: &at {type: url-test, include-all-providers: true, url: https://www.gstatic.c
 # 策略组
 proxy-groups:
   # 策略分组
+  - {name: 全球, <<: *pg}
+  - {name: 媒体, <<: *pg}
   - {name: 谷歌, <<: *pg}
   - {name: 微软, <<: *pg}
   - {name: 社交, <<: *pg}
   - {name: 智能, <<: *pg}
   - {name: 游戏, <<: *pg}
-  - {name: 媒体, <<: *pg}
-  - {name: 全球, <<: *pg}
   - {name: 苹果, type: select, proxies: [直连, 全球]}
+  - {name: 国内, type: select, proxies: [直连, 全球]}
+  - {name: 兜底, type: select, proxies: [全球, 直连]}
+
   # 优选分组
   - {name: 香港, <<: *at, filter: "(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|深|美)).)*$"}
   - {name: 台湾, <<: *at, filter: "(?=.*(台|TW|(?i)Taiwan))^((?!(港|日|韩|新|美)).)*$" }
@@ -169,9 +174,9 @@ proxy-groups:
 
 # 分流策略
 rules:
-  - RULE-SET,Adrules_domainset,REJECT
-  - RULE-SET,AdsBlock,REJECT
-  - RULE-SET,Lan,直连
+  - RULE-SET,Adrules,拦截
+  - RULE-SET,AdBlock,拦截
+  - RULE-SET,AdsBlock,拦截
   - RULE-SET,Game,游戏
   - RULE-SET,OpenAI,智能
   - RULE-SET,Twitter,社交
@@ -187,10 +192,11 @@ rules:
   - RULE-SET,GlobalMedia,媒体
   - RULE-SET,GlobalGFW,全球
   - RULE-SET,Apple,苹果
-  - RULE-SET,ChinaMedia,直连
-  - RULE-SET,China,直连
-  - GEOIP,CN,直连,no-resolve
-  - MATCH,全球
+  - RULE-SET,Lan,国内
+  - RULE-SET,ChinaMedia,国内
+  - RULE-SET,China,国内
+  - GEOIP,CN,国内,no-resolve
+  - MATCH,兜底
 
 ######### 规则锚点 #######
 rule-anchor:
@@ -209,9 +215,12 @@ rule-anchor:
 rule-providers:
 # domain 规则集
   # 广告拦截
-  Adrules_domainset:
+  Adrules:
     <<: *d
     url: "https://adrules.top/adrules_domainset.txt"
+  AdBlock:
+    <<: *c
+    url: "https://raw.githubusercontent.com/axcsz/Collect/master/Ruleset/Block/AdBlock.list"
   AdsBlock:
     <<: *c
     url: "https://raw.githubusercontent.com/axcsz/Collect/master/Ruleset/Block/AdsBlock.list"
@@ -282,7 +291,6 @@ rule-providers:
   Lan:
     <<: *c
     url: "https://raw.githubusercontent.com/axcsz/Collect/master/Ruleset/Local.list"
-
 
 # script
 script:
