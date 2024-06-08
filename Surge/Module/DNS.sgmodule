@@ -6,37 +6,37 @@
 
 [Rule]
 # DNS Leak from Shadowrocket Default
-DOMAIN-SUFFIX,dnsleaktest.com
-DOMAIN-SUFFIX,dnsleak.com
-DOMAIN-SUFFIX,expressvpn.com
-DOMAIN-SUFFIX,nordvpn.com
-DOMAIN-SUFFIX,surfshark.com
-DOMAIN-SUFFIX,ipleak.net
-DOMAIN-SUFFIX,perfect-privacy.com
-DOMAIN-SUFFIX,browserleaks.com
-DOMAIN-SUFFIX,browserleaks.org
-DOMAIN-SUFFIX,vpnunlimited.com
-DOMAIN-SUFFIX,whoer.net
-DOMAIN-SUFFIX,whrq.net
+DOMAIN-SUFFIX,dnsleaktest.com,FINAL
+DOMAIN-SUFFIX,dnsleak.com,FINAL
+DOMAIN-SUFFIX,expressvpn.com,FINAL
+DOMAIN-SUFFIX,nordvpn.com,FINAL
+DOMAIN-SUFFIX,surfshark.com,FINAL
+DOMAIN-SUFFIX,ipleak.net,FINAL
+DOMAIN-SUFFIX,perfect-privacy.com,FINAL
+DOMAIN-SUFFIX,browserleaks.com,FINAL
+DOMAIN-SUFFIX,browserleaks.org,FINAL
+DOMAIN-SUFFIX,vpnunlimited.com,FINAL
+DOMAIN-SUFFIX,whoer.net,FINAL
+DOMAIN-SUFFIX,whrq.net,FINAL
 
 # Astrill
-DOMAIN-SUFFIX,astrill.com
-DOMAIN-SUFFIX,astrill.org
-DOMAIN-SUFFIX,dnsleak.asn247.net
+DOMAIN-SUFFIX,astrill.com,FINAL
+DOMAIN-SUFFIX,astrill.org,FINAL
+DOMAIN-SUFFIX,dnsleak.asn247.net,FINAL
 
 # Surfshark
-DOMAIN-SUFFIX,surfshark.com
-DOMAIN-SUFFIX,surfsharkdns.com
+DOMAIN-SUFFIX,surfshark.com,FINAL
+DOMAIN-SUFFIX,surfsharkdns.com,FINAL
 
 # Pixelscan
-DOMAIN-SUFFIX,pixelscan.net
+DOMAIN-SUFFIX,pixelscan.net,FINAL
 
 # PING0
-DOMAIN,ipv4.ping0.cc
-DOMAIN,ipv6.ping0.cc
+DOMAIN,ipv4.ping0.cc,FINAL
+DOMAIN,ipv6.ping0.cc,FINAL
 
 # IPAPI.CO
-DOMAIN-SUFFIX,ipapi.co
+DOMAIN-SUFFIX,ipapi.co,FINAL
 
 # BrowserScan
-DOMAIN,ip-scan.adspower.net
+DOMAIN,ip-scan.adspower.net,FINAL
