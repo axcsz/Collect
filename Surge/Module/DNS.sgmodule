@@ -1,42 +1,42 @@
 #!name = DNS防泄露
-#!desc = 名称：DNS防泄露 \n作者：非正常人类研究中心 \n说明：专为小白设计的DNS防泄露，
+#!desc = 名称：DNS防泄露 \n作者：非正常人类研究中心 \n说明：专为小白设计的DNS防泄露，需要创建一个 DNS 策略组
 #!author = 非正常人类研究中心，你猜为什么会有这个插件呢？
 #!category = DNS防泄露
 #!date= 2024-01-11 21:38
 
 [Rule]
 # DNS Leak from Shadowrocket Default
-DOMAIN-SUFFIX,dnsleaktest.com,PROXY
-DOMAIN-SUFFIX,dnsleak.com,PROXY
-DOMAIN-SUFFIX,expressvpn.com,PROXY
-DOMAIN-SUFFIX,nordvpn.com,PROXY
-DOMAIN-SUFFIX,surfshark.com,PROXY
-DOMAIN-SUFFIX,ipleak.net,PROXY
-DOMAIN-SUFFIX,perfect-privacy.com,PROXY
-DOMAIN-SUFFIX,browserleaks.com,PROXY
-DOMAIN-SUFFIX,browserleaks.org,PROXY
-DOMAIN-SUFFIX,vpnunlimited.com,PROXY
-DOMAIN-SUFFIX,whoer.net,PROXY
-DOMAIN-SUFFIX,whrq.net,PROXY
+DOMAIN-SUFFIX,dnsleaktest.com,DNS
+DOMAIN-SUFFIX,dnsleak.com,DNS
+DOMAIN-SUFFIX,expressvpn.com,DNS
+DOMAIN-SUFFIX,nordvpn.com,DNS
+DOMAIN-SUFFIX,surfshark.com,DNS
+DOMAIN-SUFFIX,ipleak.net,DNS
+DOMAIN-SUFFIX,perfect-privacy.com,DNS
+DOMAIN-SUFFIX,browserleaks.com,DNS
+DOMAIN-SUFFIX,browserleaks.org,DNS
+DOMAIN-SUFFIX,vpnunlimited.com,DNS
+DOMAIN-SUFFIX,whoer.net,DNS
+DOMAIN-SUFFIX,whrq.net,DNS
 
 # Astrill
-DOMAIN-SUFFIX,astrill.com,PROXY
-DOMAIN-SUFFIX,astrill.org,PROXY
-DOMAIN-SUFFIX,dnsleak.asn247.net,PROXY
+DOMAIN-SUFFIX,astrill.com,DNS
+DOMAIN-SUFFIX,astrill.org,DNS
+DOMAIN-SUFFIX,dnsleak.asn247.net,DNS
 
 # Surfshark
-DOMAIN-SUFFIX,surfshark.com,PROXY
-DOMAIN-SUFFIX,surfsharkdns.com,PROXY
+DOMAIN-SUFFIX,surfshark.com,DNS
+DOMAIN-SUFFIX,surfsharkdns.com,DNS
 
 # Pixelscan
-DOMAIN-SUFFIX,pixelscan.net,PROXY
+DOMAIN-SUFFIX,pixelscan.net,DNS
 
 # PING0
-DOMAIN,ipv4.ping0.cc,PROXY
-DOMAIN,ipv6.ping0.cc,PROXY
+DOMAIN,ipv4.ping0.cc,DNS
+DOMAIN,ipv6.ping0.cc,DNS
 
 # IPAPI.CO
-DOMAIN-SUFFIX,ipapi.co,PROXY
+DOMAIN-SUFFIX,ipapi.co,DNS
 
 # BrowserScan
-DOMAIN,ip-scan.adspower.net,PROXY
+DOMAIN,ip-scan.adspower.net,DNS
