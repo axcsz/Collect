@@ -1,6 +1,8 @@
 #!name = TikTok
-#!date = 2024-05-30 19:00
+#!desc = 分流规则
+#!date = 2024-06-08 10:30
 #!author = 可莉 ACL4SSR
+
 
 # TikTok
 USER-AGENT,TikTok*
