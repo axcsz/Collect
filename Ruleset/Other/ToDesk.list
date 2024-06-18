@@ -5,13 +5,17 @@
 
 
 # ToDesk
-PROCESS-NAME,CrashReport.exe
-PROCESS-NAME,DriverInstaller.exe
-PROCESS-NAME,SunloginClient.exe
-PROCESS-NAME,ToDesk.exe
-PROCESS-NAME,ToDesk_Service.exe
-PROCESS-NAME,ToDesk_Session.exe
-PROCESS-NAME,ToDesk_Setup.exe
+#Windows-Oray
 PROCESS-NAME,devcon.exe
+PROCESS-NAME,DriverInstaller.exe
+PROCESS-NAME,CrashReport.exe
+PROCESS-NAME,SunloginClient.exe
+
+#Windows-ToDesk
+PROCESS-NAME,ToDesk_Setup.exe
+PROCESS-NAME,ToDesk_Session.exe
+PROCESS-NAME,ToDesk_Service.exe
+PROCESS-NAME,ToDesk.exe
+
+#Windows-System
 PROCESS-NAME,mstsc.exe
-PROCESS-NAME-REGEX,(?i)ToDesk
