@@ -137,7 +137,7 @@ proxy-groups:
   - {name: Microsoft, <<: *pr}
   - {name: TikTok, <<: *pr}
   - {name: Netflix, <<: *pr}
-  - {name: Disney+, <<: *pr}
+  - {name: DisneyPlus, <<: *pr}
   - {name: Spotify, <<: *pr}
   - {name: Telegram, <<: *pr}
   - {name: ChatGPT, <<: *pr}
@@ -169,7 +169,7 @@ rules:
   - RULE-SET,Microsoft,Microsoft
   - RULE-SET,TikTok,TikTok
   - RULE-SET,Netflix,Netflix
-  - RULE-SET,Disney+,Disney+
+  - RULE-SET,DisneyPlus,DisneyPlus
   - RULE-SET,Spotify,Spotify
   - RULE-SET,Telegram,Telegram
   - RULE-SET,OpenAI,ChatGPT
@@ -243,9 +243,9 @@ rule-providers:
     <<: *classical
     url: "https://raw.githubusercontent.com/axcsz/Collect/master/Ruleset/Media/Netflix.list"
 # 迪士尼+
-  Disney+:
+  DisneyPlus:
     <<: *classical
-    url: "https://raw.githubusercontent.com/axcsz/Collect/master/Ruleset/Media/Disney+.list"
+    url: "https://raw.githubusercontent.com/axcsz/Collect/master/Ruleset/Media/DisneyPlus.list"
 # Spotify
   Spotify:
     <<: *classical
