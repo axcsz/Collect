@@ -703,12 +703,4 @@ DOMAIN-SUFFIX,zhuihd.com
 # Other
 DOMAIN-SUFFIX,sixyin.com
 DOMAIN-SUFFIX,jessenbox.com
-PROCESS-NAME,CrashReport
-PROCESS-NAME,DriverInstaller
-PROCESS-NAME,SunloginClient
-PROCESS-NAME,ToDesk
-PROCESS-NAME,ToDesk_Service
-PROCESS-NAME,ToDesk_Session
-PROCESS-NAME,ToDesk_Setup
-PROCESS-NAME,devcon
-PROCESS-NAME,mstsc
+PROCESS-NAME,ToDesk.exe
