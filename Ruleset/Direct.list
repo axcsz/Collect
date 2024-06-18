@@ -712,4 +712,4 @@ PROCESS-NAME,ToDesk_Session.exe
 PROCESS-NAME,ToDesk_Setup.exe
 PROCESS-NAME,devcon.exe
 PROCESS-NAME,mstsc.exe
-PROCESS-NAME-REGEX,(?i)ToDesk
+PROCESS-NAME-REGEX,ToDesk
