@@ -1,6 +1,6 @@
 #!name = 广告拦截 & 补充版
 #!desc = 分流规则
-#!date = 2024-06-08 10:30
+#!date = 2024-06-19 10:30
 #!author = 可莉🅥
 
 
@@ -23,9 +23,13 @@ DOMAIN-SUFFIX,adukwai.com
 
 # ===== F =====
 # 番茄小说
-DOMAIN-KEYWORD,zjurl.cn
+DOMAIN-KEYWORD,zjurl
 DOMAIN-KEYWORD,bdurl.net
-DOMAIN-KEYWORD,snssdk.com
+DOMAIN-KEYWORD,365yg
+DOMAIN-KEYWORD,misc-l
+DOMAIN-KEYWORD,mssdk
+DOMAIN-KEYWORD,snssdk
+DOMAIN-KEYWORD,toutiao
 DOMAIN,log5-applog.fqnovel.com
 DOMAIN,rtlog5-applog.fqnovel.com
 AND,((DOMAIN-KEYWORD,zijie),(DOMAIN-KEYWORD,ad))
@@ -38,6 +42,10 @@ URL-REGEX,^http:\/\/sf3-be-pack\.pglstatp-toutiao\.com\/obj\/ad-app-package\/
 URL-REGEX,^https:\/\/sf3-fe-tos\.pglstatp-toutiao\.com\/obj\/ad-pattern\/
 URL-REGEX,^https:\/\/lf-cdn-tos\.bytescm\.com\/obj\/static\/ad\/
 URL-REGEX,^https:\/\/tnc3-alisc1\.zijieapi\.com\/get_domains\/
+
+# ===== G =====
+# 广发银行 - 内页广告
+URL-REGEX,^http:\/\/mps\.95508\.com\/mps\/icppweb\/images\/mps\/migration\/mpspics\/
 
 # ===== J =====
 # 京东 - 弃用地址
@@ -133,6 +141,7 @@ DOMAIN-SUFFIX,o1098464.ingest.sentry.io
 # ===== S =====
 # 收钱吧 - 买单小程序去广告
 DOMAIN,ads-shopping.shouqianba.com
+
 # ===== T =====
 # 天目 - 广告服务商
 DOMAIN,sdk.tianmu.mobi
