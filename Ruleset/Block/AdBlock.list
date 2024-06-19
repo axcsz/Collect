@@ -29,7 +29,6 @@ DOMAIN-KEYWORD,365yg
 DOMAIN-KEYWORD,misc-l
 DOMAIN-KEYWORD,mssdk
 DOMAIN-KEYWORD,snssdk
-DOMAIN-KEYWORD,toutiao
 DOMAIN,log5-applog.fqnovel.com
 DOMAIN,rtlog5-applog.fqnovel.com
 AND,((DOMAIN-KEYWORD,zijie),(DOMAIN-KEYWORD,ad))
