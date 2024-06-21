@@ -183,7 +183,7 @@ rules:
   - RULE-SET,WeChat,China
   - RULE-SET,ChinaMedia,China
   - RULE-SET,China,China
-  - GEOIP,CN,China,no-resolve
+  - GEOIP,CN,China
   - MATCH,兜底规则
 
 # 规则集锚点
