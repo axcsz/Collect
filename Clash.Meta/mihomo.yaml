@@ -195,7 +195,7 @@ rules:
   - RULE-SET,Lan,国内
   - RULE-SET,ChinaMedia,国内
   - RULE-SET,China,国内
-  - GEOIP,CN,国内,no-resolve
+  - GEOIP,CN,国内
   - MATCH,兜底
 
 ######### 规则锚点 #######
