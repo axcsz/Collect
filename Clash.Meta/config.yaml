@@ -14,12 +14,12 @@ p: &p {type: http, interval: 1800, health-check: {enable: true, url: https://www
 
 # 机场订阅，名称不能重复
 proxy-providers:
-  Airport 01:
+  Airport_01:
     <<: *p
     url: "此处填写机场订阅地址"
     override:
       additional-prefix: "[此处填写机场名字]"
-  Airport 02:
+  Airport_02:
     <<: *p
     url: "此处填写机场订阅地址"
     override:
@@ -124,8 +124,6 @@ proxies:
 - name: "国内直连"
   type: direct
   udp: true
-  tfo: true
-  mptcp: true
 
 # 策略组
 proxy-groups:
