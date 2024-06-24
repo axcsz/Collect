@@ -7,4 +7,4 @@ mkdir -p Collect/Ruleset
 
 #--- Surge ---#
 # 广告规则 
-curl -L -o Collect-repo/Ruleset/AdsBlock.list "https://raw.githubusercontent.com/RuCu6/QuanX/main/Rules/MyBlockAds.list"
+curl -L -o Collect-repo/Ruleset/Block/AdsBlock.list "https://raw.githubusercontent.com/RuCu6/QuanX/main/Rules/MyBlockAds.list"
