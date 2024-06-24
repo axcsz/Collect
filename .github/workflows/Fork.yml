@@ -21,7 +21,7 @@ jobs:
 
     - name: Fork
       run: |
-        curl https://raw.githubusercontent.com/axcsz/Collect/X/Script/Fork.sh | sh
+        curl https://raw.githubusercontent.com/axcsz/Collect/master/Script/Fork.sh | sh
 
 ###### Surge
       # 适配规则
