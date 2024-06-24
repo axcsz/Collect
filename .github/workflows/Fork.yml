@@ -19,7 +19,7 @@ jobs:
         repository: axcsz/Collect
         path: Collect-repo
 
-    - name: Fork
+    - name: 复刻
       run: |
         curl https://raw.githubusercontent.com/axcsz/Collect/master/Script/Fork.sh | sh
 ###### Surge
@@ -75,7 +75,7 @@ jobs:
     - name: Copy custom rules
       run: |
         if [ -f "Collect-repo/Ruleset/Reject.list" ] ; then
-          cat Collect-repo/Ruleset/Block/Ads_RuCu6.list >> Collect-repo/Ruleset/Reject.list
+          cat Collect-repo/Ruleset/Ads_RuCu6.list >> Collect-repo/Ruleset/Reject.list
         else
           echo "$file not found."
         fi
