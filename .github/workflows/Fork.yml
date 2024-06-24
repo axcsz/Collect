@@ -16,10 +16,10 @@ jobs:
     - name: Checkout target repository
       uses: actions/checkout@v4.1.0
       with:
-        repository: Repcz/Collect
+        repository: axcsz/Collect
         path: Collect-repo
 
-    - name: Fork
+    - name: 复刻
       run: |
         curl https://raw.githubusercontent.com/axcsz/Collect/master/Script/Fork.sh | sh
 
