@@ -78,7 +78,7 @@ jobs:
     - name: Copy custom rules
       run: |
         if [ -f "Collect-repo/Ruleset/Block/Reject.list" ] ; then
-          cat Collect-repo/Ruleset/Block/AdsBlock.list.list >> Collect-repo/Ruleset/Block/Reject.list
+          cat Collect-repo/Ruleset/Block/AdsBlock.list >> Collect-repo/Ruleset/Block/Reject.list
         else
           echo "$file not found."
         fi
