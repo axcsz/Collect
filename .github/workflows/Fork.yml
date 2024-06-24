@@ -25,9 +25,9 @@ jobs:
 
 ###### Surge
       # 适配规则
-    - name: Edit Ruleset
+    - name: Edit Ruleset/Block
       run: |
-        cd Collect-repo/Ruleset
+        cd Collect-repo/Ruleset/Block
         for file in *.list; do
           if [ "$file" != "Lan.list" ] ; then
             sed -i -e 's/, /,/g' \
@@ -77,8 +77,8 @@ jobs:
       # 追加规则
     - name: Copy custom rules
       run: |
-        if [ -f "Collect-repo/Ruleset/Reject.list" ] ; then
-          cat Collect-repo/Ruleset/Ads_RuCu6.list >> Collect-repo/Ruleset/Reject.list
+        if [ -f "Collect-repo/Ruleset/Block/Reject.list" ] ; then
+          cat Collect-repo/Ruleset/Block/AdsBlock.list >> Collect-repo/Ruleset/Block/Reject.list
         else
           echo "$file not found."
         fi
@@ -86,7 +86,7 @@ jobs:
       # 去重排序
     - name: Remove duplicates and lines 
       run: |
-        cd Collect-repo/Ruleset
+        cd Collect-repo/Ruleset/Block
         shopt -s nullglob  # 避免没有匹配的文件时保留原始通配符
         for file in Reject.list; do
           if [ -f "$file" ]; then
