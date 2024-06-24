@@ -19,7 +19,7 @@ jobs:
         repository: axcsz/Collect
         path: Collect-repo
 
-    - name: 复刻
+    - name: Fork
       run: |
         curl https://raw.githubusercontent.com/axcsz/Collect/master/Script/Fork.sh | sh
 
@@ -98,8 +98,8 @@ jobs:
             echo "$file not found."
           fi
         done
-      shell: bash         
-    
+      shell: bash
+
 ###### Commit
     - name: Add and Commits
       run: |
@@ -115,7 +115,7 @@ jobs:
         fi
 
     - name: Cleanup Workflow
-      uses: Mattraks/delete-workflow-runs@master
+      uses: Mattraks/delete-workflow-runs@main
       with:
         retain_days: 0
         keep_minimum_runs: 2
