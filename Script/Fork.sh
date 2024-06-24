@@ -3,7 +3,7 @@
 #!/bin/bash
 
 # 创建规则目录
-mkdir -p Collect/Ruleset
+mkdir -p Collect/Ruleset/{Block,MediaOther}
 
 #--- Surge ---#
 
