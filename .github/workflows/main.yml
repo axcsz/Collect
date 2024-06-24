@@ -19,9 +19,9 @@ jobs:
         repository: axcsz/Collect
         path: Collect-repo
 
-    - name: Fork
+    - name: 复刻
       run: |
-        curl https://raw.githubusercontent.com/axcsz/Collect/master/Script/Fork.sh | sh
+        curl https://raw.githubusercontent.com/axcsz/Collect/mini/Script/Fork.sh | sh
 ###### Surge
       # 适配规则
     - name: Edit Ruleset
