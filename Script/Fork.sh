@@ -3,8 +3,9 @@
 #!/bin/bash
 
 # 创建规则目录
-mkdir -p Collect/Ruleset
+mkdir -p Collect/Ruleset/Block
 
 #--- Surge ---#
+
 # 广告规则 
 curl -L -o Collect-repo/Ruleset/Block/AdsBlock.list "https://raw.githubusercontent.com/RuCu6/QuanX/main/Rules/MyBlockAds.list"
