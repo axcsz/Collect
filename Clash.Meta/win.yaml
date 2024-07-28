@@ -160,7 +160,7 @@ proxy-groups:
   - {name: 社交, <<: *pg}
   - {name: 苹果, type: select, proxies: [直连, 国际]}
   - {name: 国内, type: select, proxies: [直连, 国际]}
-  - {name: 兜底, type: select, proxies: [全球, 直连]}
+  - {name: 兜底, type: select, proxies: [国际, 直连]}
 
   # 优选分组
   - {name: 香港, <<: *at, filter: "(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|深|美)).)*$"}
