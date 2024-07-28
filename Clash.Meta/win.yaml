@@ -1,7 +1,7 @@
 #!name = mihomo 配置文件
-#!date = 2024-06-08 17:00
+#!date = 2024-07-28 17:00
 #!source = https://wiki.metacubex.one/example/conf/#__tabbed_1_3
-#!author = axcsz
+#!author = thNylHx
 
 
 ######### 机场锚点 start #######
@@ -126,17 +126,12 @@ dns:
 
 # 单个出站节点
 proxies:
-  # 直连
-  - name: "直连"
-    type: direct
-    ip-version: ipv6-prefer
-    udp: true
-    tfo: true
-    mptcp: true
   # 拦截
-  - name: "拦截"
-    type: reject
+  - {name: 拦截, type: reject}
+  # 直连
+  - {name: 直连, type: direct, tfo: true, udp: true, mptcp: true, ip-version: ipv6-prefer}
 
+  
 ######### 策略锚点 start #######
 # 策略组相关
 pg: &pg {type: select, proxies: [香港, 台湾, 美国, 狮城, 日本, 韩国, 其他]}
@@ -152,15 +147,14 @@ at: &at {type: url-test, include-all-providers: true, url: https://www.gstatic.c
 # 策略组
 proxy-groups:
   # 策略分组
-  - {name: 全球, <<: *pg}
+  - {name: 国际, <<: *pg}
   - {name: 媒体, <<: *pg}
+  - {name: 智能, <<: *pg}
   - {name: 谷歌, <<: *pg}
   - {name: 微软, <<: *pg}
   - {name: 社交, <<: *pg}
-  - {name: 智能, <<: *pg}
-  - {name: 游戏, <<: *pg}
-  - {name: 苹果, type: select, proxies: [直连, 全球]}
-  - {name: 国内, type: select, proxies: [直连, 全球]}
+  - {name: 苹果, type: select, proxies: [直连, 国际]}
+  - {name: 国内, type: select, proxies: [直连, 国际]}
   - {name: 兜底, type: select, proxies: [全球, 直连]}
 
   # 优选分组
@@ -172,30 +166,37 @@ proxy-groups:
   - {name: 韩国, <<: *at, filter: "(?=.*(韩|KR|(?i)Korea))^((?!(台|日|港|新|美)).)*$"}
   - {name: 其他, <<: *mt, filter: "^(?!.*(港|台|日本|韩|坡|美|HK|US|TW|JP|KR|SG|Hong|Tai|Japan|Korea|Singapore|States))"}
 
-# 分流策略
+# 规则策略
 rules:
   - RULE-SET,Adrules,拦截
-  - RULE-SET,AdBlock,拦截
-  - RULE-SET,AdsBlock,拦截
-  - RULE-SET,Game,游戏
+  - RULE-SET,BlockAds,拦截
+  - RULE-SET,BlockPrivacy,拦截
   - RULE-SET,OpenAI,智能
-  - RULE-SET,Twitter,社交
-  - RULE-SET,Facebook,社交
-  - RULE-SET,Telegram,社交
   - RULE-SET,YouTube,谷歌
   - RULE-SET,Google,谷歌
+  - RULE-SET,GoogleIP,谷歌
   - RULE-SET,GitHub,微软
   - RULE-SET,OneDrive,微软
   - RULE-SET,Microsoft,微软
+  - RULE-SET,PayPal,社交
+  - RULE-SET,Twitter,社交
+  - RULE-SET,TwitterIP,社交
+  - RULE-SET,Facebook,社交
+  - RULE-SET,FacebookIP,社交
+  - RULE-SET,Instagram,社交
+  - RULE-SET,Telegram,社交
+  - RULE-SET,1Password,社交
   - RULE-SET,TikTok,媒体
+  - RULE-SET,Disney,媒体
   - RULE-SET,Netflix,媒体
+  - RULE-SET,NetflixIP,媒体
   - RULE-SET,GlobalMedia,媒体
-  - RULE-SET,GlobalGFW,全球
+  - RULE-SET,GlobalGFW,国际
   - RULE-SET,Apple,苹果
-  - RULE-SET,Lan,国内
-  - RULE-SET,ChinaMedia,国内
+  - RULE-SET,Local,国内
+  - RULE-SET,WeChat,国内
   - RULE-SET,China,国内
-  - GEOIP,CN,国内
+  - RULE-SET,ChinaIP,国内
   - MATCH,兜底
 
 ######### 规则锚点 #######
@@ -211,90 +212,45 @@ rule-anchor:
 
 ######### 规则锚点 end #######
 
-# 规则集
+# 规则集订阅
 rule-providers:
-# domain 规则集
-  # 广告拦截
-  Adrules:
-    <<: *d
-    url: "https://adrules.top/adrules_domainset.txt"
-  AdBlock:
-    <<: *c
-    url: "https://raw.githubusercontent.com/axcsz/Collect/master/Ruleset/Block/AdBlock.list"
-  AdsBlock:
-    <<: *c
-    url: "https://raw.githubusercontent.com/axcsz/Collect/master/Ruleset/Block/AdsBlock.list"
-# 游戏平台
-  Game:
-    <<: *c
-    url: "https://raw.githubusercontent.com/axcsz/Collect/master/Ruleset/Other/Game.list"
-# ChatGPT
-  OpenAI:
-    <<: *c
-    url: "https://raw.githubusercontent.com/axcsz/Collect/master/Ruleset/Other/OpenAI.list"
-# 谷歌服务
-  YouTube:
-    <<: *c
-    url: "https://raw.githubusercontent.com/axcsz/Collect/master/Ruleset/Media/YouTube.list"
-  Google:
-    <<: *c
-    url: "https://raw.githubusercontent.com/axcsz/Collect/master/Ruleset/Other/Google.list"
-# 微软服务
-  GitHub:
-    <<: *c
-    url: "https://raw.githubusercontent.com/axcsz/Collect/master/Ruleset/Other/GitHub.list"
-  OneDrive:
-    <<: *c
-    url: "https://raw.githubusercontent.com/axcsz/Collect/master/Ruleset/Other/OneDrive.list"
-  Microsoft:
-    <<: *c
-    url: "https://raw.githubusercontent.com/axcsz/Collect/master/Ruleset/Other/Microsoft.list"
-# 社交平台
-  Telegram:
-    <<: *c
-    url: "https://raw.githubusercontent.com/axcsz/Collect/master/Ruleset/Other/Telegram.list"
-  Facebook:
-    <<: *c
-    url: "https://raw.githubusercontent.com/axcsz/Collect/master/Ruleset/Other/Facebook.list"
-  Twitter:
-    <<: *c
-    url: "https://raw.githubusercontent.com/axcsz/Collect/master/Ruleset/Other/Twitter.list"
-# 影视媒体
-  Netflix:
-    <<: *c
-    url: "https://raw.githubusercontent.com/axcsz/Collect/master/Ruleset/Media/Netflix.list"
-  TikTok:
-    <<: *c
-    url: "https://raw.githubusercontent.com/axcsz/Collect/master/Ruleset/Media/TikTok.list"
-  GlobalMedia:
-    <<: *c
-    url: "https://raw.githubusercontent.com/axcsz/Collect/master/Ruleset/Media/GlobalMedia.list"
-# 海外服务
-  GlobalGFW:
-    <<: *c
-    url: "https://raw.githubusercontent.com/axcsz/Collect/master/Ruleset/GlobalGFW.list"
-# 苹果服务
-  Apple:
-    <<: *c
-    url: "https://raw.githubusercontent.com/axcsz/Collect/master/Ruleset/Other/Apple.list"
-# 国内服务
-  WeChat:
-    <<: *c
-    url: "https://raw.githubusercontent.com/axcsz/Collect/master/Ruleset/Other/WeChat.list"
-  ChinaMedia:
-    <<: *c
-    url: "https://raw.githubusercontent.com/axcsz/Collect/master/Ruleset/Media/ChinaMedia.list"
-  China:
-    <<: *c
-    url: "https://raw.githubusercontent.com/axcsz/Collect/master/Ruleset/Direct.list"
-# 本地/局域网
-  Lan:
-    <<: *c
-    url: "https://raw.githubusercontent.com/axcsz/Collect/master/Ruleset/Local.list"
-
-# script
-script:
-  # 使用 Python 表达式编写自定义规则
-  shortcuts: 
-    # 4483 与 9305 为 BiliBili 的 QUIC CDN
-    quic: network == 'udp' and (dst_port == 443 or dst_port == 4483 or dst_port == 9305)
+  # 广告
+  Adrules: {<<: *d, url: https://adrules.top/adrules_domainset.txt}
+  BlockAds: {<<: *c, url: https://github.com/thNylHx/Tools/raw/main/Ruleset/Block/BlockAds.list}
+  BlockPrivacy: {<<: *c, url: https://github.com/thNylHx/Tools/raw/main/Ruleset/Block/BlockPrivacy.list}
+  # ChatGPT
+  OpenAI: {<<: *c, url: https://github.com/thNylHx/Tools/raw/main/Ruleset/Other/OpenAI.list}
+  # 1Password
+  1Password: {<<: *c, url: https://github.com/thNylHx/Tools/raw/main/Ruleset/Other/1Password.list}
+  # 谷歌
+  YouTube: {<<: *d, url: https://github.com/thNylHx/Tools/raw/main/Ruleset/ClashMeta/YouTube.list}
+  Google: {<<: *d, url: https://github.com/thNylHx/Tools/raw/main/Ruleset/ClashMeta/Google.list}
+  GoogleIP: {<<: *i, url: https://github.com/thNylHx/Tools/raw/main/Ruleset/ClashMeta/GoogleIP.list}
+  # 微软
+  GitHub: {<<: *d, url: https://github.com/thNylHx/Tools/raw/main/Ruleset/ClashMeta/GitHub.list}
+  OneDrive: {<<: *d, url: https://github.com/thNylHx/Tools/raw/main/Ruleset/ClashMeta/OneDrive.list}
+  Microsoft: {<<: *d, url: https://github.com/thNylHx/Tools/raw/main/Ruleset/ClashMeta/Microsoft.list}
+  # 社交 
+  Telegram: {<<: *c, url: https://github.com/thNylHx/Tools/raw/main/Ruleset/Media/Telegram.list}
+  Facebook: {<<: *d, url: https://github.com/thNylHx/Tools/raw/main/Ruleset/ClashMeta/Facebook.list}
+  FacebookIP: {<<: *i, url: https://github.com/thNylHx/Tools/raw/main/Ruleset/ClashMeta/FacebookIP.list}
+  Instagram: {<<: *d, url: https://github.com/thNylHx/Tools/raw/main/Ruleset/ClashMeta/Instagram.list}
+  PayPal: {<<: *d, url: https://github.com/thNylHx/Tools/raw/main/Ruleset/ClashMeta/PayPal.list}
+  Twitter: {<<: *d, url: https://github.com/thNylHx/Tools/raw/main/Ruleset/ClashMeta/Twitter.list}
+  TwitterIP: {<<: *i, url: https://github.com/thNylHx/Tools/raw/main/Ruleset/ClashMeta/TwitterIP.list}
+  # 影视
+  Netflix: {<<: *d, url: https://github.com/thNylHx/Tools/raw/main/Ruleset/ClashMeta/Netflix.list}
+  NetflixIP: {<<: *i, url: https://github.com/thNylHx/Tools/raw/main/Ruleset/ClashMeta/NetflixIP.list}
+  Disney: {<<: *d, url: https://github.com/thNylHx/Tools/raw/main/Ruleset/ClashMeta/Disney.list}
+  TikTok: {<<: *c, url: https://github.com/thNylHx/Tools/raw/main/Ruleset/Media/TikTok.list}
+  GlobalMedia: {<<: *c, url: https://github.com/thNylHx/Tools/raw/main/Ruleset/Media/GlobalMedia.list}
+  # 海外
+  GlobalGFW: {<<: *c, url: https://github.com/thNylHx/Tools/raw/main/Ruleset/Other/GlobalGFW.list}
+  # 苹果
+  Apple: {<<: *c, url: https://github.com/thNylHx/Tools/raw/main/Ruleset/Other/Apple.list}
+  # 国内
+  WeChat: {<<: *c, url: https://github.com/thNylHx/Tools/raw/main/Ruleset/Other/WeChat.list}
+  China: {<<: *d, url: https://github.com/thNylHx/Tools/raw/main/Ruleset/ClashMeta/China.list}
+  ChinaIP: {<<: *i, url: https://github.com/thNylHx/Tools/raw/main/Ruleset/ClashMeta/ChinaIP.list}
+  # 本地/局域网
+  Local: {<<: *c, url: https://github.com/thNylHx/Tools/raw/main/Ruleset/Other/Local.list}
