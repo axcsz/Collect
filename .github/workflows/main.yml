@@ -1,0 +1,53 @@
+name: 同步上游仓库到指定文件夹
+
+on:
+  workflow_dispatch:  # 允许手动触发工作流
+  schedule:
+    - cron: "0 */6 * * *"  # 设置定时触发，表示每6小时执行一次
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest  # 在最新版本的Ubuntu环境中运行工作流
+    env:
+      TZ: 'Asia/Shanghai'  # 设置时区为上海时间，确保时间一致
+      
+    steps:
+      - name: 检出当前仓库
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+        # 说明：从当前仓库检出代码，便于后续操作
+
+      - name: 同步上游仓库到指定文件夹
+        run: |
+          # 定义关联数组，将目标文件夹名与对应上游仓库地址进行映射
+          declare -A repos=( ["LoonKissSurge"]="https://github.com/QingRex/LoonKissSurge.git" )
+          # 遍历数组中每一项
+          for folder in "${!repos[@]}"; do
+            repo_url=${repos[$folder]}
+            echo "开始同步文件夹 ${folder}，上游仓库地址：${repo_url}"
+            # 克隆上游仓库到临时目录，目录命名为 upstream_文件夹名
+            git clone "$repo_url" "upstream_$folder"
+            # 创建目标文件夹（若不存在则自动创建）
+            mkdir -p "$folder"
+            # 清空目标文件夹中原有内容
+            rm -rf "$folder"/*
+            # 将上游仓库中所有内容复制到目标文件夹
+            cp -r "upstream_$folder"/* "$folder"/
+            # 删除临时克隆的仓库，保持工作目录整洁
+            rm -rf "upstream_$folder"
+            echo "文件夹 ${folder} 同步完成"
+          done
+        # 说明：通过循环克隆并覆盖两个上游仓库的内容到本仓库对应的文件夹中
+
+      - name: 提交并推送更改
+        run: |
+          # 配置 Git 用户信息
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          # 添加同步后的文件夹到 Git 暂存区
+          git add LoonKissSurge
+          # 提交改动，若无改动则输出提示信息
+          git commit -m "更新文件夹：同步上游仓库内容" || echo "无更改需要提交"
+          # 将改动推送到主分支
+          git push origin HEAD:main
