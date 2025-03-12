@@ -1,6 +1,6 @@
 name: 同步上游仓库到指定文件夹
 
-on:
+于:
   workflow_dispatch:  # 允许手动触发工作流
   schedule:
     - cron: "0 */6 * * *"  # 设置定时触发，表示每6小时执行一次
@@ -50,4 +50,4 @@ jobs:
           # 提交改动，若无改动则输出提示信息
           git commit -m "更新文件夹：同步上游仓库内容" || echo "无更改需要提交"
           # 将改动推送到主分支
-          git push origin HEAD:main
+          git push origin HEAD:master
