@@ -1,6 +1,6 @@
 name: 同步上游仓库到指定文件夹
 
-于:
+on:
   workflow_dispatch:  # 允许手动触发工作流
   schedule:
     - cron: "0 */6 * * *"  # 设置定时触发，每6小时执行一次
